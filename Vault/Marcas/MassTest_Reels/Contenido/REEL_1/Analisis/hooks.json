@@ -1,0 +1,22 @@
+[
+    {
+        "hook": "Tienes corte de inmigración, pero aún no cuentas con un abogado",
+        "uso": "reel",
+        "rationale": "Abre con una pregunta de dinero específica que fuerza al espectador a compararse con el escenario planteado."
+    },
+    {
+        "hook": "¿Invertirías 3.000 para construir una vía a 30.000 al mes?",
+        "uso": "ad",
+        "rationale": "Convierte la promesa en una tensión riesgo-retorno, útil para filtrar leads con intención real."
+    },
+    {
+        "hook": "El negocio no es el trámite: es el sistema que convierte demanda en ventas.",
+        "uso": "post",
+        "rationale": "Mueve la conversación de servicio puntual a mecanismo de crecimiento, más defendible para pauta."
+    },
+    {
+        "hook": "Si el margen existe, el cuello de botella no es la idea: es capturar y cerrar la demanda.",
+        "uso": "short",
+        "rationale": "Introduce pensamiento lateral y prepara la necesidad de CRM, masterclass o sistema comercial."
+    }
+]

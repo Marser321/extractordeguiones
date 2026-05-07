@@ -1,0 +1,13 @@
+{
+    "language_detected": "es",
+    "language_probability": 1.0,
+    "full_text": "Lo que va dentro de tu paquete de asilo es lo que decides si te quedas o te vas.  Un formulario solo no es suficiente, el juez necesita evidencias, declaraciones y documentos  que cuenten tu historia. He visto casos negados no por falta de razón sino por falta de preparación.  Próximamente tienes tu audiencia, escríbenos y revisamos tu paquete para saber qué le falta.",
+    "segments": [
+        {
+            "start": 0.0,
+            "end": 10.0,
+            "text": "Lo que va dentro de tu paquete de asilo es lo que decides si te quedas o te vas.  Un formulario solo no es suficiente, el juez necesita evidencias, declaraciones y documentos  que cuenten tu historia. He visto casos negados no por falta de razón sino por falta de preparación.  Próximamente tienes tu audiencia, escríbenos y revisamos tu paquete para saber qué le falta."
+        }
+    ],
+    "provider": "cloud_repair"
+}

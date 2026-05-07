@@ -1,0 +1,15 @@
+{
+    "brand_name": "MassTest_Reels",
+    "tone": "Directo, experto, Quiet Luxury",
+    "visual_direction": "Estilo Walk and Talk, profundidad de campo corta, entornos de alto nivel socioeconómico.",
+    "do": [
+        "Referenciar la rapidez del sistema (3 días)",
+        "Usar terminología técnica (CRM, leads de calidad)",
+        "Mantener el micrófono lavalier visible"
+    ],
+    "dont": [
+        "Usar palabras como 'oferton' o 'increíble'",
+        "Mostrar entornos desordenados",
+        "Prometer resultados sin mencionar el sistema"
+    ]
+}

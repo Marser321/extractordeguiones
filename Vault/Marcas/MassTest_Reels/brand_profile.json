@@ -1,0 +1,20 @@
+{
+    "brand_name": "MassTest_Reels",
+    "tone": "Directo, experto, Quiet Luxury",
+    "audience": "Dueños de agencias y creadores de contenido",
+    "offer": "Sistemas de automatización de contenido",
+    "visual_style": "Minimalista, high-fidelity, contrastado",
+    "colors": [],
+    "forbidden_words": [
+        "barato",
+        "oferton",
+        "increible"
+    ],
+    "cta": "Reserva una llamada de estrategia",
+    "preferred_formats": [
+        "reel",
+        "short",
+        "ad",
+        "post"
+    ]
+}

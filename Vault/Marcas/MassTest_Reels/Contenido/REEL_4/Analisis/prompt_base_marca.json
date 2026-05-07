@@ -1,0 +1,15 @@
+{
+    "brand_name": "MassTest_Reels",
+    "tone": "Directo, experto, sofisticado, sin estridencias.",
+    "visual_direction": "Minimalismo orgánico, contrastes de texturas (madera y tecnología), iluminación natural.",
+    "do": [
+        "Usar terminología técnica precisa (USCIS, EOIR)",
+        "Mantener una estética de alta gama",
+        "Enfatizar el sistema sobre el esfuerzo"
+    ],
+    "dont": [
+        "Usar palabras como 'oferta' o 'increíble'",
+        "Mostrar desorden visual",
+        "Promover el miedo sin ofrecer la estructura técnica"
+    ]
+}

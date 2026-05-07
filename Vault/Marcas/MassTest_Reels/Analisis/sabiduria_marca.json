@@ -1,0 +1,15 @@
+{
+    "reglas_oro": [
+        "Mantenimiento de una línea base de calidad técnica que sostiene puntuaciones consistentes por encima del 7.2.",
+        "Estabilidad en la producción de contenido, logrando picos de hasta 7.85 cuando se minimizan los errores estructurales.",
+        "Coherencia temática general que permite una evaluación uniforme a lo largo de los módulos."
+    ],
+    "barreras_criticas": [
+        "Estructura narrativa incompleta: Ausencia recurrente de ganchos (Hooks) y llamadas a la acción (CTAs) efectivos.",
+        "Tono inadecuado: Persistencia del 'Loud Marketing' y uso de palabras prohibidas que rompen la estética de 'Quiet Luxury'.",
+        "Pobreza creativa: Bajos niveles de pensamiento lateral y falta de originalidad en el enfoque de los temas.",
+        "Falta de rigor y contexto: Puntuaciones críticas en veracidad y aprovechamiento del contexto visual."
+    ],
+    "personalidad_detectada": "Un perfil comunicativo funcional y agresivo que prioriza la cantidad sobre la elegancia, careciendo de sutileza y sofisticación estructural.",
+    "proximo_paso_entrenamiento": "Reconfigurar el prompt de generación para forzar una estructura de tres actos (Hook-Valor-CTA), prohibir estrictamente el vocabulario de marketing agresivo y aplicar un filtro de 'pensamiento lateral' para diversificar los ángulos de contenido."
+}

@@ -1,0 +1,21 @@
+{
+    "escenario": "Patio o deck exterior con suelo de madera, rodeado de vegetación y árboles al aire libre. La iluminación es natural, clara y brillante, con un fondo ligeramente desenfocado (bokeh) que aporta un aire profesional y pulcro.",
+    "elementos_clave": [
+        "Hombre adulto con lentes de montura gruesa y barba",
+        "Vestimenta 'smart-casual': traje completo gris claro con camiseta blanca",
+        "Gesticulación activa con las manos para enfatizar el discurso",
+        "Entorno natural con plantas y luz de día",
+        "Anillo de bodas visible, que proyecta una imagen de estabilidad"
+    ],
+    "estilo_visual": "Directo a cámara (talking head) en formato vertical (9:16), ideal para Reels, TikTok o Shorts. El estilo es orgánico pero con una estética de alta producción gracias a la profundidad de campo y la iluminación cuidada.",
+    "sugerencias_creativas": [
+        "Insertar subtítulos dinámicos y coloridos, resaltando en un color distinto (ej. verde o amarillo) la cifra '30.000 dólares'.",
+        "Añadir un apoyo visual (B-roll) de una interfaz de software o formularios cuando se menciona 'entregar tus procesos' para tangibilizar la promesa.",
+        "Utilizar 'zooms' digitales rápidos en los cortes de edición para enfatizar frases importantes como 'Masterclass' o 'anuncios ganadores'.",
+        "Incluir un gráfico de flecha animada o un botón simulado cuando el protagonista señala hacia abajo al final del video.",
+        "Colocar un cintillo inferior con el nombre del experto y su cargo para generar autoridad desde el inicio."
+    ],
+    "ocr_detectado": [],
+    "_ai_provider": "gemini",
+    "_ai_model": "gemini-flash-latest"
+}

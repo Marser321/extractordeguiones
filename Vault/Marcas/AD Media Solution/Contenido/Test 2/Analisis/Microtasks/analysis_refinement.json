@@ -1,0 +1,13 @@
+{
+    "group": "analysis_refinement",
+    "label": "Mejorar análisis",
+    "key": "Analysis refinement",
+    "status": "Necesita revisión",
+    "score": 7.81,
+    "recommendation": "Usar una pasada fuerte solo en las advertencias críticas.",
+    "primary_action": "Mejorar análisis",
+    "findings": [
+        "especificidad bajo (5.84/10).",
+        "alucinacion bajo (0/10)."
+    ]
+}

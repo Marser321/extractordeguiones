@@ -1,0 +1,15 @@
+{
+    "brand_name": "MassTest_Reels",
+    "tone": "Directo, experto, Quiet Luxury",
+    "visual_direction": "Minimalista, high-fidelity, contrastado, fondos limpios",
+    "do": [
+        "Usar terminología técnica precisa (USCIS, EOIR)",
+        "Mantener estética de lujo silencioso",
+        "Resaltar la rapidez y el sistema"
+    ],
+    "dont": [
+        "Usar palabras como 'barato' o 'increíble'",
+        "Visuales saturados o ruidosos",
+        "Marketing agresivo tipo 'oferta'"
+    ]
+}

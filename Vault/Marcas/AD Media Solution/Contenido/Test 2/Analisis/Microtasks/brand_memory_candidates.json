@@ -1,0 +1,10 @@
+{
+    "group": "brand_memory",
+    "label": "Actualizar memoria",
+    "key": "Brand memory",
+    "status": "Listo",
+    "score": 8,
+    "recommendation": "Memoria de marca lista para alimentar próximos análisis.",
+    "primary_action": "Actualizar memoria",
+    "findings": []
+}

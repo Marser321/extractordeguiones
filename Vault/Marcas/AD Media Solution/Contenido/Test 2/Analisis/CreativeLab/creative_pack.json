@@ -1,0 +1,95 @@
+{
+    "pack_metadata": {
+        "brand_name": "AD Media Solution",
+        "video_id": "Test 2",
+        "pack_version": "scriptdna-creative-pack-v2",
+        "generated_for": [
+            "Meta Ads",
+            "Instagram",
+            "TikTok"
+        ],
+        "source_confidence": "fuerte",
+        "generated_at": "2026-05-06T20:40:55.937255Z",
+        "generation_mode": "ai",
+        "provider": "ollama",
+        "model": "llama3:latest"
+    },
+    "strategy": {
+        "big_idea": "¿Con qué negocios facturarías más rápido 30.000 dólares por mes?",
+        "core_tension": "La migración es un negocio que puede generar ingresos significativos",
+        "audience": "Latinoamérica, personas interesadas en trámites migratorios y negocios",
+        "creative_angle": "Preguntar y responder a la pregunta de la audiencia",
+        "offer_message": "Invertir 3.000 dólares para generar más de 30.000"
+    },
+    "channel_packs": [
+        {
+            "channel": "instagram|tiktok|youtube_shorts|youtube_thumbnail|linkedin|meta_ads|stories|carousel",
+            "objective": "awareness|traffic|leads|sales",
+            "asset_type": "adset visual|hero image|thumbnail|product/service card|quote card|problem/solution card|comparison card|testimonial-style card|reel cover",
+            "aspect_ratio": "9:16|4:5|1:1",
+            "hook": "¿Te hace sentido invertir 3.000 dólares para generar más de 30.000?",
+            "copy_overlay": "Trámites migratorios, seguros o real estate",
+            "caption_or_primary_text": "Invertir 3.000 dólares para generar más de 30.000",
+            "cta": "Haz clic en el botón de abajo y reserva tu lugar",
+            "prompt": "Portada vertical 9:16 para AD Media Solution, orador masculino con gafas en entorno exterior verde desenfocado, texto grande: '¿30K al mes?', composición con rostro a un tercio, contraste alto, estética limpio, moderno, con foco en la idea principal, espacio seguro para subtítulo y CTA.",
+            "negative_prompt": "texto ilegible, cifras pequeñas, promesas exageradas, fondo saturado, rostro distorsionado",
+            "tool_notes": "No inventes hechos visuales si `visual_context.status` es `pending_visual_extraction`.",
+            "why_it_works": "La pregunta retórica y la oferta de un sistema CRM preparado para empresas de trámites migratorios pueden generar interés en la audiencia.",
+            "quality_badge": "fuerte",
+            "id": "creative-01"
+        }
+    ],
+    "adsets": [
+        {
+            "name": "tratamientos_migratorios",
+            "objective": "awareness|traffic|leads|sales|retargeting",
+            "audience": "Latinoamérica, personas interesadas en trámites migratorios y negocios",
+            "angle": "La migración es un negocio que puede generar ingresos significativos",
+            "primary_text": "Invertir 3.000 dólares para generar más de 30.000",
+            "headline": "¿Con qué negocios facturarías más rápido 30.000 dólares por mes?",
+            "description": "Trámites migratorios, seguros o real estate",
+            "visual_prompt": "Portada vertical 9:16 para AD Media Solution, orador masculino con gafas en entorno exterior verde desenfocado, texto grande: '¿30K al mes?', composición con rostro a un tercio, contraste alto, estética limpio, moderno, con foco en la idea principal, espacio seguro para subtítulo y CTA.",
+            "cta": "Haz clic en el botón de abajo y reserva tu lugar"
+        }
+    ],
+    "message_variants": [
+        {
+            "use": "dm|email|caption|comment_reply|story_reply",
+            "tone": "amistoso",
+            "message": "¿Te hace sentido invertir 3.000 dólares para generar más de 30.000?"
+        }
+    ],
+    "external_tool_exports": [
+        {
+            "tool": "Meta Ads",
+            "instructions": "Crear un anuncio con una imagen que muestre a un orador masculino con gafas en entorno exterior verde desenfocado, texto grande: '¿30K al mes?' y composición con rostro a un tercio, contraste alto, estética limpio, moderno, con foco en la idea principal, espacio seguro para subtítulo y CTA.",
+            "copy_ready_prompt": "Portada vertical 9:16 para AD Media Solution, orador masculino con gafas en entorno exterior verde desenfocado, texto grande: '¿30K al mes?', composición con rostro a un tercio, contraste alto, estética limpio, moderno, con foco en la idea principal, espacio seguro para subtítulo y CTA."
+        }
+    ],
+    "production_notes": [
+        "No inventes hechos visuales si `visual_context.status` es `pending_visual_extraction`.",
+        "La pregunta retórica y la oferta de un sistema CRM preparado para empresas de trámites migratorios pueden generar interés en la audiencia.",
+        "Evita prompts genericos como 'imagen limpia y moderna' sin composición, intención, copy overlay y razón estratégica."
+    ],
+    "audit": {
+        "audit_version": "scriptdna-creative-audit-v1",
+        "status": "passed",
+        "overall_score": 8.0,
+        "scores": {
+            "coherencia_estrategica": 5.0,
+            "alineacion_visual": 5.0,
+            "consistencia_mensaje": 10,
+            "adaptacion_canal": 10.0,
+            "calidad_prompts": 10
+        },
+        "recommendations": [
+            "La Big Idea es demasiado genérica; reconectar con el Insight Lateral del análisis."
+        ],
+        "generated_at": "2026-05-06T20:40:55.946962Z",
+        "metadata": {
+            "brand_name": "AD Media Solution",
+            "video_id": "Test 2",
+            "pack_version": "scriptdna-creative-pack-v2"
+        }
+    }
+}

@@ -1,0 +1,151 @@
+{
+    "resumen_ejecutivo": "El video REEL_9 posiciona a MassTest_Reels no como un servicio de marketing, sino como un proveedor de infraestructura operativa para dueños de agencias migratorias. El **insight lateral** es que el cuello de botella de estas empresas no es la falta de clientes, sino la incapacidad de procesar la demanda con elegancia y rigor técnico (Quiet Luxury). El objetivo es la conversión a Masterclass mediante la validación de un mecanismo único: un CRM especializado. Se aprovecha el entorno visual de alto nivel (casa moderna, conjunto crema) para proyectar que el 'sistema' permite ese estilo de vida.",
+    "hooks": [
+        {
+            "hook": "¿Tu agencia de trámites está facturando o solo está sobreviviendo al caos operativo?",
+            "uso": "reel",
+            "rationale": "Cuestiona el estatus del dueño de agencia, moviéndolo de 'operador' a 'estratega', alineado con el tono experto."
+        },
+        {
+            "hook": "Escalar no es trabajar más horas; es dejar que un CRM haga el trabajo pesado por ti.",
+            "uso": "ad",
+            "rationale": "Ataca la creencia de que el crecimiento requiere sacrificio físico, ofreciendo tecnología como solución de estatus."
+        },
+        {
+            "hook": "Mira el fondo: este es el resultado de dejar de vender trámites y empezar a vender sistemas.",
+            "uso": "short",
+            "rationale": "Usa la evidencia visual (casa moderna, entorno premium) como prueba social inmediata para validar la autoridad del orador."
+        },
+        {
+            "hook": "El error de las agencias migratorias es creer que el CRM es una opción, cuando es su única vía al orden.",
+            "uso": "post",
+            "rationale": "Genera una tensión de necesidad absoluta, eliminando la ambigüedad en la toma de decisiones del prospecto."
+        }
+    ],
+    "momentos_virales": [
+        {
+            "titulo": "El Paseo del Éxito (Walk & Talk)",
+            "descripcion": "El presentador camina hacia la cámara con el fondo de la casa moderna desenfocado, transmitiendo dinamismo y control.",
+            "duracion_sugerida": "0-10s",
+            "motivo_retencion": "El movimiento físico y la calidad visual (bokeh) capturan la atención visual antes de que el cerebro procese el audio."
+        },
+        {
+            "titulo": "Revelación del Mecanismo CRM",
+            "descripcion": "Momento en que menciona el 'CRM de trámites migratorios' con un gesto de manos abierto y firme.",
+            "duracion_sugerida": "20-35s",
+            "motivo_retencion": "Es la solución técnica a la tensión planteada; el espectador se queda para entender la herramienta."
+        }
+    ],
+    "estructura_narrativa": {
+        "patron": [
+            "Apertura (Segmentación directa)",
+            "Tensión (Problema de escala)",
+            "Valor (CRM como mecanismo único)",
+            "CTA (Escasez de cupos)"
+        ],
+        "notas": "La curva de retención se apoya en la estética 'Quiet Luxury'. La transición de 'ayudamos a muchos' a 'Masterclass' debe ser rápida para no perder el impulso de autoridad."
+    },
+    "ideas_reels": [
+        {
+            "titulo": "Infraestructura vs. Esfuerzo",
+            "estructura": "Corte entre el orador caminando (éxito) y b-roll de oficinas desordenadas. El audio explica por qué el CRM es la diferencia.",
+            "cta": "Reserva una llamada de estrategia",
+            "insight_lateral": "El lujo no es el dinero, es el tiempo que recuperas cuando el sistema funciona solo."
+        },
+        {
+            "titulo": "La Masterclass de los 30K",
+            "estructura": "Uso de cifras concretas sobre el fondo residencial premium. El orador explica qué aprenderán en la sesión sin usar palabras prohibidas.",
+            "cta": "Reserva tu lugar",
+            "insight_lateral": "La educación es el filtro de entrada para clientes que valoran la sofisticación técnica."
+        }
+    ],
+    "ads": [
+        {
+            "concepto": "Escala Migratoria con CRM",
+            "angulo": "Autoridad práctica",
+            "copy": "Si buscas escalar tus ventas de trámites migratorios, el esfuerzo manual es tu techo. Te enseño el sistema que hemos implementado en agencias líderes.",
+            "cta": "Regístrate a la Masterclass"
+        },
+        {
+            "concepto": "Filtrado de Calidad",
+            "angulo": "Aspiración cuantificada",
+            "copy": "Traer clientes de calidad no es suerte, es ingeniería. Aprende a usar un CRM diseñado exclusivamente para nuestra industria.",
+            "cta": "Cupos limitados"
+        }
+    ],
+    "brief_creativo": "El objetivo es convertir a dueños de agencias mediante la promesa de orden y escala. La audiencia es psicográficamente ambiciosa pero operativamente saturada. El mensaje central: 'Tu agencia necesita un cerebro digital (CRM), no más empleados'. Visualmente, se debe mantener el estilo de alta fidelidad, aprovechando la luz natural intensa y el contraste del saco crema con la camiseta negra para denotar autoridad moderna y relajada.",
+    "captions": [
+        {
+            "plataforma": "Instagram",
+            "caption": "¿Tu agencia crece o solo se hace más pesada? 🏛️\n\nEscalar ventas en trámites migratorios requiere más que buenos vendedores; requiere un CRM que entienda la complejidad de cada proceso.\n\nEn mi Masterclass te enseño el sistema exacto. Cupos limitados. 👇",
+            "hashtags": [
+                "QuietLuxuryBusiness",
+                "CRMmigratorio",
+                "EscalaAgencias"
+            ]
+        },
+        {
+            "plataforma": "LinkedIn",
+            "caption": "La diferencia entre una empresa de trámites y un sistema de ventas escalable es la infraestructura tecnológica. Hemos ayudado a múltiples agencias a transicionar del caos operativo a la eficiencia técnica. La metodología está en mi próxima sesión privada.",
+            "hashtags": [
+                "OperationsEfficiency",
+                "ScalingSystems",
+                "LegalTech"
+            ]
+        }
+    ],
+    "calendario_publicacion": [
+        {
+            "dia": "Día 1",
+            "pieza": "Video REEL_9 (Walk & Talk)",
+            "objetivo": "Generar autoridad y awareness de la Masterclass."
+        },
+        {
+            "dia": "Día 2",
+            "pieza": "Carrusel de Beneficios del CRM",
+            "objetivo": "Educar sobre el mecanismo único y resolver objeciones técnicas."
+        },
+        {
+            "dia": "Día 3",
+            "pieza": "Testimonios en Stories",
+            "objetivo": "Validar la prueba social mencionada en el guion."
+        }
+    ],
+    "prompts_visuales": [
+        {
+            "uso": "thumbnail",
+            "prompt": "Hombre profesional con gafas y saco crema, caminando en un jardín premium frente a una casa moderna. Texto elegante: 'ESCALA TU AGENCIA'. Estilo minimalista, alta fidelidad, luz solar natural.",
+            "negative_prompt": "colores chillones, desorden, oficina genérica, texto tipo graffiti"
+        },
+        {
+            "uso": "ad_background",
+            "prompt": "Interfaz de CRM elegante y minimalista en una pantalla de MacBook Pro, sobre una mesa de madera fina en una oficina luminosa con plantas verdes al fondo.",
+            "negative_prompt": "barato, desordenado, gráficos oscuros"
+        }
+    ],
+    "prompt_base_marca": {
+        "brand_name": "MassTest_Reels",
+        "tone": "Directo, experto, Quiet Luxury",
+        "visual_direction": "Estilo Walk and Talk, profundidad de campo corta, entornos de alto nivel socioeconómico.",
+        "do": [
+            "Referenciar la rapidez del sistema (3 días)",
+            "Usar terminología técnica (CRM, leads de calidad)",
+            "Mantener el micrófono lavalier visible"
+        ],
+        "dont": [
+            "Usar palabras como 'oferton' o 'increíble'",
+            "Mostrar entornos desordenados",
+            "Prometer resultados sin mencionar el sistema"
+        ]
+    },
+    "retrospectiva": {
+        "que_funciono": [
+            "El entorno visual residencial refuerza la promesa de éxito sin ser explícitamente ostentoso (Quiet Luxury).",
+            "La mención del CRM segmenta inmediatamente a la audiencia técnica."
+        ],
+        "que_falto": [
+            "Una mención más específica del dolor operativo diario para aumentar la tensión."
+        ],
+        "siguiente_mejora": "Integrar un overlay visual del CRM mientras el orador camina para hacer la herramienta más tangible."
+    }
+}

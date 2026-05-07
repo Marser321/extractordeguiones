@@ -1,0 +1,24 @@
+{
+    "escenario": "Terraza o espacio exterior luminoso con abundante luz natural y vegetación frondosa de fondo. La profundidad de campo es reducida (bokeh), lo que resalta a la protagonista frente a un entorno verde y relajado con mobiliario de madera.",
+    "elementos_clave": [
+        "Mujer presentadora (aspecto profesional y cercano)",
+        "Gafas de montura negra",
+        "Jersey negro de cuello alto",
+        "Smartphone blanco utilizado como apoyo visual",
+        "Micrófono de solapa (lavalier) visible",
+        "Pantalones vaqueros (jeans) azules",
+        "Reloj de pulsera dorado",
+        "Silla de madera con cojines claros"
+    ],
+    "estilo_visual": "Estilo de contenido para redes sociales (9:16) tipo 'talking head'. Es orgánico, directo y busca transmitir autoridad de forma accesible. La iluminación es cálida y natural, típica de grabaciones tipo 'lifestyle'.",
+    "sugerencias_creativas": [
+        "Insertar subtítulos dinámicos con palabras resaltadas en color (ej. 'I-589', 'Errores', 'Masterclass') para mantener la retención.",
+        "Utilizar transiciones de zoom-in/zoom-out en los puntos clave del guion (como cuando invita a la Masterclass) para dar dinamismo.",
+        "Añadir una capa de apoyo (B-roll) mostrando brevemente el formulario I-589 oficial cuando se menciona al inicio.",
+        "Colocar un elemento gráfico fijo o animado con la fecha '25 de Abril' para reforzar la recordación del evento.",
+        "Incluir una flecha o gráfico de apoyo cuando mencione el 'enlace' o el comando 'comenta la palabra clase'."
+    ],
+    "ocr_detectado": [],
+    "_ai_provider": "gemini",
+    "_ai_model": "gemini-flash-latest"
+}

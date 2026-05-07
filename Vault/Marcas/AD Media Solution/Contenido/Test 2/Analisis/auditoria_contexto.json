@@ -1,0 +1,40 @@
+{
+    "audit_version": "scriptdna-context-audit-v1",
+    "status": "passed",
+    "brand_name": "AD Media Solution",
+    "video_id": "Test 2",
+    "generated_at": "2026-05-06T20:30:16.260892Z",
+    "overall_score": 8.14,
+    "scores": {
+        "fidelidad": 8.75,
+        "alineacion_marca": 10,
+        "especificidad": 5.84,
+        "pensamiento_lateral": 7.6,
+        "uso_contexto_visual": 8.33,
+        "completitud_json": 10.0,
+        "utilidad_marketing": 10,
+        "alucinacion": 10,
+        "densidad_info": 8.0,
+        "cumplimiento_marca": 10.0,
+        "estructura_persuasiva": 6.0,
+        "quiet_luxury_score": 7.8,
+        "engagement_emocional": 8.4,
+        "veracidad": 2.5,
+        "estetica_visual": 7.0,
+        "coherencia_visual_narrativa": 10
+    },
+    "warnings": [
+        "especificidad bajo (5.84/10).",
+        "veracidad bajo (2.5/10).",
+        "Estructura débil: Falta un Hook claro o un CTA directo en algunos módulos."
+    ],
+    "promoted_patterns": false,
+    "refinement_instructions": null,
+    "context": {
+        "script_chars": 1153,
+        "visual_context_status": "available",
+        "prompt_version": "scriptdna-business-v3",
+        "provider": null,
+        "model": null
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "group": "ux_clarity",
+    "label": "Revisar claridad",
+    "key": "UX clarity",
+    "status": "Mejorando",
+    "score": 5.8,
+    "recommendation": "Mantener cards compactas y mover texto largo a Ver detalles.",
+    "primary_action": "Revisar claridad",
+    "findings": [
+        "Hay labels o títulos largos que deben pasar a detalles desplegables.",
+        "Se detectó lenguaje técnico que no debería dominar la interfaz."
+    ]
+}

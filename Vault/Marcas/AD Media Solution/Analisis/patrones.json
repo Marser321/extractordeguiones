@@ -1,0 +1,569 @@
+{
+    "hooks_frecuentes": [
+        "¿Por qué los trámites migratorios le ganan al Real Estate en velocidad de facturación?",
+        "La matemática es simple: inviertes 3k para facturar 30k. ¿Aceptarías el trato?",
+        "El problema no es la falta de clientes, es que no tienes dónde recibirlos. Hablemos de sistemas.",
+        "Mira este fondo verde: parece tranquilo, pero aquí estamos hablando de facturar 30k al mes."
+    ],
+    "estructuras_ganadoras": [
+        "Gancho comparativo (Industrias)",
+        "Selección del ganador (Migración)",
+        "Justificación por demanda (Necesidad latente)",
+        "Prueba de concepto (Inversión vs Retorno)",
+        "Mecanismo único (CRM + Anuncios)",
+        "Llamado a la acción (Masterclass)"
+    ],
+    "angulos_de_venta": [
+        "Eficacia probada",
+        "Operativo/Infraestructura"
+    ],
+    "reglas_de_estilo": [
+        "Mencionar cifras específicas de inversión y retorno",
+        "Validar el sector de migración como oportunidad",
+        "Referenciar el CRM como el núcleo del éxito"
+    ],
+    "pattern_candidates": [
+        {
+            "category": "hooks_frecuentes",
+            "value": "¿Con qué negocios facturarías más rápido 30.000 dólares por mes?",
+            "source_video_id": "Test 2",
+            "prompt_version": "scriptdna-business-v2",
+            "audit_score": null,
+            "promoted": false,
+            "observed_at": "2026-05-05T17:06:10.159425Z"
+        },
+        {
+            "category": "estructuras_ganadoras",
+            "value": "apertura",
+            "source_video_id": "Test 2",
+            "prompt_version": "scriptdna-business-v2",
+            "audit_score": null,
+            "promoted": false,
+            "observed_at": "2026-05-05T17:06:10.159425Z"
+        },
+        {
+            "category": "estructuras_ganadoras",
+            "value": "tension",
+            "source_video_id": "Test 2",
+            "prompt_version": "scriptdna-business-v2",
+            "audit_score": null,
+            "promoted": false,
+            "observed_at": "2026-05-05T17:06:10.159425Z"
+        },
+        {
+            "category": "estructuras_ganadoras",
+            "value": "valor",
+            "source_video_id": "Test 2",
+            "prompt_version": "scriptdna-business-v2",
+            "audit_score": null,
+            "promoted": false,
+            "observed_at": "2026-05-05T17:06:10.159425Z"
+        },
+        {
+            "category": "estructuras_ganadoras",
+            "value": "cta",
+            "source_video_id": "Test 2",
+            "prompt_version": "scriptdna-business-v2",
+            "audit_score": null,
+            "promoted": false,
+            "observed_at": "2026-05-05T17:06:10.159425Z"
+        },
+        {
+            "category": "angulos_de_venta",
+            "value": "eficacia en la inversión",
+            "source_video_id": "Test 2",
+            "prompt_version": "scriptdna-business-v2",
+            "audit_score": null,
+            "promoted": false,
+            "observed_at": "2026-05-05T17:06:10.159425Z"
+        },
+        {
+            "category": "reglas_de_estilo",
+            "value": "regla",
+            "source_video_id": "Test 2",
+            "prompt_version": "scriptdna-business-v2",
+            "audit_score": null,
+            "promoted": false,
+            "observed_at": "2026-05-05T17:06:10.159425Z"
+        },
+        {
+            "category": "hooks_frecuentes",
+            "value": "¿Con qué negocio facturarías más rápido 30.000 dólares por mes?",
+            "source_video_id": "Test 2",
+            "prompt_version": "scriptdna-business-v2",
+            "audit_score": null,
+            "promoted": false,
+            "observed_at": "2026-05-05T17:24:10.999468Z"
+        },
+        {
+            "category": "hooks_frecuentes",
+            "value": "¿Invertirías 3.000 para construir una vía a 30.000 al mes?",
+            "source_video_id": "Test 2",
+            "prompt_version": "scriptdna-business-v2",
+            "audit_score": null,
+            "promoted": false,
+            "observed_at": "2026-05-05T17:24:10.999468Z"
+        },
+        {
+            "category": "hooks_frecuentes",
+            "value": "El negocio no es el trámite: es el sistema que convierte demanda en ventas.",
+            "source_video_id": "Test 2",
+            "prompt_version": "scriptdna-business-v2",
+            "audit_score": null,
+            "promoted": false,
+            "observed_at": "2026-05-05T17:24:10.999468Z"
+        },
+        {
+            "category": "hooks_frecuentes",
+            "value": "Si el margen existe, el cuello de botella no es la idea: es capturar y cerrar la demanda.",
+            "source_video_id": "Test 2",
+            "prompt_version": "scriptdna-business-v2",
+            "audit_score": null,
+            "promoted": false,
+            "observed_at": "2026-05-05T17:24:10.999468Z"
+        },
+        {
+            "category": "estructuras_ganadoras",
+            "value": "hook",
+            "source_video_id": "Test 2",
+            "prompt_version": "scriptdna-business-v2",
+            "audit_score": null,
+            "promoted": false,
+            "observed_at": "2026-05-05T17:24:10.999468Z"
+        },
+        {
+            "category": "estructuras_ganadoras",
+            "value": "contexto",
+            "source_video_id": "Test 2",
+            "prompt_version": "scriptdna-business-v2",
+            "audit_score": null,
+            "promoted": false,
+            "observed_at": "2026-05-05T17:24:10.999468Z"
+        },
+        {
+            "category": "estructuras_ganadoras",
+            "value": "idea central",
+            "source_video_id": "Test 2",
+            "prompt_version": "scriptdna-business-v2",
+            "audit_score": null,
+            "promoted": false,
+            "observed_at": "2026-05-05T17:24:10.999468Z"
+        },
+        {
+            "category": "angulos_de_venta",
+            "value": "aspiración cuantificada",
+            "source_video_id": "Test 2",
+            "prompt_version": "scriptdna-business-v2",
+            "audit_score": null,
+            "promoted": false,
+            "observed_at": "2026-05-05T17:24:10.999468Z"
+        },
+        {
+            "category": "angulos_de_venta",
+            "value": "riesgo calculado",
+            "source_video_id": "Test 2",
+            "prompt_version": "scriptdna-business-v2",
+            "audit_score": null,
+            "promoted": false,
+            "observed_at": "2026-05-05T17:24:10.999468Z"
+        },
+        {
+            "category": "angulos_de_venta",
+            "value": "autoridad práctica",
+            "source_video_id": "Test 2",
+            "prompt_version": "scriptdna-business-v2",
+            "audit_score": null,
+            "promoted": false,
+            "observed_at": "2026-05-05T17:24:10.999468Z"
+        },
+        {
+            "category": "reglas_de_estilo",
+            "value": "Mantener claridad",
+            "source_video_id": "Test 2",
+            "prompt_version": "scriptdna-business-v2",
+            "audit_score": null,
+            "promoted": false,
+            "observed_at": "2026-05-05T17:24:10.999468Z"
+        },
+        {
+            "category": "reglas_de_estilo",
+            "value": "Usar cifras concretas como ancla",
+            "source_video_id": "Test 2",
+            "prompt_version": "scriptdna-business-v2",
+            "audit_score": null,
+            "promoted": false,
+            "observed_at": "2026-05-05T17:25:42.799553Z"
+        },
+        {
+            "category": "reglas_de_estilo",
+            "value": "Mantener al orador como prueba humana",
+            "source_video_id": "Test 2",
+            "prompt_version": "scriptdna-business-v2",
+            "audit_score": null,
+            "promoted": false,
+            "observed_at": "2026-05-05T17:25:42.799553Z"
+        },
+        {
+            "category": "reglas_de_estilo",
+            "value": "Separar promesa, mecanismo y CTA",
+            "source_video_id": "Test 2",
+            "prompt_version": "scriptdna-business-v2",
+            "audit_score": null,
+            "promoted": false,
+            "observed_at": "2026-05-05T17:25:42.799553Z"
+        },
+        {
+            "category": "hooks_frecuentes",
+            "value": "¿Por qué los trámites migratorios le ganan al Real Estate en velocidad de facturación?",
+            "source_video_id": "Test 2",
+            "prompt_version": null,
+            "audit_score": 7.86,
+            "promoted": true,
+            "observed_at": "2026-05-06T20:06:32.007493Z"
+        },
+        {
+            "category": "hooks_frecuentes",
+            "value": "La matemática es simple: inviertes 3k para facturar 30k. ¿Aceptarías el trato?",
+            "source_video_id": "Test 2",
+            "prompt_version": null,
+            "audit_score": 7.86,
+            "promoted": true,
+            "observed_at": "2026-05-06T20:06:32.007493Z"
+        },
+        {
+            "category": "hooks_frecuentes",
+            "value": "El problema no es la falta de clientes, es que no tienes dónde recibirlos. Hablemos de sistemas.",
+            "source_video_id": "Test 2",
+            "prompt_version": null,
+            "audit_score": 7.86,
+            "promoted": true,
+            "observed_at": "2026-05-06T20:06:32.007493Z"
+        },
+        {
+            "category": "hooks_frecuentes",
+            "value": "Mira este fondo verde: parece tranquilo, pero aquí estamos hablando de facturar 30k al mes.",
+            "source_video_id": "Test 2",
+            "prompt_version": null,
+            "audit_score": 7.86,
+            "promoted": true,
+            "observed_at": "2026-05-06T20:06:32.007493Z"
+        },
+        {
+            "category": "estructuras_ganadoras",
+            "value": "Gancho comparativo (Industrias)",
+            "source_video_id": "Test 2",
+            "prompt_version": null,
+            "audit_score": 7.86,
+            "promoted": true,
+            "observed_at": "2026-05-06T20:06:32.007493Z"
+        },
+        {
+            "category": "estructuras_ganadoras",
+            "value": "Selección del ganador (Migración)",
+            "source_video_id": "Test 2",
+            "prompt_version": null,
+            "audit_score": 7.86,
+            "promoted": true,
+            "observed_at": "2026-05-06T20:06:32.007493Z"
+        },
+        {
+            "category": "estructuras_ganadoras",
+            "value": "Justificación por demanda (Necesidad latente)",
+            "source_video_id": "Test 2",
+            "prompt_version": null,
+            "audit_score": 7.86,
+            "promoted": true,
+            "observed_at": "2026-05-06T20:06:32.007493Z"
+        },
+        {
+            "category": "estructuras_ganadoras",
+            "value": "Prueba de concepto (Inversión vs Retorno)",
+            "source_video_id": "Test 2",
+            "prompt_version": null,
+            "audit_score": 7.86,
+            "promoted": true,
+            "observed_at": "2026-05-06T20:06:32.007493Z"
+        },
+        {
+            "category": "estructuras_ganadoras",
+            "value": "Mecanismo único (CRM + Anuncios)",
+            "source_video_id": "Test 2",
+            "prompt_version": null,
+            "audit_score": 7.86,
+            "promoted": true,
+            "observed_at": "2026-05-06T20:06:32.007493Z"
+        },
+        {
+            "category": "estructuras_ganadoras",
+            "value": "Llamado a la acción (Masterclass)",
+            "source_video_id": "Test 2",
+            "prompt_version": null,
+            "audit_score": 7.86,
+            "promoted": true,
+            "observed_at": "2026-05-06T20:06:32.007493Z"
+        },
+        {
+            "category": "angulos_de_venta",
+            "value": "Eficacia probada",
+            "source_video_id": "Test 2",
+            "prompt_version": null,
+            "audit_score": 7.86,
+            "promoted": true,
+            "observed_at": "2026-05-06T20:06:32.007493Z"
+        },
+        {
+            "category": "angulos_de_venta",
+            "value": "Operativo/Infraestructura",
+            "source_video_id": "Test 2",
+            "prompt_version": null,
+            "audit_score": 7.86,
+            "promoted": true,
+            "observed_at": "2026-05-06T20:06:32.007493Z"
+        },
+        {
+            "category": "reglas_de_estilo",
+            "value": "Mencionar cifras específicas de inversión y retorno",
+            "source_video_id": "Test 2",
+            "prompt_version": null,
+            "audit_score": 7.86,
+            "promoted": true,
+            "observed_at": "2026-05-06T20:06:32.007493Z"
+        },
+        {
+            "category": "reglas_de_estilo",
+            "value": "Validar el sector de migración como oportunidad",
+            "source_video_id": "Test 2",
+            "prompt_version": null,
+            "audit_score": 7.86,
+            "promoted": true,
+            "observed_at": "2026-05-06T20:06:32.007493Z"
+        },
+        {
+            "category": "reglas_de_estilo",
+            "value": "Referenciar el CRM como el núcleo del éxito",
+            "source_video_id": "Test 2",
+            "prompt_version": null,
+            "audit_score": 7.86,
+            "promoted": true,
+            "observed_at": "2026-05-06T20:06:32.007493Z"
+        },
+        {
+            "category": "estructuras_ganadoras",
+            "value": "Gancho Comparativo",
+            "source_video_id": "Test 2",
+            "prompt_version": "scriptdna-business-v3",
+            "audit_score": null,
+            "promoted": false,
+            "observed_at": "2026-05-06T20:29:25.031245Z"
+        },
+        {
+            "category": "estructuras_ganadoras",
+            "value": "Selección Estratégica (Winner)",
+            "source_video_id": "Test 2",
+            "prompt_version": "scriptdna-business-v3",
+            "audit_score": null,
+            "promoted": false,
+            "observed_at": "2026-05-06T20:29:25.031245Z"
+        },
+        {
+            "category": "estructuras_ganadoras",
+            "value": "Justificación por Demanda Latente",
+            "source_video_id": "Test 2",
+            "prompt_version": "scriptdna-business-v3",
+            "audit_score": null,
+            "promoted": false,
+            "observed_at": "2026-05-06T20:29:25.031245Z"
+        },
+        {
+            "category": "estructuras_ganadoras",
+            "value": "Prueba Matemática (ROI)",
+            "source_video_id": "Test 2",
+            "prompt_version": "scriptdna-business-v3",
+            "audit_score": null,
+            "promoted": false,
+            "observed_at": "2026-05-06T20:29:25.031245Z"
+        },
+        {
+            "category": "estructuras_ganadoras",
+            "value": "Mecanismo Único (CRM + Ads)",
+            "source_video_id": "Test 2",
+            "prompt_version": "scriptdna-business-v3",
+            "audit_score": null,
+            "promoted": false,
+            "observed_at": "2026-05-06T20:29:25.031245Z"
+        },
+        {
+            "category": "estructuras_ganadoras",
+            "value": "Llamado a la Acción (Masterclass)",
+            "source_video_id": "Test 2",
+            "prompt_version": "scriptdna-business-v3",
+            "audit_score": null,
+            "promoted": false,
+            "observed_at": "2026-05-06T20:29:25.031245Z"
+        },
+        {
+            "category": "reglas_de_estilo",
+            "value": "Mencionar cifras específicas de inversión (3k-5k) y retorno (30k)",
+            "source_video_id": "Test 2",
+            "prompt_version": "scriptdna-business-v3",
+            "audit_score": null,
+            "promoted": false,
+            "observed_at": "2026-05-06T20:29:25.031245Z"
+        },
+        {
+            "category": "reglas_de_estilo",
+            "value": "Referenciar el CRM como el cerebro de la operación",
+            "source_video_id": "Test 2",
+            "prompt_version": "scriptdna-business-v3",
+            "audit_score": null,
+            "promoted": false,
+            "observed_at": "2026-05-06T20:29:25.031245Z"
+        },
+        {
+            "category": "reglas_de_estilo",
+            "value": "Usar el nombre del orador (Daniel) para personalización",
+            "source_video_id": "Test 2",
+            "prompt_version": "scriptdna-business-v3",
+            "audit_score": null,
+            "promoted": false,
+            "observed_at": "2026-05-06T20:29:25.031245Z"
+        }
+    ],
+    "pattern_metadata": [
+        {
+            "category": "hooks_frecuentes",
+            "value": "¿Por qué los trámites migratorios le ganan al Real Estate en velocidad de facturación?",
+            "source_video_id": "Test 2",
+            "prompt_version": null,
+            "audit_score": 7.86,
+            "promoted": true,
+            "observed_at": "2026-05-06T20:06:32.007493Z"
+        },
+        {
+            "category": "hooks_frecuentes",
+            "value": "La matemática es simple: inviertes 3k para facturar 30k. ¿Aceptarías el trato?",
+            "source_video_id": "Test 2",
+            "prompt_version": null,
+            "audit_score": 7.86,
+            "promoted": true,
+            "observed_at": "2026-05-06T20:06:32.007493Z"
+        },
+        {
+            "category": "hooks_frecuentes",
+            "value": "El problema no es la falta de clientes, es que no tienes dónde recibirlos. Hablemos de sistemas.",
+            "source_video_id": "Test 2",
+            "prompt_version": null,
+            "audit_score": 7.86,
+            "promoted": true,
+            "observed_at": "2026-05-06T20:06:32.007493Z"
+        },
+        {
+            "category": "hooks_frecuentes",
+            "value": "Mira este fondo verde: parece tranquilo, pero aquí estamos hablando de facturar 30k al mes.",
+            "source_video_id": "Test 2",
+            "prompt_version": null,
+            "audit_score": 7.86,
+            "promoted": true,
+            "observed_at": "2026-05-06T20:06:32.007493Z"
+        },
+        {
+            "category": "estructuras_ganadoras",
+            "value": "Gancho comparativo (Industrias)",
+            "source_video_id": "Test 2",
+            "prompt_version": null,
+            "audit_score": 7.86,
+            "promoted": true,
+            "observed_at": "2026-05-06T20:06:32.007493Z"
+        },
+        {
+            "category": "estructuras_ganadoras",
+            "value": "Selección del ganador (Migración)",
+            "source_video_id": "Test 2",
+            "prompt_version": null,
+            "audit_score": 7.86,
+            "promoted": true,
+            "observed_at": "2026-05-06T20:06:32.007493Z"
+        },
+        {
+            "category": "estructuras_ganadoras",
+            "value": "Justificación por demanda (Necesidad latente)",
+            "source_video_id": "Test 2",
+            "prompt_version": null,
+            "audit_score": 7.86,
+            "promoted": true,
+            "observed_at": "2026-05-06T20:06:32.007493Z"
+        },
+        {
+            "category": "estructuras_ganadoras",
+            "value": "Prueba de concepto (Inversión vs Retorno)",
+            "source_video_id": "Test 2",
+            "prompt_version": null,
+            "audit_score": 7.86,
+            "promoted": true,
+            "observed_at": "2026-05-06T20:06:32.007493Z"
+        },
+        {
+            "category": "estructuras_ganadoras",
+            "value": "Mecanismo único (CRM + Anuncios)",
+            "source_video_id": "Test 2",
+            "prompt_version": null,
+            "audit_score": 7.86,
+            "promoted": true,
+            "observed_at": "2026-05-06T20:06:32.007493Z"
+        },
+        {
+            "category": "estructuras_ganadoras",
+            "value": "Llamado a la acción (Masterclass)",
+            "source_video_id": "Test 2",
+            "prompt_version": null,
+            "audit_score": 7.86,
+            "promoted": true,
+            "observed_at": "2026-05-06T20:06:32.007493Z"
+        },
+        {
+            "category": "angulos_de_venta",
+            "value": "Eficacia probada",
+            "source_video_id": "Test 2",
+            "prompt_version": null,
+            "audit_score": 7.86,
+            "promoted": true,
+            "observed_at": "2026-05-06T20:06:32.007493Z"
+        },
+        {
+            "category": "angulos_de_venta",
+            "value": "Operativo/Infraestructura",
+            "source_video_id": "Test 2",
+            "prompt_version": null,
+            "audit_score": 7.86,
+            "promoted": true,
+            "observed_at": "2026-05-06T20:06:32.007493Z"
+        },
+        {
+            "category": "reglas_de_estilo",
+            "value": "Mencionar cifras específicas de inversión y retorno",
+            "source_video_id": "Test 2",
+            "prompt_version": null,
+            "audit_score": 7.86,
+            "promoted": true,
+            "observed_at": "2026-05-06T20:06:32.007493Z"
+        },
+        {
+            "category": "reglas_de_estilo",
+            "value": "Validar el sector de migración como oportunidad",
+            "source_video_id": "Test 2",
+            "prompt_version": null,
+            "audit_score": 7.86,
+            "promoted": true,
+            "observed_at": "2026-05-06T20:06:32.007493Z"
+        },
+        {
+            "category": "reglas_de_estilo",
+            "value": "Referenciar el CRM como el núcleo del éxito",
+            "source_video_id": "Test 2",
+            "prompt_version": null,
+            "audit_score": 7.86,
+            "promoted": true,
+            "observed_at": "2026-05-06T20:06:32.007493Z"
+        }
+    ]
+}

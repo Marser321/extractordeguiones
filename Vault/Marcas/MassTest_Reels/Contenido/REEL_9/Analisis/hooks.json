@@ -1,0 +1,22 @@
+[
+    {
+        "hook": "¿Tu agencia de trámites está facturando o solo está sobreviviendo al caos operativo?",
+        "uso": "reel",
+        "rationale": "Cuestiona el estatus del dueño de agencia, moviéndolo de 'operador' a 'estratega', alineado con el tono experto."
+    },
+    {
+        "hook": "Escalar no es trabajar más horas; es dejar que un CRM haga el trabajo pesado por ti.",
+        "uso": "ad",
+        "rationale": "Ataca la creencia de que el crecimiento requiere sacrificio físico, ofreciendo tecnología como solución de estatus."
+    },
+    {
+        "hook": "Mira el fondo: este es el resultado de dejar de vender trámites y empezar a vender sistemas.",
+        "uso": "short",
+        "rationale": "Usa la evidencia visual (casa moderna, entorno premium) como prueba social inmediata para validar la autoridad del orador."
+    },
+    {
+        "hook": "El error de las agencias migratorias es creer que el CRM es una opción, cuando es su única vía al orden.",
+        "uso": "post",
+        "rationale": "Genera una tensión de necesidad absoluta, eliminando la ambigüedad en la toma de decisiones del prospecto."
+    }
+]

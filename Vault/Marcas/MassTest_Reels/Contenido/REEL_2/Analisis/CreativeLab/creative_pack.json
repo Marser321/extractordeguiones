@@ -1,0 +1,141 @@
+{
+    "pack_metadata": {
+        "brand_name": "MassTest_Reels",
+        "video_id": "REEL_2",
+        "pack_version": "scriptdna-creative-pack-v2",
+        "generated_for": [
+            "Midjourney",
+            "Ideogram",
+            "Canva",
+            "Meta Ads",
+            "TikTok",
+            "LinkedIn"
+        ],
+        "source_confidence": "fuerte",
+        "generated_at": "2026-05-06T20:57:43.622316Z",
+        "generation_mode": "ai",
+        "provider": "gemini",
+        "model": "gemini-flash-latest"
+    },
+    "strategy": {
+        "big_idea": "La invisibilidad administrativa es el mayor riesgo",
+        "core_tension": "El deseo de progreso (mudanza) frente al riesgo de exclusión legal por un error de notificación.",
+        "audience": "Inmigrantes con casos activos que valoran la seguridad, el orden y la estética profesional.",
+        "creative_angle": "Compliance de alto nivel. Tratar el estatus migratorio con la seriedad de un sistema corporativo de lujo.",
+        "offer_message": "Sistemas de control y asesoría para asegurar que tu expediente nunca se pierda por un cambio de dirección."
+    },
+    "channel_packs": [
+        {
+            "channel": "instagram",
+            "objective": "engagement",
+            "asset_type": "reel cover",
+            "aspect_ratio": "9:16",
+            "hook": "Error común: mudarte y no avisar",
+            "copy_overlay": "MUDANZA ≠ SILENCIO",
+            "caption_or_primary_text": "Tu dirección es el único puente entre tú y tu estatus legal. Si te mueves, el sistema debe saberlo en 10 días o menos. No es burocracia, es protección.",
+            "cta": "Reserva una llamada de estrategia",
+            "prompt": "9:16 portrait. High-end minimalist office background, blurred. In the foreground, a professional woman with stylish dark-rimmed glasses looking at a sleek smartphone. High-contrast lighting, 'Quiet Luxury' aesthetic. Soft shadows, neutral palette (whites, beiges, deep blacks). Top center text area clear for typography. 8k resolution, cinematic lighting.",
+            "negative_prompt": "clutter, messy room, bright saturated colors, cheap furniture, low resolution, amateur photography",
+            "tool_notes": "Ideal para usar con filtros de color desaturados en Instagram para mantener el look 'Expert'.",
+            "why_it_works": "Utiliza el contraste visual para denotar autoridad y seriedad en un tema crítico.",
+            "quality_badge": "fuerte",
+            "id": "creative-01"
+        },
+        {
+            "channel": "meta_ads",
+            "objective": "leads",
+            "asset_type": "problem/solution card",
+            "aspect_ratio": "4:5",
+            "hook": "¿Invertirías en tu futuro para perderlo por un correo no recibido?",
+            "copy_overlay": "FORMULARIO AR11 vs. RIESGO DE DEPORTACIÓN",
+            "caption_or_primary_text": "Muchos pierden su caso no por falta de pruebas, sino por falta de comunicación. El sistema USCIS y la Corte EOIR requieren precisión quirúrgica. Nosotros sistematizamos tu tranquilidad.",
+            "cta": "Reserva una llamada de estrategia",
+            "prompt": "4:5 ratio creative. Split screen design. Left side: Close up of a luxury watch and a professional hand signing a clean document. Right side: Minimalist digital dashboard showing 'AR11 Status: Sent'. Typography is elegant serif. Colors: Charcoal gray, cream, and subtle gold accents. High-fidelity photography style.",
+            "negative_prompt": "stock photos of stressed people, handcuffs, dark scary courtrooms, flashy 'free' buttons",
+            "tool_notes": "Diseño pensado para audiencias que rechazan el marketing de 'miedo' y prefieren soluciones lógicas.",
+            "why_it_works": "Eleva el trámite migratorio a un estándar de gestión de activos o 'asset management'.",
+            "quality_badge": "fuerte",
+            "id": "creative-02"
+        },
+        {
+            "channel": "youtube_thumbnail",
+            "objective": "traffic",
+            "asset_type": "thumbnail",
+            "aspect_ratio": "16:9",
+            "hook": "El error que USCIS no perdona",
+            "copy_overlay": "AR11 & EOIR-33: GUÍA RÁPIDA",
+            "caption_or_primary_text": "No dejes tu caso al azar. Aprende cómo notificar tu cambio de dirección correctamente en menos de 5 minutos.",
+            "cta": "Ver video completo",
+            "prompt": "16:9 YouTube Thumbnail. Professional woman with glasses gesturing 'stop' or 'attention' subtly. Background: A modern clean home office with a plant in bokeh. Large, bold sans-serif text 'ERROR FATAL' in white with a thin black outline. High contrast between subject and background. 4k, hyper-realistic.",
+            "negative_prompt": "neon colors, clickbait arrows, messy background, blurry face",
+            "tool_notes": "Usar tipografía 'Montserrat' o 'Inter' para el texto overlay en Canva.",
+            "why_it_works": "El contraste entre el look 'Quiet Luxury' y el texto 'Error Fatal' genera una curiosidad de alta calidad.",
+            "quality_badge": "fuerte",
+            "id": "creative-03"
+        }
+    ],
+    "adsets": [
+        {
+            "name": "Performance_Compliance_Legal",
+            "objective": "leads",
+            "audience": "Inmigrantes profesionales, dueños de negocios, 25-50 años",
+            "angle": "Riesgo administrativo",
+            "primary_text": "Si te mudaste y no avisaste a USCIS o a la Corte, tu expediente está en riesgo de ser cerrado en tu ausencia. No es una suposición, es la regla administrativa.",
+            "headline": "Protege tu trámite migratorio con sistemas, no con suerte.",
+            "description": "Expertos en automatización y gestión de expedientes legales.",
+            "visual_prompt": "Una imagen de una laptop abierta mostrando un portal de USCIS limpio, junto a una taza de café espresso de diseño en una mesa de mármol. Luz solar natural filtrada.",
+            "cta": "Reserva una llamada de estrategia"
+        }
+    ],
+    "message_variants": [
+        {
+            "use": "dm",
+            "tone": "Directo y experto",
+            "message": "Hola. Notamos que mencionaste una mudanza reciente. ¿Ya realizaste el cambio oficial en el sistema AR11 y EOIR-33? Un error aquí puede costar meses de retraso. Si necesitas ayuda con el sistema, estamos aquí."
+        },
+        {
+            "use": "story_reply",
+            "tone": "Quiet Luxury",
+            "message": "La paz mental no tiene precio, pero sí tiene un sistema. No dejes que un cambio de dirección detenga tu progreso."
+        }
+    ],
+    "external_tool_exports": [
+        {
+            "tool": "Ideogram",
+            "instructions": "Generar posters con tipografía integrada y diseño limpio.",
+            "copy_ready_prompt": "A minimalist poster for a legal tech brand. Central text 'CONTROL' in elegant serif typography. Below, smaller text 'Tu dirección, tu estatus'. A woman with glasses in a professional white outfit is subtly reflected in a glass surface. Background is a neutral, bright white office. Aesthetic: Quiet Luxury, high-end fashion magazine layout."
+        },
+        {
+            "tool": "TikTok/Reels",
+            "instructions": "Edición dinámica con subtítulos minimalistas.",
+            "copy_ready_prompt": "Add dynamic captions: 'Error común' (Yellow highlight), 'AR11' (Bold), 'EOIR-33' (Bold). Use zoom-in on '30.000 al mes' mention. Background music: Lo-fi corporate or minimalist deep house."
+        }
+    ],
+    "production_notes": [
+        "Asegurar que los términos técnicos AR11 y EOIR-33 aparezcan escritos correctamente en pantalla.",
+        "Mantener la paleta de colores en blancos, cremas y negros para reforzar el Quiet Luxury.",
+        "Evitar cualquier visual que sugiera 'urgencia barata' o 'miedo'; el enfoque debe ser 'orden profesional'."
+    ],
+    "audit": {
+        "audit_version": "scriptdna-creative-audit-v1",
+        "status": "passed",
+        "overall_score": 7.6,
+        "scores": {
+            "coherencia_estrategica": 5.0,
+            "alineacion_visual": 7.0,
+            "consistencia_mensaje": 6.0,
+            "adaptacion_canal": 10.0,
+            "calidad_prompts": 10
+        },
+        "recommendations": [
+            "La Big Idea es demasiado genérica; reconectar con el Insight Lateral del análisis.",
+            "El mensaje varía demasiado entre canales. Unificar el gancho narrativo."
+        ],
+        "generated_at": "2026-05-06T20:57:43.622803Z",
+        "metadata": {
+            "brand_name": "MassTest_Reels",
+            "video_id": "REEL_2",
+            "pack_version": "scriptdna-creative-pack-v2"
+        }
+    }
+}

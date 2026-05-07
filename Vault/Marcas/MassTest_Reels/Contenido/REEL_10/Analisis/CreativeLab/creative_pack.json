@@ -1,0 +1,247 @@
+{
+    "pack_metadata": {
+        "brand_name": "MassTest_Reels",
+        "video_id": "REEL_10",
+        "pack_version": "scriptdna-creative-pack-v2",
+        "generated_for": [
+            "Midjourney",
+            "Ideogram",
+            "Canva",
+            "Meta Ads",
+            "TikTok/Reels",
+            "LinkedIn"
+        ],
+        "source_confidence": "fuerte",
+        "generation_note": "Fallback local: 400 API key not valid. Please pass a valid API key. [reason: \"API_KEY_INVALID\"\ndomain: \"googleapis.com\"\nmetadata {\n  key: \"service\"\n  value: \"generativelanguage.googleapis.com\"\n}\n, locale: \"en-US\"\nmessage: \"API key not valid. Please pass a valid API key.\"\n]",
+        "generated_at": "2026-05-06T21:04:29.378398Z",
+        "generation_mode": "local_fallback",
+        "provider": "gemini",
+        "model": "gemini-flash-latest"
+    },
+    "strategy": {
+        "big_idea": "El I-589 es uno de los formularios más importantes en los procesos migratorios, pero es el que más errores tie",
+        "core_tension": "Transformar un contenido puntual en un sistema de piezas reutilizables.",
+        "audience": "Dueños de agencias y creadores de contenido",
+        "creative_angle": "claridad, autoridad y reutilización inteligente",
+        "offer_message": "Reserva una llamada de estrategia"
+    },
+    "channel_packs": [
+        {
+            "id": "instagram-01",
+            "channel": "instagram",
+            "objective": "guardar y compartir",
+            "asset_type": "adset visual",
+            "aspect_ratio": "4:5, 9:16",
+            "hook": "El I-589 es uno de los formularios más importantes en los procesos migratorios, pero es el que más errores tie",
+            "copy_overlay": "El I-589 es uno de los formularios más importantes en los",
+            "caption_or_primary_text": "El I-589 es uno de los formularios más importantes en los procesos migratorios, pero es el que más errores tie\n\nReserva una llamada de estrategia",
+            "cta": "Reserva una llamada de estrategia",
+            "prompt": "Post/Reel/Story para Instagram para MassTest_Reels. Objetivo: guardar y compartir. Audiencia: Dueños de agencias y creadores de contenido. Concepto visual: representar la tension entre el problema implicito del guion y la solucion de la marca, con estilo Minimalista, high-fidelity, contrastado, jerarquia clara, espacio seguro para texto, composicion editorial de alto contraste. Asset: adset visual. Copy overlay: 'El I-589 es uno de los formularios más importantes en los'. CTA: Reserva una llamada de estrategia. Referencia textual del video: El I-589 es uno de los formularios más importantes en los procesos migratorios,  pero es el que más errores tiene si no se completa con orientación.  Por eso, este 25 de abril te voy a invitar a mi Masterclass,  donde vamos a aprender parte. Usar contexto visual verificado del video.",
+            "negative_prompt": "texto ilegible, logo deformado, promesas no verificables, exceso de elementos, estética genérica",
+            "tool_notes": "Usar en Midjourney, Ideogram o Canva y adaptar tipografía de marca.",
+            "why_it_works": "Convierte el guion en una pieza concreta con objetivo, audiencia, composición, copy y CTA listos para producción externa.",
+            "quality_badge": "fuerte"
+        },
+        {
+            "id": "tiktok-02",
+            "channel": "tiktok",
+            "objective": "retención rápida y comentario",
+            "asset_type": "hero image",
+            "aspect_ratio": "9:16",
+            "hook": "El I-589 es uno de los formularios más importantes en los procesos migratorios, pero es el que más errores tie",
+            "copy_overlay": "El I-589 es uno de los formularios más importantes en los",
+            "caption_or_primary_text": "El I-589 es uno de los formularios más importantes en los procesos migratorios, pero es el que más errores tie\n\nReserva una llamada de estrategia",
+            "cta": "Reserva una llamada de estrategia",
+            "prompt": "TikTok/Reel vertical para MassTest_Reels. Objetivo: retención rápida y comentario. Audiencia: Dueños de agencias y creadores de contenido. Concepto visual: representar la tension entre el problema implicito del guion y la solucion de la marca, con estilo Minimalista, high-fidelity, contrastado, jerarquia clara, espacio seguro para texto, composicion editorial de alto contraste. Asset: hero image. Copy overlay: 'El I-589 es uno de los formularios más importantes en los'. CTA: Reserva una llamada de estrategia. Referencia textual del video: El I-589 es uno de los formularios más importantes en los procesos migratorios,  pero es el que más errores tiene si no se completa con orientación.  Por eso, este 25 de abril te voy a invitar a mi Masterclass,  donde vamos a aprender parte. Usar contexto visual verificado del video.",
+            "negative_prompt": "texto ilegible, logo deformado, promesas no verificables, exceso de elementos, estética genérica",
+            "tool_notes": "Pensado para formato vertical; mantener copy breve en zona segura.",
+            "why_it_works": "Convierte el guion en una pieza concreta con objetivo, audiencia, composición, copy y CTA listos para producción externa.",
+            "quality_badge": "fuerte"
+        },
+        {
+            "id": "youtube_shorts-03",
+            "channel": "youtube_shorts",
+            "objective": "retención y suscripción",
+            "asset_type": "thumbnail",
+            "aspect_ratio": "9:16",
+            "hook": "El I-589 es uno de los formularios más importantes en los procesos migratorios, pero es el que más errores tie",
+            "copy_overlay": "El I-589 es uno de los formularios más importantes en los",
+            "caption_or_primary_text": "El I-589 es uno de los formularios más importantes en los procesos migratorios, pero es el que más errores tie\n\nReserva una llamada de estrategia",
+            "cta": "Reserva una llamada de estrategia",
+            "prompt": "YouTube Shorts para MassTest_Reels. Objetivo: retención y suscripción. Audiencia: Dueños de agencias y creadores de contenido. Concepto visual: representar la tension entre el problema implicito del guion y la solucion de la marca, con estilo Minimalista, high-fidelity, contrastado, jerarquia clara, espacio seguro para texto, composicion editorial de alto contraste. Asset: thumbnail. Copy overlay: 'El I-589 es uno de los formularios más importantes en los'. CTA: Reserva una llamada de estrategia. Referencia textual del video: El I-589 es uno de los formularios más importantes en los procesos migratorios,  pero es el que más errores tiene si no se completa con orientación.  Por eso, este 25 de abril te voy a invitar a mi Masterclass,  donde vamos a aprender parte. Usar contexto visual verificado del video.",
+            "negative_prompt": "texto ilegible, logo deformado, promesas no verificables, exceso de elementos, estética genérica",
+            "tool_notes": "Pensado para formato vertical; mantener copy breve en zona segura.",
+            "why_it_works": "Convierte el guion en una pieza concreta con objetivo, audiencia, composición, copy y CTA listos para producción externa.",
+            "quality_badge": "fuerte"
+        },
+        {
+            "id": "youtube_thumbnail-04",
+            "channel": "youtube_thumbnail",
+            "objective": "clic inicial",
+            "asset_type": "product/service card",
+            "aspect_ratio": "16:9",
+            "hook": "El I-589 es uno de los formularios más importantes en los procesos migratorios, pero es el que más errores tie",
+            "copy_overlay": "El I-589 es uno de los formularios más importantes en los",
+            "caption_or_primary_text": "El I-589 es uno de los formularios más importantes en los procesos migratorios, pero es el que más errores tie\n\nReserva una llamada de estrategia",
+            "cta": "Reserva una llamada de estrategia",
+            "prompt": "Thumbnail YouTube para MassTest_Reels. Objetivo: clic inicial. Audiencia: Dueños de agencias y creadores de contenido. Concepto visual: representar la tension entre el problema implicito del guion y la solucion de la marca, con estilo Minimalista, high-fidelity, contrastado, jerarquia clara, espacio seguro para texto, composicion editorial de alto contraste. Asset: product/service card. Copy overlay: 'El I-589 es uno de los formularios más importantes en los'. CTA: Reserva una llamada de estrategia. Referencia textual del video: El I-589 es uno de los formularios más importantes en los procesos migratorios,  pero es el que más errores tiene si no se completa con orientación.  Por eso, este 25 de abril te voy a invitar a mi Masterclass,  donde vamos a aprender parte. Usar contexto visual verificado del video.",
+            "negative_prompt": "texto ilegible, logo deformado, promesas no verificables, exceso de elementos, estética genérica",
+            "tool_notes": "Optimizar en Ideogram o Canva con texto grande y contraste alto.",
+            "why_it_works": "Convierte el guion en una pieza concreta con objetivo, audiencia, composición, copy y CTA listos para producción externa.",
+            "quality_badge": "fuerte"
+        },
+        {
+            "id": "linkedin-05",
+            "channel": "linkedin",
+            "objective": "autoridad y conversación profesional",
+            "asset_type": "quote card",
+            "aspect_ratio": "1.91:1, 4:5",
+            "hook": "El I-589 es uno de los formularios más importantes en los procesos migratorios, pero es el que más errores tie",
+            "copy_overlay": "El I-589 es uno de los formularios más importantes en los",
+            "caption_or_primary_text": "El I-589 es uno de los formularios más importantes en los procesos migratorios, pero es el que más errores tie\n\nUna lectura práctica para equipos que necesitan convertir contenido en decisiones.\n\nReserva una llamada de estrategia",
+            "cta": "Reserva una llamada de estrategia",
+            "prompt": "Post profesional LinkedIn para MassTest_Reels. Objetivo: autoridad y conversación profesional. Audiencia: Dueños de agencias y creadores de contenido. Concepto visual: representar la tension entre el problema implicito del guion y la solucion de la marca, con estilo Minimalista, high-fidelity, contrastado, jerarquia clara, espacio seguro para texto, composicion editorial de alto contraste. Asset: quote card. Copy overlay: 'El I-589 es uno de los formularios más importantes en los'. CTA: Reserva una llamada de estrategia. Referencia textual del video: El I-589 es uno de los formularios más importantes en los procesos migratorios,  pero es el que más errores tiene si no se completa con orientación.  Por eso, este 25 de abril te voy a invitar a mi Masterclass,  donde vamos a aprender parte. Usar contexto visual verificado del video.",
+            "negative_prompt": "texto ilegible, logo deformado, promesas no verificables, exceso de elementos, estética genérica",
+            "tool_notes": "Usar en Midjourney, Ideogram o Canva y adaptar tipografía de marca.",
+            "why_it_works": "Convierte el guion en una pieza concreta con objetivo, audiencia, composición, copy y CTA listos para producción externa.",
+            "quality_badge": "fuerte"
+        },
+        {
+            "id": "meta_ads-06",
+            "channel": "meta_ads",
+            "objective": "validación de ángulo para pauta",
+            "asset_type": "problem/solution card",
+            "aspect_ratio": "1:1, 4:5, 9:16",
+            "hook": "El I-589 es uno de los formularios más importantes en los procesos migratorios, pero es el que más errores tie",
+            "copy_overlay": "El I-589 es uno de los formularios más importantes en los",
+            "caption_or_primary_text": "El I-589 es uno de los formularios más importantes en los procesos migratorios, pero es el que más errores tie. Descubre el siguiente paso y actúa con más claridad. Reserva una llamada de estrategia",
+            "cta": "Reserva una llamada de estrategia",
+            "prompt": "Meta Ads feed/story para MassTest_Reels. Objetivo: validación de ángulo para pauta. Audiencia: Dueños de agencias y creadores de contenido. Concepto visual: representar la tension entre el problema implicito del guion y la solucion de la marca, con estilo Minimalista, high-fidelity, contrastado, jerarquia clara, espacio seguro para texto, composicion editorial de alto contraste. Asset: problem/solution card. Copy overlay: 'El I-589 es uno de los formularios más importantes en los'. CTA: Reserva una llamada de estrategia. Referencia textual del video: El I-589 es uno de los formularios más importantes en los procesos migratorios,  pero es el que más errores tiene si no se completa con orientación.  Por eso, este 25 de abril te voy a invitar a mi Masterclass,  donde vamos a aprender parte. Usar contexto visual verificado del video.",
+            "negative_prompt": "texto ilegible, logo deformado, promesas no verificables, exceso de elementos, estética genérica",
+            "tool_notes": "Usar en Meta Ads como visual principal y testear 2-3 copies.",
+            "why_it_works": "Convierte el guion en una pieza concreta con objetivo, audiencia, composición, copy y CTA listos para producción externa.",
+            "quality_badge": "fuerte"
+        },
+        {
+            "id": "stories-07",
+            "channel": "stories",
+            "objective": "respuesta directa",
+            "asset_type": "comparison card",
+            "aspect_ratio": "9:16",
+            "hook": "El I-589 es uno de los formularios más importantes en los procesos migratorios, pero es el que más errores tie",
+            "copy_overlay": "El I-589 es uno de los formularios más importantes en los",
+            "caption_or_primary_text": "El I-589 es uno de los formularios más importantes en los procesos migratorios, pero es el que más errores tie\n\nReserva una llamada de estrategia",
+            "cta": "Reserva una llamada de estrategia",
+            "prompt": "Story secuencial para MassTest_Reels. Objetivo: respuesta directa. Audiencia: Dueños de agencias y creadores de contenido. Concepto visual: representar la tension entre el problema implicito del guion y la solucion de la marca, con estilo Minimalista, high-fidelity, contrastado, jerarquia clara, espacio seguro para texto, composicion editorial de alto contraste. Asset: comparison card. Copy overlay: 'El I-589 es uno de los formularios más importantes en los'. CTA: Reserva una llamada de estrategia. Referencia textual del video: El I-589 es uno de los formularios más importantes en los procesos migratorios,  pero es el que más errores tiene si no se completa con orientación.  Por eso, este 25 de abril te voy a invitar a mi Masterclass,  donde vamos a aprender parte. Usar contexto visual verificado del video.",
+            "negative_prompt": "texto ilegible, logo deformado, promesas no verificables, exceso de elementos, estética genérica",
+            "tool_notes": "Pensado para formato vertical; mantener copy breve en zona segura.",
+            "why_it_works": "Convierte el guion en una pieza concreta con objetivo, audiencia, composición, copy y CTA listos para producción externa.",
+            "quality_badge": "fuerte"
+        },
+        {
+            "id": "carousel-08",
+            "channel": "carousel",
+            "objective": "educación y guardados",
+            "asset_type": "testimonial-style card",
+            "aspect_ratio": "4:5",
+            "hook": "El I-589 es uno de los formularios más importantes en los procesos migratorios, pero es el que más errores tie",
+            "copy_overlay": "El I-589 es uno de los formularios más importantes en los",
+            "caption_or_primary_text": "El I-589 es uno de los formularios más importantes en los procesos migratorios, pero es el que más errores tie\n\nReserva una llamada de estrategia",
+            "cta": "Reserva una llamada de estrategia",
+            "prompt": "Carrusel educativo para MassTest_Reels. Objetivo: educación y guardados. Audiencia: Dueños de agencias y creadores de contenido. Concepto visual: representar la tension entre el problema implicito del guion y la solucion de la marca, con estilo Minimalista, high-fidelity, contrastado, jerarquia clara, espacio seguro para texto, composicion editorial de alto contraste. Asset: testimonial-style card. Copy overlay: 'El I-589 es uno de los formularios más importantes en los'. CTA: Reserva una llamada de estrategia. Referencia textual del video: El I-589 es uno de los formularios más importantes en los procesos migratorios,  pero es el que más errores tiene si no se completa con orientación.  Por eso, este 25 de abril te voy a invitar a mi Masterclass,  donde vamos a aprender parte. Usar contexto visual verificado del video.",
+            "negative_prompt": "texto ilegible, logo deformado, promesas no verificables, exceso de elementos, estética genérica",
+            "tool_notes": "Usar en Midjourney, Ideogram o Canva y adaptar tipografía de marca.",
+            "why_it_works": "Convierte el guion en una pieza concreta con objetivo, audiencia, composición, copy y CTA listos para producción externa.",
+            "quality_badge": "fuerte"
+        }
+    ],
+    "adsets": [
+        {
+            "name": "MassTest_Reels - Awareness - Insight principal",
+            "objective": "awareness",
+            "audience": "Dueños de agencias y creadores de contenido",
+            "angle": "autoridad y claridad",
+            "primary_text": "El I-589 es uno de los formularios más importantes en los procesos migratorios, pero es el que más errores tie. El I-589 es uno de los formularios más importantes en los procesos migratorios,  pero es el que más errores tiene si no se completa con orientación.  Por eso, este 25 de abril te voy a invitar a mi Masterclass,  donde vamos a aprender parte",
+            "headline": "Convierte esta idea en acción",
+            "description": "Pieza pensada para validar interés inicial.",
+            "visual_prompt": "Meta Ads feed/story para MassTest_Reels. Objetivo: validación de ángulo para pauta. Audiencia: Dueños de agencias y creadores de contenido. Concepto visual: representar la tension entre el problema implicito del guion y la solucion de la marca, con estilo Minimalista, high-fidelity, contrastado, jerarquia clara, espacio seguro para texto, composicion editorial de alto contraste. Asset: problem/solution card. Copy overlay: 'El I-589 es uno de los formularios más importantes en los'. CTA: Reserva una llamada de estrategia. Referencia textual del video: El I-589 es uno de los formularios más importantes en los procesos migratorios,  pero es el que más errores tiene si no se completa con orientación.  Por eso, este 25 de abril te voy a invitar a mi Masterclass,  donde vamos a aprender parte. Usar contexto visual verificado del video.",
+            "cta": "Reserva una llamada de estrategia"
+        },
+        {
+            "name": "MassTest_Reels - Leads - Problema/Solución",
+            "objective": "leads",
+            "audience": "Dueños de agencias y creadores de contenido",
+            "angle": "problema/solución",
+            "primary_text": "Si esto te está pasando, este es el siguiente paso: Reserva una llamada de estrategia.",
+            "headline": "Una solución más clara",
+            "description": "Usar como variante directa para pauta.",
+            "visual_prompt": "Post profesional LinkedIn para MassTest_Reels. Objetivo: autoridad y conversación profesional. Audiencia: Dueños de agencias y creadores de contenido. Concepto visual: representar la tension entre el problema implicito del guion y la solucion de la marca, con estilo Minimalista, high-fidelity, contrastado, jerarquia clara, espacio seguro para texto, composicion editorial de alto contraste. Asset: quote card. Copy overlay: 'El I-589 es uno de los formularios más importantes en los'. CTA: Reserva una llamada de estrategia. Referencia textual del video: El I-589 es uno de los formularios más importantes en los procesos migratorios,  pero es el que más errores tiene si no se completa con orientación.  Por eso, este 25 de abril te voy a invitar a mi Masterclass,  donde vamos a aprender parte. Usar contexto visual verificado del video.",
+            "cta": "Reserva una llamada de estrategia"
+        }
+    ],
+    "message_variants": [
+        {
+            "use": "dm",
+            "tone": "Directo, experto, Quiet Luxury",
+            "message": "Vi que este tema puede servirte. El I-589 es uno de los formularios más importantes en los procesos migratorios, pero es el que más errores tie. ¿Quieres que te comparta el recurso completo?"
+        },
+        {
+            "use": "caption",
+            "tone": "Directo, experto, Quiet Luxury",
+            "message": "El I-589 es uno de los formularios más importantes en los procesos migratorios, pero es el que más errores tie\n\nEl I-589 es uno de los formularios más importantes en los procesos migratorios,  pero es el que más errores tiene si no se completa con orientación.  Por eso, este 25 de abril te voy a invitar a mi Masterclass,  donde vamos a aprender parte\n\nReserva una llamada de estrategia"
+        },
+        {
+            "use": "story_reply",
+            "tone": "Directo, experto, Quiet Luxury",
+            "message": "Si quieres profundizar en esto, responde 'info' y te paso el siguiente paso."
+        }
+    ],
+    "external_tool_exports": [
+        {
+            "tool": "Midjourney",
+            "instructions": "Usar el prompt visual, añadir el aspect ratio indicado y evitar texto pequeño.",
+            "copy_ready_prompt": "Post/Reel/Story para Instagram para MassTest_Reels. Objetivo: guardar y compartir. Audiencia: Dueños de agencias y creadores de contenido. Concepto visual: representar la tension entre el problema implicito del guion y la solucion de la marca, con estilo Minimalista, high-fidelity, contrastado, jerarquia clara, espacio seguro para texto, composicion editorial de alto contraste. Asset: adset visual. Copy overlay: 'El I-589 es uno de los formularios más importantes en los'. CTA: Reserva una llamada de estrategia. Referencia textual del video: El I-589 es uno de los formularios más importantes en los procesos migratorios,  pero es el que más errores tiene si no se completa con orientación.  Por eso, este 25 de abril te voy a invitar a mi Masterclass,  donde vamos a aprender parte. Usar contexto visual verificado del video."
+        },
+        {
+            "tool": "Ideogram",
+            "instructions": "Ideal para composiciones con copy overlay; respetar frase exacta.",
+            "copy_ready_prompt": "Thumbnail YouTube para MassTest_Reels. Objetivo: clic inicial. Audiencia: Dueños de agencias y creadores de contenido. Concepto visual: representar la tension entre el problema implicito del guion y la solucion de la marca, con estilo Minimalista, high-fidelity, contrastado, jerarquia clara, espacio seguro para texto, composicion editorial de alto contraste. Asset: product/service card. Copy overlay: 'El I-589 es uno de los formularios más importantes en los'. CTA: Reserva una llamada de estrategia. Referencia textual del video: El I-589 es uno de los formularios más importantes en los procesos migratorios,  pero es el que más errores tiene si no se completa con orientación.  Por eso, este 25 de abril te voy a invitar a mi Masterclass,  donde vamos a aprender parte. Usar contexto visual verificado del video."
+        },
+        {
+            "tool": "Canva",
+            "instructions": "Crear plantilla con jerarquia: hook, visual central, CTA y marca.",
+            "copy_ready_prompt": "Carrusel educativo para MassTest_Reels. Objetivo: educación y guardados. Audiencia: Dueños de agencias y creadores de contenido. Concepto visual: representar la tension entre el problema implicito del guion y la solucion de la marca, con estilo Minimalista, high-fidelity, contrastado, jerarquia clara, espacio seguro para texto, composicion editorial de alto contraste. Asset: testimonial-style card. Copy overlay: 'El I-589 es uno de los formularios más importantes en los'. CTA: Reserva una llamada de estrategia. Referencia textual del video: El I-589 es uno de los formularios más importantes en los procesos migratorios,  pero es el que más errores tiene si no se completa con orientación.  Por eso, este 25 de abril te voy a invitar a mi Masterclass,  donde vamos a aprender parte. Usar contexto visual verificado del video."
+        },
+        {
+            "tool": "Meta Ads",
+            "instructions": "Usar adsets y variar headline/primary text por objetivo.",
+            "copy_ready_prompt": "Meta Ads feed/story para MassTest_Reels. Objetivo: validación de ángulo para pauta. Audiencia: Dueños de agencias y creadores de contenido. Concepto visual: representar la tension entre el problema implicito del guion y la solucion de la marca, con estilo Minimalista, high-fidelity, contrastado, jerarquia clara, espacio seguro para texto, composicion editorial de alto contraste. Asset: problem/solution card. Copy overlay: 'El I-589 es uno de los formularios más importantes en los'. CTA: Reserva una llamada de estrategia. Referencia textual del video: El I-589 es uno de los formularios más importantes en los procesos migratorios,  pero es el que más errores tiene si no se completa con orientación.  Por eso, este 25 de abril te voy a invitar a mi Masterclass,  donde vamos a aprender parte. Usar contexto visual verificado del video."
+        }
+    ],
+    "production_notes": [
+        "No se generaron imágenes dentro de ScriptDNA.",
+        "Revisar visualmente cada pieza antes de publicarla.",
+        "Usar contexto visual verificado del video."
+    ],
+    "audit": {
+        "audit_version": "scriptdna-creative-audit-v1",
+        "status": "passed",
+        "overall_score": 8.4,
+        "scores": {
+            "coherencia_estrategica": 5.0,
+            "alineacion_visual": 7.0,
+            "consistencia_mensaje": 10,
+            "adaptacion_canal": 10.0,
+            "calidad_prompts": 10
+        },
+        "recommendations": [
+            "La Big Idea es demasiado genérica; reconectar con el Insight Lateral del análisis."
+        ],
+        "generated_at": "2026-05-06T21:04:29.379693Z",
+        "metadata": {
+            "brand_name": "MassTest_Reels",
+            "video_id": "REEL_10",
+            "pack_version": "scriptdna-creative-pack-v2"
+        }
+    }
+}

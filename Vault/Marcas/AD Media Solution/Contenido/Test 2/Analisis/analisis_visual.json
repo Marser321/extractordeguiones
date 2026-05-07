@@ -1,0 +1,25 @@
+{
+    "escenario": "El escenario es al aire libre, con un fondo verde y frondoso de árboles y vegetación. El primer frame muestra un plano más abierto con césped, un paraguas de patio blanco y parte de una estructura o valla verde en el fondo. Los frames subsiguientes se centran en el orador, manteniendo un fondo natural desenfocado (bokeh) de follaje y una estructura de madera tenue. La estética general es natural, casual y luminosa, utilizando luz natural.",
+    "elementos_clave": [
+        "Un hombre adulto con piel oscura, gafas, barba corta y cabello rapado a los lados, vestido con una camiseta azul marino, pantalones claros (blancos/gris claro) y zapatillas blancas (solo visibles en el primer frame).",
+        "Un micrófono de solapa pequeño, de color oscuro con un logo, enganchado a su camiseta.",
+        "Brazalete en su muñeca derecha y un anillo en su mano izquierda.",
+        "Gestos de manos expresivos mientras habla (visibles en los frames 2-5).",
+        "Césped verde y árboles frondosos en el fondo (primer frame).",
+        "Paraguas de patio blanco y estructuras exteriores indistintas en el fondo (primer frame).",
+        "Follaje verde desenfocado y una estructura de madera tenue en el fondo (frames 2-5)."
+    ],
+    "estilo_visual": "El estilo visual parece ser una combinación de tomas más amplias (para establecer el escenario) y planos medios a primeros planos, lo que sugiere un enfoque directo y personal hacia la audiencia. La presencia de gestos de manos y cambios en la expresión facial a lo largo de los frames de primer plano indica un estilo de edición dinámico, con cortes que enfatizan los puntos clave y mantienen la energía. El uso de bokeh en el fondo desenfoca los elementos distractores, manteniendo el foco en el orador.",
+    "sugerencias_creativas": [
+        "Incorporar superposiciones de texto en pantalla (lower thirds o gráficos flotantes) para destacar los datos clave mencionados en el guion, como '30.000 dólares por mes', 'Trámites Migratorios', 'Invertir 3.000 para generar 30.000', 'Sistema CRM' y 'Masterclass', para reforzar el mensaje visualmente.",
+        "Añadir gráficos animados o B-roll pertinente cuando se mencionan conceptos específicos (ej. dinero, migración, un CRM) para hacer el video más visualmente atractivo y didáctico.",
+        "Incluir una llamada a la acción (CTA) persistente en pantalla durante la parte final del video, indicando 'Haz clic en el botón de abajo y reserva tu lugar', posiblemente con una flecha o un diseño atractivo.",
+        "Utilizar un color de texto o un efecto visual diferente para las preguntas retóricas (ej. '¿Te hace sentido invertir...?' 'Sí, claro, ¿cómo es eso?') para distinguirlas y mantener el engagement.",
+        "Considerar un lower third con el nombre del orador (Daniel) y su título o experiencia, si aplica, para añadir credibilidad.",
+        "Asegurar que la iluminación facial sea siempre óptima para evitar sombras duras, complementando la luz natural con un fill light si es necesario.",
+        "Mantener la energía del orador y sus gestos como un elemento central en la edición, ya que contribuyen a la credibilidad y el dinamismo del mensaje."
+    ],
+    "ocr_detectado": [],
+    "_ai_provider": "gemini",
+    "_ai_model": "gemini-2.5-flash"
+}

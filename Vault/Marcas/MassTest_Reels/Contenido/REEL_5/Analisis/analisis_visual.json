@@ -1,0 +1,31 @@
+{
+    "escenario": "Oficina moderna, luminosa y minimalista con una estética profesional pero cercana. Predominan los tonos neutros (blanco, beige, madera clara) y cuenta con luz natural proveniente de una ventana con vegetación de fondo, lo que transmite tranquilidad y transparencia.",
+    "elementos_clave": [
+        "Mujer joven con lentes (presentadora/experta)",
+        "Computadora portátil (MacBook)",
+        "Monitor externo LG mostrando documentos legales",
+        "Documento oficial: 'RESPONDENT'S MOTION FOR CONTINUANCE'",
+        "Planta de interior",
+        "Mobiliario de oficina ergonómico"
+    ],
+    "estilo_visual": "Estilo 'Talking Head' educativo y de testimonio. La edición alterna entre planos medios de la presentadora para generar confianza y planos detalle (inserts) de la pantalla para aportar prueba social y veracidad a la historia narrada.",
+    "sugerencias_creativas": [
+        "Insertar subtítulos dinámicos resaltando palabras clave como '3 días', '2027' y 'aprobada'.",
+        "Añadir un 'zoom-in' digital al documento cuando mencione la fecha de reprogramación para enfatizar el éxito del caso.",
+        "Utilizar una cortinilla o banner inferior con el nombre de la empresa y un llamado a la acción (CTA) constante.",
+        "Incluir un gráfico comparativo simple que muestre: Antes (20 de abril) vs. Después (2027)."
+    ],
+    "ocr_detectado": [
+        "UNITED STATES DEPARTMENT OF JUSTICE",
+        "EXECUTIVE OFFICE FOR IMMIGRATION REVIEW",
+        "IMMIGRATION COURT - MEMPHIS, TENNESSEE",
+        "ARNOL SAUL TERCERO-MEJIA",
+        "File No.: A245-694-382",
+        "Hearing: April 20, 2026",
+        "RESPONDENT'S MOTION FOR CONTINUANCE",
+        "Información automatizada de casos",
+        "claude.ai"
+    ],
+    "_ai_provider": "gemini",
+    "_ai_model": "gemini-flash-latest"
+}

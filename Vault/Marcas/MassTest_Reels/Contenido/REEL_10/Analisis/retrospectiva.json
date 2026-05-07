@@ -1,0 +1,10 @@
+{
+    "que_funciono": [
+        "El hook funcionó bien"
+    ],
+    "que_falto": [
+        "La duración del reel fue un poco corta"
+    ],
+    "siguiente_mejora": "agregar más contenido visualmente atractivo",
+    "generation_mode": "ai"
+}

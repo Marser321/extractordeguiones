@@ -1,0 +1,10 @@
+{
+    "group": "output_readiness",
+    "label": "Auditar resultado",
+    "key": "Output readiness",
+    "status": "Listo",
+    "score": 10,
+    "recommendation": "Outputs listos para ejecución o revisión final.",
+    "primary_action": "Auditar resultado",
+    "findings": []
+}

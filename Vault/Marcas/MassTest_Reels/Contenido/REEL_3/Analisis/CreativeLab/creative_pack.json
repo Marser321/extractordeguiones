@@ -1,0 +1,148 @@
+{
+    "pack_metadata": {
+        "brand_name": "MassTest_Reels",
+        "video_id": "REEL_3",
+        "pack_version": "scriptdna-creative-pack-v2",
+        "generated_for": [
+            "Midjourney",
+            "Ideogram",
+            "Canva",
+            "Meta Ads",
+            "TikTok",
+            "Reels",
+            "Shorts",
+            "LinkedIn"
+        ],
+        "source_confidence": "fuerte",
+        "generated_at": "2026-05-06T20:58:28.628277Z",
+        "generation_mode": "ai",
+        "provider": "gemini",
+        "model": "gemini-flash-latest"
+    },
+    "strategy": {
+        "big_idea": "La Carpeta de la Certeza: El paso del azar a la estrategia legal.",
+        "core_tension": "El contraste entre llenar un simple formulario y construir un expediente de evidencias sólido que determine el futuro migratorio.",
+        "audience": "Inmigrantes que buscan estatus legal y valoran la seguridad jurídica sobre soluciones rápidas.",
+        "creative_angle": "Quiet Luxury Legal: Un enfoque minimalista, profesional y de alta gama donde la preparación meticulosa es el símbolo de estatus y tranquilidad.",
+        "offer_message": "Auditoría experta de expedientes de asilo para asegurar que cada historia esté respaldada por evidencia técnica."
+    },
+    "channel_packs": [
+        {
+            "channel": "instagram",
+            "objective": "engagement",
+            "asset_type": "reel cover",
+            "aspect_ratio": "9:16",
+            "hook": "¿Tu futuro cabe en una carpeta?",
+            "copy_overlay": "LO QUE DECIDE SI TE QUEDAS",
+            "caption_or_primary_text": "Un formulario es solo papel. Una estrategia es lo que convence al juez. No dejes tu caso al azar.",
+            "cta": "Reserva una llamada de estrategia",
+            "prompt": "Portrait of a professional woman with glasses, minimalist quiet luxury office, soft natural light, holding a thick black folder. High-fidelity, cinematic photography, bokeh background of a modern workspace with green plants. 8k resolution, minimalist aesthetic.",
+            "negative_prompt": "noise, blur, low resolution, crowded space, messy office, bright saturated colors, cheap furniture",
+            "tool_notes": "Ideal for Instagram Reels cover. Text should be placed in the upper third.",
+            "why_it_works": "Visualizes the weight of the 'Black Folder' concept mentioned in the script.",
+            "quality_badge": "fuerte",
+            "id": "creative-01"
+        },
+        {
+            "channel": "meta_ads",
+            "objective": "leads",
+            "asset_type": "adset visual",
+            "aspect_ratio": "4:5",
+            "hook": "La preparación vence a la suerte.",
+            "copy_overlay": "AUDITORÍA DE ASILO: REVISA TU EXPEDIENTE",
+            "caption_or_primary_text": "He visto casos negados no por falta de razón, sino por falta de preparación. Tu historia merece ser contada correctamente.",
+            "cta": "Reserva una llamada de estrategia",
+            "prompt": "Top-down view of a clean white desk. A high-end silver laptop next to a thick, professional black leather folder. A gold watch and subtle jewelry visible on a hand pointing at a document. Minimalist, high-contrast, quiet luxury style. Professional lighting.",
+            "negative_prompt": "messy desk, cheap pens, colorful folders, dark shadows, low quality, stock photo look",
+            "tool_notes": "Use for Meta Feed Ads. High contrast between the white desk and black folder creates a scroll-stop effect.",
+            "why_it_works": "Aligns with the 'Quiet Luxury' brand profile and emphasizes professional authority.",
+            "quality_badge": "fuerte",
+            "id": "creative-02"
+        },
+        {
+            "channel": "youtube_thumbnail",
+            "objective": "traffic",
+            "asset_type": "thumbnail",
+            "aspect_ratio": "16:9",
+            "hook": "¿Por qué niegan los casos de asilo?",
+            "copy_overlay": "EL ERROR QUE TE EXPULSA",
+            "caption_or_primary_text": "Descubre qué debe contener tu paquete de asilo para evitar una negación por falta de preparación.",
+            "cta": "Mira ahora",
+            "prompt": "Close-up of a professional woman looking concerned but authoritative, soft lighting, 16:9 ratio. On the left side, a blurred stack of documents with a red 'Denied' stamp (subtle). On the right side, a sharp black folder with a gold seal or professional look. High contrast, cinematic.",
+            "negative_prompt": "cartoonish, bright red, screaming, clickbait arrows, low resolution, messy hair",
+            "tool_notes": "Keep text on the left or center to avoid the timestamp on YouTube.",
+            "why_it_works": "Uses the fear of failure (denied case) to drive clicks while maintaining high-end aesthetics.",
+            "quality_badge": "fuerte",
+            "id": "creative-03"
+        }
+    ],
+    "adsets": [
+        {
+            "name": "ASILO_PREPARACION_ALTA_INTENCION",
+            "objective": "leads",
+            "audience": "Inmigrantes en proceso legal, 25-55 años, interesados en consultoría jurídica y estabilidad.",
+            "angle": "Riesgo vs. Seguridad: 'El costo de la falta de preparación'.",
+            "primary_text": "Lo que va dentro de tu paquete de asilo es lo que decide si te quedas o te vas. Un formulario solo no es suficiente. El juez necesita evidencias que cuenten tu historia con precisión técnica.",
+            "headline": "Revisión Profesional de tu Paquete de Asilo",
+            "description": "Evita errores que cuestan casos. Reserva una llamada con expertos.",
+            "visual_prompt": "Una mano profesional cerrando una carpeta negra pesada sobre un escritorio minimalista, transmitiendo seguridad y cierre de proceso exitoso.",
+            "cta": "Reservar"
+        }
+    ],
+    "message_variants": [
+        {
+            "use": "dm",
+            "tone": "Directo y experto",
+            "message": "Hola. Vi que te interesa asegurar tu proceso. La diferencia entre el éxito y la negación suele estar en la calidad de la evidencia. ¿Te gustaría que revisáramos tu paquete de asilo?"
+        },
+        {
+            "use": "story_reply",
+            "tone": "Quiet Luxury / Empático",
+            "message": "La tranquilidad de saber que tu expediente está completo no tiene precio. Estamos aquí para auditar tu caso antes de tu audiencia."
+        }
+    ],
+    "external_tool_exports": [
+        {
+            "tool": "Midjourney",
+            "instructions": "Use for high-end cinematic visuals of the service environment.",
+            "copy_ready_prompt": "/imagine prompt: Minimalist law office interior, bright white walls, green indoor plants, a thick black leather folder on a white marble desk, silver laptop, high-key lighting, soft shadows, 8k, hyper-realistic, quiet luxury aesthetic --ar 16:9 --v 6.0"
+        },
+        {
+            "tool": "Ideogram",
+            "instructions": "Use for graphics with embedded text overlays.",
+            "copy_ready_prompt": "A minimalist poster for a legal consultant. A thick black folder in the center. Large elegant typography above it says 'PREPARACIÓN'. Below it, smaller text says 'Vence a la suerte'. High fidelity, white background, cinematic lighting."
+        },
+        {
+            "tool": "Canva",
+            "instructions": "Template structure for carousels.",
+            "copy_ready_prompt": "Slide 1: ¿Qué hay en tu carpeta? (Background: Black Folder). Slide 2: El formulario es solo el inicio. Slide 3: Evidencias + Declaraciones = Resultados. Slide 4: No te arriesgues. Reserva tu llamada."
+        }
+    ],
+    "production_notes": [
+        "Mantener el color negro de la carpeta como el ancla visual en todas las piezas.",
+        "La tipografía debe ser limpia (Sans Serif) y espaciada para mantener el look Quiet Luxury.",
+        "No usar imágenes de tribunales genéricos o martillos de juez para evitar el cliché legal barato.",
+        "El contraste entre el blanco del set y el negro del expediente debe ser el eje de la edición."
+    ],
+    "audit": {
+        "audit_version": "scriptdna-creative-audit-v1",
+        "status": "passed",
+        "overall_score": 8.4,
+        "scores": {
+            "coherencia_estrategica": 5.0,
+            "alineacion_visual": 7.0,
+            "consistencia_mensaje": 10,
+            "adaptacion_canal": 10.0,
+            "calidad_prompts": 10
+        },
+        "recommendations": [
+            "La Big Idea es demasiado genérica; reconectar con el Insight Lateral del análisis."
+        ],
+        "generated_at": "2026-05-06T20:58:28.628865Z",
+        "metadata": {
+            "brand_name": "MassTest_Reels",
+            "video_id": "REEL_3",
+            "pack_version": "scriptdna-creative-pack-v2"
+        }
+    }
+}

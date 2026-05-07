@@ -1,0 +1,140 @@
+{
+    "pack_metadata": {
+        "brand_name": "MassTest_Reels",
+        "video_id": "REEL_1",
+        "pack_version": "scriptdna-creative-pack-v2",
+        "generated_for": [
+            "Midjourney",
+            "Ideogram",
+            "Canva",
+            "Meta Ads",
+            "TikTok",
+            "LinkedIn"
+        ],
+        "source_confidence": "fuerte",
+        "generated_at": "2026-05-06T20:51:40.264851Z",
+        "generation_mode": "ai",
+        "provider": "gemini",
+        "model": "gemini-flash-latest"
+    },
+    "strategy": {
+        "big_idea": "Sistemas de protección legal en momentos críticos.",
+        "core_tension": "El colapso emocional frente a una fecha de corte vs. la precisión quirúrgica de un sistema legal experto.",
+        "audience": "Individuos con procesos migratorios activos que buscan soluciones de alto nivel y baja fricción.",
+        "creative_angle": "Quiet Luxury Legal: Menos ruido, más resultados. El alivio no es suerte, es un sistema.",
+        "offer_message": "Postergamos tu corte de inmigración con sistemas de gestión de casos de alta eficiencia."
+    },
+    "channel_packs": [
+        {
+            "channel": "instagram",
+            "objective": "engagement",
+            "asset_type": "reel cover",
+            "aspect_ratio": "9:16",
+            "hook": "¿Corte el 20 de abril y sin abogado?",
+            "copy_overlay": "SISTEMA DE PROTECCIÓN LEGAL",
+            "caption_or_primary_text": "El pánico no gana casos. Los sistemas sí. Logramos el aplazamiento de corte en solo 3 días cuando el tiempo parecía agotado. No es suerte, es metodología.",
+            "cta": "Reserva una llamada de estrategia",
+            "prompt": "Minimalist high-fidelity portrait of a professional woman with glasses, neutral beige and white outfit, soft cinematic lighting, blurred professional interior background with a green plant, high contrast, 'Quiet Luxury' aesthetic, space for typography on the top half, 8k resolution, shot on 35mm lens.",
+            "negative_prompt": "barato, saturado, colores neón, desorden, baja calidad, marketing agresivo",
+            "tool_notes": "Ideal para generar en Midjourney v6 y añadir texto en Canva.",
+            "why_it_works": "Transmite autoridad inmediata y calma, contrastando con el estrés del problema migratorio.",
+            "quality_badge": "fuerte",
+            "id": "creative-01"
+        },
+        {
+            "channel": "meta_ads",
+            "objective": "leads",
+            "asset_type": "adset visual",
+            "aspect_ratio": "4:5",
+            "hook": "Tu proceso merece un sistema, no solo un trámite.",
+            "copy_overlay": "MOCIÓN APROBADA EN 72 HORAS",
+            "caption_or_primary_text": "Cuando la incertidumbre de una corte de inmigración se vuelve insostenible, la respuesta es un sistema de gestión experto. No esperes al último minuto.",
+            "cta": "Reserva una llamada de estrategia",
+            "prompt": "Clean professional office desk, high-end stationery, a sleek tablet showing a 'Case Approved' notification, soft natural light from a window, grey and beige color palette, minimalist decor, focus on the document, hyper-realistic, depth of field.",
+            "negative_prompt": "imágenes de stock genéricas, billetes, juzgados dramáticos, martillos de juez",
+            "tool_notes": "Usar Ideogram para asegurar que el texto 'Case Approved' sea legible.",
+            "why_it_works": "Utiliza elementos de 'Quiet Luxury' para elevar la percepción del servicio legal.",
+            "quality_badge": "fuerte",
+            "id": "creative-02"
+        },
+        {
+            "channel": "linkedin",
+            "objective": "awareness",
+            "asset_type": "quote card",
+            "aspect_ratio": "1:1",
+            "hook": "La urgencia es el síntoma; el sistema es la cura.",
+            "copy_overlay": "El 20 de septiembre de 2027: El valor del tiempo comprado.",
+            "caption_or_primary_text": "En la gestión de casos críticos, la velocidad no es el único factor; la precisión lo es todo. Reprogramar una corte de 2024 a 2027 en 3 días no es un milagro, es eficiencia operativa aplicada a la ley.",
+            "cta": "Reserva una llamada de estrategia",
+            "prompt": "Macro shot of a high-end designer watch next to a clean legal folder on a marble table, professional expert atmosphere, soft shadows, minimalist, high fidelity.",
+            "negative_prompt": "reloj de baja calidad, colores chillones, desorden de oficina",
+            "tool_notes": "Ideal para profesionales que valoran la estructura y los resultados medibles.",
+            "why_it_works": "Conecta la gestión legal con la gestión de negocios de alto nivel.",
+            "quality_badge": "fuerte",
+            "id": "creative-03"
+        }
+    ],
+    "adsets": [
+        {
+            "name": "Performance_Legal_Urgency",
+            "objective": "leads",
+            "audience": "Dueños de negocios y profesionales con casos migratorios pendientes",
+            "angle": "Autoridad y Rapidez",
+            "primary_text": "Tienes corte de inmigración, pero aún no cuentas con un abogado. Resolvemos la incertidumbre con un sistema que prioriza tu tranquilidad. Resultados en días, no meses.",
+            "headline": "Moción de aplazamiento: Aprobada en 3 días",
+            "description": "Expertos en sistemas de automatización de casos complejos.",
+            "visual_prompt": "Oradora profesional en set minimalista con planta de fondo, subtítulos dinámicos en rojo sobre blanco.",
+            "cta": "Reserva una llamada de estrategia"
+        }
+    ],
+    "message_variants": [
+        {
+            "use": "dm",
+            "tone": "Directo y experto",
+            "message": "Entiendo la presión de tener una fecha de corte próxima. Hemos desarrollado un sistema que ha logrado aplazamientos en 72 horas para casos similares al suyo. ¿Hablamos?"
+        },
+        {
+            "use": "caption",
+            "tone": "Quiet Luxury",
+            "message": "La excelencia en el servicio legal se mide en la paz mental del cliente. De la angustia de abril a la seguridad de 2027. Así funciona nuestro sistema."
+        }
+    ],
+    "external_tool_exports": [
+        {
+            "tool": "Midjourney",
+            "instructions": "Generar imágenes de marca con estética minimalista y luz suave.",
+            "copy_ready_prompt": "/imagine prompt: professional minimalist law office interior, woman with glasses, beige aesthetic, green indoor plant, cinematic lighting, high fidelity, 8k --ar 16:9"
+        },
+        {
+            "tool": "Ideogram",
+            "instructions": "Para creativos con texto tipográfico preciso.",
+            "copy_ready_prompt": "A vertical 9:16 poster with the text 'SISTEMA LEGAL' in bold minimalist sans-serif typography, background is a blurred high-end office, quiet luxury style, professional palette."
+        }
+    ],
+    "production_notes": [
+        "Mantener la paleta de colores en beige, blanco y gris para reforzar el 'Quiet Luxury'.",
+        "Los subtítulos dinámicos deben usar el color rojo detectado en el video original solo para resaltar palabras clave como 'APROBADA' o '3 DÍAS'.",
+        "Asegurar que la planta verde esté presente en los visuales para dar continuidad orgánica al set del video original."
+    ],
+    "audit": {
+        "audit_version": "scriptdna-creative-audit-v1",
+        "status": "passed",
+        "overall_score": 7.72,
+        "scores": {
+            "coherencia_estrategica": 5.0,
+            "alineacion_visual": 7.0,
+            "consistencia_mensaje": 8.0,
+            "adaptacion_canal": 10.0,
+            "calidad_prompts": 8.58
+        },
+        "recommendations": [
+            "La Big Idea es demasiado genérica; reconectar con el Insight Lateral del análisis."
+        ],
+        "generated_at": "2026-05-06T20:51:40.265269Z",
+        "metadata": {
+            "brand_name": "MassTest_Reels",
+            "video_id": "REEL_1",
+            "pack_version": "scriptdna-creative-pack-v2"
+        }
+    }
+}

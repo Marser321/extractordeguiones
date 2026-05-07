@@ -1,0 +1,39 @@
+{
+    "audit_version": "scriptdna-context-audit-v1",
+    "status": "passed",
+    "brand_name": "MassTest_Reels",
+    "video_id": "REEL_4",
+    "generated_at": "2026-05-06T20:58:51.651954Z",
+    "overall_score": 7.91,
+    "scores": {
+        "fidelidad": 9.4,
+        "alineacion_marca": 10,
+        "especificidad": 6.69,
+        "pensamiento_lateral": 8.5,
+        "uso_contexto_visual": 7.0,
+        "completitud_json": 10.0,
+        "utilidad_marketing": 10,
+        "alucinacion": 2.0,
+        "densidad_info": 8.0,
+        "cumplimiento_marca": 10,
+        "estructura_persuasiva": 10,
+        "quiet_luxury_score": 7.8,
+        "engagement_emocional": 9.2,
+        "veracidad": 1.0,
+        "estetica_visual": 7.0,
+        "coherencia_visual_narrativa": 10
+    },
+    "warnings": [
+        "alucinacion bajo (2.0/10).",
+        "veracidad bajo (1.0/10)."
+    ],
+    "promoted_patterns": true,
+    "refinement_instructions": null,
+    "context": {
+        "script_chars": 372,
+        "visual_context_status": "available",
+        "prompt_version": "scriptdna-business-v3",
+        "provider": null,
+        "model": null
+    }
+}

@@ -1,0 +1,223 @@
+{
+    "resumen_ejecutivo": "## Análisis: El Costo de la Invisibilidad Administrativa\n\n**Tema:** Procedimientos obligatorios de notificación de cambio de domicilio ante USCIS y EOIR.\n**Insight Lateral:** La paradoja de la 'Libertad de Movimiento'. En el mundo del 'Quiet Luxury' y el nomadismo digital, el silencio administrativo es letal. No se trata de un trámite, se trata de evitar el 'exilio burocrático' por un error de 0 dólares.\n**Objetivo:** Posicionar a la marca como el guardián técnico que domina la micro-burocracia para proteger el estatus del cliente.\n**Tono:** Experto, sobrio y preventivo. Evita la alarma innecesaria pero enfatiza la precisión.\n**Oportunidad de Negocio:** Capturar a una audiencia que ya tiene procesos abiertos pero carece de sistemas de seguimiento, elevando el valor percibido del servicio de asesoría técnica.",
+    "hooks": [
+        {
+            "hook": "Error común, mudarte y no avisar emigración",
+            "uso": "reel",
+            "rationale": "Abre con una pregunta de dinero específica que fuerza al espectador a compararse con el escenario planteado."
+        },
+        {
+            "hook": "¿Invertirías 3.000 para construir una vía a 30.000 al mes?",
+            "uso": "ad",
+            "rationale": "Convierte la promesa en una tensión riesgo-retorno, útil para filtrar leads con intención real."
+        },
+        {
+            "hook": "El negocio no es el trámite: es el sistema que convierte demanda en ventas.",
+            "uso": "post",
+            "rationale": "Mueve la conversación de servicio puntual a mecanismo de crecimiento, más defendible para pauta."
+        },
+        {
+            "hook": "Si el margen existe, el cuello de botella no es la idea: es capturar y cerrar la demanda.",
+            "uso": "short",
+            "rationale": "Introduce pensamiento lateral y prepara la necesidad de CRM, masterclass o sistema comercial."
+        }
+    ],
+    "momentos_virales": [
+        {
+            "titulo": "Pregunta de facturación",
+            "descripcion": "Abrir con el desafío de facturar 30.000 dólares al mes y pedir al espectador que elija el negocio más rápido.",
+            "duracion_sugerida": "0-12s",
+            "motivo_retencion": "La cifra concreta y la pregunta competitiva generan curiosidad inmediata."
+        },
+        {
+            "titulo": "Comparación inversión-retorno",
+            "descripcion": "Contrastar invertir 3.000 con la posibilidad de generar 30.000 para instalar la tensión principal.",
+            "duracion_sugerida": "12-28s",
+            "motivo_retencion": "El espectador se queda para entender si la relación riesgo-retorno hace sentido."
+        },
+        {
+            "titulo": "Sistema de cierre",
+            "descripcion": "Presentar CRM, seguimiento o masterclass como mecanismo que convierte el interés en operación.",
+            "duracion_sugerida": "28-55s",
+            "motivo_retencion": "Pasa de promesa a proceso, elevando credibilidad."
+        }
+    ],
+    "estructura_narrativa": {
+        "patron": [
+            "apertura",
+            "tension",
+            "valor",
+            "cta"
+        ],
+        "notas": "La curva de retención se apoya en la dicotomía: 'Error Común' (Tensión) vs 'Solución Digital' (Valor). Se recomienda corregir los errores fonéticos del guion (UCIES por USCIS, ODIR por EOIR) mediante subtítulos dinámicos de lujo."
+    },
+    "ideas_reels": [
+        {
+            "titulo": "La pregunta de los 30K",
+            "estructura": "Texto grande con la pregunta, corte al orador, tres negocios posibles, CTA a comentar o reservar.",
+            "cta": "Reserva una llamada de estrategia",
+            "insight_lateral": "El reel funciona como test de mercado: quien responde ya está imaginando ROI."
+        },
+        {
+            "titulo": "3K contra 30K",
+            "estructura": "Pantalla dividida inversión/retorno, objeción rápida, explicación del sistema, CTA.",
+            "cta": "Reserva una llamada de estrategia",
+            "insight_lateral": "La pieza transforma una compra en apuesta racional de negocio."
+        },
+        {
+            "titulo": "El CRM invisible",
+            "estructura": "Hook sobre leads perdidos, ejemplo del proceso, visual de pipeline, invitación a masterclass.",
+            "cta": "Reserva una llamada de estrategia",
+            "insight_lateral": "Vende infraestructura comercial sin hablar como software genérico."
+        }
+    ],
+    "ads": [
+        {
+            "concepto": "Reto de facturación mensual",
+            "angulo": "aspiración cuantificada",
+            "copy": "Error común, mudarte y no avisar emigración Si quieres entender el sistema detrás de esa respuesta, este es el siguiente paso.",
+            "cta": "Reserva una llamada de estrategia"
+        },
+        {
+            "concepto": "Inversión con lógica de retorno",
+            "angulo": "riesgo calculado",
+            "copy": "No se trata de gastar en marketing. Se trata de construir una ruta medible entre atención, seguimiento y cierre.",
+            "cta": "Reserva una llamada de estrategia"
+        },
+        {
+            "concepto": "Masterclass como filtro",
+            "angulo": "autoridad práctica",
+            "copy": "Mira el proceso completo antes de invertir tiempo o dinero en otro canal que no sabes medir.",
+            "cta": "Reserva una llamada de estrategia"
+        }
+    ],
+    "brief_creativo": "## Brief: El Guardián del Expediente\n\n**Objetivo:** Convertir un trámite 'aburrido' en un pilar de seguridad migratoria.\n**Audiencia:** Inmigrantes con casos activos que valoran el orden y la sofisticación.\n**Mensaje Central:** El sistema no perdona el silencio. La tecnología es tu aliada para mantenerte visible y seguro.\n**Dirección Visual:** Mantener el look 'Talking Head' con la mujer de gafas oscuras. Usar el fondo blanco y la iluminación natural para reforzar el concepto de 'Transparencia' y 'Quiet Luxury'. Los overlays deben ser minimalistas, usando tipografías sans-serif de alto contraste.",
+    "captions": [
+        {
+            "plataforma": "Instagram",
+            "caption": "Error común, mudarte y no avisar emigración\n\nLa respuesta no está solo en el negocio. Está en el sistema que captura demanda y la convierte en ventas.\n\nReserva una llamada de estrategia",
+            "hashtags": [
+                "#negocios",
+                "#marketing",
+                "#ventas"
+            ]
+        },
+        {
+            "plataforma": "TikTok",
+            "caption": "La pregunta no es cuánto cuesta empezar. Es qué sistema puede justificar el retorno.",
+            "hashtags": [
+                "#emprendedores",
+                "#negociosonline"
+            ]
+        },
+        {
+            "plataforma": "LinkedIn",
+            "caption": "Una buena pieza de performance no empieza con una promesa; empieza con una tensión económica que el mercado reconoce.",
+            "hashtags": [
+                "#performance",
+                "#growth"
+            ]
+        }
+    ],
+    "calendario_publicacion": [
+        {
+            "dia": "Día 1",
+            "pieza": "Reel pregunta 30K",
+            "objetivo": "Capturar atención y comentarios cualificados."
+        },
+        {
+            "dia": "Día 2",
+            "pieza": "Carrusel inversión vs retorno",
+            "objetivo": "Educar y guardar."
+        },
+        {
+            "dia": "Día 3",
+            "pieza": "Adset masterclass",
+            "objetivo": "Generar reservas o leads."
+        },
+        {
+            "dia": "Día 4",
+            "pieza": "Story con encuesta",
+            "objetivo": "Medir objeciones y activar DM."
+        }
+    ],
+    "prompts_visuales": [
+        {
+            "uso": "reel cover",
+            "prompt": "Portada vertical 9:16 para MassTest_Reels, orador masculino con gafas en entorno exterior verde desenfocado, texto grande: '¿30K al mes?', composición con rostro a un tercio, contraste alto, estética Minimalista, high-fidelity, contrastado, espacio seguro para subtítulo y CTA.",
+            "negative_prompt": "texto ilegible, cifras pequeñas, promesas exageradas, fondo saturado, rostro distorsionado"
+        },
+        {
+            "uso": "meta ad",
+            "prompt": "Creativo 4:5 de performance para explicar inversión vs retorno, visual central con orador gesticulando, overlays '3K inversión' y '30K objetivo', fondo natural profesional, jerarquía clara, CTA: Reserva una llamada de estrategia.",
+            "negative_prompt": "gráficos financieros falsos, lujo genérico, billetes irreales, exceso de texto"
+        },
+        {
+            "uso": "thumbnail",
+            "prompt": "Thumbnail 16:9 con primer plano del orador, fondo verde con bokeh, expresión de pregunta, copy grande '¿Qué negocio escala más rápido?', flecha sutil hacia cifra 30K, estilo nítido y creíble.",
+            "negative_prompt": "clickbait confuso, texto cortado, demasiados iconos"
+        },
+        {
+            "uso": "carousel",
+            "prompt": "Carrusel 4:5 educativo, slide 1 pregunta 30K, slide 2 inversión 3K, slide 3 sistema CRM, slide 4 masterclass, usar paleta sobria, tipografía pesada, composición editorial limpia.",
+            "negative_prompt": "plantilla genérica, saturación excesiva, layouts desordenados"
+        }
+    ],
+    "prompt_base_marca": {
+        "brand_name": "MassTest_Reels",
+        "tone": "Directo, experto, Quiet Luxury",
+        "visual_direction": "Minimalista, high-fidelity, contrastado, fondos limpios",
+        "do": [
+            "Usar terminología técnica precisa (USCIS, EOIR)",
+            "Mantener estética de lujo silencioso",
+            "Resaltar la rapidez y el sistema"
+        ],
+        "dont": [
+            "Usar palabras como 'barato' o 'increíble'",
+            "Visuales saturados o ruidosos",
+            "Marketing agresivo tipo 'oferta'"
+        ]
+    },
+    "retrospectiva": {
+        "que_funciono": [
+            "Detección de errores fonéticos críticos en el audio original",
+            "Integración de elementos visuales específicos (smartphone, vestimenta beige)"
+        ],
+        "que_falto": [
+            "Mayor profundidad en la consecuencia legal específica (ej. órdenes de deportación in absentia)"
+        ],
+        "siguiente_mejora": "Incluir un comparativo visual de 'Antes y Después' de un expediente ordenado vs uno perdido por falta de notificación.",
+        "generation_mode": "ai"
+    },
+    "_quality_repair": {
+        "applied": true,
+        "reason": "Se detectaron placeholders, schema copiado o baja densidad de piezas.",
+        "source": "script_visual_brand_deterministic_repair"
+    },
+    "_prompt_version": "scriptdna-business-v3",
+    "_context_inputs": {
+        "prompt_version": "scriptdna-business-v3",
+        "script_chars": 305,
+        "script_truncated": false,
+        "brand_profile_fields": [
+            "audience",
+            "brand_name",
+            "cta",
+            "forbidden_words",
+            "offer",
+            "preferred_formats",
+            "tone",
+            "visual_style"
+        ],
+        "historical_pattern_counts": {
+            "hooks_frecuentes": 15,
+            "estructuras_ganadoras": 39,
+            "angulos_de_venta": 3,
+            "reglas_de_estilo": 36,
+            "pattern_candidates": 120,
+            "pattern_metadata": 120
+        },
+        "visual_context_available": true,
+        "visual_context_status": "available"
+    }
+}

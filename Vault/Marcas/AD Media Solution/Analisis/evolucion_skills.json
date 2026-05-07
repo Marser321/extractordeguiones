@@ -1,0 +1,47 @@
+{
+    "history": [
+        {
+            "score": 7.81,
+            "improvements": [
+                "especificidad bajo (5.84/10).",
+                "alucinacion bajo (0/10)."
+            ],
+            "timestamp": "2026-05-05T18:48:35.838591Z"
+        },
+        {
+            "score": 7.86,
+            "improvements": [
+                "alucinacion bajo (0/10).",
+                "veracidad bajo (4.0/10)."
+            ],
+            "timestamp": "2026-05-06T20:06:32.008403Z"
+        },
+        {
+            "score": 8.48,
+            "improvements": [
+                "veracidad bajo (4.0/10)."
+            ],
+            "timestamp": "2026-05-06T20:12:27.718111Z"
+        },
+        {
+            "score": 7.51,
+            "improvements": [
+                "especificidad bajo (5.84/10).",
+                "alucinacion bajo (0/10).",
+                "veracidad bajo (2.5/10).",
+                "Estructura débil: Falta un Hook claro o un CTA directo en algunos módulos."
+            ],
+            "timestamp": "2026-05-06T20:29:25.043678Z"
+        },
+        {
+            "score": 8.14,
+            "improvements": [
+                "especificidad bajo (5.84/10).",
+                "veracidad bajo (2.5/10).",
+                "Estructura débil: Falta un Hook claro o un CTA directo en algunos módulos."
+            ],
+            "timestamp": "2026-05-06T20:30:16.261673Z"
+        }
+    ],
+    "current_level": "intermediate"
+}

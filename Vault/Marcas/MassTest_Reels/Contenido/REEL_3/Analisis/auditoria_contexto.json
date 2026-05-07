@@ -1,0 +1,40 @@
+{
+    "audit_version": "scriptdna-context-audit-v1",
+    "status": "passed",
+    "brand_name": "MassTest_Reels",
+    "video_id": "REEL_3",
+    "generated_at": "2026-05-06T20:58:03.744477Z",
+    "overall_score": 7.27,
+    "scores": {
+        "fidelidad": 8.36,
+        "alineacion_marca": 10,
+        "especificidad": 6.69,
+        "pensamiento_lateral": 6.7,
+        "uso_contexto_visual": 6.67,
+        "completitud_json": 10.0,
+        "utilidad_marketing": 10,
+        "alucinacion": 0.4,
+        "densidad_info": 8.0,
+        "cumplimiento_marca": 8.0,
+        "estructura_persuasiva": 8.0,
+        "quiet_luxury_score": 7.1,
+        "engagement_emocional": 8.4,
+        "veracidad": 1.0,
+        "estetica_visual": 7.0,
+        "coherencia_visual_narrativa": 10
+    },
+    "warnings": [
+        "alucinacion bajo (0.4/10).",
+        "veracidad bajo (1.0/10).",
+        "USO DE PALABRAS PROHIBIDAS: Revisa el perfil de marca y elimina términos no permitidos."
+    ],
+    "promoted_patterns": true,
+    "refinement_instructions": "AUDITORIA DETECTÓ DEFICIENCIAS. REFINA EL OUTPUT SIGUIENDO ESTO:\n- Evitar frases genéricas. Usar datos concretos y ejemplos precisos.\n- Profundizar en el 'insight lateral'. Ir más allá de lo obvio.\n- ELIMINAR nombres, marcas o hechos que no estén en el input proporcionado.\n- CORREGIR: alucinacion bajo (0.4/10).\n- CORREGIR: veracidad bajo (1.0/10).\n- CORREGIR: USO DE PALABRAS PROHIBIDAS: Revisa el perfil de marca y elimina términos no permitidos.",
+    "context": {
+        "script_chars": 370,
+        "visual_context_status": "available",
+        "prompt_version": "scriptdna-business-v3",
+        "provider": null,
+        "model": null
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "patron": [
+        "apertura",
+        "tension",
+        "valor",
+        "cta"
+    ],
+    "notas": "analisis de curva de retención"
+}

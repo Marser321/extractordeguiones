@@ -1,0 +1,21 @@
+{
+    "escenario": "Entorno exterior luminoso, posiblemente una terraza o jardín con abundante vegetación natural. La estética es orgánica, despejada y transmite una sensación de accesibilidad y transparencia, contrastando el tema legal serio con un ambiente relajado.",
+    "elementos_clave": [
+        "Mujer (portavoz) con actitud empática y gesticulación activa",
+        "Lentes de pasta negros que aportan un aire intelectual/profesional",
+        "Computadora portátil sobre una mesa de madera rústica",
+        "Fondo con vegetación desenfocada (efecto bokeh)",
+        "Vestimenta en tonos neutros (blanco y tierra) que comunica calma"
+    ],
+    "estilo_visual": "Formato vertical (9:16) optimizado para redes sociales (Reels/TikTok). Estilo de 'talking head' orgánico y directo a la cámara, con iluminación natural que busca generar confianza inmediata con el espectador.",
+    "sugerencias_creativas": [
+        "Incluir subtítulos dinámicos (estilo captions) resaltando en colores contrastantes palabras como 'MOCIÓN', 'TIEMPO' y 'ABOGADO'.",
+        "Incorporar un 'b-roll' breve de documentos legales o un mazo de juez cuando se mencione la 'moción de aplazamiento' para reforzar el concepto visualmente.",
+        "Usar cortes rápidos (jump cuts) entre frases para aumentar el dinamismo y mantener la atención en el ritmo del guion.",
+        "Añadir un cronómetro o elemento visual de cuenta regresiva cuando se diga 'el tiempo no perdona' para generar sentido de urgencia.",
+        "Finalizar con un 'call to action' (CTA) gráfico que invite a enviar un mensaje directo para revisión de casos."
+    ],
+    "ocr_detectado": [],
+    "_ai_provider": "gemini",
+    "_ai_model": "gemini-flash-latest"
+}

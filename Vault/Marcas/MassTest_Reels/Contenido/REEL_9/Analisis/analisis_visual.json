@@ -1,0 +1,21 @@
+{
+    "escenario": "Entorno residencial suburbano de nivel socioeconómico alto durante el día. Se observa una calle asfaltada, una casa de arquitectura moderna con acabados en madera, césped bien cuidado y árboles frondosos. La luz solar es intensa y natural, proyectando sombras marcadas, lo que transmite una imagen de éxito y claridad.",
+    "elementos_clave": [
+        "Presentador: hombre con gafas, barba corta, vistiendo un conjunto de saco y pantalón color crema con camiseta negra (estilo business casual).",
+        "Micrófono de solapa (lavalier) negro visible en la camiseta.",
+        "Arquitectura moderna: casa de fondo con líneas limpias.",
+        "Naturaleza: árboles altos y jardín verde.",
+        "Vehículo recreativo cubierto al fondo (sugiere un estilo de vida de éxito)."
+    ],
+    "estilo_visual": "Estilo 'Walk and Talk' (caminar y hablar a cámara) que genera dinamismo y cercanía. La profundidad de campo es corta en los primeros planos (efecto bokeh), manteniendo el enfoque nítido en el presentador mientras el fondo se desenfoca suavemente para evitar distracciones.",
+    "sugerencias_creativas": [
+        "Insertar apoyos visuales (B-roll) de testimonios de clientes reales cuando el guion mencione 'esto es lo que tienen que decir'.",
+        "Añadir gráficos animados (motion graphics) que muestren la interfaz del CRM para visualizar la herramienta técnica.",
+        "Incluir subtítulos dinámicos con palabras resaltadas en colores contrastantes para mantener la atención del espectador.",
+        "Utilizar un recuadro o 'pop-up' con un contador de cupos cuando mencione que son 'limitados' para aumentar el sentido de urgencia.",
+        "Colocar un cintillo inferior (lower third) con el nombre del presentador y su cargo para generar autoridad desde el inicio."
+    ],
+    "ocr_detectado": [],
+    "_ai_provider": "gemini",
+    "_ai_model": "gemini-flash-latest"
+}

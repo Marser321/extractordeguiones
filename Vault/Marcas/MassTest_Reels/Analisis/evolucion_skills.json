@@ -1,0 +1,1006 @@
+{
+    "history": [
+        {
+            "score": 7.85,
+            "improvements": [
+                "fidelidad bajo (5.25/10).",
+                "alucinacion bajo (0/10)."
+            ],
+            "timestamp": "2026-05-05T18:26:58.683687Z"
+        },
+        {
+            "score": 7.85,
+            "improvements": [
+                "fidelidad bajo (5.25/10).",
+                "alucinacion bajo (0/10)."
+            ],
+            "timestamp": "2026-05-05T18:26:58.687590Z"
+        },
+        {
+            "score": 7.81,
+            "improvements": [
+                "alucinacion bajo (0/10)."
+            ],
+            "timestamp": "2026-05-05T18:28:40.230518Z"
+        },
+        {
+            "score": 7.81,
+            "improvements": [
+                "alucinacion bajo (0/10)."
+            ],
+            "timestamp": "2026-05-05T18:28:40.237004Z"
+        },
+        {
+            "score": 8.33,
+            "improvements": [
+                "alucinacion bajo (0/10)."
+            ],
+            "timestamp": "2026-05-05T18:31:34.198370Z"
+        },
+        {
+            "score": 8.33,
+            "improvements": [
+                "alucinacion bajo (0/10)."
+            ],
+            "timestamp": "2026-05-05T18:31:34.205198Z"
+        },
+        {
+            "score": 8.21,
+            "improvements": [
+                "alucinacion bajo (0/10)."
+            ],
+            "timestamp": "2026-05-05T18:32:33.818355Z"
+        },
+        {
+            "score": 8.21,
+            "improvements": [
+                "alucinacion bajo (0/10)."
+            ],
+            "timestamp": "2026-05-05T18:32:33.825003Z"
+        },
+        {
+            "score": 8.13,
+            "improvements": [
+                "alucinacion bajo (0/10)."
+            ],
+            "timestamp": "2026-05-05T18:33:31.333335Z"
+        },
+        {
+            "score": 8.13,
+            "improvements": [
+                "alucinacion bajo (0/10)."
+            ],
+            "timestamp": "2026-05-05T18:33:31.339245Z"
+        },
+        {
+            "score": 8.21,
+            "improvements": [
+                "alucinacion bajo (0/10)."
+            ],
+            "timestamp": "2026-05-05T18:35:07.441023Z"
+        },
+        {
+            "score": 8.21,
+            "improvements": [
+                "alucinacion bajo (0/10)."
+            ],
+            "timestamp": "2026-05-05T18:35:07.448274Z"
+        },
+        {
+            "score": 8.26,
+            "improvements": [
+                "alucinacion bajo (0/10)."
+            ],
+            "timestamp": "2026-05-05T18:36:39.239325Z"
+        },
+        {
+            "score": 8.26,
+            "improvements": [
+                "alucinacion bajo (0/10)."
+            ],
+            "timestamp": "2026-05-05T18:36:39.246416Z"
+        },
+        {
+            "score": 7.84,
+            "improvements": [
+                "alucinacion bajo (0/10)."
+            ],
+            "timestamp": "2026-05-05T18:38:38.043498Z"
+        },
+        {
+            "score": 7.84,
+            "improvements": [
+                "alucinacion bajo (0/10)."
+            ],
+            "timestamp": "2026-05-05T18:38:38.051676Z"
+        },
+        {
+            "score": 8.2,
+            "improvements": [
+                "alucinacion bajo (0/10)."
+            ],
+            "timestamp": "2026-05-05T18:39:35.379074Z"
+        },
+        {
+            "score": 8.2,
+            "improvements": [
+                "alucinacion bajo (0/10)."
+            ],
+            "timestamp": "2026-05-05T18:39:35.386457Z"
+        },
+        {
+            "score": 7.76,
+            "improvements": [
+                "uso_contexto_visual bajo (5.0/10).",
+                "alucinacion bajo (0/10)."
+            ],
+            "timestamp": "2026-05-05T18:40:20.286294Z"
+        },
+        {
+            "score": 7.76,
+            "improvements": [
+                "uso_contexto_visual bajo (5.0/10).",
+                "alucinacion bajo (0/10)."
+            ],
+            "timestamp": "2026-05-05T18:40:20.295454Z"
+        },
+        {
+            "score": 7.75,
+            "improvements": [
+                "uso_contexto_visual bajo (5.0/10).",
+                "alucinacion bajo (0/10)."
+            ],
+            "timestamp": "2026-05-05T18:41:20.152024Z"
+        },
+        {
+            "score": 7.75,
+            "improvements": [
+                "uso_contexto_visual bajo (5.0/10).",
+                "alucinacion bajo (0/10)."
+            ],
+            "timestamp": "2026-05-05T18:41:20.165156Z"
+        },
+        {
+            "score": 7.76,
+            "improvements": [
+                "uso_contexto_visual bajo (5.0/10).",
+                "alucinacion bajo (0/10)."
+            ],
+            "timestamp": "2026-05-05T18:41:59.103401Z"
+        },
+        {
+            "score": 7.76,
+            "improvements": [
+                "uso_contexto_visual bajo (5.0/10).",
+                "alucinacion bajo (0/10)."
+            ],
+            "timestamp": "2026-05-05T18:41:59.110921Z"
+        },
+        {
+            "score": 8.33,
+            "improvements": [
+                "alucinacion bajo (0/10)."
+            ],
+            "timestamp": "2026-05-05T18:48:35.859754Z"
+        },
+        {
+            "score": 8.21,
+            "improvements": [
+                "alucinacion bajo (0/10)."
+            ],
+            "timestamp": "2026-05-05T18:48:35.864764Z"
+        },
+        {
+            "score": 8.13,
+            "improvements": [
+                "alucinacion bajo (0/10)."
+            ],
+            "timestamp": "2026-05-05T18:48:35.869633Z"
+        },
+        {
+            "score": 8.21,
+            "improvements": [
+                "alucinacion bajo (0/10)."
+            ],
+            "timestamp": "2026-05-05T18:48:35.874721Z"
+        },
+        {
+            "score": 8.26,
+            "improvements": [
+                "alucinacion bajo (0/10)."
+            ],
+            "timestamp": "2026-05-05T18:48:35.880084Z"
+        },
+        {
+            "score": 7.84,
+            "improvements": [
+                "alucinacion bajo (0/10)."
+            ],
+            "timestamp": "2026-05-05T18:48:35.885111Z"
+        },
+        {
+            "score": 8.2,
+            "improvements": [
+                "alucinacion bajo (0/10)."
+            ],
+            "timestamp": "2026-05-05T18:48:35.890155Z"
+        },
+        {
+            "score": 7.76,
+            "improvements": [
+                "uso_contexto_visual bajo (5.0/10).",
+                "alucinacion bajo (0/10)."
+            ],
+            "timestamp": "2026-05-05T18:48:35.895358Z"
+        },
+        {
+            "score": 7.75,
+            "improvements": [
+                "uso_contexto_visual bajo (5.0/10).",
+                "alucinacion bajo (0/10)."
+            ],
+            "timestamp": "2026-05-05T18:48:35.900433Z"
+        },
+        {
+            "score": 7.76,
+            "improvements": [
+                "uso_contexto_visual bajo (5.0/10).",
+                "alucinacion bajo (0/10)."
+            ],
+            "timestamp": "2026-05-05T18:48:35.905306Z"
+        },
+        {
+            "score": 7.75,
+            "improvements": [
+                "alucinacion bajo (0/10)."
+            ],
+            "timestamp": "2026-05-05T21:10:19.397136Z"
+        },
+        {
+            "score": 7.75,
+            "improvements": [
+                "alucinacion bajo (0/10)."
+            ],
+            "timestamp": "2026-05-05T21:10:19.408316Z"
+        },
+        {
+            "score": 7.63,
+            "improvements": [
+                "alucinacion bajo (0/10).",
+                "USO DE PALABRAS PROHIBIDAS: Revisa el perfil de marca y elimina términos no permitidos."
+            ],
+            "timestamp": "2026-05-05T21:11:01.989492Z"
+        },
+        {
+            "score": 7.63,
+            "improvements": [
+                "alucinacion bajo (0/10).",
+                "USO DE PALABRAS PROHIBIDAS: Revisa el perfil de marca y elimina términos no permitidos."
+            ],
+            "timestamp": "2026-05-05T21:11:02.001282Z"
+        },
+        {
+            "score": 7.37,
+            "improvements": [
+                "alucinacion bajo (0/10).",
+                "quiet_luxury_score bajo (5.6/10).",
+                "USO DE PALABRAS PROHIBIDAS: Revisa el perfil de marca y elimina términos no permitidos.",
+                "Tono demasiado agresivo (Loud Marketing): Se recomienda suavizar el lenguaje hacia el 'Quiet Luxury'."
+            ],
+            "timestamp": "2026-05-05T21:11:42.447500Z"
+        },
+        {
+            "score": 7.37,
+            "improvements": [
+                "alucinacion bajo (0/10).",
+                "quiet_luxury_score bajo (5.6/10).",
+                "USO DE PALABRAS PROHIBIDAS: Revisa el perfil de marca y elimina términos no permitidos.",
+                "Tono demasiado agresivo (Loud Marketing): Se recomienda suavizar el lenguaje hacia el 'Quiet Luxury'."
+            ],
+            "timestamp": "2026-05-05T21:11:42.457587Z"
+        },
+        {
+            "score": 7.36,
+            "improvements": [
+                "alucinacion bajo (0/10).",
+                "quiet_luxury_score bajo (3.3/10).",
+                "USO DE PALABRAS PROHIBIDAS: Revisa el perfil de marca y elimina términos no permitidos.",
+                "Tono demasiado agresivo (Loud Marketing): Se recomienda suavizar el lenguaje hacia el 'Quiet Luxury'."
+            ],
+            "timestamp": "2026-05-05T21:12:18.703859Z"
+        },
+        {
+            "score": 7.36,
+            "improvements": [
+                "alucinacion bajo (0/10).",
+                "quiet_luxury_score bajo (3.3/10).",
+                "USO DE PALABRAS PROHIBIDAS: Revisa el perfil de marca y elimina términos no permitidos.",
+                "Tono demasiado agresivo (Loud Marketing): Se recomienda suavizar el lenguaje hacia el 'Quiet Luxury'."
+            ],
+            "timestamp": "2026-05-05T21:12:18.714701Z"
+        },
+        {
+            "score": 7.89,
+            "improvements": [
+                "alucinacion bajo (0/10).",
+                "USO DE PALABRAS PROHIBIDAS: Revisa el perfil de marca y elimina términos no permitidos."
+            ],
+            "timestamp": "2026-05-05T21:12:56.286563Z"
+        },
+        {
+            "score": 7.89,
+            "improvements": [
+                "alucinacion bajo (0/10).",
+                "USO DE PALABRAS PROHIBIDAS: Revisa el perfil de marca y elimina términos no permitidos."
+            ],
+            "timestamp": "2026-05-05T21:12:56.297569Z"
+        },
+        {
+            "score": 7.4,
+            "improvements": [
+                "alucinacion bajo (0/10).",
+                "quiet_luxury_score bajo (4.8/10).",
+                "USO DE PALABRAS PROHIBIDAS: Revisa el perfil de marca y elimina términos no permitidos.",
+                "Tono demasiado agresivo (Loud Marketing): Se recomienda suavizar el lenguaje hacia el 'Quiet Luxury'."
+            ],
+            "timestamp": "2026-05-05T21:13:44.693425Z"
+        },
+        {
+            "score": 7.4,
+            "improvements": [
+                "alucinacion bajo (0/10).",
+                "quiet_luxury_score bajo (4.8/10).",
+                "USO DE PALABRAS PROHIBIDAS: Revisa el perfil de marca y elimina términos no permitidos.",
+                "Tono demasiado agresivo (Loud Marketing): Se recomienda suavizar el lenguaje hacia el 'Quiet Luxury'."
+            ],
+            "timestamp": "2026-05-05T21:13:44.704874Z"
+        },
+        {
+            "score": 7.53,
+            "improvements": [
+                "alucinacion bajo (0/10).",
+                "USO DE PALABRAS PROHIBIDAS: Revisa el perfil de marca y elimina términos no permitidos."
+            ],
+            "timestamp": "2026-05-05T21:14:27.491468Z"
+        },
+        {
+            "score": 7.53,
+            "improvements": [
+                "alucinacion bajo (0/10).",
+                "USO DE PALABRAS PROHIBIDAS: Revisa el perfil de marca y elimina términos no permitidos."
+            ],
+            "timestamp": "2026-05-05T21:14:27.502407Z"
+        },
+        {
+            "score": 8.15,
+            "improvements": [
+                "alucinacion bajo (0/10)."
+            ],
+            "timestamp": "2026-05-05T21:15:36.743899Z"
+        },
+        {
+            "score": 8.15,
+            "improvements": [
+                "alucinacion bajo (0/10)."
+            ],
+            "timestamp": "2026-05-05T21:15:36.752059Z"
+        },
+        {
+            "score": 8.0,
+            "improvements": [
+                "alucinacion bajo (0/10)."
+            ],
+            "timestamp": "2026-05-05T21:17:55.171160Z"
+        },
+        {
+            "score": 8.0,
+            "improvements": [
+                "alucinacion bajo (0/10)."
+            ],
+            "timestamp": "2026-05-05T21:17:55.183267Z"
+        },
+        {
+            "score": 7.42,
+            "improvements": [
+                "alucinacion bajo (0/10).",
+                "USO DE PALABRAS PROHIBIDAS: Revisa el perfil de marca y elimina términos no permitidos."
+            ],
+            "timestamp": "2026-05-05T21:18:41.022130Z"
+        },
+        {
+            "score": 7.42,
+            "improvements": [
+                "alucinacion bajo (0/10).",
+                "USO DE PALABRAS PROHIBIDAS: Revisa el perfil de marca y elimina términos no permitidos."
+            ],
+            "timestamp": "2026-05-05T21:18:41.030810Z"
+        },
+        {
+            "score": 6.98,
+            "improvements": [
+                "uso_contexto_visual bajo (5.33/10).",
+                "alucinacion bajo (0/10).",
+                "quiet_luxury_score bajo (4.1/10).",
+                "USO DE PALABRAS PROHIBIDAS: Revisa el perfil de marca y elimina términos no permitidos.",
+                "Tono demasiado agresivo (Loud Marketing): Se recomienda suavizar el lenguaje hacia el 'Quiet Luxury'."
+            ],
+            "timestamp": "2026-05-05T21:30:03.201800Z"
+        },
+        {
+            "score": 6.98,
+            "improvements": [
+                "uso_contexto_visual bajo (5.33/10).",
+                "alucinacion bajo (0/10).",
+                "quiet_luxury_score bajo (4.1/10).",
+                "USO DE PALABRAS PROHIBIDAS: Revisa el perfil de marca y elimina términos no permitidos.",
+                "Tono demasiado agresivo (Loud Marketing): Se recomienda suavizar el lenguaje hacia el 'Quiet Luxury'."
+            ],
+            "timestamp": "2026-05-05T21:30:03.210980Z"
+        },
+        {
+            "score": 8.21,
+            "improvements": [
+                "alucinacion bajo (0/10)."
+            ],
+            "timestamp": "2026-05-05T21:31:06.032369Z"
+        },
+        {
+            "score": 8.21,
+            "improvements": [
+                "alucinacion bajo (0/10)."
+            ],
+            "timestamp": "2026-05-05T21:31:06.040620Z"
+        },
+        {
+            "score": 8.13,
+            "improvements": [
+                "alucinacion bajo (0/10)."
+            ],
+            "timestamp": "2026-05-05T21:32:05.338603Z"
+        },
+        {
+            "score": 8.13,
+            "improvements": [
+                "alucinacion bajo (0/10)."
+            ],
+            "timestamp": "2026-05-05T21:32:05.348739Z"
+        },
+        {
+            "score": 7.43,
+            "improvements": [
+                "uso_contexto_visual bajo (5.33/10).",
+                "alucinacion bajo (0/10).",
+                "USO DE PALABRAS PROHIBIDAS: Revisa el perfil de marca y elimina términos no permitidos."
+            ],
+            "timestamp": "2026-05-05T21:32:40.325079Z"
+        },
+        {
+            "score": 7.43,
+            "improvements": [
+                "uso_contexto_visual bajo (5.33/10).",
+                "alucinacion bajo (0/10).",
+                "USO DE PALABRAS PROHIBIDAS: Revisa el perfil de marca y elimina términos no permitidos."
+            ],
+            "timestamp": "2026-05-05T21:32:40.335149Z"
+        },
+        {
+            "score": 7.76,
+            "improvements": [
+                "uso_contexto_visual bajo (5.0/10).",
+                "alucinacion bajo (0/10)."
+            ],
+            "timestamp": "2026-05-05T21:33:17.262772Z"
+        },
+        {
+            "score": 7.76,
+            "improvements": [
+                "uso_contexto_visual bajo (5.0/10).",
+                "alucinacion bajo (0/10)."
+            ],
+            "timestamp": "2026-05-05T21:33:17.272093Z"
+        },
+        {
+            "score": 8.28,
+            "improvements": [
+                "alucinacion bajo (0/10)."
+            ],
+            "timestamp": "2026-05-05T21:34:29.066448Z"
+        },
+        {
+            "score": 8.28,
+            "improvements": [
+                "alucinacion bajo (0/10)."
+            ],
+            "timestamp": "2026-05-05T21:34:29.075803Z"
+        },
+        {
+            "score": 8.2,
+            "improvements": [
+                "alucinacion bajo (0/10)."
+            ],
+            "timestamp": "2026-05-05T21:35:41.332810Z"
+        },
+        {
+            "score": 8.2,
+            "improvements": [
+                "alucinacion bajo (0/10)."
+            ],
+            "timestamp": "2026-05-05T21:35:41.344330Z"
+        },
+        {
+            "score": 8.15,
+            "improvements": [
+                "alucinacion bajo (0/10)."
+            ],
+            "timestamp": "2026-05-05T21:36:44.256304Z"
+        },
+        {
+            "score": 8.15,
+            "improvements": [
+                "alucinacion bajo (0/10)."
+            ],
+            "timestamp": "2026-05-05T21:36:44.269745Z"
+        },
+        {
+            "score": 8.14,
+            "improvements": [
+                "alucinacion bajo (0/10)."
+            ],
+            "timestamp": "2026-05-05T21:38:06.196539Z"
+        },
+        {
+            "score": 8.14,
+            "improvements": [
+                "alucinacion bajo (0/10)."
+            ],
+            "timestamp": "2026-05-05T21:38:06.211684Z"
+        },
+        {
+            "score": 7.76,
+            "improvements": [
+                "uso_contexto_visual bajo (5.0/10).",
+                "alucinacion bajo (0/10)."
+            ],
+            "timestamp": "2026-05-05T21:38:51.278942Z"
+        },
+        {
+            "score": 7.76,
+            "improvements": [
+                "uso_contexto_visual bajo (5.0/10).",
+                "alucinacion bajo (0/10)."
+            ],
+            "timestamp": "2026-05-05T21:38:51.287891Z"
+        },
+        {
+            "score": 7.42,
+            "improvements": [
+                "uso_contexto_visual bajo (5.67/10).",
+                "alucinacion bajo (0/10).",
+                "veracidad bajo (1.0/10)."
+            ],
+            "timestamp": "2026-05-06T15:50:27.075736Z"
+        },
+        {
+            "score": 7.42,
+            "improvements": [
+                "uso_contexto_visual bajo (5.67/10).",
+                "alucinacion bajo (0/10).",
+                "veracidad bajo (1.0/10)."
+            ],
+            "timestamp": "2026-05-06T15:50:27.086723Z"
+        },
+        {
+            "score": 7.42,
+            "improvements": [
+                "uso_contexto_visual bajo (5.67/10).",
+                "alucinacion bajo (0/10).",
+                "veracidad bajo (1.0/10)."
+            ],
+            "timestamp": "2026-05-06T15:51:59.071774Z"
+        },
+        {
+            "score": 7.42,
+            "improvements": [
+                "uso_contexto_visual bajo (5.67/10).",
+                "alucinacion bajo (0/10).",
+                "veracidad bajo (1.0/10)."
+            ],
+            "timestamp": "2026-05-06T15:51:59.122332Z"
+        },
+        {
+            "score": 7.59,
+            "improvements": [
+                "alucinacion bajo (0/10).",
+                "veracidad bajo (1.0/10)."
+            ],
+            "timestamp": "2026-05-06T15:54:02.777335Z"
+        },
+        {
+            "score": 7.59,
+            "improvements": [
+                "alucinacion bajo (0/10).",
+                "veracidad bajo (1.0/10)."
+            ],
+            "timestamp": "2026-05-06T15:54:02.789898Z"
+        },
+        {
+            "score": 7.43,
+            "improvements": [
+                "pensamiento_lateral bajo (5.8/10).",
+                "alucinacion bajo (0/10).",
+                "veracidad bajo (1.0/10).",
+                "Estructura débil: Falta un Hook claro o un CTA directo en algunos módulos."
+            ],
+            "timestamp": "2026-05-06T15:55:30.420277Z"
+        },
+        {
+            "score": 7.43,
+            "improvements": [
+                "pensamiento_lateral bajo (5.8/10).",
+                "alucinacion bajo (0/10).",
+                "veracidad bajo (1.0/10).",
+                "Estructura débil: Falta un Hook claro o un CTA directo en algunos módulos."
+            ],
+            "timestamp": "2026-05-06T15:55:30.429487Z"
+        },
+        {
+            "score": 7.38,
+            "improvements": [
+                "pensamiento_lateral bajo (5.8/10).",
+                "alucinacion bajo (0/10).",
+                "veracidad bajo (2.5/10).",
+                "Estructura débil: Falta un Hook claro o un CTA directo en algunos módulos."
+            ],
+            "timestamp": "2026-05-06T15:56:45.669315Z"
+        },
+        {
+            "score": 7.38,
+            "improvements": [
+                "pensamiento_lateral bajo (5.8/10).",
+                "alucinacion bajo (0/10).",
+                "veracidad bajo (2.5/10).",
+                "Estructura débil: Falta un Hook claro o un CTA directo en algunos módulos."
+            ],
+            "timestamp": "2026-05-06T15:56:45.679567Z"
+        },
+        {
+            "score": 7.38,
+            "improvements": [
+                "pensamiento_lateral bajo (5.8/10).",
+                "alucinacion bajo (0/10).",
+                "veracidad bajo (1.0/10).",
+                "Estructura débil: Falta un Hook claro o un CTA directo en algunos módulos."
+            ],
+            "timestamp": "2026-05-06T15:58:20.105619Z"
+        },
+        {
+            "score": 7.38,
+            "improvements": [
+                "pensamiento_lateral bajo (5.8/10).",
+                "alucinacion bajo (0/10).",
+                "veracidad bajo (1.0/10).",
+                "Estructura débil: Falta un Hook claro o un CTA directo en algunos módulos."
+            ],
+            "timestamp": "2026-05-06T15:58:20.115463Z"
+        },
+        {
+            "score": 7.29,
+            "improvements": [
+                "pensamiento_lateral bajo (5.8/10).",
+                "alucinacion bajo (0/10).",
+                "veracidad bajo (1.0/10).",
+                "Estructura débil: Falta un Hook claro o un CTA directo en algunos módulos."
+            ],
+            "timestamp": "2026-05-06T15:59:33.148350Z"
+        },
+        {
+            "score": 7.29,
+            "improvements": [
+                "pensamiento_lateral bajo (5.8/10).",
+                "alucinacion bajo (0/10).",
+                "veracidad bajo (1.0/10).",
+                "Estructura débil: Falta un Hook claro o un CTA directo en algunos módulos."
+            ],
+            "timestamp": "2026-05-06T15:59:33.157599Z"
+        },
+        {
+            "score": 7.53,
+            "improvements": [
+                "alucinacion bajo (0/10).",
+                "veracidad bajo (2.5/10).",
+                "Estructura débil: Falta un Hook claro o un CTA directo en algunos módulos."
+            ],
+            "timestamp": "2026-05-06T16:01:03.278336Z"
+        },
+        {
+            "score": 7.53,
+            "improvements": [
+                "alucinacion bajo (0/10).",
+                "veracidad bajo (2.5/10).",
+                "Estructura débil: Falta un Hook claro o un CTA directo en algunos módulos."
+            ],
+            "timestamp": "2026-05-06T16:01:03.287211Z"
+        },
+        {
+            "score": 7.29,
+            "improvements": [
+                "pensamiento_lateral bajo (5.8/10).",
+                "alucinacion bajo (0/10).",
+                "veracidad bajo (2.5/10).",
+                "Estructura débil: Falta un Hook claro o un CTA directo en algunos módulos."
+            ],
+            "timestamp": "2026-05-06T16:03:02.407524Z"
+        },
+        {
+            "score": 7.29,
+            "improvements": [
+                "pensamiento_lateral bajo (5.8/10).",
+                "alucinacion bajo (0/10).",
+                "veracidad bajo (2.5/10).",
+                "Estructura débil: Falta un Hook claro o un CTA directo en algunos módulos."
+            ],
+            "timestamp": "2026-05-06T16:03:02.414787Z"
+        },
+        {
+            "score": 7.21,
+            "improvements": [
+                "pensamiento_lateral bajo (5.8/10).",
+                "uso_contexto_visual bajo (5.25/10).",
+                "alucinacion bajo (0/10).",
+                "veracidad bajo (2.5/10).",
+                "Estructura débil: Falta un Hook claro o un CTA directo en algunos módulos."
+            ],
+            "timestamp": "2026-05-06T16:05:00.676601Z"
+        },
+        {
+            "score": 7.21,
+            "improvements": [
+                "pensamiento_lateral bajo (5.8/10).",
+                "uso_contexto_visual bajo (5.25/10).",
+                "alucinacion bajo (0/10).",
+                "veracidad bajo (2.5/10).",
+                "Estructura débil: Falta un Hook claro o un CTA directo en algunos módulos."
+            ],
+            "timestamp": "2026-05-06T16:05:00.684925Z"
+        },
+        {
+            "score": 7.44,
+            "improvements": [
+                "pensamiento_lateral bajo (5.8/10).",
+                "uso_contexto_visual bajo (5.33/10).",
+                "alucinacion bajo (0/10).",
+                "veracidad bajo (4.0/10).",
+                "Estructura débil: Falta un Hook claro o un CTA directo en algunos módulos."
+            ],
+            "timestamp": "2026-05-06T16:06:12.687404Z"
+        },
+        {
+            "score": 7.44,
+            "improvements": [
+                "pensamiento_lateral bajo (5.8/10).",
+                "uso_contexto_visual bajo (5.33/10).",
+                "alucinacion bajo (0/10).",
+                "veracidad bajo (4.0/10).",
+                "Estructura débil: Falta un Hook claro o un CTA directo en algunos módulos."
+            ],
+            "timestamp": "2026-05-06T16:06:12.698355Z"
+        },
+        {
+            "score": 7.46,
+            "improvements": [
+                "alucinacion bajo (0/10).",
+                "quiet_luxury_score bajo (4.0/10).",
+                "USO DE PALABRAS PROHIBIDAS: Revisa el perfil de marca y elimina términos no permitidos.",
+                "Tono demasiado agresivo (Loud Marketing): Se recomienda suavizar el lenguaje hacia el 'Quiet Luxury'."
+            ],
+            "timestamp": "2026-05-06T20:07:23.055615Z"
+        },
+        {
+            "score": 7.29,
+            "improvements": [
+                "pensamiento_lateral bajo (5.8/10).",
+                "alucinacion bajo (0/10).",
+                "veracidad bajo (2.5/10).",
+                "Estructura débil: Falta un Hook claro o un CTA directo en algunos módulos."
+            ],
+            "timestamp": "2026-05-06T20:12:27.731709Z"
+        },
+        {
+            "score": 7.44,
+            "improvements": [
+                "pensamiento_lateral bajo (5.8/10).",
+                "uso_contexto_visual bajo (5.33/10).",
+                "alucinacion bajo (0/10).",
+                "veracidad bajo (4.0/10).",
+                "Estructura débil: Falta un Hook claro o un CTA directo en algunos módulos."
+            ],
+            "timestamp": "2026-05-06T20:12:27.735529Z"
+        },
+        {
+            "score": 7.21,
+            "improvements": [
+                "pensamiento_lateral bajo (5.8/10).",
+                "uso_contexto_visual bajo (5.25/10).",
+                "alucinacion bajo (0/10).",
+                "veracidad bajo (2.5/10).",
+                "Estructura débil: Falta un Hook claro o un CTA directo en algunos módulos."
+            ],
+            "timestamp": "2026-05-06T20:12:27.738793Z"
+        },
+        {
+            "score": 7.53,
+            "improvements": [
+                "alucinacion bajo (0/10).",
+                "veracidad bajo (2.5/10).",
+                "Estructura débil: Falta un Hook claro o un CTA directo en algunos módulos."
+            ],
+            "timestamp": "2026-05-06T20:12:27.744832Z"
+        },
+        {
+            "score": 7.46,
+            "improvements": [
+                "alucinacion bajo (0/10).",
+                "quiet_luxury_score bajo (4.0/10).",
+                "USO DE PALABRAS PROHIBIDAS: Revisa el perfil de marca y elimina términos no permitidos.",
+                "Tono demasiado agresivo (Loud Marketing): Se recomienda suavizar el lenguaje hacia el 'Quiet Luxury'."
+            ],
+            "timestamp": "2026-05-06T20:12:27.750024Z"
+        },
+        {
+            "score": 7.43,
+            "improvements": [
+                "pensamiento_lateral bajo (5.8/10).",
+                "alucinacion bajo (0/10).",
+                "veracidad bajo (1.0/10).",
+                "Estructura débil: Falta un Hook claro o un CTA directo en algunos módulos."
+            ],
+            "timestamp": "2026-05-06T20:12:27.753781Z"
+        },
+        {
+            "score": 7.29,
+            "improvements": [
+                "pensamiento_lateral bajo (5.8/10).",
+                "alucinacion bajo (0/10).",
+                "veracidad bajo (1.0/10).",
+                "Estructura débil: Falta un Hook claro o un CTA directo en algunos módulos."
+            ],
+            "timestamp": "2026-05-06T20:12:27.757415Z"
+        },
+        {
+            "score": 7.38,
+            "improvements": [
+                "pensamiento_lateral bajo (5.8/10).",
+                "alucinacion bajo (0/10).",
+                "veracidad bajo (1.0/10).",
+                "Estructura débil: Falta un Hook claro o un CTA directo en algunos módulos."
+            ],
+            "timestamp": "2026-05-06T20:12:27.760941Z"
+        },
+        {
+            "score": 7.38,
+            "improvements": [
+                "pensamiento_lateral bajo (5.8/10).",
+                "alucinacion bajo (0/10).",
+                "veracidad bajo (2.5/10).",
+                "Estructura débil: Falta un Hook claro o un CTA directo en algunos módulos."
+            ],
+            "timestamp": "2026-05-06T20:12:27.764484Z"
+        },
+        {
+            "score": 7.85,
+            "improvements": [
+                "alucinacion bajo (0/10).",
+                "veracidad bajo (1.0/10)."
+            ],
+            "timestamp": "2026-05-06T20:12:27.770203Z"
+        },
+        {
+            "score": 7.39,
+            "improvements": [
+                "alucinacion bajo (1.2/10).",
+                "veracidad bajo (1.0/10).",
+                "USO DE PALABRAS PROHIBIDAS: Revisa el perfil de marca y elimina términos no permitidos."
+            ],
+            "timestamp": "2026-05-06T20:51:24.852898Z"
+        },
+        {
+            "score": 7.51,
+            "improvements": [
+                "alucinacion bajo (0/10).",
+                "veracidad bajo (2.5/10).",
+                "USO DE PALABRAS PROHIBIDAS: Revisa el perfil de marca y elimina términos no permitidos."
+            ],
+            "timestamp": "2026-05-06T20:57:23.826822Z"
+        },
+        {
+            "score": 7.27,
+            "improvements": [
+                "alucinacion bajo (0.4/10).",
+                "veracidad bajo (1.0/10).",
+                "USO DE PALABRAS PROHIBIDAS: Revisa el perfil de marca y elimina términos no permitidos."
+            ],
+            "timestamp": "2026-05-06T20:58:03.744843Z"
+        },
+        {
+            "score": 7.91,
+            "improvements": [
+                "alucinacion bajo (2.0/10).",
+                "veracidad bajo (1.0/10)."
+            ],
+            "timestamp": "2026-05-06T20:58:51.652296Z"
+        },
+        {
+            "score": 7.93,
+            "improvements": [
+                "alucinacion bajo (1.2/10).",
+                "veracidad bajo (1.0/10)."
+            ],
+            "timestamp": "2026-05-06T20:59:31.282436Z"
+        },
+        {
+            "score": 7.95,
+            "improvements": [
+                "alucinacion bajo (1.2/10).",
+                "veracidad bajo (2.5/10)."
+            ],
+            "timestamp": "2026-05-06T21:00:00.840084Z"
+        },
+        {
+            "score": 7.52,
+            "improvements": [
+                "alucinacion bajo (0.4/10).",
+                "veracidad bajo (2.5/10)."
+            ],
+            "timestamp": "2026-05-06T21:00:28.505596Z"
+        },
+        {
+            "score": 7.53,
+            "improvements": [
+                "uso_contexto_visual bajo (5.25/10).",
+                "alucinacion bajo (2.0/10).",
+                "veracidad bajo (2.5/10)."
+            ],
+            "timestamp": "2026-05-06T21:00:57.083056Z"
+        },
+        {
+            "score": 7.77,
+            "improvements": [
+                "uso_contexto_visual bajo (5.67/10).",
+                "alucinacion bajo (4.4/10).",
+                "veracidad bajo (4.0/10)."
+            ],
+            "timestamp": "2026-05-06T21:02:12.186152Z"
+        },
+        {
+            "score": 8.16,
+            "improvements": [
+                "alucinacion bajo (4.4/10).",
+                "veracidad bajo (1.0/10)."
+            ],
+            "timestamp": "2026-05-06T21:04:28.303531Z"
+        },
+        {
+            "score": 7.77,
+            "improvements": [
+                "uso_contexto_visual bajo (5.67/10).",
+                "alucinacion bajo (4.4/10).",
+                "veracidad bajo (4.0/10)."
+            ],
+            "timestamp": "2026-05-06T23:20:19.035597Z"
+        },
+        {
+            "score": 7.01,
+            "improvements": [
+                "alucinacion bajo (0/10).",
+                "quiet_luxury_score bajo (4.0/10).",
+                "engagement_emocional bajo (5.4/10).",
+                "veracidad bajo (5.5/10).",
+                "USO DE PALABRAS PROHIBIDAS: Revisa el perfil de marca y elimina términos no permitidos.",
+                "Tono demasiado agresivo (Loud Marketing): Se recomienda suavizar el lenguaje hacia el 'Quiet Luxury'.",
+                "Falta de resonancia emocional: El contenido se siente plano o puramente informativo."
+            ],
+            "timestamp": "2026-05-06T23:20:40.832642Z"
+        }
+    ],
+    "current_level": "intermediate"
+}

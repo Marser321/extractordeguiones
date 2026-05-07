@@ -1,0 +1,15 @@
+{
+    "brand_name": "MassTest_Reels",
+    "tone": "Directo, experto, Quiet Luxury",
+    "visual_direction": "Minimalista, high-fidelity, contrastado",
+    "do": [
+        "Usar terminología técnica precisa",
+        "Mantener la carpeta negra como ancla visual",
+        "Corregir erratas del habla en subtítulos"
+    ],
+    "dont": [
+        "Usar palabras como 'barato' u 'oferta'",
+        "Mostrar desorden en el set",
+        "Usar música de tendencia ruidosa"
+    ]
+}

@@ -1,0 +1,26 @@
+{
+    "escenario": "El video alterna entre dos entornos: un espacio interior minimalista y luminoso con paredes blancas, un sofá gris y una planta decorativa que proyecta una imagen profesional y confiable; y el interior de un vehículo para el testimonio, lo cual aporta un tono de autenticidad y cercanía (estilo UGC).",
+    "elementos_clave": [
+        "Presentadora con gafas y vestimenta profesional casual (beige y blanco)",
+        "Planta de interior verde en jarrón beige",
+        "Cojín con patrón geométrico",
+        "Cliente (Aaron Saúl III) usando una gorra marrón y camiseta negra",
+        "Subtítulos dinámicos con fondo rojo",
+        "Reloj y accesorios sutiles en la presentadora"
+    ],
+    "estilo_visual": "Estilo híbrido que combina la pulcritud de un video corporativo moderno con la crudeza de un testimonio tipo 'User Generated Content' (UGC). La edición parece enfocada en la fluidez entre la narración de la experta y la validación del cliente para generar autoridad y confianza rápida.",
+    "sugerencias_creativas": [
+        "Incluir el logo de 'América Trámites' en una esquina durante todo el video para reforzar el branding.",
+        "Agregar un 'paper effect' o apoyo visual cuando se mencione la 'moción aprobada' para hacer el resultado más tangible.",
+        "Utilizar una barra de progreso en la parte superior para retener la atención del espectador.",
+        "Mejorar la iluminación del testimonio del cliente si es posible, o añadir un filtro que unifique la colorimetría de ambos clips.",
+        "Insertar un 'Call to Action' (CTA) visual al final con el número de WhatsApp o redes sociales de forma clara."
+    ],
+    "ocr_detectado": [
+        "experiencia con América",
+        "estaba muy nervioso por",
+        "de abril me presentaron"
+    ],
+    "_ai_provider": "gemini",
+    "_ai_model": "gemini-flash-latest"
+}

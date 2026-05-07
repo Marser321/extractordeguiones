@@ -1,0 +1,15 @@
+{
+    "brand_name": "MassTest_Reels",
+    "tone": "Directo, experto, Quiet Luxury",
+    "visual_direction": "Minimalista, high-fidelity, contrastado",
+    "do": [
+        "Usar cifras concretas (3 días, 2027)",
+        "Mantener el set limpio y minimalista",
+        "Corregir erratas fonéticas en subtítulos"
+    ],
+    "dont": [
+        "Usar palabras como 'oferton' o 'increíble'",
+        "Mostrar desorden en el fondo",
+        "Usar marketing agresivo de bajo costo"
+    ]
+}

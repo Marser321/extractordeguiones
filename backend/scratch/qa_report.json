@@ -1,0 +1,23 @@
+{
+  "timestamp": "2026-05-05 11:55:22",
+  "tests": [
+    {
+      "source": "Big Buck Bunny (Direct MP4)",
+      "steps": {
+        "video_download": "SUCCESS",
+        "audio_extraction": "SUCCESS",
+        "transcription": "SUCCESS",
+        "visual_extraction": "SUCCESS",
+        "visual_analysis": "SUCCESS",
+        "business_analysis": "SUCCESS"
+      },
+      "word_count": 0,
+      "visual_summary": {
+        "status": "error",
+        "error": "GEMINI_API_KEY no configurada."
+      },
+      "analysis_provider": "ollama",
+      "status": "PASSED"
+    }
+  ]
+}

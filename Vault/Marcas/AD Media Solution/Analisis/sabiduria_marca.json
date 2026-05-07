@@ -1,0 +1,13 @@
+{
+    "reglas_oro": [
+        "Mantener la estructura narrativa que permite alcanzar niveles de 'Éxito' (8.48) a pesar de las deficiencias técnicas.",
+        "Preservar el ritmo visual o de enganche que compensa la falta de precisión factual inicial."
+    ],
+    "barreras_criticas": [
+        "Alucinaciones críticas (score 0/10) que generan información inventada o sin sustento.",
+        "Baja veracidad (4.0/10) recurrente que compromete la autoridad de la marca.",
+        "Falta de especificidad (5.84/10) resultando en guiones genéricos y poco profundos."
+    ],
+    "personalidad_detectada": "Un perfil creativo con gran potencial de impacto pero con una ejecución técnica descuidada y tendencia a la invención de datos.",
+    "proximo_paso_entrenamiento": "Establecer un proceso obligatorio de 'Grounding' mediante el cual la IA deba citar fuentes internas antes de redactar y prohibir la generación de datos no suministrados expresamente."
+}

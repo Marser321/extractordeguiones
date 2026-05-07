@@ -1,0 +1,20 @@
+{
+    "escenario": "Interior de una oficina moderna o home-office con iluminación natural brillante. El fondo es minimalista y profesional, con paredes blancas, una silla de oficina ergonómica, un escritorio con laptop y una planta decorativa sutilmente desenfocada.",
+    "elementos_clave": [
+        "Mujer joven con gafas de marco oscuro",
+        "Smartphone blanco utilizado como apoyo para la narrativa",
+        "Atuendo profesional casual (camiseta blanca y pantalón beige)",
+        "Reloj de pulsera y joyería minimalista",
+        "Entorno de trabajo despejado"
+    ],
+    "estilo_visual": "Estilo 'talking head' directo a cámara, optimizado para plataformas de video vertical (Reels/TikTok). La estética es limpia, luminosa y profesional, diseñada para transmitir confianza y autoridad en temas legales/migratorios de manera accesible.",
+    "sugerencias_creativas": [
+        "Incorporar subtítulos dinámicos que resalten términos técnicos como 'AR11' y 'EOIR-33' (corrigiendo los nombres del guion)",
+        "Añadir overlays visuales que muestren miniaturas de los formularios mencionados para facilitar la identificación",
+        "Realizar cortes o zooms digitales en frases clave para aumentar el dinamismo visual",
+        "Incluir un cierre con un llamado a la acción (CTA) visual que muestre el logo y redes sociales de contacto"
+    ],
+    "ocr_detectado": [],
+    "_ai_provider": "gemini",
+    "_ai_model": "gemini-flash-latest"
+}

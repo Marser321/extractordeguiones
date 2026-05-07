@@ -1,0 +1,24 @@
+{
+    "escenario": "Combinación de dos ambientes: un interior de oficina luminoso y minimalista con paredes blancas y plantas, y un entorno exterior natural (jardín/patio). Esta dualidad proyecta una imagen de profesionalismo moderno, cercano y flexible.",
+    "elementos_clave": [
+        "Mujer joven con gafas y estilo profesional/casual",
+        "Carpeta negra voluminosa (representando el paquete de asilo)",
+        "Computadora portátil (MacBook)",
+        "Reloj de pulsera dorado y joyería sutil",
+        "Fondo de vegetación natural",
+        "Teclado y escritorio blanco"
+    ],
+    "estilo_visual": "Estilo de contenido informativo para redes sociales (tipo Reels/TikTok). La iluminación es natural y suave (high-key), con un encuadre vertical. El cambio de locación sugiere un estilo de vida dinámico y una profesional que está disponible en diferentes entornos.",
+    "sugerencias_creativas": [
+        "Insertar subtítulos dinámicos con palabras resaltadas en colores (ej. 'Asilo', 'Evidencias', 'Preparación').",
+        "Utilizar transiciones rápidas entre el interior y el exterior para mantener el ritmo del guion.",
+        "Agregar un 'sticker' o gráfico de flecha señalando la carpeta cuando mencione 'lo que va dentro'.",
+        "Incluir un botón de llamado a la acción (CTA) visual que diga 'Enviar Mensaje' al final del video.",
+        "Mostrar brevemente un primer plano de los documentos (o representaciones) para dar peso visual al concepto de 'evidencias'."
+    ],
+    "ocr_detectado": [
+        "neax"
+    ],
+    "_ai_provider": "gemini",
+    "_ai_model": "gemini-flash-latest"
+}

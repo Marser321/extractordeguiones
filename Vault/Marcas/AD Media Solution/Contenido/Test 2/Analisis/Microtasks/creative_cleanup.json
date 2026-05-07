@@ -1,0 +1,12 @@
+{
+    "group": "creative_cleanup",
+    "label": "Pulir creativos",
+    "key": "Creative cleanup",
+    "status": "Necesita revisión",
+    "score": 7.1,
+    "recommendation": "Normalizar nombres y revisar prompts marcados antes de copiar.",
+    "primary_action": "Pulir creativos",
+    "findings": [
+        "Hay frases creativas genéricas que conviene especificar."
+    ]
+}

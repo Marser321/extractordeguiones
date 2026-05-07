@@ -1,0 +1,12 @@
+[
+    {
+        "uso": "thumbnail",
+        "prompt": "Hombre profesional con gafas y saco crema, caminando en un jardín premium frente a una casa moderna. Texto elegante: 'ESCALA TU AGENCIA'. Estilo minimalista, alta fidelidad, luz solar natural.",
+        "negative_prompt": "colores chillones, desorden, oficina genérica, texto tipo graffiti"
+    },
+    {
+        "uso": "ad_background",
+        "prompt": "Interfaz de CRM elegante y minimalista en una pantalla de MacBook Pro, sobre una mesa de madera fina en una oficina luminosa con plantas verdes al fondo.",
+        "negative_prompt": "barato, desordenado, gráficos oscuros"
+    }
+]

@@ -1,0 +1,13 @@
+{
+    "language_detected": "es",
+    "language_probability": 1.0,
+    "full_text": "Tienes corte próximamente, no cuentas con abogado y no sabes qué hacer, eso no significa que  está solo, significa que necesitas una moción de aplazamiento.  En esta moción de aplazamiento se le solicita al juez que te dé más tiempo para preparar  tu caso, conseguir un abogado y para respirar.  Es momento de revisar tu caso ahora, no mañana, porque el tiempo no perdona.",
+    "segments": [
+        {
+            "start": 0.0,
+            "end": 10.0,
+            "text": "Tienes corte próximamente, no cuentas con abogado y no sabes qué hacer, eso no significa que  está solo, significa que necesitas una moción de aplazamiento.  En esta moción de aplazamiento se le solicita al juez que te dé más tiempo para preparar  tu caso, conseguir un abogado y para respirar.  Es momento de revisar tu caso ahora, no mañana, porque el tiempo no perdona."
+        }
+    ],
+    "provider": "cloud_repair"
+}

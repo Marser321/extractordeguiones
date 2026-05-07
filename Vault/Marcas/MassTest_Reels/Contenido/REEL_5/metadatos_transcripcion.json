@@ -1,0 +1,13 @@
+{
+    "language_detected": "es",
+    "language_probability": 1.0,
+    "full_text": "Tres días fue el tiempo exactamente que tomó cambiar la corte de este cliente,  la cual tenía el 20 de abril de este año.  Este cliente llegó sin abogado y con mucho miedo de presentarse solo a tu juez.  No sabía que existía una opción, una moción de aplazamiento.  Le presentamos esta moción y en solo tres días fue aprobada.  Evidentemente, no todos los casos son iguales, pero tenía una buena justificación.  Su corte del 20 de abril de este año quedó reprogramada para el 2027.  Hoy tiene tiempo para conseguir representación legal y preparar su caso como se merece.  Si tienes corte próximamente, no te desesperes.  Contártanos, revisamos tu caso para saber si calificas para este tipo de emoción.",
+    "segments": [
+        {
+            "start": 0.0,
+            "end": 10.0,
+            "text": "Tres días fue el tiempo exactamente que tomó cambiar la corte de este cliente,  la cual tenía el 20 de abril de este año.  Este cliente llegó sin abogado y con mucho miedo de presentarse solo a tu juez.  No sabía que existía una opción, una moción de aplazamiento.  Le presentamos esta moción y en solo tres días fue aprobada.  Evidentemente, no todos los casos son iguales, pero tenía una buena justificación.  Su corte del 20 de abril de este año quedó reprogramada para el 2027.  Hoy tiene tiempo para conseguir representación legal y preparar su caso como se merece.  Si tienes corte próximamente, no te desesperes.  Contártanos, revisamos tu caso para saber si calificas para este tipo de emoción."
+        }
+    ],
+    "provider": "cloud_repair"
+}

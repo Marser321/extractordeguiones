@@ -1,0 +1,69 @@
+{
+    "microtask_version": "scriptdna-microtasks-v1",
+    "brand_name": "AD Media Solution",
+    "video_id": "Test 2",
+    "generated_at": "2026-05-06T19:37:22.137683Z",
+    "overall_score": 7.74,
+    "status": "Necesita revisión",
+    "groups": [
+        {
+            "group": "ux_clarity",
+            "label": "Revisar claridad",
+            "key": "UX clarity",
+            "status": "Mejorando",
+            "score": 5.8,
+            "recommendation": "Mantener cards compactas y mover texto largo a Ver detalles.",
+            "primary_action": "Revisar claridad",
+            "findings": [
+                "Hay labels o títulos largos que deben pasar a detalles desplegables.",
+                "Se detectó lenguaje técnico que no debería dominar la interfaz."
+            ]
+        },
+        {
+            "group": "creative_cleanup",
+            "label": "Pulir creativos",
+            "key": "Creative cleanup",
+            "status": "Necesita revisión",
+            "score": 7.1,
+            "recommendation": "Normalizar nombres y revisar prompts marcados antes de copiar.",
+            "primary_action": "Pulir creativos",
+            "findings": [
+                "Hay frases creativas genéricas que conviene especificar."
+            ]
+        },
+        {
+            "group": "analysis_refinement",
+            "label": "Mejorar análisis",
+            "key": "Analysis refinement",
+            "status": "Necesita revisión",
+            "score": 7.81,
+            "recommendation": "Usar una pasada fuerte solo en las advertencias críticas.",
+            "primary_action": "Mejorar análisis",
+            "findings": [
+                "especificidad bajo (5.84/10).",
+                "alucinacion bajo (0/10)."
+            ]
+        },
+        {
+            "group": "brand_memory",
+            "label": "Actualizar memoria",
+            "key": "Brand memory",
+            "status": "Listo",
+            "score": 8,
+            "recommendation": "Memoria de marca lista para alimentar próximos análisis.",
+            "primary_action": "Actualizar memoria",
+            "findings": []
+        },
+        {
+            "group": "output_readiness",
+            "label": "Auditar resultado",
+            "key": "Output readiness",
+            "status": "Listo",
+            "score": 10,
+            "recommendation": "Outputs listos para ejecución o revisión final.",
+            "primary_action": "Auditar resultado",
+            "findings": []
+        }
+    ],
+    "next_action": "Revisar claridad"
+}
