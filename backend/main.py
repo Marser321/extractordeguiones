@@ -625,6 +625,15 @@ def read_root():
 @app.get("/app", response_class=HTMLResponse)
 def read_app():
     html_path = STATIC_DIR / "app.html"
+    if not html_path.exists():
+        # Fallback para Vercel si los paths se mueven en el build
+        alt_path = Path(__file__).parent / "static" / "app.html"
+        if alt_path.exists():
+            html_path = alt_path
+            
+    if not html_path.exists():
+        raise HTTPException(status_code=404, detail=f"No se encontró app.html en {html_path}")
+        
     return HTMLResponse(html_path.read_text(encoding="utf-8"))
 
 
