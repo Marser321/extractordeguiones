@@ -10,14 +10,14 @@
       "use": "@vercel/static"
     }
   ],
-  "routes": [
+  "rewrites": [
     {
-      "src": "/static/(.*)",
-      "dest": "/backend/static/$1"
+      "source": "/static/(.*)",
+      "destination": "/backend/static/$1"
     },
     {
-      "src": "/(.*)",
-      "dest": "backend/main.py"
+      "source": "/(.*)",
+      "destination": "/backend/main.py"
     }
   ],
   "env": {
