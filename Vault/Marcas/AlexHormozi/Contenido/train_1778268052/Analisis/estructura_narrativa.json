@@ -1,0 +1,9 @@
+{
+    "patron": [
+        "apertura",
+        "tension",
+        "valor",
+        "cta"
+    ],
+    "notas": "El guion es muy corto, por lo que la estructura se basa en la premisa de que el 'valor' es la revelación de la metodología de Hormozi. La 'apertura' sería la declaración inicial, la 'tensión' la implicación de que la emoción nubla la realidad, el 'valor' la solución conductual, y el 'cta' implícito sería adoptar esta perspectiva. Para un video más largo, se necesitaría expandir la 'tensión' con ejemplos de fracasos emocionales y el 'valor' con casos de éxito conductual."
+}

@@ -1,0 +1,9 @@
+{
+    "status": "pending_visual_extraction",
+    "source_files": [],
+    "notes": "La extracción de frames/OCR se implementa como siguiente capa; este archivo reserva el contrato de análisis visual.",
+    "frame_samples": [],
+    "ocr_text": [],
+    "shot_types": [],
+    "editing_notes": []
+}

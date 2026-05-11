@@ -1,0 +1,238 @@
+{
+    "status": "completed",
+    "generation_mode": "ai",
+    "provider": "openrouter",
+    "model": "openrouter/auto",
+    "fallback_provider": "ollama",
+    "prompt_version": "scriptdna-business-v3",
+    "context_inputs": {
+        "prompt_version": "scriptdna-business-v3",
+        "script_chars": 1921,
+        "script_truncated": false,
+        "brand_profile_fields": [
+            "audience",
+            "brand_name",
+            "cta",
+            "preferred_formats",
+            "tone",
+            "visual_style"
+        ],
+        "historical_pattern_counts": {},
+        "visual_context_available": false,
+        "visual_context_status": "missing"
+    },
+    "modules": [
+        "summary",
+        "hooks",
+        "viral_moments",
+        "narrative_structure",
+        "reel_ideas",
+        "ads",
+        "creative_brief",
+        "captions",
+        "publishing_calendar",
+        "visual_prompts",
+        "retrospective"
+    ],
+    "generated_files": [
+        "Vault/Marcas/AlexHormozi/Contenido/train_1778267883/Analisis/resumen_ejecutivo.md",
+        "Vault/Marcas/AlexHormozi/Contenido/train_1778267883/Analisis/hooks.json",
+        "Vault/Marcas/AlexHormozi/Contenido/train_1778267883/Analisis/momentos_virales.json",
+        "Vault/Marcas/AlexHormozi/Contenido/train_1778267883/Analisis/estructura_narrativa.json",
+        "Vault/Marcas/AlexHormozi/Contenido/train_1778267883/Analisis/ideas_reels.json",
+        "Vault/Marcas/AlexHormozi/Contenido/train_1778267883/Analisis/ads.json",
+        "Vault/Marcas/AlexHormozi/Contenido/train_1778267883/Analisis/brief_creativo.md",
+        "Vault/Marcas/AlexHormozi/Contenido/train_1778267883/Analisis/captions.json",
+        "Vault/Marcas/AlexHormozi/Contenido/train_1778267883/Analisis/calendario_publicacion.json",
+        "Vault/Marcas/AlexHormozi/Contenido/train_1778267883/Analisis/prompts_visuales.json",
+        "Vault/Marcas/AlexHormozi/Contenido/train_1778267883/Analisis/prompt_base_marca.json",
+        "Vault/Marcas/AlexHormozi/Contenido/train_1778267883/Analisis/analisis_visual.json",
+        "Vault/Marcas/AlexHormozi/Contenido/train_1778267883/Analisis/retrospectiva.json"
+    ],
+    "patterns_updated": false,
+    "pattern_candidates_recorded": true,
+    "audit": {
+        "audit_version": "scriptdna-context-audit-v1",
+        "status": "passed",
+        "brand_name": "AlexHormozi",
+        "video_id": "train_1778267883",
+        "generated_at": "2026-05-08T19:20:19.263764Z",
+        "overall_score": 8.11,
+        "scores": {
+            "fidelidad": 7.5,
+            "alineacion_marca": 9.8,
+            "especificidad": 7.98,
+            "pensamiento_lateral": 9.4,
+            "uso_contexto_visual": 5.0,
+            "completitud_json": 10.0,
+            "utilidad_marketing": 10,
+            "alucinacion": 0,
+            "densidad_info": 8.0,
+            "cumplimiento_marca": 10.0,
+            "estructura_persuasiva": 10,
+            "quiet_luxury_score": 8.6,
+            "engagement_emocional": 10,
+            "veracidad": 8.5,
+            "estetica_visual": 7.0,
+            "coherencia_visual_narrativa": 8.0
+        },
+        "warnings": [
+            "uso_contexto_visual bajo (5.0/10).",
+            "alucinacion bajo (0/10).",
+            "Contexto visual pendiente: evitar asumir estética o escenas verificadas."
+        ],
+        "promoted_patterns": true,
+        "refinement_instructions": null,
+        "context": {
+            "script_chars": 1921,
+            "visual_context_status": "pending_visual_extraction",
+            "prompt_version": "scriptdna-business-v3",
+            "provider": null,
+            "model": null
+        }
+    },
+    "patterns": {
+        "hooks_frecuentes": [],
+        "estructuras_ganadoras": [],
+        "angulos_de_venta": [],
+        "reglas_de_estilo": [],
+        "pattern_candidates": [
+            {
+                "category": "hooks_frecuentes",
+                "value": "¿Tu éxito profesional te roba la paz familiar? Alex Hormozi te dice cómo recuperarla.",
+                "source_video_id": "train_1778267883",
+                "prompt_version": "scriptdna-business-v3",
+                "audit_score": null,
+                "promoted": false,
+                "observed_at": "2026-05-08T19:20:18.643059Z"
+            },
+            {
+                "category": "hooks_frecuentes",
+                "value": "Mi hija de 3 años no me quiere ver. ¿Culpa o estrategia?",
+                "source_video_id": "train_1778267883",
+                "prompt_version": "scriptdna-business-v3",
+                "audit_score": null,
+                "promoted": false,
+                "observed_at": "2026-05-08T19:20:18.643059Z"
+            },
+            {
+                "category": "hooks_frecuentes",
+                "value": "De 1.2M a 3M: ¿El precio es tu familia? Alex Hormozi aborda la culpa del padre.",
+                "source_video_id": "train_1778267883",
+                "prompt_version": "scriptdna-business-v3",
+                "audit_score": null,
+                "promoted": false,
+                "observed_at": "2026-05-08T19:20:18.643059Z"
+            },
+            {
+                "category": "hooks_frecuentes",
+                "value": "La 'línea de guilte' que te libera de la culpa paterna.",
+                "source_video_id": "train_1778267883",
+                "prompt_version": "scriptdna-business-v3",
+                "audit_score": null,
+                "promoted": false,
+                "observed_at": "2026-05-08T19:20:18.643059Z"
+            },
+            {
+                "category": "estructuras_ganadoras",
+                "value": "apertura",
+                "source_video_id": "train_1778267883",
+                "prompt_version": "scriptdna-business-v3",
+                "audit_score": null,
+                "promoted": false,
+                "observed_at": "2026-05-08T19:20:18.643059Z"
+            },
+            {
+                "category": "estructuras_ganadoras",
+                "value": "tension",
+                "source_video_id": "train_1778267883",
+                "prompt_version": "scriptdna-business-v3",
+                "audit_score": null,
+                "promoted": false,
+                "observed_at": "2026-05-08T19:20:18.643059Z"
+            },
+            {
+                "category": "estructuras_ganadoras",
+                "value": "valor",
+                "source_video_id": "train_1778267883",
+                "prompt_version": "scriptdna-business-v3",
+                "audit_score": null,
+                "promoted": false,
+                "observed_at": "2026-05-08T19:20:18.643059Z"
+            },
+            {
+                "category": "estructuras_ganadoras",
+                "value": "cta",
+                "source_video_id": "train_1778267883",
+                "prompt_version": "scriptdna-business-v3",
+                "audit_score": null,
+                "promoted": false,
+                "observed_at": "2026-05-08T19:20:18.643059Z"
+            },
+            {
+                "category": "angulos_de_venta",
+                "value": "Se enfoca en la paradoja de alcanzar el éxito financiero pero sentir que se pierde lo más importante: la familia. Se presenta la solución de Hormozi como una forma de tener ambos mundos.",
+                "source_video_id": "train_1778267883",
+                "prompt_version": "scriptdna-business-v3",
+                "audit_score": null,
+                "promoted": false,
+                "observed_at": "2026-05-08T19:20:18.643059Z"
+            },
+            {
+                "category": "angulos_de_venta",
+                "value": "Reformula el tiempo familiar no como un costo, sino como una inversión estratégica que puede ser tan o más rentable que el trabajo, si se aborda con la mentalidad correcta.",
+                "source_video_id": "train_1778267883",
+                "prompt_version": "scriptdna-business-v3",
+                "audit_score": null,
+                "promoted": false,
+                "observed_at": "2026-05-08T19:20:18.643059Z"
+            },
+            {
+                "category": "reglas_de_estilo",
+                "value": "Ser directo y al grano.",
+                "source_video_id": "train_1778267883",
+                "prompt_version": "scriptdna-business-v3",
+                "audit_score": null,
+                "promoted": false,
+                "observed_at": "2026-05-08T19:20:18.643059Z"
+            },
+            {
+                "category": "reglas_de_estilo",
+                "value": "Ofrecer soluciones prácticas y medibles.",
+                "source_video_id": "train_1778267883",
+                "prompt_version": "scriptdna-business-v3",
+                "audit_score": null,
+                "promoted": false,
+                "observed_at": "2026-05-08T19:20:18.643059Z"
+            },
+            {
+                "category": "reglas_de_estilo",
+                "value": "Utilizar analogías y ejemplos claros.",
+                "source_video_id": "train_1778267883",
+                "prompt_version": "scriptdna-business-v3",
+                "audit_score": null,
+                "promoted": false,
+                "observed_at": "2026-05-08T19:20:18.643059Z"
+            },
+            {
+                "category": "reglas_de_estilo",
+                "value": "Mantener un tono de autoridad pero accesible.",
+                "source_video_id": "train_1778267883",
+                "prompt_version": "scriptdna-business-v3",
+                "audit_score": null,
+                "promoted": false,
+                "observed_at": "2026-05-08T19:20:18.643059Z"
+            },
+            {
+                "category": "reglas_de_estilo",
+                "value": "Fomentar la acción inmediata del espectador.",
+                "source_video_id": "train_1778267883",
+                "prompt_version": "scriptdna-business-v3",
+                "audit_score": null,
+                "promoted": false,
+                "observed_at": "2026-05-08T19:20:18.643059Z"
+            }
+        ],
+        "pattern_metadata": []
+    }
+}

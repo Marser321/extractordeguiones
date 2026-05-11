@@ -88,10 +88,15 @@
           <section class="workspace" aria-label="AD MediaSolution Studio">
 
         <section class="status-grid" aria-label="Estado del sistema">
-          <article class="status-card" id="card-gemini">
+          <article class="status-card" id="card-openrouter">
+            <span class="label">OpenRouter</span>
+            <strong id="stat-openrouter">Revisando</strong>
+            <small id="stat-openrouter-note">Motor cloud (Principal)</small>
+          </article>
+          <article class="status-card hidden" id="card-gemini" style="display: none;">
             <span class="label">Gemini</span>
-            <strong id="stat-gemini">Revisando</strong>
-            <small id="stat-gemini-note">Motor cloud</small>
+            <strong id="stat-gemini">Oculto</strong>
+            <small id="stat-gemini-note">Motor secundario</small>
           </article>
           <article class="status-card" id="card-ollama">
             <span class="label">Local dev</span>
@@ -175,11 +180,11 @@
                 <div class="step-content" data-step="2">
                   <div class="step-title">
                     <h2>Video</h2>
-                    <p>Arrastra un video del Mac o pega un link público.</p>
+                    <p>Arrastra un video del Mac o pega un link público. Para Instagram en cloud, sube el archivo descargado.</p>
                   </div>
                   <div class="source-tabs" role="tablist" aria-label="Tipo de fuente">
-                    <button type="button" class="tab active" data-source="url"><strong>Pega URL</strong><small>YouTube, drive o link público</small></button>
-                    <button type="button" class="tab" data-source="upload"><strong>Arrastra video</strong><small>Reel o archivo local</small></button>
+                    <button type="button" class="tab active" data-source="url"><strong>Pega URL</strong><small>YouTube o link público directo</small></button>
+                    <button type="button" class="tab" data-source="upload"><strong>Arrastra video</strong><small>Recomendado para Instagram</small></button>
                   </div>
 
                   <div class="source-fields">
@@ -213,13 +218,14 @@
                     <label>
                       <span>Motor</span>
                       <select id="ai-provider" name="ai_provider">
-                        <option value="gemini">Gemini (Pipeline cloud)</option>
+                        <option value="openrouter" selected>OpenRouter (Pipeline cloud)</option>
+                        <option value="gemini" class="developer-only hidden">Gemini (Respaldo)</option>
                         <option value="ollama" class="developer-only hidden">Ollama (Local Dev)</option>
                       </select>
                     </label>
                     <select id="ai-model" name="ai_model" class="hidden" aria-hidden="true"></select>
                   </div>
-                  <div class="message warning">Si el pipeline no está activo, configura Gemini e InsForge como variables de entorno en Vercel.</div>
+                  <div class="message warning">Si el pipeline no está activo, configura OPENROUTER_API_KEY e InsForge en el dashboard de Vercel.</div>
                   <div class="step-actions">
                     <button type="button" class="secondary-button prev-step">Atrás</button>
                     <button id="submit-button" class="primary-button" type="submit">Iniciar extracción</button>
@@ -356,10 +362,15 @@
 
         <section id="ai-view" class="view">
           <div class="ai-layout">
-            <section class="panel analysis-panel">
-              <div class="panel-header"><h2>Gemini API</h2><span id="gemini-config-pill" class="pill">Revisando</span></div>
-              <div id="config-summary" class="human-status">Revisando conexión...</div>
+            <section class="panel analysis-panel developer-only hidden" style="display: none;">
+              <div class="panel-header"><h2>Gemini API</h2><span id="gemini-config-pill" class="pill">Oculto</span></div>
+              <div id="config-summary" class="human-status">Panel desactivado.</div>
               <pre id="config-status" class="hidden" aria-hidden="true"></pre>
+            </section>
+
+            <section class="panel analysis-panel">
+              <div class="panel-header"><h2>OpenRouter API</h2><span id="openrouter-config-pill" class="pill">Revisando</span></div>
+              <div id="openrouter-summary" class="human-status">Revisando conexión a OpenRouter...</div>
             </section>
 
             <section class="panel analysis-panel developer-only hidden">
@@ -402,7 +413,7 @@
 
             <form id="ai-test-form" class="panel form-panel">
               <div class="panel-header"><h2>Prueba rápida</h2></div>
-              <select id="test-ai-provider" name="provider" class="hidden" aria-hidden="true"><option value="gemini">Gemini</option><option value="ollama">Ollama</option></select>
+              <select id="test-ai-provider" name="provider" class="hidden" aria-hidden="true"><option value="openrouter">OpenRouter</option><option value="gemini">Gemini</option><option value="ollama">Ollama</option></select>
               <input id="test-ai-model" name="model" class="hidden" type="text" />
               <textarea id="test-ai-prompt" name="prompt" class="hidden">Responde brevemente si AD MediaSolution Studio está conectado.</textarea>
               <button class="primary-button" type="submit">Probar conexión</button>

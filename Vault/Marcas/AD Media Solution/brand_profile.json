@@ -1,5 +1,6 @@
 {
-    "brand_name": "AD Media Solution",
+    "id": "709cb6bf-1d56-46a4-b2a8-6c6fb812b3dc",
+    "name": "AD Media Solution",
     "tone": "claro, experto, directo y accionable",
     "audience": "audiencia interesada en contenido, marketing y crecimiento",
     "offer": "",
@@ -12,5 +13,8 @@
         "short",
         "ad",
         "post"
-    ]
+    ],
+    "metadata": {},
+    "created_at": "2026-05-07T17:58:26.560584+00:00",
+    "updated_at": "2026-05-07T17:58:26.560584+00:00"
 }

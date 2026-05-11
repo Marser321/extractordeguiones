@@ -1,51 +1,48 @@
-# AD MediaSolution - Pulido Visual De App
+# AD MediaSolution Studio - Plan De Ajustes Visuales Locales
 
 ## Resumen
-Rebrandear la experiencia visible de la app como **AD MediaSolution**, usando `Final.jpg` como fuente de logo, paleta y tono visual. ScriptDNA queda como etiqueta secundaria de producto interno.
+Levantar la aplicacion en entorno local, revisar la interfaz actual y preparar una fase de cambios visuales guiada por feedback humano.
 
 ## Protocolo Operativo
 <vibe_coding_protocol>
   <reasoning_before_action>
-    Este archivo registra el plan aprobado antes de editar la aplicacion.
-    La solicitud actual aprueba implementar el plan, por lo que despues de registrar estas guardrails se puede mutar la implementacion local.
+    Este archivo registra el plan antes de editar archivos de la aplicacion.
+    La exploracion inicial y el arranque local se usan para entender el estado real de la UI.
+    Los cambios visuales se implementaran solo despues de aprobacion explicita del vibe.
   </reasoning_before_action>
 
   <xml_guardrails>
     Las reglas criticas se mantienen envueltas en etiquetas XML claras.
-    Se preserva la jerarquia XML para facilitar auditoria.
+    Si durante la sesion aparecen nuevas guardrails, se agregaran preservando esta jerarquia XML.
   </xml_guardrails>
 
   <educational_feedback>
-    Se explicara cada bloque tecnico importante, por que se hace y que beneficio operativo aporta.
-    La explicacion sera breve y no narrara comandos triviales.
+    Cada bloque tecnico importante explicara que se hara, por que se hace y que beneficio aporta a la operacion.
+    La explicacion sera breve, enfocada en decisiones utiles de producto y experiencia visual.
   </educational_feedback>
 
   <atomicity>
-    El trabajo se organiza en fases: assets de marca, shell UI, sistema visual, notas de despliegue y validacion.
-    La validacion visual se trata como fase separada despues de los checks automaticos.
+    El trabajo se organiza en fases: ejecutar local, observar la UI, implementar una tanda acotada de cambios visuales y validar en navegador.
+    La validacion visual se tratara como fase separada despues de editar CSS/HTML/JS.
   </atomicity>
 
   <security>
-    No se escribiran tokens, API keys ni secretos en codigo, prompts persistentes o archivos versionados.
-    Las variables Gemini e InsForge deben configurarse manualmente en Vercel.
+    No se escribiran tokens, API keys, cookies ni secretos en codigo, prompts persistentes o archivos versionados.
+    Cualquier configuracion sensible seguira viviendo en .env o variables de entorno.
   </security>
 </vibe_coding_protocol>
 
-## Cambios Clave
-- Crear assets reutilizables en `backend/static/brand/` desde `Final.jpg`.
-- Rebrandear sidebar, titulo del navegador, microcopy y estados visibles como AD MediaSolution.
-- Aplicar paleta `#81E7FF`, `#488EFF`, `#01327F`, `#2E3033`, `#F3FAFD`, `#FEFEFE`.
-- Mantener ScriptDNA como subtitulo/producto secundario.
-- Agregar notas de despliegue manual para `GEMINI_API_KEY`, `GEMINI_API_KEYS`, `INSFORGE_ANON_KEY` e `INSFORGE_BASE_URL`.
+## Fases
+- Ejecutar la app localmente en `http://127.0.0.1:8000/app`.
+- Inspeccionar la UI actual y detectar los archivos visuales relevantes: `backend/static/app.html`, `backend/static/app.css` y `backend/static/app.js`.
+- Esperar feedback y aprobacion explicita del vibe sobre los cambios visuales deseados.
+- Implementar los cambios aprobados en una tanda pequena y coherente.
+- Validar localmente con navegador y checks automaticos disponibles.
 
-## Validacion
-- `backend/venv/bin/python -m py_compile backend/main.py backend/core/config.py backend/services/*.py`
-- `node --check backend/static/app.js`
-- Import smoke con `PYTHONPATH=backend`.
-- Verificacion visual de `/app` en navegador local.
+## Beneficio Operativo
+Trabajar contra la app real evita cambios esteticos a ciegas y permite validar rapido si la interfaz queda mas clara, mas usable y mas alineada con el flujo de procesamiento de guiones.
 
-## Supuestos
-- No se ejecutara deploy automatico.
-- `Final.jpg` es la fuente aprobada de identidad.
-- La configuracion real de APIs se hara manualmente en Vercel.
-- El pulido visual no certifica FFmpeg, Whisper, jobs largos, Vault persistente ni procesamiento pesado en serverless.
+## Validacion Prevista
+- Confirmar que la app carga en local.
+- Revisar que no haya errores visibles de layout en desktop.
+- Si se editan archivos frontend, verificar en navegador que los controles principales sigan accesibles.

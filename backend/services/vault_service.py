@@ -251,25 +251,73 @@ class VaultService:
             name = ib.get("name") or ib.get("brand_name")
             if name not in brands_map:
                 brands_map[name] = {"brand_name": name, "video_count": 0}
-            else:
-                # Si está en ambos, podríamos actualizar datos del perfil si quisiéramos
-                pass
+
+        # Fallback: buscar marcas que tengan scripts pero no registro de marca
+        script_brands = insforge_service.list_brands_from_scripts()
+        for sb_name in script_brands:
+            if sb_name not in brands_map:
+                brands_map[sb_name] = {"brand_name": sb_name, "video_count": 0}
         
         return sorted(brands_map.values(), key=lambda x: x["brand_name"])
 
     def list_videos(self, brand_name: str) -> list:
         brand_name = self._safe_name(brand_name, "brand_name")
         videos_path = self.marcas_dir / brand_name / "Contenido"
-        if not videos_path.exists():
-            return []
         videos = []
+        if not videos_path.exists():
+            for row in insforge_service.get_scripts_by_brand(brand_name):
+                video_id = row.get("video_id_str") or row.get("video_id")
+                if not video_id:
+                    continue
+                videos.append(self.describe_video_from_record(row))
+            return videos
         for video_path in sorted(videos_path.iterdir()):
             if video_path.is_dir():
                 videos.append(self.describe_video(brand_name, video_path.name))
+        known = {item["video_id"] for item in videos}
+        for row in insforge_service.get_scripts_by_brand(brand_name):
+            video_id = row.get("video_id_str") or row.get("video_id")
+            if video_id and video_id not in known:
+                videos.append(self.describe_video_from_record(row))
         return videos
+
+    def describe_video_from_record(self, record: dict) -> dict:
+        brand_name = record.get("brand_name") or record.get("name") or ""
+        video_id = record.get("video_id_str") or record.get("video_id") or ""
+        status = record.get("status") or "pending"
+        creative = record.get("creative_prompts")
+        has_outputs = isinstance(creative, dict) and bool(creative)
+        return {
+            "brand_name": brand_name,
+            "video_id": video_id,
+            "path": None,
+            "created_at": None,
+            "source_type": "cloud",
+            "source_value": record.get("video_url"),
+            "language": None,
+            "segments_count": 0,
+            "status": "completed" if status == "completed" else status,
+            "analysis_status": status,
+            "audit": {},
+            "creative_pack": {
+                "available": has_outputs,
+                "metadata": {},
+                "json_path": None,
+                "markdown_path": None,
+            },
+            "files": {},
+            "outputs": [],
+            "original_files": [],
+            "frames": [],
+            "job_id": record.get("job_id"),
+        }
 
     def describe_video(self, brand_name: str, video_id: str) -> dict:
         video_path = self.get_video_path(brand_name, video_id)
+        if not video_path.exists():
+            record = insforge_service.get_video_script(brand_name, video_id)
+            if record:
+                return self.describe_video_from_record(record)
         transcription = self.read_json(video_path / "metadatos_transcripcion.json") or {}
         source = self.read_json(video_path / "source_metadata.json") or {}
         analysis = self.read_json(video_path / "analisis_estado.json") or {}

@@ -1,0 +1,53 @@
+{
+    "language_detected": "es",
+    "language_probability": 1,
+    "full_text": "¿Están las empresas ahora mismo que no tienen websites y hacen dinero?  Absolutamente.  ¿Pueden hacer lo mucho que pueden?  Probablemente no.  Hay gente hoy que utiliza las máquinas de actualidad.  Hay gente hoy que todavía está en la mano.  No significa que les hace más probablemente competir.  Es decir, que están competiendo y todavía ganando una desadentidad.  Es decir, que tienen que ser mucho mejor en otras arenas.",
+    "segments": [
+        {
+            "start": 0.0,
+            "end": 2.4,
+            "text": " ¿Están las empresas ahora mismo que no tienen websites y hacen dinero?"
+        },
+        {
+            "start": 2.4,
+            "end": 3.4,
+            "text": " Absolutamente."
+        },
+        {
+            "start": 4.4,
+            "end": 5.6000000000000005,
+            "text": " ¿Pueden hacer lo mucho que pueden?"
+        },
+        {
+            "start": 6.2,
+            "end": 6.8,
+            "text": " Probablemente no."
+        },
+        {
+            "start": 6.8,
+            "end": 9.4,
+            "text": " Hay gente hoy que utiliza las máquinas de actualidad."
+        },
+        {
+            "start": 9.4,
+            "end": 12.0,
+            "text": " Hay gente hoy que todavía está en la mano."
+        },
+        {
+            "start": 12.6,
+            "end": 15.8,
+            "text": " No significa que les hace más probablemente competir."
+        },
+        {
+            "start": 15.8,
+            "end": 18.8,
+            "text": " Es decir, que están competiendo y todavía ganando una desadentidad."
+        },
+        {
+            "start": 19.0,
+            "end": 22.0,
+            "text": " Es decir, que tienen que ser mucho mejor en otras arenas."
+        }
+    ],
+    "provider": "whisper_local"
+}

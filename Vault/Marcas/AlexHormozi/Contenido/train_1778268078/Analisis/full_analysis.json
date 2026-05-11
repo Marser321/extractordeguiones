@@ -1,0 +1,243 @@
+{
+    "resumen_ejecutivo": "## Resumen Ejecutivo: El Dolor Inevitable del Crecimiento Empresarial\n\n**Tema:** La naturaleza intrínsecamente difícil y dolorosa del crecimiento empresarial, independientemente de la etapa.\n\n**Insight Lateral:** El crecimiento no es lineal ni siempre placentero. La 'pared' que se encuentra es una manifestación del esfuerzo y la resistencia inherente al progreso. La clave no es evitar el dolor, sino hacerlo más 'barato' mediante frameworks de pensamiento estratégico.\n\n**Objetivo:** Educar a la audiencia sobre la inevitabilidad del sufrimiento en los negocios y presentar la necesidad de herramientas estratégicas para gestionarlo.\n\n**Tono:** Directo, experto, realista y empoderador.\n\n**Oportunidad de Negocio:** Posicionar a Alex Hormozi como la autoridad que ofrece las herramientas y mentalidad para navegar la dificultad del crecimiento empresarial de manera más eficiente y menos costosa.\n\n**Supuestos:** El guion asume que la audiencia está involucrada en negocios y experimenta o anticipa desafíos de crecimiento.",
+    "hooks": [
+        {
+            "hook": "¿Crees que el crecimiento empresarial es fácil? Piensa de nuevo.",
+            "uso": "reel",
+            "rationale": "Desafía una creencia común y genera curiosidad inmediata al presentar una perspectiva contraintuitiva sobre el crecimiento."
+        },
+        {
+            "hook": "El crecimiento duele. ¿Estás preparado para pagarlo?",
+            "uso": "ad",
+            "rationale": "Apela a la emoción y al instinto de autopreservación, planteando el crecimiento como una inversión con un costo emocional y práctico."
+        },
+        {
+            "hook": "Estancado o en crecimiento: el dolor es constante. Aquí te explico por qué.",
+            "uso": "post",
+            "rationale": "Aborda ambas realidades (crecimiento y estancamiento) y promete una explicación, apelando a la necesidad de comprensión y solución."
+        },
+        {
+            "hook": "El secreto para hacer el 'dolor' del negocio más barato.",
+            "uso": "short",
+            "rationale": "Promete una solución práctica y un beneficio tangible (reducir costos, en este caso, emocionales/estratégicos), generando intriga."
+        }
+    ],
+    "momentos_virales": [
+        {
+            "titulo": "La Paradoja del Crecimiento Doloroso",
+            "descripcion": "Se explica cómo tanto el crecimiento activo como el estancamiento ('paredes') generan sufrimiento en los negocios, presentando una visión realista y cruda de la realidad empresarial.",
+            "duracion_sugerida": "20-30s",
+            "motivo_retencion": "La audiencia se identifica con la frustración de que el 'dolor' es constante, independientemente de si se avanza o no. La revelación de que no hay escape fácil genera intriga."
+        },
+        {
+            "titulo": "El Costo del 'Platotamiento'",
+            "descripcion": "Se detalla cómo la falta de crecimiento ('estar platotado') también presenta sus propias 'paredes' y limitaciones, reforzando la idea de que el desafío es inherente a la actividad empresarial.",
+            "duracion_sugerida": "15-20s",
+            "motivo_retencion": "Valida la experiencia de aquellos que se sienten atrapados y les ofrece una perspectiva de que su situación no es una anomalía, sino parte del juego."
+        }
+    ],
+    "estructura_narrativa": {
+        "patron": [
+            "apertura",
+            "tension",
+            "valor",
+            "cta"
+        ],
+        "notas": "El guion presenta una apertura directa que establece la premisa del dolor en el crecimiento. La tensión se construye al describir las 'paredes' y el estado de 'cazado'. El valor reside en la idea de que los 'frameworks' pueden hacer el proceso más 'barato'. El CTA implícito es la necesidad de buscar estas herramientas."
+    },
+    "ideas_reels": [
+        {
+            "titulo": "El Dolor del Éxito (y del Fracaso)",
+            "estructura": "Inicio con el orador diciendo 'El crecimiento duele'. Luego, se muestran clips rápidos de 'paredes' metafóricas (muros, laberintos). Se contrasta con clips de estancamiento (rueda girando en vacío). Cierre con el orador explicando que los frameworks hacen el dolor más 'barato'.",
+            "cta": "Guarda este video para cuando el crecimiento te golpee.",
+            "insight_lateral": "El 'dolor' no es una señal de que algo va mal, sino una métrica de que algo está sucediendo. La clave es gestionarlo, no evitarlo."
+        },
+        {
+            "titulo": "Cazado por tu Negocio: La Realidad del Emprendedor",
+            "estructura": "Comienza con una pregunta: '¿Te sientes cazado por tu propio negocio?'. Visuales de alguien atrapado. Se explica que esto ocurre tanto si creces rápido como si estás estancado. Se introduce la idea de 'frameworks' como la salida.",
+            "cta": "Comparte si entiendes esta lucha.",
+            "insight_lateral": "La sensación de estar 'cazado' es una manifestación de la falta de control estratégico, no necesariamente de la falta de esfuerzo."
+        }
+    ],
+    "ads": [
+        {
+            "concepto": "El Costo Oculto del Crecimiento",
+            "angulo": "Se enfoca en la inevitabilidad del sufrimiento en los negocios y posiciona la sabiduría de Hormozi como la forma de minimizar ese costo.",
+            "copy": "Crecer duele. Estancarse duele. En los negocios, el dolor es una constante. Pero, ¿y si pudieras hacerlo más 'barato'? Alex Hormozi revela cómo los frameworks estratégicos te ayudan a navegar las 'paredes' del crecimiento y el estancamiento. Deja de sufrir innecesariamente. Descubre cómo pensar mejor para pagar menos.",
+            "cta": "Descubre los frameworks de Hormozi."
+        },
+        {
+            "concepto": "No Hay Escape: Solo Gestión del Dolor",
+            "angulo": "Desafía la noción de un 'negocio fácil' y presenta la mentalidad de Hormozi como la única vía realista para la supervivencia y el éxito a largo plazo.",
+            "copy": "Pensabas que el éxito era sinónimo de tranquilidad? Error. El crecimiento trae 'paredes', el estancamiento también. Estás 'cazado'. La única diferencia es cuánto te cuesta el sufrimiento. Alex Hormozi te enseña a pensar estratégicamente para que cada 'golpe' sea menos doloroso. ¿Listo para pagar el precio justo?",
+            "cta": "Aprende a gestionar el dolor empresarial."
+        }
+    ],
+    "brief_creativo": "## Brief Creativo: Navegando el Dolor del Crecimiento Empresarial\n\n**Objetivo:** Crear contenido que eduque a emprendedores y empresarios sobre la naturaleza inevitable del desafío y el dolor en el crecimiento empresarial, y posicionar a Alex Hormozi como la fuente de estrategias para gestionarlo de manera más eficiente.\n\n**Audiencia Psicográfica:** Emprendedores, dueños de negocios y aspirantes a empresarios que están experimentando o anticipan dificultades en el crecimiento. Buscan soluciones prácticas y una mentalidad realista, no promesas vacías.\n\n**Mensaje Central:** El crecimiento y el estancamiento empresarial son inherentemente difíciles y dolorosos. La clave no es evitar el dolor, sino hacerlo más 'barato' mediante el uso de frameworks de pensamiento estratégico.\n\n**Entregables:** Videos cortos (reels, shorts), posts para redes sociales, anuncios (ads) y posibles piezas de contenido más largo (si aplica).\n\n**Dirección Visual:**\n*   **Estilo:** Limpio, moderno, directo. Enfocado en la claridad del mensaje.\n*   **Elementos:** Uso de metáforas visuales para 'paredes', 'estancamiento', 'estar cazado'. Gráficos minimalistas que ilustren conceptos.\n*   **Orador:** Alex Hormozi debe proyectar autoridad, experiencia y una franqueza realista. Gestos enfáticos pero controlados.\n*   **Paleta de Colores:** Consistente con la marca Alex Hormozi (si está definida, usarla; si no, optar por colores que transmitan seriedad y profesionalismo, evitando lo excesivamente brillante o infantil).",
+    "captions": [
+        {
+            "plataforma": "Instagram",
+            "caption": "El crecimiento empresarial no es un camino de rosas. De hecho, a menudo es doloroso. Ya sea que estés escalando rápido y chocando contra 'paredes', o estés estancado y sintiéndote 'cazado', el sufrimiento es parte del juego. La buena noticia: puedes hacerlo más 'barato'. Alex Hormozi comparte cómo los frameworks estratégicos son tu mejor arma contra el dolor innecesario. ¿Estás listo para pensar diferente?\n\n#AlexHormozi #Emprendimiento #Negocios #CrecimientoEmpresarial #MentalidadEmprendedora #EstrategiaDeNegocios #DolorEmpresarial",
+            "hashtags": [
+                "AlexHormozi",
+                "Emprendimiento",
+                "Negocios",
+                "CrecimientoEmpresarial",
+                "MentalidadEmprendedora",
+                "EstrategiaDeNegocios",
+                "DolorEmpresarial"
+            ]
+        },
+        {
+            "plataforma": "TikTok",
+            "caption": "¡El crecimiento duele! 🤯 Y el estancamiento también. ¿Te sientes atrapado? Alex Hormozi te dice cómo hacer que el 'dolor' de tu negocio sea más barato con frameworks. #AlexHormozi #Emprendedor #NegociosOnline #TipsDeNegocios #Mentalidad #FracasoExitoso #Estrategia",
+            "hashtags": [
+                "AlexHormozi",
+                "Emprendedor",
+                "NegociosOnline",
+                "TipsDeNegocios",
+                "Mentalidad",
+                "FracasoExitoso",
+                "Estrategia"
+            ]
+        },
+        {
+            "plataforma": "YouTube",
+            "caption": "Alex Hormozi: El Dolor Inevitable del Crecimiento Empresarial (Y Cómo Hacerlo Más Barato)\n\nEn este video, Alex Hormozi desglosa la cruda realidad del emprendimiento: el crecimiento trae consigo 'paredes' y el estancamiento te deja 'cazado'. Descubre por qué el sufrimiento es una constante y, lo más importante, cómo puedes minimizar su impacto utilizando frameworks de pensamiento estratégico.\n\nSi buscas una perspectiva realista y accionable sobre los desafíos empresariales, este video es para ti.\n\n#AlexHormozi #Negocios #Emprendimiento #Crecimiento #Estrategia #MentalidadDeNegocios #Emprendedores",
+            "hashtags": [
+                "AlexHormozi",
+                "Negocios",
+                "Emprendimiento",
+                "Crecimiento",
+                "Estrategia",
+                "MentalidadDeNegocios",
+                "Emprendedores"
+            ]
+        },
+        {
+            "plataforma": "LinkedIn",
+            "caption": "La realidad del crecimiento empresarial es que rara vez es fácil. Ya sea que estés expandiéndote rápidamente y enfrentando nuevas 'paredes', o te encuentres en un punto de estancamiento sintiéndote 'cazado', el desafío es constante. La clave no está en evitar el dolor, sino en hacerlo más 'barato' a través de la aplicación de frameworks estratégicos.\n\nAlex Hormozi aborda esta dura verdad, ofreciendo una perspectiva valiosa para líderes y emprendedores que buscan navegar la complejidad del mundo empresarial con mayor eficacia.\n\n¿Cómo gestionas tú el 'dolor' inherente al crecimiento?\n\n#AlexHormozi #Liderazgo #EstrategiaEmpresarial #DesarrolloDeNegocios #Emprendimiento #Gestión #Innovación",
+            "hashtags": [
+                "AlexHormozi",
+                "Liderazgo",
+                "EstrategiaEmpresarial",
+                "DesarrolloDeNegocios",
+                "Emprendimiento",
+                "Gestión",
+                "Innovación"
+            ]
+        }
+    ],
+    "calendario_publicacion": [
+        {
+            "dia": "Día 1",
+            "pieza": "Reel: El Dolor del Éxito (y del Fracaso)",
+            "objetivo": "Captar la atención inicial y generar reconocimiento del problema universal del dolor empresarial."
+        },
+        {
+            "dia": "Día 2",
+            "pieza": "Post de Instagram/LinkedIn: Cita clave sobre la inevitabilidad del dolor.",
+            "objetivo": "Reforzar el mensaje central y fomentar la reflexión y el engagement en la comunidad."
+        },
+        {
+            "dia": "Día 3",
+            "pieza": "Ad (Facebook/Instagram): El Costo Oculto del Crecimiento",
+            "objetivo": "Atraer a una audiencia más amplia interesada en soluciones prácticas para el crecimiento empresarial."
+        },
+        {
+            "dia": "Día 4",
+            "pieza": "Short de TikTok: El secreto para hacer el 'dolor' del negocio más barato.",
+            "objetivo": "Generar viralidad y alcanzar a una audiencia más joven y dinámica con un mensaje conciso."
+        },
+        {
+            "dia": "Día 5",
+            "pieza": "Video de YouTube: Alex Hormozi: El Dolor Inevitable del Crecimiento Empresarial (Y Cómo Hacerlo Más Barato)",
+            "objetivo": "Proporcionar valor profundo y posicionar a Hormozi como una autoridad en la materia, capturando a la audiencia que busca contenido educativo detallado."
+        }
+    ],
+    "prompts_visuales": [
+        {
+            "uso": "thumbnail",
+            "prompt": "Alex Hormozi mirando directamente a la cámara con una expresión seria pero determinada. Detrás de él, un fondo minimalista con una línea gráfica que simula una 'pared' o un pico ascendente que se quiebra. Texto superpuesto: 'El Crecimiento DUELE'. Estilo limpio y moderno.",
+            "negative_prompt": "Fondos recargados, sonrisas falsas, gráficos infantiles, texto ilegible."
+        },
+        {
+            "uso": "ad",
+            "prompt": "Secuencia rápida: 1. Alex Hormozi hablando con intensidad. 2. Gráfico animado de un camino que se vuelve un muro infranqueable. 3. Imagen de alguien sintiéndose atrapado en una red. 4. Alex Hormozi señalando un diagrama simple de 'frameworks'. 5. Texto claro: 'Haz el Dolor Más Barato'. Estilo visual dinámico y profesional.",
+            "negative_prompt": "Animaciones de baja calidad, transiciones abruptas sin sentido, colores chillones, personas genéricas."
+        },
+        {
+            "uso": "post",
+            "prompt": "Imagen de Alex Hormozi con una cita destacada: 'El negocio es difícil, se va a sufrir'. Fondo con texturas sutiles que evocan esfuerzo o resistencia. Paleta de colores sobria y profesional.",
+            "negative_prompt": "Imágenes de stock genéricas, fondos demasiado brillantes, tipografía difícil de leer."
+        },
+        {
+            "uso": "story",
+            "prompt": "Video corto vertical: Alex Hormozi dice 'Estás cazado'. Aparece texto: '¿Crecimiento o Estancamiento? Ambos duelen.'. Luego, Hormozi sonríe levemente y dice 'Pero hay una forma de hacerlo más barato.'. Fondo con elementos gráficos abstractos que sugieren estrategia.",
+            "negative_prompt": "Texto que ocupa toda la pantalla, baja resolución, música estridente."
+        }
+    ],
+    "prompt_base_marca": {
+        "brand_name": "AlexHormozi",
+        "tone": "Claro, experto, directo y accionable. Con un toque de realismo crudo y autoridad.",
+        "visual_direction": "Estilo limpio, moderno, con foco en la idea principal. Uso de gráficos minimalistas y metáforas visuales claras. El orador (Alex Hormozi) debe proyectar confianza y experiencia.",
+        "do": [
+            "Ser directo y al grano.",
+            "Ofrecer soluciones prácticas y medibles.",
+            "Utilizar analogías y ejemplos claros.",
+            "Mantener un tono de autoridad pero accesible.",
+            "Fomentar la acción inmediata del espectador.",
+            "Desafiar el status quo con lógica y evidencia."
+        ],
+        "dont": [
+            "Usar jerga excesiva o lenguaje vago.",
+            "Prometer resultados fáciles o sin esfuerzo.",
+            "Ser condescendiente o paternalista.",
+            "Utilizar elementos visuales distractores o de baja calidad."
+        ]
+    },
+    "retrospectiva": {
+        "que_funciono": [
+            "La identificación de la 'pared' y el estado de 'cazado' como metáforas centrales del dolor empresarial.",
+            "El enfoque en la inevitabilidad del sufrimiento, independientemente de la fase del negocio.",
+            "La propuesta de 'frameworks' como solución para hacer el dolor más 'barato'."
+        ],
+        "que_falto": [
+            "El guion es muy corto y conceptual. Faltan ejemplos concretos de 'frameworks' o cómo aplicarlos.",
+            "No se profundiza en qué constituye el 'dolor' en cada etapa (crecimiento vs. estancamiento).",
+            "La llamada a la acción es implícita; podría ser más explícita."
+        ],
+        "siguiente_mejora": "Desarrollar contenido que profundice en ejemplos específicos de 'frameworks' (ej. el framework de 'priorización', el de 'gestión de tiempo', etc.) y cómo estos mitigan el dolor en situaciones de crecimiento y estancamiento. Crear piezas que muestren casos de uso o testimonios (si existen) que validen la efectividad de estos frameworks.",
+        "generation_mode": "ai"
+    },
+    "_quality_repair": {
+        "applied": false
+    },
+    "_prompt_version": "scriptdna-business-v3",
+    "_context_inputs": {
+        "prompt_version": "scriptdna-business-v3",
+        "script_chars": 476,
+        "script_truncated": false,
+        "brand_profile_fields": [
+            "audience",
+            "created_at",
+            "cta",
+            "id",
+            "name",
+            "preferred_formats",
+            "tone",
+            "updated_at",
+            "visual_style"
+        ],
+        "historical_pattern_counts": {
+            "hooks_frecuentes": 12,
+            "estructuras_ganadoras": 4,
+            "angulos_de_venta": 5,
+            "reglas_de_estilo": 7,
+            "pattern_candidates": 49,
+            "pattern_metadata": 49
+        },
+        "visual_context_available": false,
+        "visual_context_status": "missing"
+    }
+}

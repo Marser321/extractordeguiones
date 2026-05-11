@@ -1,0 +1,250 @@
+{
+    "resumen_ejecutivo": "## Resumen Ejecutivo: AlexHormozi - La Razón Fundamental del Éxito\n\n**Tema:** La importancia de la objetividad y el análisis conductual para definir la realidad y tomar decisiones efectivas.\n\n**Insight Lateral:** La verdadera maestría no reside en la intuición o la emoción, sino en la capacidad de despojar las situaciones de subjetividad para observar patrones de comportamiento puros. Esto permite una toma de decisiones más precisa y menos propensa a errores basados en sesgos personales.\n\n**Objetivo:** Posicionar a Alex Hormozi como una autoridad en la toma de decisiones basada en datos y evidencia observable, alejándose de enfoques puramente emocionales o psicológicos.\n\n**Tono:** Claro, experto, directo y accionable.\n\n**Oportunidad de Negocio:** Ofrecer a la audiencia herramientas y marcos de pensamiento para analizar sus propios negocios y vidas desde una perspectiva conductual, mejorando la efectividad de sus estrategias y reduciendo la incertidumbre.\n\n**Supuestos:** El guion se enfoca en la eliminación de la emoción para alcanzar una definición más precisa de la realidad, lo cual implica que la audiencia puede estar lidiando con decisiones nubladas por el sentimiento.",
+    "hooks": [
+        {
+            "hook": "¿Tu intuición te falla? Alex Hormozi revela la única métrica que importa.",
+            "uso": "reel",
+            "rationale": "Apela a la frustración común de la intuición errática y promete una solución simple y definitiva, alineada con el tono directo de Hormozi."
+        },
+        {
+            "hook": "La 'realidad' que te engaña: Cómo verla sin filtros, según Alex Hormozi.",
+            "uso": "short",
+            "rationale": "Genera intriga sobre la naturaleza de la 'realidad' y posiciona a Hormozi como quien tiene la clave para una percepción más clara y objetiva."
+        },
+        {
+            "hook": "Deja de sentir, empieza a ver: La ciencia detrás de las decisiones de Alex Hormozi.",
+            "uso": "ad",
+            "rationale": "Contrasta directamente la emoción con la observación científica, un ángulo atractivo para audiencias que buscan resultados medibles y estrategias probadas."
+        },
+        {
+            "hook": "El secreto de Hormozi: Elimina la emoción para definir tu éxito.",
+            "uso": "post",
+            "rationale": "Directo, enfocado en el beneficio (éxito) y en la metodología (eliminar emoción), invitando a la reflexión sobre la propia aproximación."
+        }
+    ],
+    "momentos_virales": [
+        {
+            "titulo": "Pregunta de facturación",
+            "descripcion": "Abrir con el desafío de facturar 30.000 dólares al mes y pedir al espectador que elija el negocio más rápido.",
+            "duracion_sugerida": "0-12s",
+            "motivo_retencion": "La cifra concreta y la pregunta competitiva generan curiosidad inmediata."
+        },
+        {
+            "titulo": "Comparación inversión-retorno",
+            "descripcion": "Contrastar invertir 3.000 con la posibilidad de generar 30.000 para instalar la tensión principal.",
+            "duracion_sugerida": "12-28s",
+            "motivo_retencion": "El espectador se queda para entender si la relación riesgo-retorno hace sentido."
+        },
+        {
+            "titulo": "Sistema de cierre",
+            "descripcion": "Presentar CRM, seguimiento o masterclass como mecanismo que convierte el interés en operación.",
+            "duracion_sugerida": "28-55s",
+            "motivo_retencion": "Pasa de promesa a proceso, elevando credibilidad."
+        }
+    ],
+    "estructura_narrativa": {
+        "patron": [
+            "apertura",
+            "tension",
+            "valor",
+            "cta"
+        ],
+        "notas": "El guion es muy corto, por lo que la estructura se basa en la premisa de que el 'valor' es la revelación de la metodología de Hormozi. La 'apertura' sería la declaración inicial, la 'tensión' la implicación de que la emoción nubla la realidad, el 'valor' la solución conductual, y el 'cta' implícito sería adoptar esta perspectiva. Para un video más largo, se necesitaría expandir la 'tensión' con ejemplos de fracasos emocionales y el 'valor' con casos de éxito conductual."
+    },
+    "ideas_reels": [
+        {
+            "titulo": "La pregunta de los 30K",
+            "estructura": "Texto grande con la pregunta, corte al orador, tres negocios posibles, CTA a comentar o reservar.",
+            "cta": "Guardar, compartir o solicitar más información",
+            "insight_lateral": "El reel funciona como test de mercado: quien responde ya está imaginando ROI."
+        },
+        {
+            "titulo": "3K contra 30K",
+            "estructura": "Pantalla dividida inversión/retorno, objeción rápida, explicación del sistema, CTA.",
+            "cta": "Guardar, compartir o solicitar más información",
+            "insight_lateral": "La pieza transforma una compra en apuesta racional de negocio."
+        },
+        {
+            "titulo": "El CRM invisible",
+            "estructura": "Hook sobre leads perdidos, ejemplo del proceso, visual de pipeline, invitación a masterclass.",
+            "cta": "Guardar, compartir o solicitar más información",
+            "insight_lateral": "Vende infraestructura comercial sin hablar como software genérico."
+        }
+    ],
+    "ads": [
+        {
+            "concepto": "Reto de facturación mensual",
+            "angulo": "aspiración cuantificada",
+            "copy": "La única y más grande raser que tengo para definir la realidad más acuérdida ha sido el removimiento de todo e Si quieres entender el sistema detrás de esa respuesta, este es el siguiente paso.",
+            "cta": "Guardar, compartir o solicitar más información"
+        },
+        {
+            "concepto": "Inversión con lógica de retorno",
+            "angulo": "riesgo calculado",
+            "copy": "No se trata de gastar en marketing. Se trata de construir una ruta medible entre atención, seguimiento y cierre.",
+            "cta": "Guardar, compartir o solicitar más información"
+        },
+        {
+            "concepto": "Masterclass como filtro",
+            "angulo": "autoridad práctica",
+            "copy": "Mira el proceso completo antes de invertir tiempo o dinero en otro canal que no sabes medir.",
+            "cta": "Guardar, compartir o solicitar más información"
+        }
+    ],
+    "brief_creativo": "## Brief Creativo: AlexHormozi - La Lógica Pura\n\n**Objetivo:** Crear contenido que posicione a Alex Hormozi como un referente en la toma de decisiones objetivas y basadas en evidencia conductual, diferenciándolo de enfoques emocionales.\n\n**Audiencia Psicográfica:** Emprendedores, marketers y profesionales ambiciosos que buscan optimizar sus estrategias, superar bloqueos mentales y alcanzar resultados medibles. Valoran la lógica, la eficiencia y la autoridad probada.\n\n**Mensaje Central:** La clave para una realidad más precisa y decisiones efectivas reside en eliminar la subjetividad emocional y enfocarse en la observación pura del comportamiento.\n\n**Entregables:**\n*   Hooks para redes sociales (Reels, Shorts, Posts).\n*   Conceptos para anuncios cortos.\n*   Ideas para videos virales cortos.\n*   Guía de estilo y tono.\n\n**Dirección Visual:**\n*   Estilo limpio, moderno, con foco en la idea principal.\n*   Uso de gráficos minimalistas que representen datos o patrones.\n*   El orador (Hormozi) debe proyectar confianza y autoridad a través de su lenguaje corporal y expresión facial, reforzando la seriedad del mensaje.",
+    "captions": [
+        {
+            "plataforma": "Instagram",
+            "caption": "La única forma de definir la realidad con precisión: despojarla de sentimiento, emoción y psicología. Enfócate en lo observable. ¿Estás listo para ver las cosas como son?\n\n#AlexHormozi #TomaDeDecisiones #MentalidadEmpresarial #Negocios #Estrategia #Comportamiento",
+            "hashtags": [
+                "AlexHormozi",
+                "TomaDeDecisiones",
+                "MentalidadEmpresarial",
+                "Negocios",
+                "Estrategia",
+                "Comportamiento"
+            ]
+        },
+        {
+            "plataforma": "TikTok",
+            "caption": "¡Basta de emociones! 🙅‍♂️ La clave para entender la realidad está en observar el comportamiento. ¡Te explico cómo! 👇\n\n#Hormozi #BusinessTips #DecisionMaking #BehavioralScience #Entrepreneurship",
+            "hashtags": [
+                "Hormozi",
+                "BusinessTips",
+                "DecisionMaking",
+                "BehavioralScience",
+                "Entrepreneurship"
+            ]
+        },
+        {
+            "plataforma": "YouTube",
+            "caption": "Alex Hormozi: La Verdadera Definición de Realidad (Sin Emociones)\n\nEn este video, Alex Hormozi comparte su método fundamental para entender la realidad: eliminar la subjetividad y centrarse en el comportamiento observable. Descubre cómo esta perspectiva puede transformar tu toma de decisiones y potenciar tu éxito.\n\n#AlexHormozi #RealidadObjetiva #PsicologiaDeNegocios #MarketingDePerformance #CrecimientoEmpresarial",
+            "hashtags": [
+                "AlexHormozi",
+                "RealidadObjetiva",
+                "PsicologiaDeNegocios",
+                "MarketingDePerformance",
+                "CrecimientoEmpresarial"
+            ]
+        },
+        {
+            "plataforma": "LinkedIn",
+            "caption": "La métrica definitiva para definir la realidad: la observación conductual pura. Al remover el sesgo emocional y psicológico, obtenemos una claridad sin precedentes para la toma de decisiones estratégicas.\n\n¿Cómo aplicas este principio en tu liderazgo o estrategia de negocio?\n\n#AlexHormozi #Liderazgo #EstrategiaEmpresarial #TomaDeDecisionesBasadaEnDatos #ComportamientoOrganizacional",
+            "hashtags": [
+                "AlexHormozi",
+                "Liderazgo",
+                "EstrategiaEmpresarial",
+                "TomaDeDecisionesBasadaEnDatos",
+                "ComportamientoOrganizacional"
+            ]
+        }
+    ],
+    "calendario_publicacion": [
+        {
+            "dia": "Día 1",
+            "pieza": "Reel corto con el hook '¿Tu intuición te falla? Alex Hormozi revela la única métrica que importa.'",
+            "objetivo": "Captar la atención inicial y generar curiosidad sobre el método de decisión de Hormozi."
+        },
+        {
+            "dia": "Día 2",
+            "pieza": "Post en Instagram/LinkedIn con la cita principal y una pregunta abierta: '¿Cómo aplicas la observación conductual en tu día a día?'",
+            "objetivo": "Fomentar la interacción y el debate sobre el tema."
+        },
+        {
+            "dia": "Día 3",
+            "pieza": "Anuncio corto (Ad) con el concepto 'El Desapego Estratégico'.",
+            "objetivo": "Atraer a una audiencia más amplia interesada en mejorar sus decisiones."
+        },
+        {
+            "dia": "Día 4",
+            "pieza": "Video corto (Short/TikTok) explicando el 'Momento Viral: La Desconexión Emocional como Superpoder'.",
+            "objetivo": "Profundizar en el concepto de manera dinámica y entretenida."
+        }
+    ],
+    "prompts_visuales": [
+        {
+            "uso": "reel cover",
+            "prompt": "Portada vertical 9:16 para AlexHormozi, orador masculino con gafas en entorno exterior verde desenfocado, texto grande: '¿30K al mes?', composición con rostro a un tercio, contraste alto, estética limpio, moderno, con foco en la idea principal, espacio seguro para subtítulo y CTA.",
+            "negative_prompt": "texto ilegible, cifras pequeñas, promesas exageradas, fondo saturado, rostro distorsionado"
+        },
+        {
+            "uso": "meta ad",
+            "prompt": "Creativo 4:5 de performance para explicar inversión vs retorno, visual central con orador gesticulando, overlays '3K inversión' y '30K objetivo', fondo natural profesional, jerarquía clara, CTA: Guardar, compartir o solicitar más información.",
+            "negative_prompt": "gráficos financieros falsos, lujo genérico, billetes irreales, exceso de texto"
+        },
+        {
+            "uso": "thumbnail",
+            "prompt": "Thumbnail 16:9 con primer plano del orador, fondo verde con bokeh, expresión de pregunta, copy grande '¿Qué negocio escala más rápido?', flecha sutil hacia cifra 30K, estilo nítido y creíble.",
+            "negative_prompt": "clickbait confuso, texto cortado, demasiados iconos"
+        },
+        {
+            "uso": "carousel",
+            "prompt": "Carrusel 4:5 educativo, slide 1 pregunta 30K, slide 2 inversión 3K, slide 3 sistema CRM, slide 4 masterclass, usar paleta sobria, tipografía pesada, composición editorial limpia.",
+            "negative_prompt": "plantilla genérica, saturación excesiva, layouts desordenados"
+        }
+    ],
+    "prompt_base_marca": {
+        "brand_name": "AlexHormozi",
+        "tone": "Claro, experto, directo y accionable. Evitar jerga excesiva o lenguaje vago.",
+        "visual_direction": "Estilo limpio, moderno, minimalista. Foco en la idea principal. Uso de gráficos claros y tipografía legible. El orador debe proyectar autoridad y confianza.",
+        "do": [
+            "Ser directo y al grano.",
+            "Ofrecer soluciones prácticas y medibles.",
+            "Utilizar analogías y ejemplos claros (si el guion lo permite).",
+            "Mantener un tono de autoridad pero accesible.",
+            "Fomentar la acción inmediata del espectador.",
+            "Desafiar el status quo con lógica y evidencia."
+        ],
+        "dont": [
+            "Usar lenguaje emocional o sentimental.",
+            "Ser ambiguo o dar rodeos.",
+            "Presentar información sin una aplicación práctica clara.",
+            "Utilizar elementos visuales distractores o recargados."
+        ]
+    },
+    "retrospectiva": {
+        "que_funciono": [
+            "La premisa central de eliminar la emoción para alcanzar una 'realidad más acuérdida' es un ángulo fuerte y diferenciador.",
+            "El tono directo y experto de Hormozi se alinea perfectamente con el mensaje de objetividad."
+        ],
+        "que_falto": [
+            "El guion es extremadamente corto, lo que limita la profundidad del análisis y la generación de múltiples activos detallados.",
+            "Falta de ejemplos concretos o casos de estudio dentro del guion para ilustrar la aplicación práctica del método.",
+            "Ausencia de contexto visual específico para anclar las recomendaciones visuales."
+        ],
+        "siguiente_mejora": "Expandir el contenido con ejemplos prácticos de cómo aplicar la 'observación conductual' en escenarios empresariales comunes (ej. marketing, ventas, gestión de equipos). Crear un video más largo que desarrolle la 'tensión' y el 'valor' con casos de éxito o fracaso ilustrativos.",
+        "generation_mode": "ai"
+    },
+    "_quality_repair": {
+        "applied": true,
+        "reason": "Se detectaron placeholders, schema copiado o baja densidad de piezas.",
+        "source": "script_visual_brand_deterministic_repair"
+    },
+    "_prompt_version": "scriptdna-business-v3",
+    "_context_inputs": {
+        "prompt_version": "scriptdna-business-v3",
+        "script_chars": 240,
+        "script_truncated": false,
+        "brand_profile_fields": [
+            "audience",
+            "created_at",
+            "cta",
+            "id",
+            "name",
+            "preferred_formats",
+            "tone",
+            "updated_at",
+            "visual_style"
+        ],
+        "historical_pattern_counts": {
+            "hooks_frecuentes": 8,
+            "estructuras_ganadoras": 4,
+            "angulos_de_venta": 5,
+            "reglas_de_estilo": 6,
+            "pattern_candidates": 32,
+            "pattern_metadata": 32
+        },
+        "visual_context_available": false,
+        "visual_context_status": "missing"
+    }
+}

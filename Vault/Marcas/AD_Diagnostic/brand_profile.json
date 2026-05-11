@@ -1,0 +1,20 @@
+{
+    "id": "d72e5882-a1f3-4931-ab81-a1090cd9165a",
+    "name": "AD_Diagnostic",
+    "tone": "claro, experto, directo y accionable",
+    "audience": "audiencia interesada en contenido, marketing y crecimiento",
+    "offer": "",
+    "visual_style": "limpio, moderno, con foco en la idea principal",
+    "colors": [],
+    "forbidden_words": [],
+    "cta": "Guardar, compartir o solicitar más información",
+    "preferred_formats": [
+        "reel",
+        "short",
+        "ad",
+        "post"
+    ],
+    "metadata": {},
+    "created_at": "2026-05-07T17:58:28.394155+00:00",
+    "updated_at": "2026-05-07T17:58:28.394155+00:00"
+}

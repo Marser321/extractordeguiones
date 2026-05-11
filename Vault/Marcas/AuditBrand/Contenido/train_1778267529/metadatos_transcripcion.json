@@ -1,0 +1,73 @@
+{
+    "language_detected": "es",
+    "language_probability": 1,
+    "full_text": "30.44% de las personas que terminan el primer mes de la escuela  hacen el primer dólar de la vida.  Y eso es como,  así, como,  como,  eso es lo que hacemos, ¿Sabes?  Y como,  sé cómo difícil el primer dólar es,  como,  hay mucho para obtener el primer dólar de la vida,  porque el segundo dólar viene mucho más rápido después de eso.  Sí, yo creo que tener el primer dólar de la vida  es muy importante.",
+    "segments": [
+        {
+            "start": 0.0,
+            "end": 3.0,
+            "text": " 30.44% de las personas que terminan el primer mes de la escuela"
+        },
+        {
+            "start": 3.0,
+            "end": 4.8,
+            "text": " hacen el primer dólar de la vida."
+        },
+        {
+            "start": 4.8,
+            "end": 6.0,
+            "text": " Y eso es como,"
+        },
+        {
+            "start": 6.0,
+            "end": 8.8,
+            "text": " así, como,"
+        },
+        {
+            "start": 8.8,
+            "end": 9.700000000000001,
+            "text": " como,"
+        },
+        {
+            "start": 9.700000000000001,
+            "end": 11.0,
+            "text": " eso es lo que hacemos, ¿Sabes?"
+        },
+        {
+            "start": 11.0,
+            "end": 11.700000000000001,
+            "text": " Y como,"
+        },
+        {
+            "start": 11.700000000000001,
+            "end": 13.700000000000001,
+            "text": " sé cómo difícil el primer dólar es,"
+        },
+        {
+            "start": 13.700000000000001,
+            "end": 14.3,
+            "text": " como,"
+        },
+        {
+            "start": 14.3,
+            "end": 16.4,
+            "text": " hay mucho para obtener el primer dólar de la vida,"
+        },
+        {
+            "start": 16.4,
+            "end": 18.8,
+            "text": " porque el segundo dólar viene mucho más rápido después de eso."
+        },
+        {
+            "start": 18.8,
+            "end": 20.400000000000002,
+            "text": " Sí, yo creo que tener el primer dólar de la vida"
+        },
+        {
+            "start": 20.400000000000002,
+            "end": 22.400000000000002,
+            "text": " es muy importante."
+        }
+    ],
+    "provider": "whisper_local"
+}

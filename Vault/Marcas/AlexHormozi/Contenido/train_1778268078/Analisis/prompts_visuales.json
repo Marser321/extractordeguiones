@@ -1,0 +1,22 @@
+[
+    {
+        "uso": "thumbnail",
+        "prompt": "Alex Hormozi mirando directamente a la cámara con una expresión seria pero determinada. Detrás de él, un fondo minimalista con una línea gráfica que simula una 'pared' o un pico ascendente que se quiebra. Texto superpuesto: 'El Crecimiento DUELE'. Estilo limpio y moderno.",
+        "negative_prompt": "Fondos recargados, sonrisas falsas, gráficos infantiles, texto ilegible."
+    },
+    {
+        "uso": "ad",
+        "prompt": "Secuencia rápida: 1. Alex Hormozi hablando con intensidad. 2. Gráfico animado de un camino que se vuelve un muro infranqueable. 3. Imagen de alguien sintiéndose atrapado en una red. 4. Alex Hormozi señalando un diagrama simple de 'frameworks'. 5. Texto claro: 'Haz el Dolor Más Barato'. Estilo visual dinámico y profesional.",
+        "negative_prompt": "Animaciones de baja calidad, transiciones abruptas sin sentido, colores chillones, personas genéricas."
+    },
+    {
+        "uso": "post",
+        "prompt": "Imagen de Alex Hormozi con una cita destacada: 'El negocio es difícil, se va a sufrir'. Fondo con texturas sutiles que evocan esfuerzo o resistencia. Paleta de colores sobria y profesional.",
+        "negative_prompt": "Imágenes de stock genéricas, fondos demasiado brillantes, tipografía difícil de leer."
+    },
+    {
+        "uso": "story",
+        "prompt": "Video corto vertical: Alex Hormozi dice 'Estás cazado'. Aparece texto: '¿Crecimiento o Estancamiento? Ambos duelen.'. Luego, Hormozi sonríe levemente y dice 'Pero hay una forma de hacerlo más barato.'. Fondo con elementos gráficos abstractos que sugieren estrategia.",
+        "negative_prompt": "Texto que ocupa toda la pantalla, baja resolución, música estridente."
+    }
+]

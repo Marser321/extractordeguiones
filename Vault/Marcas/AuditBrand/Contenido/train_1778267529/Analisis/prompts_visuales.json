@@ -1,0 +1,22 @@
+[
+    {
+        "uso": "thumbnail",
+        "prompt": "Minimalist design, modern, clean. A single, crisp golden dollar coin is centered on a clean white background. Subtle upward arrow graphic integrated behind the coin. Text overlay: 'Tu Primer Dólar'. Brand colors of AuditBrand subtly used in the arrow or coin's sheen. Focus on clarity and the core idea.",
+        "negative_prompt": "Cluttered background, multiple coins, complex graphics, dark colors, people, hands."
+    },
+    {
+        "uso": "ad",
+        "prompt": "Dynamic visual for an ad. Starts with a visual representation of a steep, almost insurmountable wall. A single, glowing golden dollar coin is placed at the base. As the ad progresses, a subtle, modern graphic path appears leading upwards from the coin. The background is clean and modern, using AuditBrand's color palette. The final frame shows the coin at the top of the path, with a subtle ripple effect. Text: 'El Primer Dólar: Tu Punto de Partida'.",
+        "negative_prompt": "Realistic scenes, busy cityscapes, complex animations, overly dramatic visuals, stock footage of people celebrating."
+    },
+    {
+        "uso": "post",
+        "prompt": "Clean, modern graphic for a social media post. A stylized, abstract representation of a 'launch sequence' or 'ignition'. Think of concentric circles expanding outwards from a central point, with the central point being a subtle golden dollar symbol. Use AuditBrand's color scheme. Minimal text overlay: 'Desbloquea tu Crecimiento'.",
+        "negative_prompt": "Photorealistic images, busy backgrounds, text-heavy designs, outdated graphics."
+    },
+    {
+        "uso": "story",
+        "prompt": "Short, animated graphic for a story. A simple, clean animation showing a single dollar coin 'dropping' into place, triggering a chain reaction of smaller, faster coins falling into a stylized 'earnings' bar that quickly fills up. Use AuditBrand's modern, clean aesthetic and color palette. Text appears briefly: 'El Efecto Dominó'.",
+        "negative_prompt": "Static image, complex characters, distracting elements, excessive text."
+    }
+]

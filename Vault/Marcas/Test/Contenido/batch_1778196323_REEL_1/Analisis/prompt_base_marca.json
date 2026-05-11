@@ -1,0 +1,11 @@
+{
+    "brand_name": "Test",
+    "tone": "claro, experto, directo y accionable",
+    "visual_direction": "limpio, moderno, con foco en la idea principal",
+    "do": [
+        "Mantener claridad"
+    ],
+    "dont": [
+        "Prometer resultados no verificables"
+    ]
+}

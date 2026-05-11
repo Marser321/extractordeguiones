@@ -1,0 +1,41 @@
+{
+    "audit_version": "scriptdna-context-audit-v1",
+    "status": "passed",
+    "brand_name": "AlexHormozi",
+    "video_id": "train_1778268019",
+    "generated_at": "2026-05-08T19:20:51.456492Z",
+    "overall_score": 7.79,
+    "scores": {
+        "fidelidad": 10,
+        "alineacion_marca": 10,
+        "especificidad": 7.74,
+        "pensamiento_lateral": 8.5,
+        "uso_contexto_visual": 5.0,
+        "completitud_json": 10.0,
+        "utilidad_marketing": 10,
+        "alucinacion": 0,
+        "densidad_info": 8.0,
+        "cumplimiento_marca": 10.0,
+        "estructura_persuasiva": 10,
+        "quiet_luxury_score": 9.4,
+        "engagement_emocional": 10,
+        "veracidad": 1.0,
+        "estetica_visual": 7.0,
+        "coherencia_visual_narrativa": 8.0
+    },
+    "warnings": [
+        "uso_contexto_visual bajo (5.0/10).",
+        "alucinacion bajo (0/10).",
+        "veracidad bajo (1.0/10).",
+        "Contexto visual pendiente: evitar asumir estética o escenas verificadas."
+    ],
+    "promoted_patterns": true,
+    "refinement_instructions": null,
+    "context": {
+        "script_chars": 423,
+        "visual_context_status": "pending_visual_extraction",
+        "prompt_version": "scriptdna-business-v3",
+        "provider": null,
+        "model": null
+    }
+}

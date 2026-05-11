@@ -1,0 +1,260 @@
+{
+    "resumen_ejecutivo": "## Resumen Ejecutivo: AlexHormozi - El Poder de la Adaptación Digital\n\n**Tema:** La relevancia y el potencial de negocio de las empresas que operan sin presencia web tradicional en la era digital actual.\n\n**Insight Lateral:** La aparente 'desventaja' de no tener un sitio web puede ser, irónicamente, una ventaja competitiva si se compensa con una excelencia superior en otras áreas del negocio. Esto desafía la noción universal de que una web es indispensable para el éxito, sugiriendo que la adaptabilidad y la maestría en canales alternativos son claves.\n\n**Objetivo:** Posicionar a AlexHormozi como una voz experta que desafía las convenciones del marketing digital, ofreciendo una perspectiva matizada sobre la necesidad de una presencia web y destacando la importancia de la adaptabilidad y la excelencia operativa.\n\n**Tono:** Directo, experto, provocador y accionable.\n\n**Oportunidad de Negocio:** Capitalizar la tendencia de emprendedores que buscan validación para modelos de negocio no convencionales o que operan en nichos donde la web no es el canal principal. Ofrecer estrategias para optimizar el rendimiento sin depender exclusivamente de un sitio web.\n\n**Supuestos:** El guion asume que el espectador está familiarizado con el concepto de 'sitio web' y 'presencia digital', y que está interesado en estrategias de crecimiento empresarial, incluso aquellas que se salen de lo común.",
+    "hooks": [
+        {
+            "hook": "¿Tu negocio no tiene web y aún así genera ingresos? Alex Hormozi revela la verdad.",
+            "uso": "reel",
+            "rationale": "Genera intriga al plantear una paradoja: hacer dinero sin la herramienta digital considerada esencial. Apela a la curiosidad del emprendedor que opera de forma no tradicional o que busca validación para su modelo."
+        },
+        {
+            "hook": "La 'desventaja' que te hace ganar: Cómo competir sin sitio web, según Alex Hormozi.",
+            "uso": "short",
+            "rationale": "Utiliza el concepto de 'desventaja' como un gancho irónico. Sugiere que la falta de una web puede forzar una excelencia superior en otras áreas, creando una ventaja competitiva inesperada. Tono directo y provocador."
+        },
+        {
+            "hook": "Webs obsoletas vs. Negocios rentables: ¿Quién gana? Alex Hormozi analiza.",
+            "uso": "ad",
+            "rationale": "Crea una dicotomía clara y desafiante. Invita a la reflexión sobre la efectividad real de las estrategias digitales convencionales frente a modelos de negocio más ágiles o nicho."
+        },
+        {
+            "hook": "No tienes web, pero vendes. ¿Eres un genio o estás en peligro? Hormozi responde.",
+            "uso": "post",
+            "rationale": "Apela directamente al espectador que se encuentra en esta situación, generando una conexión personal. Plantea una pregunta dual que incita a la lectura o visualización para obtener la respuesta."
+        }
+    ],
+    "momentos_virales": [
+        {
+            "titulo": "Pregunta de facturación",
+            "descripcion": "Abrir con el desafío de facturar 30.000 dólares al mes y pedir al espectador que elija el negocio más rápido.",
+            "duracion_sugerida": "0-12s",
+            "motivo_retencion": "La cifra concreta y la pregunta competitiva generan curiosidad inmediata."
+        },
+        {
+            "titulo": "Comparación inversión-retorno",
+            "descripcion": "Contrastar invertir 3.000 con la posibilidad de generar 30.000 para instalar la tensión principal.",
+            "duracion_sugerida": "12-28s",
+            "motivo_retencion": "El espectador se queda para entender si la relación riesgo-retorno hace sentido."
+        },
+        {
+            "titulo": "Sistema de cierre",
+            "descripcion": "Presentar CRM, seguimiento o masterclass como mecanismo que convierte el interés en operación.",
+            "duracion_sugerida": "28-55s",
+            "motivo_retencion": "Pasa de promesa a proceso, elevando credibilidad."
+        }
+    ],
+    "estructura_narrativa": {
+        "patron": [
+            "apertura",
+            "tension",
+            "valor",
+            "cta"
+        ],
+        "notas": "El guion presenta una apertura que plantea una pregunta provocadora (negocios sin web que ganan dinero). La tensión se genera al contrastar esta realidad con la creencia generalizada de que una web es indispensable. El valor reside en la explicación de cómo estos negocios compensan y compiten. El CTA implícito es reflexionar sobre la propia estrategia y considerar la adaptabilidad."
+    },
+    "ideas_reels": [
+        {
+            "titulo": "La pregunta de los 30K",
+            "estructura": "Texto grande con la pregunta, corte al orador, tres negocios posibles, CTA a comentar o reservar.",
+            "cta": "Guardar, compartir o solicitar más información",
+            "insight_lateral": "El reel funciona como test de mercado: quien responde ya está imaginando ROI."
+        },
+        {
+            "titulo": "3K contra 30K",
+            "estructura": "Pantalla dividida inversión/retorno, objeción rápida, explicación del sistema, CTA.",
+            "cta": "Guardar, compartir o solicitar más información",
+            "insight_lateral": "La pieza transforma una compra en apuesta racional de negocio."
+        },
+        {
+            "titulo": "El CRM invisible",
+            "estructura": "Hook sobre leads perdidos, ejemplo del proceso, visual de pipeline, invitación a masterclass.",
+            "cta": "Guardar, compartir o solicitar más información",
+            "insight_lateral": "Vende infraestructura comercial sin hablar como software genérico."
+        }
+    ],
+    "ads": [
+        {
+            "concepto": "Reto de facturación mensual",
+            "angulo": "aspiración cuantificada",
+            "copy": "¿Están las empresas ahora mismo que no tienen websites y hacen dinero? Absolutamente Si quieres entender el sistema detrás de esa respuesta, este es el siguiente paso.",
+            "cta": "Guardar, compartir o solicitar más información"
+        },
+        {
+            "concepto": "Inversión con lógica de retorno",
+            "angulo": "riesgo calculado",
+            "copy": "No se trata de gastar en marketing. Se trata de construir una ruta medible entre atención, seguimiento y cierre.",
+            "cta": "Guardar, compartir o solicitar más información"
+        },
+        {
+            "concepto": "Masterclass como filtro",
+            "angulo": "autoridad práctica",
+            "copy": "Mira el proceso completo antes de invertir tiempo o dinero en otro canal que no sabes medir.",
+            "cta": "Guardar, compartir o solicitar más información"
+        }
+    ],
+    "brief_creativo": "## Brief Creativo: AlexHormozi - Adaptabilidad Digital\n\n**Objetivo:** Crear contenido que desafíe la noción de que un sitio web es la única vía al éxito empresarial, posicionando a Alex Hormozi como un pensador estratégico que ofrece perspectivas no convencionales.\n\n**Audiencia Psicográfica:** Emprendedores, dueños de negocios (especialmente PYMES y startups), consultores de marketing, y cualquier persona interesada en modelos de negocio innovadores y estrategias de crecimiento que se salen de lo común. Buscan validación para sus enfoques no tradicionales y consejos prácticos para optimizar su rendimiento.\n\n**Mensaje Central:** La excelencia operativa y la adaptabilidad en canales alternativos pueden ser tan o más efectivas que una presencia web tradicional, permitiendo a las empresas competir y ganar incluso sin un sitio web.\n\n**Entregables:** Hooks para redes sociales (Reels, Shorts, Posts), conceptos para anuncios cortos, y un análisis de la estructura narrativa para maximizar la retención.\n\n**Dirección Visual:** Mantener el estilo limpio, moderno y enfocado en la idea principal característico de Alex Hormozi. Utilizar gráficos minimalistas que refuercen el concepto de 'alternativa' o 'compensación'. El orador debe proyectar autoridad y claridad.",
+    "captions": [
+        {
+            "plataforma": "Instagram",
+            "caption": "Muchos creen que un sitio web es la única forma de hacer crecer un negocio. Pero, ¿qué pasa si te digo que hay empresas que facturan millones sin uno? 🤔 Alex Hormozi explica cómo la 'desventaja' de no tener web puede forzarte a ser brutalmente bueno en otras áreas. ¡La clave está en la adaptabilidad y la excelencia!\n\n¿Tu negocio opera sin web? ¡Cuéntanos tu experiencia en los comentarios!\n\n#AlexHormozi #Emprendimiento #MarketingDigital #Negocios #EstrategiaEmpresarial #SinSitioWeb #Adaptabilidad",
+            "hashtags": [
+                "AlexHormozi",
+                "Emprendimiento",
+                "MarketingDigital",
+                "Negocios",
+                "EstrategiaEmpresarial",
+                "SinSitioWeb",
+                "Adaptabilidad"
+            ]
+        },
+        {
+            "plataforma": "TikTok",
+            "caption": "¡La verdad sobre los negocios SIN WEB! 🤯 ¿Se puede ganar dinero sin ella? ¡Sí! ¿Se puede competir? ¡También! Alex Hormozi revela el secreto: ser MUCHO mejor en otras cosas. 🚀 #AlexHormozi #Emprendedor #Marketing #NegociosExitosos #Estrategia #Viral",
+            "hashtags": [
+                "AlexHormozi",
+                "Emprendedor",
+                "Marketing",
+                "NegociosExitosos",
+                "Estrategia",
+                "Viral"
+            ]
+        },
+        {
+            "plataforma": "YouTube",
+            "caption": "Alex Hormozi: ¿Es Realmente Necesario un Sitio Web en 2026? | Estrategias de Negocio No Convencionales\n\nEn este video, Alex Hormozi desafía la creencia popular de que un sitio web es indispensable para el éxito empresarial. Analiza cómo algunas empresas logran una rentabilidad significativa operando sin una presencia web tradicional, destacando la importancia de la excelencia en otras áreas del negocio.\n\nDescubre si tu modelo de negocio puede prosperar sin depender exclusivamente de un sitio web y aprende cómo compensar y competir eficazmente.\n\n#AlexHormozi #Marketing #Negocios #Emprendimiento #EstrategiaDigital #CrecimientoEmpresarial",
+            "hashtags": [
+                "AlexHormozi",
+                "Marketing",
+                "Negocios",
+                "Emprendimiento",
+                "EstrategiaDigital",
+                "CrecimientoEmpresarial"
+            ]
+        },
+        {
+            "plataforma": "LinkedIn",
+            "caption": "La paradoja del éxito sin web: ¿Una desventaja o una ventaja competitiva oculta?\n\nAlex Hormozi explora el fascinante escenario de empresas que generan ingresos sustanciales sin una presencia web formal. Lejos de ser una limitación, esta situación puede obligar a desarrollar una maestría excepcional en otros canales, creando una diferenciación poderosa.\n\n¿Cómo logran estas empresas competir y ganar? La respuesta reside en ser 'mucho mejor en otras arenas'. Una lección clave sobre adaptabilidad y enfoque estratégico en el panorama empresarial actual.\n\n#AlexHormozi #EstrategiaDeNegocios #Marketing #Emprendimiento #Innovacion #Liderazgo",
+            "hashtags": [
+                "AlexHormozi",
+                "EstrategiaDeNegocios",
+                "Marketing",
+                "Emprendimiento",
+                "Innovacion",
+                "Liderazgo"
+            ]
+        }
+    ],
+    "calendario_publicacion": [
+        {
+            "dia": "Día 1",
+            "pieza": "Reel: El Mito de la Web Indispensable",
+            "objetivo": "Generar intriga y debate inicial sobre la necesidad de un sitio web."
+        },
+        {
+            "dia": "Día 2",
+            "pieza": "Post de Instagram: ¿Tu negocio opera sin web? ¡Comparte tu experiencia!",
+            "objetivo": "Fomentar la interacción y recopilar insights de la audiencia."
+        },
+        {
+            "dia": "Día 3",
+            "pieza": "Anuncio Corto (Ad): El Negocio 'Offline' que Desafía las Reglas",
+            "objetivo": "Amplificar el mensaje a una audiencia más amplia interesada en estrategias no convencionales."
+        },
+        {
+            "dia": "Día 4",
+            "pieza": "TikTok: ¡La verdad sobre los negocios SIN WEB!",
+            "objetivo": "Captar la atención con un formato rápido y directo, apelando a la curiosidad."
+        },
+        {
+            "dia": "Día 5",
+            "pieza": "Video de YouTube: ¿Es Realmente Necesario un Sitio Web en 2026?",
+            "objetivo": "Profundizar en el tema, ofreciendo análisis y valor a largo plazo."
+        }
+    ],
+    "prompts_visuales": [
+        {
+            "uso": "thumbnail",
+            "prompt": "Alex Hormozi mirando directamente a la cámara con una expresión pensativa pero segura. Fondo minimalista y limpio, con un gráfico sutil que representa una balanza o un signo de interrogación. Paleta de colores neutra con un toque de acento vibrante. Texto superpuesto: '¿Sin Web y GANANDO?'",
+            "negative_prompt": "Fondo recargado, imágenes de sitios web genéricos, personas sonriendo de forma exagerada, gráficos complejos."
+        },
+        {
+            "uso": "ad",
+            "prompt": "Secuencia rápida: Comienza con un gráfico abstracto que representa 'conectividad' o 'red'. Transición a Alex Hormozi hablando con autoridad. Breves clips de negocios físicos (tienda, taller) o interacciones cara a cara. Finaliza con un gráfico simple de una balanza inclinada hacia 'Excelencia' sobre 'Web'. Texto clave: 'La Verdad sobre los Negocios Sin Web'.",
+            "negative_prompt": "Imágenes de pantallas de ordenador, código, interfaces web, gráficos de crecimiento genéricos."
+        },
+        {
+            "uso": "post",
+            "prompt": "Imagen de Alex Hormozi con un gesto de 'pensar' o señalar. El fondo es un degradado sutil. En un lado de la imagen, un icono minimalista de una casa (representando 'negocio físico/tradicional') y en el otro, un icono de una nube (representando 'digital/web'). La balanza está claramente inclinada hacia el lado del negocio físico o hacia un punto intermedio que sugiere 'equilibrio estratégico'.",
+            "negative_prompt": "Fotografías de baja calidad, texto ilegible, elementos visuales distractores."
+        },
+        {
+            "uso": "story",
+            "prompt": "Animación corta: Aparece el texto '¿Tu negocio no tiene web?' seguido de un gran signo de interrogación. Luego, el texto cambia a '¿Y aún así ganas dinero?'. Alex Hormozi aparece brevemente con una sonrisa enigmática. Finalmente, el texto 'La clave: Ser MUCHO MEJOR en OTRAS ARENAS.' con un CTA para guardar o compartir.",
+            "negative_prompt": "Demasiado texto, animaciones complejas, música estridente."
+        }
+    ],
+    "prompt_base_marca": {
+        "brand_name": "AlexHormozi",
+        "tone": "Claro, experto, directo y accionable. Provocador cuando desafía convenciones.",
+        "visual_direction": "Limpio, moderno, minimalista, con foco en la idea principal. Uso de gráficos simples y directos. El orador debe proyectar autoridad y confianza.",
+        "do": [
+            "Ser directo y al grano.",
+            "Ofrecer soluciones prácticas y medibles.",
+            "Utilizar analogías y ejemplos claros.",
+            "Mantener un tono de autoridad pero accesible.",
+            "Fomentar la acción inmediata del espectador.",
+            "Desafiar el status quo con lógica y evidencia."
+        ],
+        "dont": [
+            "Usar jerga excesiva o innecesaria.",
+            "Ser vago o ambiguo.",
+            "Depender de clichés de marketing sin sustancia.",
+            "Crear contenido visualmente recargado o distractor."
+        ]
+    },
+    "retrospectiva": {
+        "que_funciono": [
+            "La premisa central de cuestionar la necesidad universal de un sitio web es inherentemente disruptiva y genera interés.",
+            "El tono directo y experto de Alex Hormozi resuena con la audiencia que busca consejos prácticos.",
+            "La idea de 'compensar' la falta de web con excelencia en otras áreas ofrece un ángulo de valor claro."
+        ],
+        "que_falto": [
+            "El guion original es muy corto y carece de ejemplos concretos o datos específicos que respalden la afirmación.",
+            "No hay un CTA explícito en el guion, lo que limita la acción directa del espectador.",
+            "Falta de profundidad en la explicación de 'otras arenas' donde se puede destacar."
+        ],
+        "siguiente_mejora": "Expandir el contenido con casos de estudio específicos (aunque sean hipotéticos o generalizados si no hay datos) que ilustren cómo las empresas compensan la falta de web. Definir claramente cuáles son esas 'otras arenas' (ej: marketing de referidos, experiencia del cliente offline, ventas directas, etc.) y cómo medirlas. Incorporar un CTA claro al final de cada pieza de contenido.",
+        "generation_mode": "ai"
+    },
+    "_quality_repair": {
+        "applied": true,
+        "reason": "Se detectaron placeholders, schema copiado o baja densidad de piezas.",
+        "source": "script_visual_brand_deterministic_repair"
+    },
+    "_prompt_version": "scriptdna-business-v3",
+    "_context_inputs": {
+        "prompt_version": "scriptdna-business-v3",
+        "script_chars": 423,
+        "script_truncated": false,
+        "brand_profile_fields": [
+            "audience",
+            "created_at",
+            "cta",
+            "id",
+            "name",
+            "preferred_formats",
+            "tone",
+            "updated_at",
+            "visual_style"
+        ],
+        "historical_pattern_counts": {
+            "hooks_frecuentes": 4,
+            "estructuras_ganadoras": 4,
+            "angulos_de_venta": 2,
+            "reglas_de_estilo": 5,
+            "pattern_candidates": 15,
+            "pattern_metadata": 15
+        },
+        "visual_context_available": false,
+        "visual_context_status": "missing"
+    }
+}

@@ -6,6 +6,11 @@
 .gitignore
 .DS_Store
 .vercel
+pyproject.toml
+uv.lock
+backend/pyproject.toml
+backend/uv.lock
+backend/.python-version
 
 backend/venv
 backend/venv/**
@@ -14,6 +19,8 @@ backend/**/__pycache__
 backend/**/*.pyc
 backend/scratch
 backend/scratch/**
+deploy_temp
+deploy_temp/**
 
 Vault
 Vault/**
@@ -21,3 +28,9 @@ Vault/**
 Contexto.docx
 Final.jpg
 implementation_plan.md
+*.docx
+*.wav
+*.mp3
+*.mp4
+*.mov
+*.m4a

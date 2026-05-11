@@ -1,6 +1,12 @@
 import subprocess
+import shutil
 from pathlib import Path
 from typing import List
+
+try:
+    import imageio_ffmpeg
+except ImportError:
+    imageio_ffmpeg = None
 
 try:
     from core.config import settings
@@ -11,17 +17,33 @@ except ModuleNotFoundError:
 
 class VisualService:
     def __init__(self):
-        self.ffmpeg_available = self._check_ffmpeg()
+        self.ffmpeg_path = self._find_ffmpeg()
+        self.ffmpeg_available = self.ffmpeg_path is not None and self._check_ffmpeg()
+
+    def _find_ffmpeg(self):
+        binary = shutil.which("ffmpeg")
+        if binary:
+            return binary
+        if imageio_ffmpeg is not None:
+            try:
+                return imageio_ffmpeg.get_ffmpeg_exe()
+            except Exception:
+                return None
+        return None
 
     def _check_ffmpeg(self) -> bool:
+        if not self.ffmpeg_path:
+            return False
         try:
-            subprocess.run(["ffmpeg", "-version"], capture_output=True, check=True)
+            subprocess.run([self.ffmpeg_path, "-version"], capture_output=True, check=True)
             return True
         except (subprocess.CalledProcessError, FileNotFoundError):
             return False
 
     def _ensure_ffmpeg(self):
-        if not self.ffmpeg_available and not self._check_ffmpeg():
+        if not self.ffmpeg_available:
+            self.ffmpeg_path = self._find_ffmpeg()
+        if not self.ffmpeg_path or not self._check_ffmpeg():
             raise RuntimeError("FFmpeg no está instalado. Requerido para extracción visual.")
         self.ffmpeg_available = True
 
@@ -48,7 +70,7 @@ class VisualService:
         output_pattern = frames_dir / "frame_%03d.jpg"
         
         command = [
-            "ffmpeg",
+            self.ffmpeg_path,
             "-i", str(video_file),
             "-vf", f"fps=1/{interval_seconds}",
             "-q:v", "2", # Alta calidad (1-31, menor es mejor)

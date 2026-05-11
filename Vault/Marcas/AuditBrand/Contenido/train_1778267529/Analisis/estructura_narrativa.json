@@ -1,0 +1,9 @@
+{
+    "patron": [
+        "apertura",
+        "tension",
+        "valor",
+        "cta"
+    ],
+    "notas": "La curva de retención se basa en la identificación inmediata con la dificultad del 'primer dólar' (tensión), seguida de la promesa de que es superable y que los siguientes llegarán más rápido (valor). El CTA debe ser claro para guiar al espectador hacia la solución que ofrece AuditBrand."
+}

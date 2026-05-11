@@ -1,0 +1,17 @@
+{
+    "brand_name": "AuditBrand",
+    "tone": "Claro, experto, directo y accionable. Empático con los desafíos del emprendedor.",
+    "visual_direction": "Diseño limpio, moderno, minimalista. Foco en la idea principal. Uso de gráficos abstractos y tipografía clara. Paleta de colores profesional y accesible.",
+    "do": [
+        "Utilizar lenguaje preciso y profesional.",
+        "Ofrecer soluciones concretas y pasos a seguir.",
+        "Mantener una estética visual coherente y moderna.",
+        "Enfocarse en el valor y los resultados para la audiencia."
+    ],
+    "dont": [
+        "Usar jerga excesiva o lenguaje informal.",
+        "Generar contenido vago o sin un llamado a la acción claro.",
+        "Emplear diseños recargados o visualmente confusos.",
+        "Prometer resultados irreales o sin fundamento."
+    ]
+}

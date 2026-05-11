@@ -1,0 +1,14 @@
+{
+    "que_funciono": [
+        "El concepto central del 'aburrimiento estratégico' como hack de productividad es potente y contraintuitivo, generando interés.",
+        "La estructura narrativa clásica (apertura, tensión, valor, CTA) es efectiva para mantener la atención.",
+        "La conexión con Alex Hormozi como autoridad añade credibilidad."
+    ],
+    "que_falto": [
+        "Evidencia visual específica del guion (ya que el transcript es corto y sin metadatos visuales).",
+        "Un CTA explícito en el guion original para desarrollar en las piezas de marketing.",
+        "Profundidad en la explicación de 'por qué' el aburrimiento funciona a nivel psicológico o neurológico."
+    ],
+    "siguiente_mejora": "Para futuras iteraciones, integrar elementos visuales específicos del video (si están disponibles) en los prompts y descripciones. Expandir el 'valor' con ejemplos más concretos o estudios de caso breves para reforzar la autoridad y la aplicabilidad de las tácticas.",
+    "generation_mode": "ai"
+}

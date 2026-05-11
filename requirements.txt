@@ -2,8 +2,8 @@ fastapi==0.111.0
 uvicorn==0.29.0
 python-dotenv==1.0.1
 requests==2.31.0
-google-generativeai==0.5.2
 google-genai>=1.0.0
 pydantic==2.7.1
 pydantic-settings==2.2.1
 yt-dlp==2024.4.9
+imageio-ffmpeg==0.5.1

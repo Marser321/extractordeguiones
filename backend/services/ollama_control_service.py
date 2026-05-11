@@ -21,6 +21,19 @@ class OllamaControlService:
         self.process: Optional[subprocess.Popen] = None
 
     def status(self) -> dict:
+        if settings.IS_CLOUD:
+            return {
+                "installed": False,
+                "running": False,
+                "api_running": False,
+                "base_url": self.ollama_url,
+                "pid": None,
+                "launchd_service": None,
+                "message": "Ollama no está disponible en modo cloud. Usa Gemini Cloud.",
+                "can_start": False,
+                "can_stop": False,
+                "mode": "cloud-disabled"
+            }
         binary = shutil.which("ollama")
         launchd = self._launchd_info()
         api_running = self._api_running()

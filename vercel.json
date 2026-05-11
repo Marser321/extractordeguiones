@@ -1,22 +1,18 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "backend/main.py",
-      "use": "@vercel/python"
-    }
-  ],
   "rewrites": [
     {
-      "source": "/static/(.*)",
-      "destination": "backend/static/$1"
-    },
-    {
       "source": "/(.*)",
-      "destination": "backend/main.py"
+      "destination": "/api/index.py"
     }
   ],
   "env": {
-    "PYTHONPATH": "backend"
+    "PYTHONPATH": "."
+  },
+  "functions": {
+    "api/index.py": {
+      "maxDuration": 60,
+      "excludeFiles": "{Vault/**,deploy_temp/**,backend/venv/**,backend/scratch/**,Contexto.docx,Final.jpg,implementation_plan.md,**/*.wav,**/*.mp3,**/*.mp4,**/*.mov,**/*.m4a}"
+    }
   }
 }

@@ -1,0 +1,15 @@
+{
+    "brand_name": "AD Media",
+    "tone": "Experto, directo y orientado a resultados.",
+    "visual_direction": "Limpio, tipografías San Serif modernas, alto contraste, uso de espacios en blanco.",
+    "do": [
+        "Hablar de ROI y métricas",
+        "Priorizar la claridad del mensaje",
+        "Usar verbos de acción"
+    ],
+    "dont": [
+        "Usar lenguaje vago o excesivamente técnico sin explicarlo",
+        "Prometer resultados mágicos sin estrategia",
+        "Visuales sobrecargados"
+    ]
+}

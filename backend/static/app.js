@@ -54,6 +54,10 @@ const configSummary = document.querySelector("#config-summary");
 const aiSummary = document.querySelector("#ai-summary");
 const ollamaRunningPill = document.querySelector("#ollama-running-pill");
 const geminiConfigPill = document.querySelector("#gemini-config-pill");
+const statOpenRouter = document.querySelector("#stat-openrouter");
+const statOpenRouterNote = document.querySelector("#stat-openrouter-note");
+const openrouterConfigPill = document.querySelector("#openrouter-config-pill");
+const openrouterSummary = document.querySelector("#openrouter-summary");
 const statGemini = document.querySelector("#stat-gemini");
 const statGeminiNote = document.querySelector("#stat-gemini-note");
 const statOllama = document.querySelector("#stat-ollama");
@@ -281,6 +285,7 @@ function validateCurrentStep() {
       showError("Pega una URL o cambia a Subir reel/video para usar un archivo local.");
       return false;
     }
+    if (handleInstagramUrlHint()) return false;
     if (activeSource === "upload" && !uploadInput.files.length) {
       showError("Arrastra un reel/video o elige un archivo del Mac antes de continuar.");
       return false;
@@ -379,6 +384,26 @@ let latestCreativePack = null;
 let pollTimer = null;
 let creativePollTimer = null;
 let selectedVideo = null;
+const INSTAGRAM_UPLOAD_MESSAGE = "Instagram suele bloquear descargas por URL desde Vercel. Descarga el reel/video y usa Arrastra video para procesarlo sin rate-limit ni login.";
+
+function isInstagramUrl(value) {
+  try {
+    const hostname = new URL(value).hostname.toLowerCase().replace(/^www\./, "");
+    return hostname === "instagram.com" || hostname === "instagr.am";
+  } catch (_error) {
+    return false;
+  }
+}
+
+function handleInstagramUrlHint() {
+  if (activeSource !== "url") return false;
+  if (!isInstagramUrl(urlInput.value.trim())) return false;
+  showError(INSTAGRAM_UPLOAD_MESSAGE);
+  uploadField.classList.remove("hidden");
+  uploadField.classList.add("drag-over");
+  window.setTimeout(() => uploadField.classList.remove("drag-over"), 1200);
+  return true;
+}
 
 function setMainView(viewId) {
   mainTabs.forEach((tab) => tab.classList.toggle("active", tab.dataset.view === viewId));
@@ -445,7 +470,17 @@ function endpointForSource() {
 
 async function submitJob(payload) {
   const response = await fetch(endpointForSource(), payload);
-  const data = await response.json();
+  if (response.status === 413) {
+    throw new Error("El archivo es demasiado grande (Vercel permite máximo 4.5MB). Pega un link de YouTube en vez de subirlo, o ejecuta la app localmente.");
+  }
+  
+  let data;
+  try {
+    data = await response.json();
+  } catch (err) {
+    throw new Error(`Error inesperado del servidor (${response.status}). Es posible que el archivo sea demasiado pesado para la nube.`);
+  }
+
   if (!response.ok) throw new Error(data.detail || "Error desconocido.");
   return data;
 }
@@ -453,7 +488,7 @@ async function submitJob(payload) {
 function buildPayload(formData) {
   const brandName = formData.get("brand_name")?.trim();
   const videoId = formData.get("video_id")?.trim();
-  const provider = formData.get("ai_provider") || "ollama";
+  const provider = formData.get("ai_provider") || "gemini";
   const model = formData.get("ai_model") || null;
 
   if (activeSource === "upload") {
@@ -468,7 +503,11 @@ function buildPayload(formData) {
   }
 
   const payload = { brand_name: brandName, video_id: videoId, ai_provider: provider, ai_model: model };
-  if (activeSource === "url") payload.url = formData.get("url")?.trim();
+  if (activeSource === "url") {
+    const url = formData.get("url")?.trim();
+    if (isInstagramUrl(url)) throw new Error(INSTAGRAM_UPLOAD_MESSAGE);
+    payload.url = url;
+  }
   if (activeSource === "local") payload.local_file_path = formData.get("local_file_path")?.trim();
 
   return {
@@ -1138,7 +1177,7 @@ async function refineSkill() {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        ai_provider: aiProvider.value || "gemini",
+        ai_provider: aiProvider.value || "openrouter",
         ai_model: aiModel.value || null
       })
     });
@@ -1238,12 +1277,51 @@ async function loadAiStatus() {
     renderConfigStatus(configData);
     renderAiSummary(aiData);
     updateAiModels(aiData);
+    applyHybridMode(configData);
     updateGlobalStatus(aiData, ollamaData, configData);
   } catch (error) {
     aiSummary.textContent = "No se pudo cargar el estado de IA.";
     configSummary.textContent = "No se pudo cargar configuración.";
-    statGemini.textContent = "Error";
+    statOpenRouter.textContent = "Error";
+    statGemini.textContent = "Oculto";
     statOllama.textContent = "Error";
+  }
+}
+
+function applyHybridMode(config) {
+  if (config.is_cloud) {
+    // Ocultar fuente local si estamos en Vercel
+    const localTab = document.querySelector('.tab[data-source="local"]');
+    if (localTab) localTab.style.display = 'none';
+    if (activeSource === "local") {
+      activeSource = "url";
+      sourceTabs.forEach((tab) => tab.classList.toggle("active", tab.dataset.source === "url"));
+      urlField.classList.remove("hidden");
+      uploadField.classList.add("hidden");
+      localField.classList.add("hidden");
+    }
+
+    // Ocultar sección de Ollama
+    const ollamaSection = document.querySelector('#ollama-status')?.closest('.analysis-panel');
+    if (ollamaSection) ollamaSection.classList.add('hidden');
+
+    // Deshabilitar la opción de Ollama en el selector de motores
+    const ollamaOption = document.querySelector('option[value="ollama"]');
+    if (ollamaOption) ollamaOption.disabled = true;
+    if (aiProvider?.value === "ollama") aiProvider.value = "openrouter";
+    
+    // Asegurar que Gemini esté oculto si no es el principal
+    const geminiOption = document.querySelector('option[value="gemini"]');
+    if (geminiOption && aiProvider?.value !== "gemini") geminiOption.classList.add('hidden');
+
+    // Badge en el sidebar product-caption
+    const caption = document.querySelector('.product-caption');
+    if (caption && !caption.querySelector('.cloud-pill')) {
+      const pill = document.createElement('span');
+      pill.className = 'cloud-pill';
+      pill.textContent = 'CLOUD';
+      caption.appendChild(pill);
+    }
   }
 }
 
@@ -1258,24 +1336,42 @@ function renderOllamaControl(status) {
 }
 
 function renderConfigStatus(status) {
-  const ready = Boolean(status.gemini_api_key_configured && (status.gemini_sdk_installed || status.gemini_legacy_sdk_installed));
-  geminiConfigPill.textContent = status.restart_required ? "Requiere reinicio" : ready ? "Activo" : "No configurado";
-  statGemini.textContent = ready ? "Listo" : "Pendiente";
-  statGeminiNote.textContent = status.restart_required ? "Requiere reinicio" : (ready ? "Disponible" : "No configurado");
-  configSummary.innerHTML = `
-    <strong>${status.restart_required ? "Gemini necesita reinicio." : ready ? "Gemini está activo." : "Gemini no está configurado."}</strong>
-    <span>${ready ? "Puedes usarlo para análisis creativo cloud." : "Configura GEMINI_API_KEY/GEMINI_API_KEYS en Vercel antes de probar flujos reales."}</span>
-  `;
+  // OpenRouter Status
+  const orReady = Boolean(status.openrouter_api_key_configured);
+  if (openrouterConfigPill) openrouterConfigPill.textContent = orReady ? "Activo" : "No configurado";
+  if (statOpenRouter) statOpenRouter.textContent = orReady ? "Listo" : "Pendiente";
+  if (statOpenRouterNote) statOpenRouterNote.textContent = orReady ? "Disponible cloud" : "No configurado";
+  if (openrouterSummary) {
+    openrouterSummary.innerHTML = `
+      <strong>${orReady ? "OpenRouter está activo." : "OpenRouter no está configurado."}</strong>
+      <span>${orReady ? "Usando OpenRouter como motor principal para análisis creativo." : "Configura OPENROUTER_API_KEY en Vercel."}</span>
+    `;
+  }
+
+  // Gemini Status (Hidden/Secondary)
+  const geminiReady = Boolean(status.gemini_api_key_configured && (status.gemini_sdk_installed || status.gemini_legacy_sdk_installed));
+  if (geminiConfigPill) geminiConfigPill.textContent = "Oculto";
+  if (statGemini) statGemini.textContent = "Oculto";
+  if (statGeminiNote) statGeminiNote.textContent = "Secundario";
+  if (configSummary) {
+    configSummary.innerHTML = `<strong>Panel de Gemini desactivado por preferencia del usuario.</strong>`;
+  }
 }
 
 function updateGlobalStatus(aiData, ollamaData, configData) {
+  const isOpenRouterReady = Boolean(configData.openrouter_api_key_configured);
   const isGeminiReady = Boolean(configData.gemini_api_key_configured && (configData.gemini_sdk_installed || configData.gemini_legacy_sdk_installed));
   const isOllamaReady = Boolean(ollamaData.running);
 
-  if (isGeminiReady) {
+  if (isOpenRouterReady) {
     badgeAi.classList.add("hidden");
     globalStatusDot.className = "status-dot done";
     globalStatusTitle.textContent = "Pipeline cloud activo";
+    globalStatusSubtitle.textContent = "Listo con OpenRouter";
+  } else if (isGeminiReady) {
+    badgeAi.classList.add("hidden");
+    globalStatusDot.className = "status-dot done";
+    globalStatusTitle.textContent = "Gemini activo (Respaldo)";
     globalStatusSubtitle.textContent = "Listo para analizar";
   } else if (isOllamaReady) {
     badgeAi.classList.add("hidden");
@@ -1286,7 +1382,7 @@ function updateGlobalStatus(aiData, ollamaData, configData) {
     badgeAi.classList.remove("hidden");
     globalStatusDot.className = "status-dot error";
     globalStatusTitle.textContent = "Pipeline pendiente";
-    globalStatusSubtitle.textContent = "Configura variables en Vercel";
+    globalStatusSubtitle.textContent = "Falta OPENROUTER_API_KEY";
   }
 }
 
@@ -1294,12 +1390,13 @@ function updateGlobalStatus(aiData, ollamaData, configData) {
 function renderAiSummary(status) {
   const ollama = status.ollama || {};
   const gemini = status.gemini || {};
-  const recommended = gemini.available ? "Gemini" : ollama.available ? "Ollama" : "Ninguno";
+  const openrouter = status.openrouter || {};
+  const recommended = openrouter.available ? "OpenRouter" : gemini.available ? "Gemini" : ollama.available ? "Ollama" : "Ninguno";
   const testProvider = document.querySelector("#test-ai-provider");
-  if (testProvider) testProvider.value = recommended === "Gemini" ? "gemini" : "ollama";
+  if (testProvider) testProvider.value = recommended === "OpenRouter" ? "openrouter" : recommended === "Gemini" ? "gemini" : "ollama";
   aiSummary.innerHTML = `
     <strong>${recommended === "Ninguno" ? "No hay motor activo." : `${recommended} es la mejor opción ahora.`}</strong>
-    <span>${recommended === "Ninguno" ? "Configura Gemini en Vercel o activa el motor local antes de lanzar procesos largos." : "Puedes procesar piezas con esta configuración."}</span>
+    <span>${recommended === "Ninguno" ? "Configura OpenRouter en Vercel o activa el motor local." : "Puedes procesar piezas con esta configuración."}</span>
   `;
 }
 
@@ -1321,8 +1418,13 @@ async function runOllamaAction(action) {
 }
 
 function updateAiModels(status) {
-  const provider = aiProvider.value;
-  const models = provider === "gemini" ? status.gemini.models : status.ollama.models;
+  const openrouter = status.openrouter || {};
+  const gemini = status.gemini || {};
+  const ollama = status.ollama || {};
+  let models = [];
+  if (provider === "openrouter") models = openrouter.models;
+  else if (provider === "gemini") models = gemini.models;
+  else models = ollama.models;
   aiModel.innerHTML = (models || []).map((model) => `<option value="${escapeAttr(model)}">${escapeHtml(model)}</option>`).join("");
   if (!aiModel.innerHTML) {
     aiModel.innerHTML = `<option value=""></option>`;
@@ -1410,6 +1512,13 @@ function escapeAttr(value) {
 
 mainTabs.forEach((tab) => tab.addEventListener("click", () => setMainView(tab.dataset.view)));
 sourceTabs.forEach((tab) => tab.addEventListener("click", () => setSource(tab.dataset.source)));
+urlInput.addEventListener("input", () => {
+  if (!isInstagramUrl(urlInput.value.trim())) return;
+  showError(INSTAGRAM_UPLOAD_MESSAGE);
+});
+urlInput.addEventListener("paste", () => {
+  window.setTimeout(handleInstagramUrlHint, 0);
+});
 
 consolidateWisdomBtn.addEventListener("click", async () => {
   const brandName = document.querySelector("#profile-brand-name").value.trim() || selectedVideo?.brand_name || "";
@@ -1423,7 +1532,7 @@ consolidateWisdomBtn.addEventListener("click", async () => {
   brandProfileResult.innerHTML = `<strong>Actualizando sabiduría...</strong><span>Estoy revisando el historial de auditorías de la marca.</span>`;
   
   try {
-    const response = await fetch(`/training/consolidate/${encodeURIComponent(brandName)}?ai_provider=${encodeURIComponent(aiProvider.value || "gemini")}`, { method: "POST" });
+    const response = await fetch(`/training/consolidate/${encodeURIComponent(brandName)}?ai_provider=${encodeURIComponent(aiProvider.value || "openrouter")}`, { method: "POST" });
     const data = await response.json();
     if (response.ok) {
       brandWisdomCard.classList.remove("hidden");
@@ -1563,7 +1672,7 @@ reanalyzeVideo.addEventListener("click", async () => {
     return;
   }
   const payload = {
-    ai_provider: aiProvider.value || "gemini",
+    ai_provider: aiProvider.value || "openrouter",
     ai_model: aiModel.value || null,
   };
   const response = await fetch(`/jobs/analyze/${encodeURIComponent(selectedVideo.brand_name)}/${encodeURIComponent(selectedVideo.video_id)}`, {
@@ -1638,9 +1747,9 @@ generateCreativePack.addEventListener("click", async () => {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        ai_provider: aiProvider.value || "gemini",
+        ai_provider: aiProvider.value || "openrouter",
         ai_model: aiModel.value || null,
-        fallback_provider: "ollama",
+        fallback_provider: "openrouter",
       }),
     });
     const job = await response.json();

@@ -1,0 +1,211 @@
+{
+    "_ai_provider": "local_fallback",
+    "_ai_model": "deterministic",
+    "resumen_ejecutivo": "# Resumen ejecutivo\n\nNo se pudo usar el proveedor IA seleccionado: HTTPConnectionPool(host='localhost', port=11434): Max retries exceeded with url: /api/chat (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=11434): Failed to establish a new connection: [Errno 61] Connection refused\"))\n\nExtracto base:\n\nLet's leave the world behind  Take me, throw the light  Fall into the dark side  We don't need the light  We'll live on the dark side  I see it, let's feel it  While we're still young and fearless  Let go of the light  Fall into the dark side  Fall into the dark side  We've been to the dark side  Let go of the light  Fall into the dark side  Beneath the sky  This blackest time is  We're running out of time  Don't wait for truth  To come and point this  Let's just believe the lies  Believe it, I\n",
+    "hooks": [
+        {
+            "hook": "Let's leave the world behind Take me, throw the light Fall into the dark side We don't need the light We'll li",
+            "uso": "reel",
+            "rationale": "Abre con una pregunta de dinero específica que fuerza al espectador a compararse con el escenario planteado."
+        },
+        {
+            "hook": "¿Invertirías 3.000 para construir una vía a 30.000 al mes?",
+            "uso": "ad",
+            "rationale": "Convierte la promesa en una tensión riesgo-retorno, útil para filtrar leads con intención real."
+        },
+        {
+            "hook": "El negocio no es el trámite: es el sistema que convierte demanda en ventas.",
+            "uso": "post",
+            "rationale": "Mueve la conversación de servicio puntual a mecanismo de crecimiento, más defendible para pauta."
+        },
+        {
+            "hook": "Si el margen existe, el cuello de botella no es la idea: es capturar y cerrar la demanda.",
+            "uso": "short",
+            "rationale": "Introduce pensamiento lateral y prepara la necesidad de CRM, masterclass o sistema comercial."
+        }
+    ],
+    "momentos_virales": [
+        {
+            "titulo": "Pregunta de facturación",
+            "descripcion": "Abrir con el desafío de facturar 30.000 dólares al mes y pedir al espectador que elija el negocio más rápido.",
+            "duracion_sugerida": "0-12s",
+            "motivo_retencion": "La cifra concreta y la pregunta competitiva generan curiosidad inmediata."
+        },
+        {
+            "titulo": "Comparación inversión-retorno",
+            "descripcion": "Contrastar invertir 3.000 con la posibilidad de generar 30.000 para instalar la tensión principal.",
+            "duracion_sugerida": "12-28s",
+            "motivo_retencion": "El espectador se queda para entender si la relación riesgo-retorno hace sentido."
+        },
+        {
+            "titulo": "Sistema de cierre",
+            "descripcion": "Presentar CRM, seguimiento o masterclass como mecanismo que convierte el interés en operación.",
+            "duracion_sugerida": "28-55s",
+            "motivo_retencion": "Pasa de promesa a proceso, elevando credibilidad."
+        }
+    ],
+    "estructura_narrativa": {
+        "patron": [
+            "hook",
+            "contexto",
+            "idea central",
+            "cta"
+        ],
+        "notas": "Estructura fallback generada sin IA externa."
+    },
+    "ideas_reels": [
+        {
+            "titulo": "La pregunta de los 30K",
+            "estructura": "Texto grande con la pregunta, corte al orador, tres negocios posibles, CTA a comentar o reservar.",
+            "cta": "Guardar, compartir o solicitar más información",
+            "insight_lateral": "El reel funciona como test de mercado: quien responde ya está imaginando ROI."
+        },
+        {
+            "titulo": "3K contra 30K",
+            "estructura": "Pantalla dividida inversión/retorno, objeción rápida, explicación del sistema, CTA.",
+            "cta": "Guardar, compartir o solicitar más información",
+            "insight_lateral": "La pieza transforma una compra en apuesta racional de negocio."
+        },
+        {
+            "titulo": "El CRM invisible",
+            "estructura": "Hook sobre leads perdidos, ejemplo del proceso, visual de pipeline, invitación a masterclass.",
+            "cta": "Guardar, compartir o solicitar más información",
+            "insight_lateral": "Vende infraestructura comercial sin hablar como software genérico."
+        }
+    ],
+    "ads": [
+        {
+            "concepto": "Reto de facturación mensual",
+            "angulo": "aspiración cuantificada",
+            "copy": "Let's leave the world behind Take me, throw the light Fall into the dark side We don't need the light We'll li Si quieres entender el sistema detrás de esa respuesta, este es el siguiente paso.",
+            "cta": "Guardar, compartir o solicitar más información"
+        },
+        {
+            "concepto": "Inversión con lógica de retorno",
+            "angulo": "riesgo calculado",
+            "copy": "No se trata de gastar en marketing. Se trata de construir una ruta medible entre atención, seguimiento y cierre.",
+            "cta": "Guardar, compartir o solicitar más información"
+        },
+        {
+            "concepto": "Masterclass como filtro",
+            "angulo": "autoridad práctica",
+            "copy": "Mira el proceso completo antes de invertir tiempo o dinero en otro canal que no sabes medir.",
+            "cta": "Guardar, compartir o solicitar más información"
+        }
+    ],
+    "brief_creativo": "# Brief creativo\n\nObjetivo: reutilizar el contenido base.\n\nAudiencia: audiencia interesada en contenido, marketing y crecimiento\n\nCTA: Guardar, compartir o solicitar más información\n",
+    "captions": [
+        {
+            "plataforma": "Instagram",
+            "caption": "Let's leave the world behind Take me, throw the light Fall into the dark side We don't need the light We'll li\n\nLa respuesta no está solo en el negocio. Está en el sistema que captura demanda y la convierte en ventas.\n\nGuardar, compartir o solicitar más información",
+            "hashtags": [
+                "#negocios",
+                "#marketing",
+                "#ventas"
+            ]
+        },
+        {
+            "plataforma": "TikTok",
+            "caption": "La pregunta no es cuánto cuesta empezar. Es qué sistema puede justificar el retorno.",
+            "hashtags": [
+                "#emprendedores",
+                "#negociosonline"
+            ]
+        },
+        {
+            "plataforma": "LinkedIn",
+            "caption": "Una buena pieza de performance no empieza con una promesa; empieza con una tensión económica que el mercado reconoce.",
+            "hashtags": [
+                "#performance",
+                "#growth"
+            ]
+        }
+    ],
+    "calendario_publicacion": [
+        {
+            "dia": "Día 1",
+            "pieza": "Reel pregunta 30K",
+            "objetivo": "Capturar atención y comentarios cualificados."
+        },
+        {
+            "dia": "Día 2",
+            "pieza": "Carrusel inversión vs retorno",
+            "objetivo": "Educar y guardar."
+        },
+        {
+            "dia": "Día 3",
+            "pieza": "Adset masterclass",
+            "objetivo": "Generar reservas o leads."
+        },
+        {
+            "dia": "Día 4",
+            "pieza": "Story con encuesta",
+            "objetivo": "Medir objeciones y activar DM."
+        }
+    ],
+    "prompts_visuales": [
+        {
+            "uso": "reel cover",
+            "prompt": "Portada vertical 9:16 para AD_Diagnostic, orador masculino con gafas en entorno exterior verde desenfocado, texto grande: '¿30K al mes?', composición con rostro a un tercio, contraste alto, estética limpio, moderno, con foco en la idea principal, espacio seguro para subtítulo y CTA.",
+            "negative_prompt": "texto ilegible, cifras pequeñas, promesas exageradas, fondo saturado, rostro distorsionado"
+        },
+        {
+            "uso": "meta ad",
+            "prompt": "Creativo 4:5 de performance para explicar inversión vs retorno, visual central con orador gesticulando, overlays '3K inversión' y '30K objetivo', fondo natural profesional, jerarquía clara, CTA: Guardar, compartir o solicitar más información.",
+            "negative_prompt": "gráficos financieros falsos, lujo genérico, billetes irreales, exceso de texto"
+        },
+        {
+            "uso": "thumbnail",
+            "prompt": "Thumbnail 16:9 con primer plano del orador, fondo verde con bokeh, expresión de pregunta, copy grande '¿Qué negocio escala más rápido?', flecha sutil hacia cifra 30K, estilo nítido y creíble.",
+            "negative_prompt": "clickbait confuso, texto cortado, demasiados iconos"
+        },
+        {
+            "uso": "carousel",
+            "prompt": "Carrusel 4:5 educativo, slide 1 pregunta 30K, slide 2 inversión 3K, slide 3 sistema CRM, slide 4 masterclass, usar paleta sobria, tipografía pesada, composición editorial limpia.",
+            "negative_prompt": "plantilla genérica, saturación excesiva, layouts desordenados"
+        }
+    ],
+    "prompt_base_marca": {
+        "brand_name": "AD_Diagnostic",
+        "tone": "claro, experto, directo y accionable",
+        "visual_direction": "limpio, moderno, con foco en la idea principal",
+        "do": [
+            "Mantener claridad"
+        ],
+        "dont": [
+            "Prometer resultados no verificables"
+        ]
+    },
+    "retrospectiva": {
+        "que_funciono": [
+            "Se generó una base operativa"
+        ],
+        "que_falto": [
+            "Proveedor IA funcional"
+        ],
+        "siguiente_mejora": "Configurar Gemini o verificar modelo Ollama.",
+        "generation_mode": "local_fallback"
+    },
+    "_quality_repair": {
+        "applied": true,
+        "reason": "Se detectaron placeholders, schema copiado o baja densidad de piezas.",
+        "source": "script_visual_brand_deterministic_repair"
+    },
+    "_prompt_version": "scriptdna-business-v3",
+    "_context_inputs": {
+        "prompt_version": "scriptdna-business-v3",
+        "script_chars": 1244,
+        "script_truncated": false,
+        "brand_profile_fields": [
+            "audience",
+            "brand_name",
+            "cta",
+            "preferred_formats",
+            "tone",
+            "visual_style"
+        ],
+        "historical_pattern_counts": {},
+        "visual_context_available": false,
+        "visual_context_status": "missing"
+    }
+}

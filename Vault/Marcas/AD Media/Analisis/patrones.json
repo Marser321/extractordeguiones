@@ -1,0 +1,135 @@
+{
+    "hooks_frecuentes": [],
+    "estructuras_ganadoras": [],
+    "angulos_de_venta": [],
+    "reglas_de_estilo": [],
+    "pattern_candidates": [
+        {
+            "category": "hooks_frecuentes",
+            "value": "Subtítulos realizados por la comunidad de Amara",
+            "source_video_id": "AD Media",
+            "prompt_version": "scriptdna-business-v3",
+            "audit_score": null,
+            "promoted": false,
+            "observed_at": "2026-05-07T02:40:12.406725Z"
+        },
+        {
+            "category": "hooks_frecuentes",
+            "value": "¿Invertirías 3.000 para construir una vía a 30.000 al mes?",
+            "source_video_id": "AD Media",
+            "prompt_version": "scriptdna-business-v3",
+            "audit_score": null,
+            "promoted": false,
+            "observed_at": "2026-05-07T02:40:12.406725Z"
+        },
+        {
+            "category": "hooks_frecuentes",
+            "value": "El negocio no es el trámite: es el sistema que convierte demanda en ventas.",
+            "source_video_id": "AD Media",
+            "prompt_version": "scriptdna-business-v3",
+            "audit_score": null,
+            "promoted": false,
+            "observed_at": "2026-05-07T02:40:12.406725Z"
+        },
+        {
+            "category": "hooks_frecuentes",
+            "value": "Si el margen existe, el cuello de botella no es la idea: es capturar y cerrar la demanda.",
+            "source_video_id": "AD Media",
+            "prompt_version": "scriptdna-business-v3",
+            "audit_score": null,
+            "promoted": false,
+            "observed_at": "2026-05-07T02:40:12.406725Z"
+        },
+        {
+            "category": "estructuras_ganadoras",
+            "value": "Gancho de Error Común",
+            "source_video_id": "AD Media",
+            "prompt_version": "scriptdna-business-v3",
+            "audit_score": null,
+            "promoted": false,
+            "observed_at": "2026-05-07T02:40:12.406725Z"
+        },
+        {
+            "category": "estructuras_ganadoras",
+            "value": "Tensión de Pérdida de Audiencia",
+            "source_video_id": "AD Media",
+            "prompt_version": "scriptdna-business-v3",
+            "audit_score": null,
+            "promoted": false,
+            "observed_at": "2026-05-07T02:40:12.406725Z"
+        },
+        {
+            "category": "estructuras_ganadoras",
+            "value": "Solución de Claridad AD Media",
+            "source_video_id": "AD Media",
+            "prompt_version": "scriptdna-business-v3",
+            "audit_score": null,
+            "promoted": false,
+            "observed_at": "2026-05-07T02:40:12.406725Z"
+        },
+        {
+            "category": "estructuras_ganadoras",
+            "value": "Llamado a la Acción Estratégico",
+            "source_video_id": "AD Media",
+            "prompt_version": "scriptdna-business-v3",
+            "audit_score": null,
+            "promoted": false,
+            "observed_at": "2026-05-07T02:40:12.406725Z"
+        },
+        {
+            "category": "angulos_de_venta",
+            "value": "aspiración cuantificada",
+            "source_video_id": "AD Media",
+            "prompt_version": "scriptdna-business-v3",
+            "audit_score": null,
+            "promoted": false,
+            "observed_at": "2026-05-07T02:40:12.406725Z"
+        },
+        {
+            "category": "angulos_de_venta",
+            "value": "riesgo calculado",
+            "source_video_id": "AD Media",
+            "prompt_version": "scriptdna-business-v3",
+            "audit_score": null,
+            "promoted": false,
+            "observed_at": "2026-05-07T02:40:12.406725Z"
+        },
+        {
+            "category": "angulos_de_venta",
+            "value": "autoridad práctica",
+            "source_video_id": "AD Media",
+            "prompt_version": "scriptdna-business-v3",
+            "audit_score": null,
+            "promoted": false,
+            "observed_at": "2026-05-07T02:40:12.406725Z"
+        },
+        {
+            "category": "reglas_de_estilo",
+            "value": "Hablar de ROI y métricas",
+            "source_video_id": "AD Media",
+            "prompt_version": "scriptdna-business-v3",
+            "audit_score": null,
+            "promoted": false,
+            "observed_at": "2026-05-07T02:40:12.406725Z"
+        },
+        {
+            "category": "reglas_de_estilo",
+            "value": "Priorizar la claridad del mensaje",
+            "source_video_id": "AD Media",
+            "prompt_version": "scriptdna-business-v3",
+            "audit_score": null,
+            "promoted": false,
+            "observed_at": "2026-05-07T02:40:12.406725Z"
+        },
+        {
+            "category": "reglas_de_estilo",
+            "value": "Usar verbos de acción",
+            "source_video_id": "AD Media",
+            "prompt_version": "scriptdna-business-v3",
+            "audit_score": null,
+            "promoted": false,
+            "observed_at": "2026-05-07T02:40:12.406725Z"
+        }
+    ],
+    "pattern_metadata": []
+}

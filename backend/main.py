@@ -1,12 +1,14 @@
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime
+import json
 from pathlib import Path
 from threading import Lock
 from typing import Callable, Literal, Optional
 from uuid import uuid4
 
-from fastapi import FastAPI, File, Form, HTTPException, UploadFile
-from fastapi.responses import FileResponse, HTMLResponse
+from fastapi import FastAPI, File, Form, HTTPException, UploadFile, BackgroundTasks
+from fastapi.responses import FileResponse, HTMLResponse, JSONResponse, PlainTextResponse
+from fastapi.responses import RedirectResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, model_validator
 
@@ -65,7 +67,7 @@ jobs = {}
 
 class PromptRequest(BaseModel):
     prompt: str
-    engine: Literal["ollama", "gemini-flash", "gemini-pro"] = "ollama"
+    engine: Literal["ollama", "gemini-flash", "gemini-pro"] = "gemini-flash"
     model: Optional[str] = None
 
 
@@ -101,7 +103,7 @@ class JobUrlRequest(BaseModel):
     brand_name: str
     video_id: str
     url: str
-    ai_provider: str = "ollama"
+    ai_provider: str = "gemini"
     ai_model: Optional[str] = None
     analysis_modules: Optional[list] = None
 
@@ -110,7 +112,7 @@ class JobLocalPathRequest(BaseModel):
     brand_name: str
     video_id: str
     local_file_path: str
-    ai_provider: str = "ollama"
+    ai_provider: str = "gemini"
     ai_model: Optional[str] = None
     analysis_modules: Optional[list] = None
 
@@ -120,7 +122,7 @@ class JobProcessRequest(BaseModel):
     video_id: str
     url: Optional[str] = None
     local_file_path: Optional[str] = None
-    ai_provider: str = "ollama"
+    ai_provider: str = "gemini"
     ai_model: Optional[str] = None
     analysis_modules: Optional[list] = None
 
@@ -134,7 +136,7 @@ class JobProcessRequest(BaseModel):
 
 
 class AITestRequest(BaseModel):
-    provider: str = "ollama"
+    provider: str = "gemini"
     model: Optional[str] = None
     prompt: str = "Responde en JSON: {\"ok\": true, \"message\": \"ScriptDNA conectado\"}"
 
@@ -151,7 +153,7 @@ class BrandProfileRequest(BaseModel):
 
 
 class AnalyzeJobRequest(BaseModel):
-    ai_provider: str = "ollama"
+    ai_provider: str = "gemini"
     ai_model: Optional[str] = None
     analysis_modules: Optional[list] = None
 
@@ -167,7 +169,7 @@ class MicrotaskRunRequest(BaseModel):
 
 
 class RefineJobRequest(BaseModel):
-    ai_provider: str = "ollama"
+    ai_provider: str = "gemini"
     ai_model: Optional[str] = None
 
 
@@ -186,6 +188,107 @@ def _public_job(job_id: str) -> dict:
         return dict(jobs[job_id])
 
 
+def _job_snapshot(job_id: str) -> Optional[dict]:
+    with jobs_lock:
+        job = jobs.get(job_id)
+        return dict(job) if job else None
+
+
+def _record_to_job(record: Optional[dict]) -> Optional[dict]:
+    if not record:
+        return None
+    state = {}
+    raw_state = record.get("analyzed_script")
+    if isinstance(raw_state, str) and raw_state:
+        try:
+            parsed = json.loads(raw_state)
+            state = parsed.get("job_state", parsed) if isinstance(parsed, dict) else {}
+        except json.JSONDecodeError:
+            state = {}
+    elif isinstance(raw_state, dict):
+        state = raw_state.get("job_state", raw_state)
+
+    result = state.get("result")
+    if result is None and record.get("creative_prompts"):
+        result = record.get("creative_prompts")
+
+    return {
+        "job_id": record.get("job_id") or state.get("job_id"),
+        "status": record.get("status") or state.get("status") or "pending",
+        "progress": state.get("progress", JOB_STEPS.get(record.get("status"), 0)),
+        "message": state.get("message") or "Estado recuperado desde InsForge.",
+        "brand_name": record.get("brand_name") or state.get("brand_name"),
+        "video_id": record.get("video_id_str") or state.get("video_id"),
+        "source_type": state.get("source_type"),
+        "source_value": record.get("video_url") or state.get("source_value"),
+        "ai_provider": state.get("ai_provider"),
+        "ai_model": state.get("ai_model"),
+        "analysis_modules": state.get("analysis_modules") or [],
+        "created_at": state.get("created_at"),
+        "updated_at": state.get("updated_at"),
+        "error": state.get("error"),
+        "result": result,
+        "insforge_id": record.get("id"),
+    }
+
+
+def _public_job_from_cache_or_store(job_id: str) -> Optional[dict]:
+    cached = _job_snapshot(job_id)
+    if cached:
+        return cached
+    return _record_to_job(insforge_service.get_video_script_by_job_id(job_id))
+
+
+def _read_text_if_exists(path: Path) -> Optional[str]:
+    if path.exists() and path.is_file():
+        return path.read_text(encoding="utf-8")
+    return None
+
+
+def _read_json_if_exists(path: Path):
+    if path.exists() and path.is_file():
+        with open(path, "r", encoding="utf-8") as handle:
+            return json.load(handle)
+    return None
+
+
+def _collect_output_payload(brand_name: str, video_id: str) -> dict:
+    video_path = vault_service.get_video_path(brand_name, video_id)
+    analysis_dir = video_path / "Analisis"
+    creative_dir = analysis_dir / "CreativeLab"
+    payload = {
+        "script": _read_text_if_exists(video_path / "guion_original.txt"),
+        "metadata": _read_json_if_exists(video_path / "metadatos_transcripcion.json"),
+        "source_metadata": _read_json_if_exists(video_path / "source_metadata.json"),
+        "analysis": {},
+        "creative_pack": {
+            "json": _read_json_if_exists(creative_dir / "creative_pack.json"),
+            "markdown": _read_text_if_exists(creative_dir / "creative_pack.md"),
+        },
+    }
+    for output in vault_service.list_outputs(brand_name, video_id):
+        filename = output.get("filename")
+        path = Path(output.get("path", ""))
+        if not filename or not path.exists() or filename in {"creative_pack.json", "creative_pack.md"}:
+            continue
+        if filename.endswith(".json"):
+            payload["analysis"][filename] = _read_json_if_exists(path)
+        else:
+            payload["analysis"][filename] = _read_text_if_exists(path)
+    return payload
+
+
+def _stored_output_payload(brand_name: str, video_id: str) -> dict:
+    record = insforge_service.get_video_script(brand_name, video_id)
+    if not record:
+        return {}
+    job = _record_to_job(record) or {}
+    result = job.get("result") or {}
+    if isinstance(result, dict):
+        return result.get("output_payload") or result.get("outputs_payload") or {}
+    return {}
+
+
 def _active_ollama_jobs() -> list[dict]:
     active_statuses = {"queued", "extracting_audio", "transcribing", "analyzing", "analyzing_text", "extracting_frames", "analyzing_visuals", "generating_assets"}
     with jobs_lock:
@@ -198,6 +301,11 @@ def _active_ollama_jobs() -> list[dict]:
 
 def _ensure_ai_provider_available(ai_provider: str):
     if ai_provider == "ollama":
+        if settings.IS_CLOUD:
+            raise HTTPException(
+                status_code=400,
+                detail="Ollama solo está disponible en modo local/desarrollo. Usa Gemini para el despliegue cloud.",
+            )
         status = ollama_control_service.status()
         if not status["running"]:
             raise HTTPException(
@@ -211,6 +319,20 @@ def _ensure_ai_provider_available(ai_provider: str):
                 status_code=400,
                 detail="Gemini no está configurado o no tiene SDK disponible. Configura GEMINI_API_KEY en .env o usa Ollama.",
             )
+    elif ai_provider == "openrouter":
+        status = ai_provider_service.status()
+        if not status["openrouter"]["available"]:
+            raise HTTPException(
+                status_code=400,
+                detail="OpenRouter no está configurado (falta llave API).",
+            )
+    elif ai_provider == "groq":
+        status = ai_provider_service.status()
+        if not status["groq"]["available"]:
+            raise HTTPException(
+                status_code=400,
+                detail="Groq no está configurado (falta llave API).",
+            )
     else:
         raise HTTPException(status_code=400, detail=f"Proveedor IA no soportado: {ai_provider}")
 
@@ -220,33 +342,42 @@ def _create_job(
     video_id: str,
     source_type: str,
     source_value: str,
-    ai_provider: str = "ollama",
+    ai_provider: str = "gemini",
     ai_model: Optional[str] = None,
     analysis_modules: Optional[list] = None,
 ) -> str:
     job_id = uuid4().hex
+    now = _now()
+    initial_state = {
+        "job_id": job_id,
+        "status": "queued",
+        "progress": JOB_STEPS["queued"],
+        "message": "Trabajo creado.",
+        "brand_name": brand_name,
+        "video_id": video_id,
+        "source_type": source_type,
+        "source_value": source_value,
+        "ai_provider": ai_provider,
+        "ai_model": ai_model,
+        "analysis_modules": analysis_modules or analysis_service.default_modules(),
+        "created_at": now,
+        "updated_at": now,
+        "error": None,
+        "result": None,
+        "insforge_id": None,
+    }
     with jobs_lock:
-        jobs[job_id] = {
-            "job_id": job_id,
-            "status": "queued",
-            "progress": JOB_STEPS["queued"],
-            "message": "Trabajo creado.",
-            "brand_name": brand_name,
-            "video_id": video_id,
-            "source_type": source_type,
-            "source_value": source_value,
-            "ai_provider": ai_provider,
-            "ai_model": ai_model,
-            "analysis_modules": analysis_modules or analysis_service.default_modules(),
-            "created_at": _now(),
-            "updated_at": _now(),
-            "error": None,
-            "result": None,
-            "insforge_id": None,
-        }
+        jobs[job_id] = initial_state
     
     # Persistir en InsForge
-    ins_record = insforge_service.create_video_script(brand_name, video_id, source_value, job_id)
+    ins_record = insforge_service.create_video_script(
+        brand_name,
+        video_id,
+        source_value,
+        job_id,
+        status="queued",
+        job_state=initial_state,
+    )
     if ins_record:
         with jobs_lock:
             jobs[job_id]["insforge_id"] = ins_record["id"]
@@ -265,27 +396,27 @@ def _update_job(job_id: str, status: str, message: str, result: Optional[dict] =
             job["result"] = result
         if error is not None:
             job["error"] = error
+        snapshot = dict(job)
             
     # Sync con InsForge
     with jobs_lock:
         job = jobs[job_id]
         ins_id = job.get("insforge_id")
     
+    updates = {
+        "status": "failed" if error else status,
+        "analyzed_script": json.dumps({"job_state": snapshot}, ensure_ascii=False),
+    }
+    if result:
+        updates["original_script"] = result.get("script_preview")
+        updates["creative_prompts"] = result
+        if "segments_count" in result:
+            updates["video_url"] = result.get("video_url") or job.get("source_value")
+
     if ins_id:
-        updates = {"status": status}
-        if result:
-            # Sincronizar datos clave
-            updates["original_script"] = result.get("script_preview")
-            updates["analyzed_script"] = str(result.get("analysis_status", {}))
-            updates["creative_prompts"] = result.get("outputs", {})
-            # Si hay metadatos de transcripción, guardarlos
-            if "segments_count" in result:
-                updates["video_url"] = result.get("video_url") or job.get("source_value")
-        
-        if error:
-            updates["status"] = "failed"
-            
         insforge_service.update_video_script(ins_id, updates)
+    else:
+        insforge_service.update_video_script_by_job_id(job_id, updates)
 
 
 def _run_media_extract(request: MediaExtractRequest) -> tuple:
@@ -430,6 +561,7 @@ def _process_job(
             metadata_path,
             analysis_status,
         )
+        result["output_payload"] = _collect_output_payload(brand_name, video_id)
         _update_job(job_id, "completed", "Trabajo completado.", result=result)
     except Exception as error:
         _update_job(job_id, "failed", "El trabajo falló.", error=str(error))
@@ -458,6 +590,7 @@ def _process_analysis_job(
             "analysis_status": analysis_status,
             "outputs": vault_service.list_outputs(brand_name, video_id),
         }
+        result["output_payload"] = _collect_output_payload(brand_name, video_id)
         _update_job(job_id, "completed", "Análisis completado.", result=result)
         print(f"[Analysis] Job {job_id} completed successfully for {brand_name}/{video_id}")
     except Exception as error:
@@ -498,6 +631,7 @@ def _process_creative_pack_job(
             },
             "outputs": vault_service.list_outputs(brand_name, video_id),
         }
+        result["output_payload"] = _collect_output_payload(brand_name, video_id)
         _update_job(job_id, "completed", "Creative pack generado.", result=result)
         print(f"[CreativePack] Job {job_id} completed successfully for {brand_name}/{video_id}")
     except Exception as error:
@@ -559,6 +693,7 @@ def _process_refine_job(
             "audit_score": new_audit.get("overall_score"),
             "outputs": vault_service.list_outputs(brand_name, video_id),
         }
+        result["output_payload"] = _collect_output_payload(brand_name, video_id)
         _update_job(job_id, "completed", "Skill refinada con éxito.", result=result)
     except Exception as error:
         print(f"[Refine] Job {job_id} failed: {error}")
@@ -571,20 +706,38 @@ def _start_job(
     source_type: str,
     source_value: str,
     media_runner: Callable[[Path], Path],
-    ai_provider: str = "ollama",
+    background_tasks: BackgroundTasks,
+    ai_provider: str = "gemini",
     ai_model: Optional[str] = None,
     analysis_modules: Optional[list] = None,
 ) -> dict:
     _ensure_ai_provider_available(ai_provider)
     job_id = _create_job(brand_name, video_id, source_type, source_value, ai_provider, ai_model, analysis_modules)
-    executor.submit(_process_job, job_id, brand_name, video_id, source_type, media_runner, ai_provider, ai_model, analysis_modules)
+    
+    # En Cloud (Vercel) usamos BackgroundTasks para evitar bloqueos del worker
+    # En Local usamos el executor o BackgroundTasks indistintamente
+    background_tasks.add_task(
+        _process_job, job_id, brand_name, video_id, source_type, media_runner, ai_provider, ai_model, analysis_modules
+    )
+    
     return _public_job(job_id)
 
 
-def _start_analysis_job(brand_name: str, video_id: str, ai_provider: str, ai_model: Optional[str], analysis_modules: Optional[list]) -> dict:
+def _start_analysis_job(
+    brand_name: str, 
+    video_id: str, 
+    ai_provider: str, 
+    ai_model: Optional[str], 
+    analysis_modules: Optional[list],
+    background_tasks: BackgroundTasks
+) -> dict:
     _ensure_ai_provider_available(ai_provider)
     job_id = _create_job(brand_name, video_id, "analysis", "vault", ai_provider, ai_model, analysis_modules)
-    executor.submit(_process_analysis_job, job_id, brand_name, video_id, ai_provider, ai_model, analysis_modules)
+    
+    background_tasks.add_task(
+        _process_analysis_job, job_id, brand_name, video_id, ai_provider, ai_model, analysis_modules
+    )
+    
     return _public_job(job_id)
 
 
@@ -594,13 +747,18 @@ def _start_creative_pack_job(
     ai_provider: str,
     ai_model: Optional[str],
     fallback_provider: Optional[str],
+    background_tasks: BackgroundTasks
 ) -> dict:
     if ai_provider != "local":
         _ensure_ai_provider_available(ai_provider)
     job_id = _create_job(brand_name, video_id, "creative_pack", "vault", ai_provider, ai_model, [])
     with jobs_lock:
         jobs[job_id]["analysis_modules"] = ["creative_pack"]
-    executor.submit(_process_creative_pack_job, job_id, brand_name, video_id, ai_provider, ai_model, fallback_provider)
+        
+    background_tasks.add_task(
+        _process_creative_pack_job, job_id, brand_name, video_id, ai_provider, ai_model, fallback_provider
+    )
+    
     return _public_job(job_id)
 
 
@@ -614,12 +772,7 @@ def _raise_http_error(error: Exception):
 
 @app.get("/")
 def read_root():
-    return {
-        "status": "ScriptDNA API is running",
-        "app": "/app",
-        "vault_root": str(vault_service.root),
-        "ai": ai_provider_service.status(),
-    }
+    return RedirectResponse(url="/app")
 
 
 @app.get("/app", response_class=HTMLResponse)
@@ -678,6 +831,94 @@ def ai_test(request: AITestRequest):
         _raise_http_error(error)
 
 
+@app.get("/diagnostic")
+def diagnostic():
+    """Endpoint de diagnóstico para verificar salud del sistema en la nube."""
+    ai_stat = ai_provider_service.status()
+    ins_conf = insforge_service.configured()
+    vault_root = str(settings.VAULT_ROOT)
+    
+    writable = False
+    try:
+        test_file = settings.VAULT_ROOT / ".write_test"
+        test_file.write_text("ok")
+        test_file.unlink()
+        writable = True
+    except Exception:
+        pass
+
+    gemini_live = False
+    gemini_error = None
+    if ai_stat["gemini"]["available"]:
+        try:
+            ai_provider_service.generate_text(
+                prompt="Ping", 
+                provider="gemini", 
+                model=settings.GEMINI_DEFAULT_MODEL,
+                json_mode=False
+            )
+            gemini_live = True
+        except Exception as e:
+            gemini_error = str(e)
+
+    openrouter_live = False
+    openrouter_error = None
+    if ai_stat["openrouter"]["available"]:
+        try:
+            ai_provider_service.generate_text(
+                prompt="Ping", 
+                provider="openrouter", 
+                model=settings.OPENROUTER_DEFAULT_MODEL,
+                json_mode=False
+            )
+            openrouter_live = True
+        except Exception as e:
+            openrouter_error = str(e)
+
+    groq_live = False
+    groq_error = None
+    if ai_stat["groq"]["available"]:
+        try:
+            ai_provider_service.generate_text(
+                prompt="Ping", 
+                provider="groq", 
+                model=settings.GROQ_DEFAULT_MODEL,
+                json_mode=False
+            )
+            groq_live = True
+        except Exception as e:
+            groq_error = str(e)
+
+    return {
+        "status": "ok",
+        "cloud_mode": settings.IS_CLOUD,
+        "vault": {
+            "root": vault_root,
+            "writable": writable
+        },
+        "insforge": {
+            "configured": ins_conf,
+            "base_url": settings.INSFORGE_BASE_URL
+        },
+        "gemini": {
+            "available": ai_stat["gemini"]["available"],
+            "live": gemini_live,
+            "error": gemini_error
+        },
+        "openrouter": {
+            "available": ai_stat["openrouter"]["available"],
+            "live": openrouter_live,
+            "error": openrouter_error
+        },
+        "groq": {
+            "available": ai_stat["groq"]["available"],
+            "live": groq_live,
+            "error": groq_error
+        },
+        "timestamp": _now()
+    }
+
+
 @app.get("/ollama/status")
 def ollama_status():
     return ollama_control_service.status()
@@ -722,17 +963,23 @@ def config_status():
     project_root = Path(__file__).resolve().parent.parent
     env_paths = [project_root / ".env", Path.cwd() / ".env"]
     existing_env = next((path for path in env_paths if path.exists()), None)
-    gemini_key = settings.GEMINI_API_KEY
+    gemini_key = settings.GEMINI_API_KEY or settings.GEMINI_API_KEYS
+    openrouter_key = settings.OPENROUTER_API_KEY or settings.OPENROUTER_API_KEYS
+    
     env_has_gemini = False
+    env_has_openrouter = False
+    
     if existing_env:
         try:
-            for line in existing_env.read_text(encoding="utf-8").splitlines():
+            content = existing_env.read_text(encoding="utf-8")
+            for line in content.splitlines():
                 stripped = line.strip()
-                if stripped.startswith("GEMINI_API_KEY=") and stripped.split("=", 1)[1].strip():
+                if (stripped.startswith("GEMINI_API_KEY=") or stripped.startswith("GEMINI_API_KEYS=")) and stripped.split("=", 1)[1].strip():
                     env_has_gemini = True
-                    break
+                if (stripped.startswith("OPENROUTER_API_KEY=") or stripped.startswith("OPENROUTER_API_KEYS=")) and stripped.split("=", 1)[1].strip():
+                    env_has_openrouter = True
         except OSError:
-            env_has_gemini = False
+            pass
 
     configured_source = None
     if bool(gemini_key):
@@ -748,10 +995,25 @@ def config_status():
         "gemini_api_key_masked": "********" if gemini_key else None,
         "gemini_api_key_source": configured_source,
         "gemini_env_file_has_key": env_has_gemini,
-        "restart_required": env_has_gemini and not bool(gemini_key),
+        "openrouter_api_key_configured": bool(openrouter_key),
+        "openrouter_env_file_has_key": env_has_openrouter,
+        "restart_required": (env_has_gemini and not bool(gemini_key)) or (env_has_openrouter and not bool(openrouter_key)),
         "gemini_sdk_installed": ai_status_data["gemini"]["sdk_installed"],
         "gemini_legacy_sdk_installed": ai_status_data["gemini"]["legacy_sdk_installed"],
-        "setup_note": "Rota la clave compartida y coloca la nueva en .env como GEMINI_API_KEY. La clave real nunca se devuelve por API ni se guarda desde el navegador.",
+        "is_cloud": settings.IS_CLOUD,
+        "is_vercel": settings.IS_VERCEL,
+        "insforge_configured": insforge_service.configured(),
+        "cloud_capabilities": {
+            "url_source": True,
+            "upload_source": True,
+            "local_path_source": not settings.IS_CLOUD,
+            "ollama": not settings.IS_CLOUD,
+            "gemini": bool(gemini_key),
+            "openrouter": bool(openrouter_key),
+            "persistent_jobs": insforge_service.configured(),
+            "vault_root": str(vault_service.root),
+        },
+        "setup_note": "OpenRouter es ahora el motor principal. Gemini se mantiene como respaldo si la llave es válida. Configura OPENROUTER_API_KEY en Vercel.",
     }
 
 
@@ -807,8 +1069,10 @@ def process_pipeline(request: PipelineProcessRequest):
 
 
 @app.post("/jobs/process-url")
-def create_url_job(request: JobUrlRequest):
+def create_url_job(request: JobUrlRequest, background_tasks: BackgroundTasks):
     try:
+        media_service.validate_url_source(request.url)
+
         def runner(video_path: Path) -> Path:
             audio_file = media_service.process_url(request.url, video_path)
             vault_service.save_json(video_path, "source_metadata.json", {
@@ -818,13 +1082,13 @@ def create_url_job(request: JobUrlRequest):
             })
             return audio_file
 
-        return _start_job(request.brand_name, request.video_id, "url", request.url, runner, request.ai_provider, request.ai_model, request.analysis_modules)
+        return _start_job(request.brand_name, request.video_id, "url", request.url, runner, background_tasks, request.ai_provider, request.ai_model, request.analysis_modules)
     except Exception as error:
         _raise_http_error(error)
 
 
 @app.post("/jobs/process")
-def create_generic_job(request: JobProcessRequest):
+def create_generic_job(request: JobProcessRequest, background_tasks: BackgroundTasks):
     if request.url:
         return create_url_job(
             JobUrlRequest(
@@ -834,7 +1098,8 @@ def create_generic_job(request: JobProcessRequest):
                 ai_provider=request.ai_provider,
                 ai_model=request.ai_model,
                 analysis_modules=request.analysis_modules,
-            )
+            ),
+            background_tasks=background_tasks
         )
     return create_local_path_job(
         JobLocalPathRequest(
@@ -844,13 +1109,19 @@ def create_generic_job(request: JobProcessRequest):
             ai_provider=request.ai_provider,
             ai_model=request.ai_model,
             analysis_modules=request.analysis_modules,
-        )
+        ),
+        background_tasks=background_tasks
     )
 
 
 @app.post("/jobs/process-local-path")
-def create_local_path_job(request: JobLocalPathRequest):
+def create_local_path_job(request: JobLocalPathRequest, background_tasks: BackgroundTasks):
     try:
+        if settings.IS_CLOUD:
+            raise HTTPException(
+                status_code=400,
+                detail="La fuente por ruta local solo está disponible en modo local. En cloud usa URL o subida de archivo.",
+            )
         local_path = Path(request.local_file_path).expanduser()
         if not local_path.exists():
             raise FileNotFoundError(f"No se encontró el archivo local: {local_path}")
@@ -866,16 +1137,17 @@ def create_local_path_job(request: JobLocalPathRequest):
             })
             return audio_file
 
-        return _start_job(request.brand_name, request.video_id, "local_path", str(local_path), runner, request.ai_provider, request.ai_model, request.analysis_modules)
+        return _start_job(request.brand_name, request.video_id, "local_path", str(local_path), runner, background_tasks, request.ai_provider, request.ai_model, request.analysis_modules)
     except Exception as error:
         _raise_http_error(error)
 
 
 @app.post("/jobs/process-upload")
 def create_upload_job(
+    background_tasks: BackgroundTasks,
     brand_name: str = Form(...),
     video_id: str = Form(...),
-    ai_provider: str = Form("ollama"),
+    ai_provider: str = Form("gemini"),
     ai_model: Optional[str] = Form(None),
     analysis_modules: Optional[str] = Form(None),
     file: UploadFile = File(...),
@@ -894,7 +1166,7 @@ def create_upload_job(
             return audio_file
 
         modules = [item.strip() for item in analysis_modules.split(",") if item.strip()] if analysis_modules else None
-        return _start_job(brand_name, video_id, "upload", str(uploaded_path), runner, ai_provider, ai_model, modules)
+        return _start_job(brand_name, video_id, "upload", str(uploaded_path), runner, background_tasks, ai_provider, ai_model, modules)
     except Exception as error:
         _raise_http_error(error)
     finally:
@@ -902,19 +1174,21 @@ def create_upload_job(
 
 
 @app.post("/jobs/analyze/{brand_name}/{video_id}")
-def analyze_existing_video(brand_name: str, video_id: str, request: AnalyzeJobRequest):
+def analyze_existing_video(brand_name: str, video_id: str, request: AnalyzeJobRequest, background_tasks: BackgroundTasks):
     try:
-        return _start_analysis_job(brand_name, video_id, request.ai_provider, request.ai_model, request.analysis_modules)
+        return _start_analysis_job(brand_name, video_id, request.ai_provider, request.ai_model, request.analysis_modules, background_tasks)
     except Exception as error:
         _raise_http_error(error)
 
 
 @app.post("/jobs/refine/{brand_name}/{video_id}")
-def refine_existing_analysis(brand_name: str, video_id: str, request: RefineJobRequest):
+def refine_existing_analysis(brand_name: str, video_id: str, request: RefineJobRequest, background_tasks: BackgroundTasks):
     try:
         _ensure_ai_provider_available(request.ai_provider)
         job_id = _create_job(brand_name, video_id, "refine", "vault", request.ai_provider, request.ai_model, [])
-        executor.submit(_process_refine_job, job_id, brand_name, video_id, request.ai_provider, request.ai_model)
+        background_tasks.add_task(
+            _process_refine_job, job_id, brand_name, video_id, request.ai_provider, request.ai_model
+        )
         return _public_job(job_id)
     except Exception as error:
         _raise_http_error(error)
@@ -926,9 +1200,6 @@ def get_brand_evolution(brand_name: str):
         from services.training_service import training_service
         brand_path = vault_service.create_brand_structure(brand_name)
         return vault_service.read_json(brand_path / "Analisis" / "evolucion_skills.json") or {"history": [], "current_level": "novice"}
-    except Exception as error:
-        _raise_http_error(error)
-
     except Exception as error:
         _raise_http_error(error)
 
@@ -960,10 +1231,10 @@ def get_brand_wisdom(brand_name: str):
 
 @app.get("/jobs/{job_id}")
 def read_job(job_id: str):
-    with jobs_lock:
-        if job_id not in jobs:
-            raise HTTPException(status_code=404, detail="Job no encontrado.")
-    return _public_job(job_id)
+    job = _public_job_from_cache_or_store(job_id)
+    if not job:
+        raise HTTPException(status_code=404, detail="Job no encontrado.")
+    return job
 
 
 @app.get("/vault/brands")
@@ -979,7 +1250,7 @@ def list_brand_videos(brand_name: str):
 @app.get("/vault/brands/{brand_name}/videos/{video_id}")
 def describe_brand_video(brand_name: str, video_id: str):
     video_path = vault_service.get_video_path(brand_name, video_id)
-    if not video_path.exists():
+    if not video_path.exists() and not insforge_service.get_video_script(brand_name, video_id):
         raise HTTPException(status_code=404, detail="Video no encontrado en el Vault.")
     return vault_service.describe_video(brand_name, video_id)
 
@@ -1006,7 +1277,18 @@ def list_video_outputs(brand_name: str, video_id: str):
     try:
         video_path = vault_service.get_video_path(brand_name, video_id)
         if not video_path.exists():
-            raise FileNotFoundError("Video no encontrado en el Vault.")
+            payload = _stored_output_payload(brand_name, video_id)
+            if not payload:
+                raise FileNotFoundError("Video no encontrado en el Vault.")
+            outputs = []
+            for filename in (payload.get("analysis") or {}).keys():
+                outputs.append({
+                    "key": filename.rsplit(".", 1)[0],
+                    "label": filename,
+                    "filename": filename,
+                    "path": None,
+                })
+            return {"brand_name": brand_name, "video_id": video_id, "outputs": outputs}
         return {"brand_name": brand_name, "video_id": video_id, "outputs": vault_service.list_outputs(brand_name, video_id)}
     except Exception as error:
         _raise_http_error(error)
@@ -1017,6 +1299,9 @@ def read_creative_pack(brand_name: str, video_id: str):
     try:
         pack = creative_pack_service.read_pack(brand_name, video_id)
         paths = creative_pack_service.pack_paths(brand_name, video_id)
+        if not pack:
+            payload = _stored_output_payload(brand_name, video_id)
+            pack = (payload.get("creative_pack") or {}).get("json") or {}
         return {
             "brand_name": brand_name,
             "video_id": video_id,
@@ -1055,7 +1340,7 @@ def generate_creative_pack(brand_name: str, video_id: str, request: CreativePack
 
 
 @app.post("/creative-pack/{brand_name}/{video_id}/job")
-def generate_creative_pack_job(brand_name: str, video_id: str, request: CreativePackRequest):
+def generate_creative_pack_job(brand_name: str, video_id: str, request: CreativePackRequest, background_tasks: BackgroundTasks):
     try:
         return _start_creative_pack_job(
             brand_name=brand_name,
@@ -1063,6 +1348,7 @@ def generate_creative_pack_job(brand_name: str, video_id: str, request: Creative
             ai_provider=request.ai_provider,
             ai_model=request.ai_model,
             fallback_provider=request.fallback_provider,
+            background_tasks=background_tasks
         )
     except Exception as error:
         _raise_http_error(error)
@@ -1080,6 +1366,12 @@ def read_creative_pack_file(brand_name: str, video_id: str, filename: str):
         paths = creative_pack_service.pack_paths(brand_name, video_id)
         file_path = paths["json"] if filename.endswith(".json") else paths["markdown"]
         if not file_path.exists():
+            payload = _stored_output_payload(brand_name, video_id)
+            stored_value = (payload.get("creative_pack") or {}).get("json" if filename.endswith(".json") else "markdown")
+            if stored_value is not None:
+                if filename.endswith(".json"):
+                    return JSONResponse(stored_value)
+                return PlainTextResponse(str(stored_value), media_type=allowed[filename])
             raise FileNotFoundError(f"No se encontró {filename}.")
         return FileResponse(file_path, media_type=allowed[filename], filename=filename)
     except Exception as error:
@@ -1108,6 +1400,9 @@ def read_script(brand_name: str, video_id: str):
         video_path = vault_service.get_video_path(brand_name, video_id)
         script_path = video_path / "guion_original.txt"
         if not script_path.exists():
+            payload = _stored_output_payload(brand_name, video_id)
+            if payload.get("script"):
+                return PlainTextResponse(payload["script"], media_type="text/plain; charset=utf-8")
             raise FileNotFoundError(f"No se encontró el guion en {script_path}")
         return FileResponse(script_path, media_type="text/plain; charset=utf-8", filename="guion_original.txt")
     except Exception as error:
@@ -1120,6 +1415,9 @@ def read_metadata(brand_name: str, video_id: str):
         video_path = vault_service.get_video_path(brand_name, video_id)
         metadata_path = video_path / "metadatos_transcripcion.json"
         if not metadata_path.exists():
+            payload = _stored_output_payload(brand_name, video_id)
+            if payload.get("metadata"):
+                return JSONResponse(payload["metadata"])
             raise FileNotFoundError(f"No se encontraron metadatos en {metadata_path}")
         return FileResponse(metadata_path, media_type="application/json", filename="metadatos_transcripcion.json")
     except Exception as error:
@@ -1171,6 +1469,16 @@ def read_analysis_file(brand_name: str, video_id: str, filename: str):
             legacy_path = video_path / filename
             file_path = legacy_path if legacy_path.exists() else file_path
         if not file_path.exists():
+            payload = _stored_output_payload(brand_name, video_id)
+            if filename in {"creative_pack.json", "creative_pack.md"}:
+                creative_payload = payload.get("creative_pack") or {}
+                stored_value = creative_payload.get("json" if filename.endswith(".json") else "markdown")
+            else:
+                stored_value = (payload.get("analysis") or {}).get(filename)
+            if stored_value is not None:
+                if filename.endswith(".json"):
+                    return JSONResponse(stored_value)
+                return PlainTextResponse(str(stored_value), media_type=allowed[filename])
             raise FileNotFoundError(f"No se encontró {filename} en {video_path}")
         return FileResponse(file_path, media_type=allowed[filename], filename=filename)
     except Exception as error:

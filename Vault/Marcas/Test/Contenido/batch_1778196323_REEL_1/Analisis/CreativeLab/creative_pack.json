@@ -1,0 +1,247 @@
+{
+    "pack_metadata": {
+        "brand_name": "Test",
+        "video_id": "batch_1778196323_REEL_1",
+        "pack_version": "scriptdna-creative-pack-v2",
+        "generated_for": [
+            "Midjourney",
+            "Ideogram",
+            "Canva",
+            "Meta Ads",
+            "TikTok/Reels",
+            "LinkedIn"
+        ],
+        "source_confidence": "basado_en_supuestos",
+        "generation_note": "Fallback local: No hay llaves Gemini API disponibles para JSON.",
+        "generated_at": "2026-05-07T23:25:48.877135Z",
+        "generation_mode": "local_fallback",
+        "provider": "gemini",
+        "model": "gemini-2.0-flash"
+    },
+    "strategy": {
+        "big_idea": "Tienes corte de inmigración, pero aún no cuentas con un abogado",
+        "core_tension": "Transformar un contenido puntual en un sistema de piezas reutilizables.",
+        "audience": "audiencia interesada en contenido, marketing y crecimiento",
+        "creative_angle": "claridad, autoridad y reutilización inteligente",
+        "offer_message": "Guardar, compartir o solicitar más información"
+    },
+    "channel_packs": [
+        {
+            "id": "instagram-01",
+            "channel": "instagram",
+            "objective": "guardar y compartir",
+            "asset_type": "adset visual",
+            "aspect_ratio": "4:5, 9:16",
+            "hook": "Tienes corte de inmigración, pero aún no cuentas con un abogado",
+            "copy_overlay": "Tienes corte de inmigración, pero aún no cuentas con un ab",
+            "caption_or_primary_text": "Tienes corte de inmigración, pero aún no cuentas con un abogado\n\nGuardar, compartir o solicitar más información",
+            "cta": "Guardar, compartir o solicitar más información",
+            "prompt": "Post/Reel/Story para Instagram para Test. Objetivo: guardar y compartir. Audiencia: audiencia interesada en contenido, marketing y crecimiento. Concepto visual: representar la tension entre el problema implicito del guion y la solucion de la marca, con estilo limpio, moderno, con foco en la idea principal, jerarquia clara, espacio seguro para texto, composicion editorial de alto contraste. Asset: adset visual. Copy overlay: 'Tienes corte de inmigración, pero aún no cuentas con un ab'. CTA: Guardar, compartir o solicitar más información. Referencia textual del video: Tienes corte de inmigración, pero aún no cuentas con un abogado.  Esto le pasó a uno de nuestros clientes.  Vino a nosotros porque tenía corte el 20 de abril,  con mucho miedo, sin representación.  Le presentamos una moción para plazar la c. Sin evidencia visual verificada; usar composición conceptual basada en marca y guion.",
+            "negative_prompt": "texto ilegible, logo deformado, promesas no verificables, exceso de elementos, estética genérica",
+            "tool_notes": "Usar en Midjourney, Ideogram o Canva y adaptar tipografía de marca.",
+            "why_it_works": "Convierte el guion en una pieza concreta con objetivo, audiencia, composición, copy y CTA listos para producción externa.",
+            "quality_badge": "basado_en_supuestos"
+        },
+        {
+            "id": "tiktok-02",
+            "channel": "tiktok",
+            "objective": "retención rápida y comentario",
+            "asset_type": "hero image",
+            "aspect_ratio": "9:16",
+            "hook": "Tienes corte de inmigración, pero aún no cuentas con un abogado",
+            "copy_overlay": "Tienes corte de inmigración, pero aún no cuentas con un ab",
+            "caption_or_primary_text": "Tienes corte de inmigración, pero aún no cuentas con un abogado\n\nGuardar, compartir o solicitar más información",
+            "cta": "Guardar, compartir o solicitar más información",
+            "prompt": "TikTok/Reel vertical para Test. Objetivo: retención rápida y comentario. Audiencia: audiencia interesada en contenido, marketing y crecimiento. Concepto visual: representar la tension entre el problema implicito del guion y la solucion de la marca, con estilo limpio, moderno, con foco en la idea principal, jerarquia clara, espacio seguro para texto, composicion editorial de alto contraste. Asset: hero image. Copy overlay: 'Tienes corte de inmigración, pero aún no cuentas con un ab'. CTA: Guardar, compartir o solicitar más información. Referencia textual del video: Tienes corte de inmigración, pero aún no cuentas con un abogado.  Esto le pasó a uno de nuestros clientes.  Vino a nosotros porque tenía corte el 20 de abril,  con mucho miedo, sin representación.  Le presentamos una moción para plazar la c. Sin evidencia visual verificada; usar composición conceptual basada en marca y guion.",
+            "negative_prompt": "texto ilegible, logo deformado, promesas no verificables, exceso de elementos, estética genérica",
+            "tool_notes": "Pensado para formato vertical; mantener copy breve en zona segura.",
+            "why_it_works": "Convierte el guion en una pieza concreta con objetivo, audiencia, composición, copy y CTA listos para producción externa.",
+            "quality_badge": "basado_en_supuestos"
+        },
+        {
+            "id": "youtube_shorts-03",
+            "channel": "youtube_shorts",
+            "objective": "retención y suscripción",
+            "asset_type": "thumbnail",
+            "aspect_ratio": "9:16",
+            "hook": "Tienes corte de inmigración, pero aún no cuentas con un abogado",
+            "copy_overlay": "Tienes corte de inmigración, pero aún no cuentas con un ab",
+            "caption_or_primary_text": "Tienes corte de inmigración, pero aún no cuentas con un abogado\n\nGuardar, compartir o solicitar más información",
+            "cta": "Guardar, compartir o solicitar más información",
+            "prompt": "YouTube Shorts para Test. Objetivo: retención y suscripción. Audiencia: audiencia interesada en contenido, marketing y crecimiento. Concepto visual: representar la tension entre el problema implicito del guion y la solucion de la marca, con estilo limpio, moderno, con foco en la idea principal, jerarquia clara, espacio seguro para texto, composicion editorial de alto contraste. Asset: thumbnail. Copy overlay: 'Tienes corte de inmigración, pero aún no cuentas con un ab'. CTA: Guardar, compartir o solicitar más información. Referencia textual del video: Tienes corte de inmigración, pero aún no cuentas con un abogado.  Esto le pasó a uno de nuestros clientes.  Vino a nosotros porque tenía corte el 20 de abril,  con mucho miedo, sin representación.  Le presentamos una moción para plazar la c. Sin evidencia visual verificada; usar composición conceptual basada en marca y guion.",
+            "negative_prompt": "texto ilegible, logo deformado, promesas no verificables, exceso de elementos, estética genérica",
+            "tool_notes": "Pensado para formato vertical; mantener copy breve en zona segura.",
+            "why_it_works": "Convierte el guion en una pieza concreta con objetivo, audiencia, composición, copy y CTA listos para producción externa.",
+            "quality_badge": "basado_en_supuestos"
+        },
+        {
+            "id": "youtube_thumbnail-04",
+            "channel": "youtube_thumbnail",
+            "objective": "clic inicial",
+            "asset_type": "product/service card",
+            "aspect_ratio": "16:9",
+            "hook": "Tienes corte de inmigración, pero aún no cuentas con un abogado",
+            "copy_overlay": "Tienes corte de inmigración, pero aún no cuentas con un ab",
+            "caption_or_primary_text": "Tienes corte de inmigración, pero aún no cuentas con un abogado\n\nGuardar, compartir o solicitar más información",
+            "cta": "Guardar, compartir o solicitar más información",
+            "prompt": "Thumbnail YouTube para Test. Objetivo: clic inicial. Audiencia: audiencia interesada en contenido, marketing y crecimiento. Concepto visual: representar la tension entre el problema implicito del guion y la solucion de la marca, con estilo limpio, moderno, con foco en la idea principal, jerarquia clara, espacio seguro para texto, composicion editorial de alto contraste. Asset: product/service card. Copy overlay: 'Tienes corte de inmigración, pero aún no cuentas con un ab'. CTA: Guardar, compartir o solicitar más información. Referencia textual del video: Tienes corte de inmigración, pero aún no cuentas con un abogado.  Esto le pasó a uno de nuestros clientes.  Vino a nosotros porque tenía corte el 20 de abril,  con mucho miedo, sin representación.  Le presentamos una moción para plazar la c. Sin evidencia visual verificada; usar composición conceptual basada en marca y guion.",
+            "negative_prompt": "texto ilegible, logo deformado, promesas no verificables, exceso de elementos, estética genérica",
+            "tool_notes": "Optimizar en Ideogram o Canva con texto grande y contraste alto.",
+            "why_it_works": "Convierte el guion en una pieza concreta con objetivo, audiencia, composición, copy y CTA listos para producción externa.",
+            "quality_badge": "basado_en_supuestos"
+        },
+        {
+            "id": "linkedin-05",
+            "channel": "linkedin",
+            "objective": "autoridad y conversación profesional",
+            "asset_type": "quote card",
+            "aspect_ratio": "1.91:1, 4:5",
+            "hook": "Tienes corte de inmigración, pero aún no cuentas con un abogado",
+            "copy_overlay": "Tienes corte de inmigración, pero aún no cuentas con un ab",
+            "caption_or_primary_text": "Tienes corte de inmigración, pero aún no cuentas con un abogado\n\nUna lectura práctica para equipos que necesitan convertir contenido en decisiones.\n\nGuardar, compartir o solicitar más información",
+            "cta": "Guardar, compartir o solicitar más información",
+            "prompt": "Post profesional LinkedIn para Test. Objetivo: autoridad y conversación profesional. Audiencia: audiencia interesada en contenido, marketing y crecimiento. Concepto visual: representar la tension entre el problema implicito del guion y la solucion de la marca, con estilo limpio, moderno, con foco en la idea principal, jerarquia clara, espacio seguro para texto, composicion editorial de alto contraste. Asset: quote card. Copy overlay: 'Tienes corte de inmigración, pero aún no cuentas con un ab'. CTA: Guardar, compartir o solicitar más información. Referencia textual del video: Tienes corte de inmigración, pero aún no cuentas con un abogado.  Esto le pasó a uno de nuestros clientes.  Vino a nosotros porque tenía corte el 20 de abril,  con mucho miedo, sin representación.  Le presentamos una moción para plazar la c. Sin evidencia visual verificada; usar composición conceptual basada en marca y guion.",
+            "negative_prompt": "texto ilegible, logo deformado, promesas no verificables, exceso de elementos, estética genérica",
+            "tool_notes": "Usar en Midjourney, Ideogram o Canva y adaptar tipografía de marca.",
+            "why_it_works": "Convierte el guion en una pieza concreta con objetivo, audiencia, composición, copy y CTA listos para producción externa.",
+            "quality_badge": "basado_en_supuestos"
+        },
+        {
+            "id": "meta_ads-06",
+            "channel": "meta_ads",
+            "objective": "validación de ángulo para pauta",
+            "asset_type": "problem/solution card",
+            "aspect_ratio": "1:1, 4:5, 9:16",
+            "hook": "Tienes corte de inmigración, pero aún no cuentas con un abogado",
+            "copy_overlay": "Tienes corte de inmigración, pero aún no cuentas con un ab",
+            "caption_or_primary_text": "Tienes corte de inmigración, pero aún no cuentas con un abogado. Descubre el siguiente paso y actúa con más claridad. Guardar, compartir o solicitar más información",
+            "cta": "Guardar, compartir o solicitar más información",
+            "prompt": "Meta Ads feed/story para Test. Objetivo: validación de ángulo para pauta. Audiencia: audiencia interesada en contenido, marketing y crecimiento. Concepto visual: representar la tension entre el problema implicito del guion y la solucion de la marca, con estilo limpio, moderno, con foco en la idea principal, jerarquia clara, espacio seguro para texto, composicion editorial de alto contraste. Asset: problem/solution card. Copy overlay: 'Tienes corte de inmigración, pero aún no cuentas con un ab'. CTA: Guardar, compartir o solicitar más información. Referencia textual del video: Tienes corte de inmigración, pero aún no cuentas con un abogado.  Esto le pasó a uno de nuestros clientes.  Vino a nosotros porque tenía corte el 20 de abril,  con mucho miedo, sin representación.  Le presentamos una moción para plazar la c. Sin evidencia visual verificada; usar composición conceptual basada en marca y guion.",
+            "negative_prompt": "texto ilegible, logo deformado, promesas no verificables, exceso de elementos, estética genérica",
+            "tool_notes": "Usar en Meta Ads como visual principal y testear 2-3 copies.",
+            "why_it_works": "Convierte el guion en una pieza concreta con objetivo, audiencia, composición, copy y CTA listos para producción externa.",
+            "quality_badge": "basado_en_supuestos"
+        },
+        {
+            "id": "stories-07",
+            "channel": "stories",
+            "objective": "respuesta directa",
+            "asset_type": "comparison card",
+            "aspect_ratio": "9:16",
+            "hook": "Tienes corte de inmigración, pero aún no cuentas con un abogado",
+            "copy_overlay": "Tienes corte de inmigración, pero aún no cuentas con un ab",
+            "caption_or_primary_text": "Tienes corte de inmigración, pero aún no cuentas con un abogado\n\nGuardar, compartir o solicitar más información",
+            "cta": "Guardar, compartir o solicitar más información",
+            "prompt": "Story secuencial para Test. Objetivo: respuesta directa. Audiencia: audiencia interesada en contenido, marketing y crecimiento. Concepto visual: representar la tension entre el problema implicito del guion y la solucion de la marca, con estilo limpio, moderno, con foco en la idea principal, jerarquia clara, espacio seguro para texto, composicion editorial de alto contraste. Asset: comparison card. Copy overlay: 'Tienes corte de inmigración, pero aún no cuentas con un ab'. CTA: Guardar, compartir o solicitar más información. Referencia textual del video: Tienes corte de inmigración, pero aún no cuentas con un abogado.  Esto le pasó a uno de nuestros clientes.  Vino a nosotros porque tenía corte el 20 de abril,  con mucho miedo, sin representación.  Le presentamos una moción para plazar la c. Sin evidencia visual verificada; usar composición conceptual basada en marca y guion.",
+            "negative_prompt": "texto ilegible, logo deformado, promesas no verificables, exceso de elementos, estética genérica",
+            "tool_notes": "Pensado para formato vertical; mantener copy breve en zona segura.",
+            "why_it_works": "Convierte el guion en una pieza concreta con objetivo, audiencia, composición, copy y CTA listos para producción externa.",
+            "quality_badge": "basado_en_supuestos"
+        },
+        {
+            "id": "carousel-08",
+            "channel": "carousel",
+            "objective": "educación y guardados",
+            "asset_type": "testimonial-style card",
+            "aspect_ratio": "4:5",
+            "hook": "Tienes corte de inmigración, pero aún no cuentas con un abogado",
+            "copy_overlay": "Tienes corte de inmigración, pero aún no cuentas con un ab",
+            "caption_or_primary_text": "Tienes corte de inmigración, pero aún no cuentas con un abogado\n\nGuardar, compartir o solicitar más información",
+            "cta": "Guardar, compartir o solicitar más información",
+            "prompt": "Carrusel educativo para Test. Objetivo: educación y guardados. Audiencia: audiencia interesada en contenido, marketing y crecimiento. Concepto visual: representar la tension entre el problema implicito del guion y la solucion de la marca, con estilo limpio, moderno, con foco en la idea principal, jerarquia clara, espacio seguro para texto, composicion editorial de alto contraste. Asset: testimonial-style card. Copy overlay: 'Tienes corte de inmigración, pero aún no cuentas con un ab'. CTA: Guardar, compartir o solicitar más información. Referencia textual del video: Tienes corte de inmigración, pero aún no cuentas con un abogado.  Esto le pasó a uno de nuestros clientes.  Vino a nosotros porque tenía corte el 20 de abril,  con mucho miedo, sin representación.  Le presentamos una moción para plazar la c. Sin evidencia visual verificada; usar composición conceptual basada en marca y guion.",
+            "negative_prompt": "texto ilegible, logo deformado, promesas no verificables, exceso de elementos, estética genérica",
+            "tool_notes": "Usar en Midjourney, Ideogram o Canva y adaptar tipografía de marca.",
+            "why_it_works": "Convierte el guion en una pieza concreta con objetivo, audiencia, composición, copy y CTA listos para producción externa.",
+            "quality_badge": "basado_en_supuestos"
+        }
+    ],
+    "adsets": [
+        {
+            "name": "Test - Awareness - Insight principal",
+            "objective": "awareness",
+            "audience": "audiencia interesada en contenido, marketing y crecimiento",
+            "angle": "autoridad y claridad",
+            "primary_text": "Tienes corte de inmigración, pero aún no cuentas con un abogado. Tienes corte de inmigración, pero aún no cuentas con un abogado.  Esto le pasó a uno de nuestros clientes.  Vino a nosotros porque tenía corte el 20 de abril,  con mucho miedo, sin representación.  Le presentamos una moción para plazar la c",
+            "headline": "Convierte esta idea en acción",
+            "description": "Pieza pensada para validar interés inicial.",
+            "visual_prompt": "Meta Ads feed/story para Test. Objetivo: validación de ángulo para pauta. Audiencia: audiencia interesada en contenido, marketing y crecimiento. Concepto visual: representar la tension entre el problema implicito del guion y la solucion de la marca, con estilo limpio, moderno, con foco en la idea principal, jerarquia clara, espacio seguro para texto, composicion editorial de alto contraste. Asset: problem/solution card. Copy overlay: 'Tienes corte de inmigración, pero aún no cuentas con un ab'. CTA: Guardar, compartir o solicitar más información. Referencia textual del video: Tienes corte de inmigración, pero aún no cuentas con un abogado.  Esto le pasó a uno de nuestros clientes.  Vino a nosotros porque tenía corte el 20 de abril,  con mucho miedo, sin representación.  Le presentamos una moción para plazar la c. Sin evidencia visual verificada; usar composición conceptual basada en marca y guion.",
+            "cta": "Guardar, compartir o solicitar más información"
+        },
+        {
+            "name": "Test - Leads - Problema/Solución",
+            "objective": "leads",
+            "audience": "audiencia interesada en contenido, marketing y crecimiento",
+            "angle": "problema/solución",
+            "primary_text": "Si esto te está pasando, este es el siguiente paso: Guardar, compartir o solicitar más información.",
+            "headline": "Una solución más clara",
+            "description": "Usar como variante directa para pauta.",
+            "visual_prompt": "Post profesional LinkedIn para Test. Objetivo: autoridad y conversación profesional. Audiencia: audiencia interesada en contenido, marketing y crecimiento. Concepto visual: representar la tension entre el problema implicito del guion y la solucion de la marca, con estilo limpio, moderno, con foco en la idea principal, jerarquia clara, espacio seguro para texto, composicion editorial de alto contraste. Asset: quote card. Copy overlay: 'Tienes corte de inmigración, pero aún no cuentas con un ab'. CTA: Guardar, compartir o solicitar más información. Referencia textual del video: Tienes corte de inmigración, pero aún no cuentas con un abogado.  Esto le pasó a uno de nuestros clientes.  Vino a nosotros porque tenía corte el 20 de abril,  con mucho miedo, sin representación.  Le presentamos una moción para plazar la c. Sin evidencia visual verificada; usar composición conceptual basada en marca y guion.",
+            "cta": "Guardar, compartir o solicitar más información"
+        }
+    ],
+    "message_variants": [
+        {
+            "use": "dm",
+            "tone": "claro, experto, directo y accionable",
+            "message": "Vi que este tema puede servirte. Tienes corte de inmigración, pero aún no cuentas con un abogado. ¿Quieres que te comparta el recurso completo?"
+        },
+        {
+            "use": "caption",
+            "tone": "claro, experto, directo y accionable",
+            "message": "Tienes corte de inmigración, pero aún no cuentas con un abogado\n\nTienes corte de inmigración, pero aún no cuentas con un abogado.  Esto le pasó a uno de nuestros clientes.  Vino a nosotros porque tenía corte el 20 de abril,  con mucho miedo, sin representación.  Le presentamos una moción para plazar la c\n\nGuardar, compartir o solicitar más información"
+        },
+        {
+            "use": "story_reply",
+            "tone": "claro, experto, directo y accionable",
+            "message": "Si quieres profundizar en esto, responde 'info' y te paso el siguiente paso."
+        }
+    ],
+    "external_tool_exports": [
+        {
+            "tool": "Midjourney",
+            "instructions": "Usar el prompt visual, añadir el aspect ratio indicado y evitar texto pequeño.",
+            "copy_ready_prompt": "Post/Reel/Story para Instagram para Test. Objetivo: guardar y compartir. Audiencia: audiencia interesada en contenido, marketing y crecimiento. Concepto visual: representar la tension entre el problema implicito del guion y la solucion de la marca, con estilo limpio, moderno, con foco en la idea principal, jerarquia clara, espacio seguro para texto, composicion editorial de alto contraste. Asset: adset visual. Copy overlay: 'Tienes corte de inmigración, pero aún no cuentas con un ab'. CTA: Guardar, compartir o solicitar más información. Referencia textual del video: Tienes corte de inmigración, pero aún no cuentas con un abogado.  Esto le pasó a uno de nuestros clientes.  Vino a nosotros porque tenía corte el 20 de abril,  con mucho miedo, sin representación.  Le presentamos una moción para plazar la c. Sin evidencia visual verificada; usar composición conceptual basada en marca y guion."
+        },
+        {
+            "tool": "Ideogram",
+            "instructions": "Ideal para composiciones con copy overlay; respetar frase exacta.",
+            "copy_ready_prompt": "Thumbnail YouTube para Test. Objetivo: clic inicial. Audiencia: audiencia interesada en contenido, marketing y crecimiento. Concepto visual: representar la tension entre el problema implicito del guion y la solucion de la marca, con estilo limpio, moderno, con foco en la idea principal, jerarquia clara, espacio seguro para texto, composicion editorial de alto contraste. Asset: product/service card. Copy overlay: 'Tienes corte de inmigración, pero aún no cuentas con un ab'. CTA: Guardar, compartir o solicitar más información. Referencia textual del video: Tienes corte de inmigración, pero aún no cuentas con un abogado.  Esto le pasó a uno de nuestros clientes.  Vino a nosotros porque tenía corte el 20 de abril,  con mucho miedo, sin representación.  Le presentamos una moción para plazar la c. Sin evidencia visual verificada; usar composición conceptual basada en marca y guion."
+        },
+        {
+            "tool": "Canva",
+            "instructions": "Crear plantilla con jerarquia: hook, visual central, CTA y marca.",
+            "copy_ready_prompt": "Carrusel educativo para Test. Objetivo: educación y guardados. Audiencia: audiencia interesada en contenido, marketing y crecimiento. Concepto visual: representar la tension entre el problema implicito del guion y la solucion de la marca, con estilo limpio, moderno, con foco en la idea principal, jerarquia clara, espacio seguro para texto, composicion editorial de alto contraste. Asset: testimonial-style card. Copy overlay: 'Tienes corte de inmigración, pero aún no cuentas con un ab'. CTA: Guardar, compartir o solicitar más información. Referencia textual del video: Tienes corte de inmigración, pero aún no cuentas con un abogado.  Esto le pasó a uno de nuestros clientes.  Vino a nosotros porque tenía corte el 20 de abril,  con mucho miedo, sin representación.  Le presentamos una moción para plazar la c. Sin evidencia visual verificada; usar composición conceptual basada en marca y guion."
+        },
+        {
+            "tool": "Meta Ads",
+            "instructions": "Usar adsets y variar headline/primary text por objetivo.",
+            "copy_ready_prompt": "Meta Ads feed/story para Test. Objetivo: validación de ángulo para pauta. Audiencia: audiencia interesada en contenido, marketing y crecimiento. Concepto visual: representar la tension entre el problema implicito del guion y la solucion de la marca, con estilo limpio, moderno, con foco en la idea principal, jerarquia clara, espacio seguro para texto, composicion editorial de alto contraste. Asset: problem/solution card. Copy overlay: 'Tienes corte de inmigración, pero aún no cuentas con un ab'. CTA: Guardar, compartir o solicitar más información. Referencia textual del video: Tienes corte de inmigración, pero aún no cuentas con un abogado.  Esto le pasó a uno de nuestros clientes.  Vino a nosotros porque tenía corte el 20 de abril,  con mucho miedo, sin representación.  Le presentamos una moción para plazar la c. Sin evidencia visual verificada; usar composición conceptual basada en marca y guion."
+        }
+    ],
+    "production_notes": [
+        "No se generaron imágenes dentro de ScriptDNA.",
+        "Revisar visualmente cada pieza antes de publicarla.",
+        "Sin evidencia visual verificada; usar composición conceptual basada en marca y guion."
+    ],
+    "audit": {
+        "audit_version": "scriptdna-creative-audit-v1",
+        "status": "passed",
+        "overall_score": 8.4,
+        "scores": {
+            "coherencia_estrategica": 5.0,
+            "alineacion_visual": 7.0,
+            "consistencia_mensaje": 10,
+            "adaptacion_canal": 10.0,
+            "calidad_prompts": 10
+        },
+        "recommendations": [
+            "La Big Idea es demasiado genérica; reconectar con el Insight Lateral del análisis."
+        ],
+        "generated_at": "2026-05-07T23:25:48.877712Z",
+        "metadata": {
+            "brand_name": "Test",
+            "video_id": "batch_1778196323_REEL_1",
+            "pack_version": "scriptdna-creative-pack-v2"
+        }
+    }
+}

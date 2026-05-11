@@ -137,6 +137,26 @@ No escribas estos valores en el codigo ni en archivos versionados. El Preview/UI
 
 Nota operativa: el despliegue visual no certifica procesamiento pesado en serverless. FFmpeg, Whisper local, jobs largos, uploads grandes y Vault persistente requieren una fase posterior de arquitectura cloud.
 
+### Alcance MVP en Vercel
+
+El MVP cloud queda certificado para UI/API, diagnostico, Gemini Cloud, InsForge y jobs cortos. En Vercel, el Vault usa `/tmp/scriptdna-vault` como workspace temporal y los resultados que deban sobrevivir cold starts deben estar persistidos en InsForge.
+
+Antes de pruebas humanas, ejecuta el runbook de produccion:
+
+```bash
+python3 backend/tools/live_preflight.py --base-url https://scriptdna-preview.vercel.app
+```
+
+La matriz manual completa esta en `LIVE_TEST_RUNBOOK.md`.
+
+Quedan fuera de esta certificacion: videos largos, descargas bloqueadas por YouTube/Instagram, uploads grandes, audio descargable durable y procesos que excedan `maxDuration: 60`. Para esos casos, la siguiente fase debe mover el procesamiento pesado a un worker o servicio durable y dejar Vercel como UI/API liviana.
+
+Instagram en Vercel: si el reel/video requiere login, cookies o dispara rate-limit, la app no intenta usar credenciales de Instagram. Descarga el archivo en tu dispositivo y procésalo con la opción `Arrastra video`.
+
+Para validar localmente el mismo runtime declarado para despliegue, usa Python 3.12. Si `backend/venv/bin/python --version` muestra Python 3.9, recrea el entorno antes de tomar los checks locales como equivalentes al deploy.
+
+Si `/ai/test` devuelve `PERMISSION_DENIED` o indica que una API key fue reportada como filtrada, rota esa key en Vercel. La app intenta saltar a la siguiente llave configurada en `GEMINI_API_KEYS`, pero si todas estan bloqueadas el MVP no puede ejecutar Gemini hasta reemplazarlas.
+
 ## Control local de Ollama
 
 La pestana `IA` permite monitorear, encender, apagar y reiniciar Ollama desde la web local. En macOS la app intenta usar el servicio `launchd` `com.ollama.ollama`; si no esta disponible, puede iniciar `ollama serve` como proceso local controlado.

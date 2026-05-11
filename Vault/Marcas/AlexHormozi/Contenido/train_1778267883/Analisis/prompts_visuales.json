@@ -1,0 +1,22 @@
+[
+    {
+        "uso": "thumbnail",
+        "prompt": "Close-up de Alex Hormozi con expresión seria pero empática, mirando directamente a la cámara. En el fondo, un gráfico minimalista que muestra una línea ascendente (ingresos) cruzando una línea descendente (tiempo familiar). Colores limpios y modernos.",
+        "negative_prompt": "Imágenes recargadas, caras de niños tristes, gráficos complejos, colores estridentes."
+    },
+    {
+        "uso": "ad",
+        "prompt": "Secuencia rápida: 1) Un padre trabajando intensamente en su laptop, con expresión de estrés. 2) Breve clip de una niña de 3 años mirando hacia otro lado, evitando al padre. 3) Alex Hormozi aparece en pantalla dividida, explicando con gestos claros. 4) Gráfico simple mostrando 'Ingresos + Tiempo Familiar'. Estilo visual limpio y directo.",
+        "negative_prompt": "Escenas familiares genéricas, música dramática excesiva, efectos visuales complejos."
+    },
+    {
+        "uso": "post",
+        "prompt": "Imagen de un reloj de arena donde la arena superior representa 'dinero' y la inferior 'tiempo familiar'. Alex Hormozi aparece en una esquina, señalando el reloj. Fondo blanco o gris claro.",
+        "negative_prompt": "Relojes tradicionales, fondos oscuros, elementos distractores."
+    },
+    {
+        "uso": "story",
+        "prompt": "Animación corta: un icono de 'maletín' se transforma en un icono de 'familia' con una flecha indicando un cambio de enfoque. Texto superpuesto: '¿Tu éxito te aleja de tu familia?'.",
+        "negative_prompt": "Fotos estáticas, texto difícil de leer, animaciones complejas."
+    }
+]

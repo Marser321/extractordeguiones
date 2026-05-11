@@ -1,0 +1,19 @@
+{
+    "brand_name": "AlexHormozi",
+    "tone": "Claro, experto, directo y accionable. Usa un lenguaje que empodere y motive a la acción inmediata.",
+    "visual_direction": "Limpio, moderno, con foco en la idea principal. Utiliza espacios minimalistas, tipografía audaz y una paleta de colores controlada. Evita el desorden visual.",
+    "do": [
+        "Ser directo y al grano.",
+        "Ofrecer soluciones prácticas y medibles.",
+        "Utilizar analogías y ejemplos claros.",
+        "Mantener un tono de autoridad pero accesible.",
+        "Fomentar la acción inmediata del espectador.",
+        "Desafiar el status quo con lógica y evidencia."
+    ],
+    "dont": [
+        "Usar jerga excesiva o lenguaje vago.",
+        "Presentar información sin un llamado a la acción claro.",
+        "Crear contenido visualmente recargado o confuso.",
+        "Ser condescendiente o poco empático con los desafíos de la audiencia."
+    ]
+}

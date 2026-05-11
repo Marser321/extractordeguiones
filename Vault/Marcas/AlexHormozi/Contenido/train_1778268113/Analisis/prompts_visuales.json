@@ -1,0 +1,22 @@
+[
+    {
+        "uso": "thumbnail",
+        "prompt": "Close-up del rostro de Alex Hormozi con una expresión de intensa concentración, ligeramente fruncido el ceño. Fondo minimalista y desenfocado en tonos grises. Texto superpuesto en blanco audaz: 'EL SECRETO DEL ABURRIMIENTO'.",
+        "negative_prompt": "Fondo caótico, múltiples objetos, colores brillantes, sonrisas forzadas, texto ilegible."
+    },
+    {
+        "uso": "ad",
+        "prompt": "Secuencia rápida: 1. Mano bloqueando la pantalla de un smartphone con cinta adhesiva. 2. Persona sentada en un escritorio minimalista, iluminado solo por la luz de un monitor, trabajando intensamente. 3. Gráfico simple mostrando una línea ascendente de 'Productividad' junto a una línea descendente de 'Distracción'.",
+        "negative_prompt": "Oficinas desordenadas, múltiples pantallas, gente hablando, notificaciones visuales constantes."
+    },
+    {
+        "uso": "post",
+        "prompt": "Imagen dividida: Lado izquierdo muestra un collage de iconos de redes sociales, notificaciones y distracciones digitales en colores vibrantes y caóticos. Lado derecho muestra un espacio sereno y minimalista con una sola lámpara de escritorio y un cuaderno abierto, en tonos neutros y suaves.",
+        "negative_prompt": "Demasiados elementos en ambos lados, falta de contraste, estilo de arte pobre."
+    },
+    {
+        "uso": "story",
+        "prompt": "Animación simple: Un icono de teléfono móvil se transforma gradualmente en un candado cerrado. Luego, el candado se abre para revelar un gráfico de barras de productividad en aumento.",
+        "negative_prompt": "Animación compleja, colores estridentes, texto difícil de leer en formato vertical."
+    }
+]

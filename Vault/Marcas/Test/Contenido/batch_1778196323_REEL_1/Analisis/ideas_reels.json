@@ -1,0 +1,20 @@
+[
+    {
+        "titulo": "La pregunta de los 30K",
+        "estructura": "Texto grande con la pregunta, corte al orador, tres negocios posibles, CTA a comentar o reservar.",
+        "cta": "Guardar, compartir o solicitar más información",
+        "insight_lateral": "El reel funciona como test de mercado: quien responde ya está imaginando ROI."
+    },
+    {
+        "titulo": "3K contra 30K",
+        "estructura": "Pantalla dividida inversión/retorno, objeción rápida, explicación del sistema, CTA.",
+        "cta": "Guardar, compartir o solicitar más información",
+        "insight_lateral": "La pieza transforma una compra en apuesta racional de negocio."
+    },
+    {
+        "titulo": "El CRM invisible",
+        "estructura": "Hook sobre leads perdidos, ejemplo del proceso, visual de pipeline, invitación a masterclass.",
+        "cta": "Guardar, compartir o solicitar más información",
+        "insight_lateral": "Vende infraestructura comercial sin hablar como software genérico."
+    }
+]

@@ -1,0 +1,23 @@
+{
+    "language_detected": "es",
+    "language_probability": 1,
+    "full_text": "La única y más grande raser que tengo para definir la realidad más acuérdida  ha sido el removimiento de todo el sentimiento, el emoción y la psicología de la ecuación  y la only looking at it from a behaviorist frame of what can I observe.",
+    "segments": [
+        {
+            "start": 0.0,
+            "end": 5.6000000000000005,
+            "text": " La única y más grande raser que tengo para definir la realidad más acuérdida"
+        },
+        {
+            "start": 5.6000000000000005,
+            "end": 14.0,
+            "text": " ha sido el removimiento de todo el sentimiento, el emoción y la psicología de la ecuación"
+        },
+        {
+            "start": 14.0,
+            "end": 18.400000000000002,
+            "text": " y la only looking at it from a behaviorist frame of what can I observe."
+        }
+    ],
+    "provider": "whisper_local"
+}

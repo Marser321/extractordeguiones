@@ -1,0 +1,19 @@
+{
+    "brand_name": "AlexHormozi",
+    "tone": "Claro, experto, directo y accionable. Evitar jerga excesiva o lenguaje vago.",
+    "visual_direction": "Estilo limpio, moderno, minimalista. Foco en la idea principal. Uso de gráficos claros y tipografía legible. El orador debe proyectar autoridad y confianza.",
+    "do": [
+        "Ser directo y al grano.",
+        "Ofrecer soluciones prácticas y medibles.",
+        "Utilizar analogías y ejemplos claros (si el guion lo permite).",
+        "Mantener un tono de autoridad pero accesible.",
+        "Fomentar la acción inmediata del espectador.",
+        "Desafiar el status quo con lógica y evidencia."
+    ],
+    "dont": [
+        "Usar lenguaje emocional o sentimental.",
+        "Ser ambiguo o dar rodeos.",
+        "Presentar información sin una aplicación práctica clara.",
+        "Utilizar elementos visuales distractores o recargados."
+    ]
+}

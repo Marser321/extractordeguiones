@@ -1,0 +1,20 @@
+[
+    {
+        "titulo": "Pregunta de facturación",
+        "descripcion": "Abrir con el desafío de facturar 30.000 dólares al mes y pedir al espectador que elija el negocio más rápido.",
+        "duracion_sugerida": "0-12s",
+        "motivo_retencion": "La cifra concreta y la pregunta competitiva generan curiosidad inmediata."
+    },
+    {
+        "titulo": "Comparación inversión-retorno",
+        "descripcion": "Contrastar invertir 3.000 con la posibilidad de generar 30.000 para instalar la tensión principal.",
+        "duracion_sugerida": "12-28s",
+        "motivo_retencion": "El espectador se queda para entender si la relación riesgo-retorno hace sentido."
+    },
+    {
+        "titulo": "Sistema de cierre",
+        "descripcion": "Presentar CRM, seguimiento o masterclass como mecanismo que convierte el interés en operación.",
+        "duracion_sugerida": "28-55s",
+        "motivo_retencion": "Pasa de promesa a proceso, elevando credibilidad."
+    }
+]

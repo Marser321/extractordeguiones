@@ -1,0 +1,117 @@
+{
+    "hooks_frecuentes": [],
+    "estructuras_ganadoras": [],
+    "angulos_de_venta": [],
+    "reglas_de_estilo": [],
+    "pattern_candidates": [
+        {
+            "category": "hooks_frecuentes",
+            "value": "Tienes corte de inmigración, pero aún no cuentas con un abogado",
+            "source_video_id": "batch_1778196323_REEL_1",
+            "prompt_version": "scriptdna-business-v3",
+            "audit_score": null,
+            "promoted": false,
+            "observed_at": "2026-05-07T23:25:47.018105Z"
+        },
+        {
+            "category": "hooks_frecuentes",
+            "value": "¿Invertirías 3.000 para construir una vía a 30.000 al mes?",
+            "source_video_id": "batch_1778196323_REEL_1",
+            "prompt_version": "scriptdna-business-v3",
+            "audit_score": null,
+            "promoted": false,
+            "observed_at": "2026-05-07T23:25:47.018105Z"
+        },
+        {
+            "category": "hooks_frecuentes",
+            "value": "El negocio no es el trámite: es el sistema que convierte demanda en ventas.",
+            "source_video_id": "batch_1778196323_REEL_1",
+            "prompt_version": "scriptdna-business-v3",
+            "audit_score": null,
+            "promoted": false,
+            "observed_at": "2026-05-07T23:25:47.018105Z"
+        },
+        {
+            "category": "hooks_frecuentes",
+            "value": "Si el margen existe, el cuello de botella no es la idea: es capturar y cerrar la demanda.",
+            "source_video_id": "batch_1778196323_REEL_1",
+            "prompt_version": "scriptdna-business-v3",
+            "audit_score": null,
+            "promoted": false,
+            "observed_at": "2026-05-07T23:25:47.018105Z"
+        },
+        {
+            "category": "estructuras_ganadoras",
+            "value": "hook",
+            "source_video_id": "batch_1778196323_REEL_1",
+            "prompt_version": "scriptdna-business-v3",
+            "audit_score": null,
+            "promoted": false,
+            "observed_at": "2026-05-07T23:25:47.018105Z"
+        },
+        {
+            "category": "estructuras_ganadoras",
+            "value": "contexto",
+            "source_video_id": "batch_1778196323_REEL_1",
+            "prompt_version": "scriptdna-business-v3",
+            "audit_score": null,
+            "promoted": false,
+            "observed_at": "2026-05-07T23:25:47.018105Z"
+        },
+        {
+            "category": "estructuras_ganadoras",
+            "value": "idea central",
+            "source_video_id": "batch_1778196323_REEL_1",
+            "prompt_version": "scriptdna-business-v3",
+            "audit_score": null,
+            "promoted": false,
+            "observed_at": "2026-05-07T23:25:47.018105Z"
+        },
+        {
+            "category": "estructuras_ganadoras",
+            "value": "cta",
+            "source_video_id": "batch_1778196323_REEL_1",
+            "prompt_version": "scriptdna-business-v3",
+            "audit_score": null,
+            "promoted": false,
+            "observed_at": "2026-05-07T23:25:47.018105Z"
+        },
+        {
+            "category": "angulos_de_venta",
+            "value": "aspiración cuantificada",
+            "source_video_id": "batch_1778196323_REEL_1",
+            "prompt_version": "scriptdna-business-v3",
+            "audit_score": null,
+            "promoted": false,
+            "observed_at": "2026-05-07T23:25:47.018105Z"
+        },
+        {
+            "category": "angulos_de_venta",
+            "value": "riesgo calculado",
+            "source_video_id": "batch_1778196323_REEL_1",
+            "prompt_version": "scriptdna-business-v3",
+            "audit_score": null,
+            "promoted": false,
+            "observed_at": "2026-05-07T23:25:47.018105Z"
+        },
+        {
+            "category": "angulos_de_venta",
+            "value": "autoridad práctica",
+            "source_video_id": "batch_1778196323_REEL_1",
+            "prompt_version": "scriptdna-business-v3",
+            "audit_score": null,
+            "promoted": false,
+            "observed_at": "2026-05-07T23:25:47.018105Z"
+        },
+        {
+            "category": "reglas_de_estilo",
+            "value": "Mantener claridad",
+            "source_video_id": "batch_1778196323_REEL_1",
+            "prompt_version": "scriptdna-business-v3",
+            "audit_score": null,
+            "promoted": false,
+            "observed_at": "2026-05-07T23:25:47.018105Z"
+        }
+    ],
+    "pattern_metadata": []
+}

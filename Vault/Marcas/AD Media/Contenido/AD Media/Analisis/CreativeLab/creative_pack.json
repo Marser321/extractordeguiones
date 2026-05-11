@@ -1,0 +1,142 @@
+{
+    "pack_metadata": {
+        "brand_name": "AD Media",
+        "video_id": "AD Media",
+        "pack_version": "scriptdna-creative-pack-v2",
+        "generated_for": [
+            "Midjourney",
+            "Ideogram",
+            "Canva",
+            "Meta Ads",
+            "TikTok",
+            "Reels",
+            "Shorts",
+            "LinkedIn"
+        ],
+        "source_confidence": "basado_en_supuestos",
+        "generated_at": "2026-05-07T02:41:21.452840Z",
+        "generation_mode": "ai",
+        "provider": "gemini",
+        "model": "gemini-flash-latest"
+    },
+    "strategy": {
+        "big_idea": "La transformación del negocio artesanal en un sistema de captura de demanda escalable (3K a 30K).",
+        "core_tension": "El miedo a invertir 3.000€ sin ver el camino claro hacia los 30.000€ de retorno.",
+        "audience": "Emprendedores B2B, dueños de agencias y creadores que buscan profesionalizar su embudo de ventas.",
+        "creative_angle": "Lógica financiera aplicada al contenido: No es 'postear por postear', es construir una vía de facturación.",
+        "offer_message": "Aprende a construir el sistema que convierte la demanda en ventas reales y medibles."
+    },
+    "channel_packs": [
+        {
+            "channel": "instagram",
+            "objective": "engagement",
+            "asset_type": "carousel",
+            "aspect_ratio": "4:5",
+            "hook": "¿Invertirías 3.000 para construir una vía a 30.000 al mes?",
+            "copy_overlay": "IDEA vs. SISTEMA: La anatomía de los 30K",
+            "caption_or_primary_text": "Muchos tienen la idea, pocos tienen el sistema. Invertir 3.000 no es un gasto si la estructura de captura de demanda está lista para escalar a 30.000. No se trata del trámite, se trata del ROI.",
+            "cta": "Guardar, compartir o solicitar más información",
+            "prompt": "Instagram Carousel Slide, 4:5, minimalist business aesthetic. Slide 1: Bold typography '3K -> 30K' in high-contrast white over a deep charcoal background with a subtle green accent light. Slide 2: Comparative layout 'The Idea' vs 'The System' with clean icons. High-end editorial design, Swiss style, sans-serif font, professional and authoritative.",
+            "negative_prompt": "clutter, messy, low resolution, childish illustrations, bright neon colors, cursive fonts",
+            "tool_notes": "Usa Canva para las capas de texto sobre el fondo generado en Midjourney.",
+            "why_it_works": "Utiliza una tensión económica real para filtrar a personas con mentalidad de inversión.",
+            "quality_badge": "fuerte",
+            "id": "creative-01"
+        },
+        {
+            "channel": "tiktok",
+            "objective": "awareness",
+            "asset_type": "reel",
+            "aspect_ratio": "9:16",
+            "hook": "El cuello de botella no es tu idea, es tu capacidad de capturar demanda.",
+            "copy_overlay": "3K Inversión = 30K Ventas",
+            "caption_or_primary_text": "Si el margen existe, el problema es el sistema. Deja de jugar al negocio y empieza a construir una máquina de ventas.",
+            "cta": "Guardar, compartir o solicitar más información",
+            "prompt": "9:16 dynamic composition, professional business coach in a modern office, blurred background with natural lighting, floating text bubbles with '3,000' and '30,000', clean and sharp focus, hyper-realistic, shot on 35mm lens, high contrast.",
+            "negative_prompt": "dark, grainy, unprofessional, crowded, cartoonish",
+            "tool_notes": "Ideal para CapCut. Sincroniza el texto con el golpe de voz del hook.",
+            "why_it_works": "Ataca directamente al problema operativo (cuello de botella) en los primeros 3 segundos.",
+            "quality_badge": "fuerte",
+            "id": "creative-02"
+        },
+        {
+            "channel": "linkedin",
+            "objective": "leads",
+            "asset_type": "quote card",
+            "aspect_ratio": "1:1",
+            "hook": "El negocio no es el trámite: es el sistema que convierte demanda en ventas.",
+            "copy_overlay": "SISTEMAS > IDEAS",
+            "caption_or_primary_text": "En el performance marketing, la brecha entre una inversión de 3K y una facturación de 30K se cierra con procesos, no con suerte. ¿Tu estructura actual soporta ese crecimiento?",
+            "cta": "Guardar, compartir o solicitar más información",
+            "prompt": "1:1 LinkedIn Post, clean professional white background with subtle gray textures, a portrait of a focused professional in the corner, large elegant quote marks, bold black typography with key words in corporate green, minimalist luxury aesthetic.",
+            "negative_prompt": "salesy, cheap, generic stock photo, bright red, cluttered",
+            "tool_notes": "Generar en Ideogram para asegurar que el texto de la cita sea perfecto.",
+            "why_it_works": "El tono experto y directo resuena con la audiencia profesional de LinkedIn que valora la eficiencia.",
+            "quality_badge": "fuerte",
+            "id": "creative-03"
+        }
+    ],
+    "adsets": [
+        {
+            "name": "AD_MEDIA_PERFORMANCE_01",
+            "objective": "leads",
+            "audience": "Dueños de negocio B2B, Agencias de Marketing, Consultores.",
+            "angle": "Matemática del Crecimiento",
+            "primary_text": "Si tienes el margen pero no las ventas, tu problema no es el producto. Es el sistema. Descubre cómo escalar de 3.000 a 30.000 con una metodología basada en captura de demanda.",
+            "headline": "¿Listo para los 30K mensuales?",
+            "description": "Un sistema diseñado para convertir atención en facturación real.",
+            "visual_prompt": "A split-screen visual for Meta Ads: Left side showing a chaotic 'Idea' process, Right side showing a clean 'System' flow with a green growth arrow. High-end graphic design, minimal colors, clear CTA button area.",
+            "cta": "Guardar, compartir o solicitar más información"
+        }
+    ],
+    "message_variants": [
+        {
+            "use": "dm",
+            "tone": "experto y directo",
+            "message": "Hola, vi que te interesó el concepto de escalar a 30K. La clave no está en el gasto, sino en el sistema de captura. Si quieres ver cómo lo estructuramos en AD Media, dime y te envío más info."
+        },
+        {
+            "use": "story_reply",
+            "tone": "accionable",
+            "message": "Exacto, el trámite es secundario. Lo importante es el retorno. ¿Has calculado cuánto te cuesta hoy no tener ese sistema?"
+        }
+    ],
+    "external_tool_exports": [
+        {
+            "tool": "Midjourney",
+            "instructions": "Usa estos prompts para generar fondos de alta calidad para tus anuncios y portadas.",
+            "copy_ready_prompt": "/imagine prompt: Minimalist professional workspace, deep bokeh, natural soft light, space for text overlay, cinematic lighting, 8k resolution, corporate but modern aesthetic --ar 9:16 --v 6.0"
+        },
+        {
+            "tool": "Ideogram",
+            "instructions": "Ideal para generar imágenes con texto integrado sin errores tipográficos.",
+            "copy_ready_prompt": "A clean social media post with the text 'SYSTEM OVER IDEA' in bold, black, modern sans-serif font. Below in smaller text '3K to 30K Roadmap'. High contrast white background, professional and sharp."
+        }
+    ],
+    "production_notes": [
+        "Mantener la tipografía San Serif para proyectar modernidad.",
+        "Dado que el contexto visual está pendiente, se priorizan composiciones minimalistas que funcionen con cualquier fondo profesional.",
+        "El mensaje de '3.000 a 30.000' debe ser el ancla visual en todos los formatos."
+    ],
+    "audit": {
+        "audit_version": "scriptdna-creative-audit-v1",
+        "status": "passed",
+        "overall_score": 7.78,
+        "scores": {
+            "coherencia_estrategica": 5.0,
+            "alineacion_visual": 7.0,
+            "consistencia_mensaje": 8.0,
+            "adaptacion_canal": 9.0,
+            "calidad_prompts": 9.92
+        },
+        "recommendations": [
+            "La Big Idea es demasiado genérica; reconectar con el Insight Lateral del análisis."
+        ],
+        "generated_at": "2026-05-07T02:41:21.453013Z",
+        "metadata": {
+            "brand_name": "AD Media",
+            "video_id": "AD Media",
+            "pack_version": "scriptdna-creative-pack-v2"
+        }
+    }
+}

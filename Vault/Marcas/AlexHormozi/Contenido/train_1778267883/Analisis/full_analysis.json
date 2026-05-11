@@ -1,0 +1,239 @@
+{
+    "resumen_ejecutivo": "## Resumen Ejecutivo: Alex Hormozi - El Dilema del Padre Trabajador\n\n**Tema:** La tensión entre el éxito profesional y la paternidad, específicamente el conflicto interno de un padre que busca aumentar sus ingresos mientras siente culpa por el tiempo que no pasa con sus hijos.\n\n**Insight Lateral:** La culpa del padre no es un problema de *falta de tiempo*, sino de *percepción de valor*. El padre cree que su ausencia es un sacrificio que *debería* ser reconocido y compensado emocionalmente por sus hijos, en lugar de ser una decisión estratégica para un objetivo mayor. La solución no es trabajar menos, sino redefinir la relación entre el tiempo invertido y el valor percibido, tanto financiero como emocional.\n\n**Objetivo:** Transformar la culpa y la preocupación del padre en una estrategia clara para alinear sus objetivos financieros con sus aspiraciones familiares, utilizando el modelo de negocio de Alex Hormozi para reestructurar prioridades.\n\n**Tono:** Experto, directo, empático pero resolutivo.\n\n**Oportunidad de Negocio:** Posicionar a Alex Hormozi como un mentor que no solo enseña a ganar dinero, sino a vivir una vida plena y equilibrada, abordando las preocupaciones emocionales profundas de su audiencia de emprendedores.\n\n**Supuestos:**\n* El padre tiene la capacidad financiera para delegar o automatizar tareas que liberan su tiempo.\n* La hija de 3 años muestra rechazo debido a la ausencia percibida, no a una falta de afecto inherente.\n* El padre valora genuinamente la relación con sus hijos y está dispuesto a hacer ajustes estratégicos.",
+    "hooks": [
+        {
+            "hook": "¿Tu éxito profesional te roba la paz familiar? Alex Hormozi te dice cómo recuperarla.",
+            "uso": "reel",
+            "rationale": "Apela directamente a la tensión principal del video (éxito vs. familia) y promete una solución de un experto reconocido (Alex Hormozi)."
+        },
+        {
+            "hook": "Mi hija de 3 años no me quiere ver. ¿Culpa o estrategia?",
+            "uso": "short",
+            "rationale": "Genera intriga y empatía al exponer una vulnerabilidad personal, invitando a la audiencia a descubrir la 'respuesta' o el ángulo estratégico."
+        },
+        {
+            "hook": "De 1.2M a 3M: ¿El precio es tu familia? Alex Hormozi aborda la culpa del padre.",
+            "uso": "ad",
+            "rationale": "Combina el éxito financiero cuantificable con la preocupación emocional, creando un dilema que la audiencia puede reconocer y queriendo saber cómo se resuelve."
+        },
+        {
+            "hook": "La 'línea de guilte' que te libera de la culpa paterna.",
+            "uso": "post",
+            "rationale": "Introduce un concepto clave y específico del video ('línea de guilte') que suena a una herramienta práctica y novedosa, generando curiosidad."
+        }
+    ],
+    "momentos_virales": [
+        {
+            "titulo": "La 'Línea de Guilte' Revelada",
+            "descripcion": "Alex Hormozi explica la estrategia de la 'línea de guilte' (guilt line) para redefinir la percepción de la ausencia paterna. Se enfoca en la frase clave que el padre debe usar para comunicar su compromiso sin generar más culpa.",
+            "duracion_sugerida": "30-45s",
+            "motivo_retencion": "Ofrece una solución concreta y psicológica a un problema emocional común, presentada de forma directa y memorable por Hormozi."
+        },
+        {
+            "titulo": "El Cálculo del Valor del Tiempo Familiar",
+            "descripcion": "Se desglosa el cálculo financiero que Hormozi usa para demostrar que el tiempo libre puede ser más rentable que el trabajo actual, si se reasignan recursos. Se enfoca en la transición de 'trabajar en casa' a 'tiempo de calidad con los niños'.",
+            "duracion_sugerida": "20-30s",
+            "motivo_retencion": "Demuestra la aplicación práctica de principios de negocio a un problema personal, mostrando cómo la lógica financiera puede resolver dilemas emocionales."
+        }
+    ],
+    "estructura_narrativa": {
+        "patron": [
+            "apertura",
+            "tension",
+            "valor",
+            "cta"
+        ],
+        "notas": "El video sigue una estructura clásica: 1. **Apertura:** Presentación del éxito financiero ('1.2M a 3M') y la preocupación personal (hija no quiere verlo). 2. **Tensión:** Expresión de culpa ('guilte') y el conflicto entre el deseo de éxito y la paternidad. Se introduce la figura del padre como modelo. 3. **Valor:** Hormozi aplica su metodología de negocio para reestructurar la pregunta: ¿qué necesitas para ganar X y tener tiempo con tus hijos? Se introduce el cálculo de margen de profit, costo de asociación y valor del tiempo. Se presenta la 'línea de guilte' como solución táctica. 4. **CTA:** Implícito en la entrega de la solución y la validación final ('Eso es genial, me aprecio. GATCH!'). La curva de retención se mantiene alta por la vulnerabilidad inicial, la promesa de una solución financiera/emocional y la entrega de un concepto clave ('línea de guilte')."
+    },
+    "ideas_reels": [
+        {
+            "titulo": "El Secreto para Ganar Más y Ver Más a tus Hijos",
+            "estructura": "Inicio con la preocupación del padre. Hormozi interviene con la pregunta clave: ¿cuánto vale tu tiempo? Desglose rápido del cálculo (margen, costo, tiempo). Presentación de la 'línea de guilte'.",
+            "cta": "Guarda este video para no olvidar cómo balancear tu vida.",
+            "insight_lateral": "La culpa no se resuelve con más tiempo, sino con una redefinición estratégica del valor del tiempo y la comunicación."
+        },
+        {
+            "titulo": "Mi Hija Me Rechaza: La Verdad Detrás de la Culpa Paterna",
+            "estructura": "Fragmento emotivo del padre hablando de su hija. Transición a Hormozi explicando que el rechazo es una señal, no un veredicto. Introducción de la 'línea de guilte' como herramienta para cambiar la dinámica.",
+            "cta": "Comparte si conoces a un padre que necesite escuchar esto.",
+            "insight_lateral": "El 'guilte' paterno es a menudo una proyección de nuestras propias expectativas no cumplidas, que podemos reprogramar."
+        },
+        {
+            "titulo": "De 1.2M a 3M: ¿A Qué Costo? La Respuesta de Alex Hormozi",
+            "estructura": "Gráfico simple mostrando el aumento de ingresos. Voz en off del padre expresando preocupación por su familia. Hormozi aparece para plantear la pregunta clave sobre el valor del tiempo y la solución de la 'línea de guilte'.",
+            "cta": "Solicita más información sobre cómo aplicar estas estrategias a tu negocio.",
+            "insight_lateral": "El crecimiento financiero y la conexión familiar no son mutuamente excluyentes; requieren una reingeniería de prioridades y comunicación."
+        }
+    ],
+    "ads": [
+        {
+            "concepto": "El Dilema del Padre Exitoso",
+            "angulo": "Se enfoca en la paradoja de alcanzar el éxito financiero pero sentir que se pierde lo más importante: la familia. Se presenta la solución de Hormozi como una forma de tener ambos mundos.",
+            "copy": "¿Estás construyendo un imperio pero sientes que tu familia se aleja? Alex Hormozi entiende esa lucha. Descubre la estrategia para multiplicar tus ingresos SIN sacrificar tu tiempo con tus hijos. ¡No dejes que la culpa te controle! Haz clic para aprender la 'línea de guilte' y recupera el equilibrio.",
+            "cta": "Descubre la Estrategia"
+        },
+        {
+            "concepto": "La Inversión Más Rentable: Tu Tiempo Familiar",
+            "angulo": "Reformula el tiempo familiar no como un costo, sino como una inversión estratégica que puede ser tan o más rentable que el trabajo, si se aborda con la mentalidad correcta.",
+            "copy": "Pasas horas trabajando, pero tu hija de 3 años te evita. ¿Suena familiar? Alex Hormozi te muestra cómo recalcular el valor de tu tiempo. Transforma tu culpa en una estrategia poderosa para ganar más y conectar más. ¡Es hora de invertir en lo que realmente importa! Ver cómo.",
+            "cta": "Ver el Video Completo"
+        }
+    ],
+    "brief_creativo": "## Brief Creativo: Alex Hormozi - Equilibrio Padre-Emprendedor\n\n**Objetivo:** Crear contenido que resuene con emprendedores que experimentan la tensión entre el éxito profesional y la paternidad, ofreciendo soluciones prácticas y psicológicas basadas en la metodología de Alex Hormozi.\n\n**Audiencia Psicográfica:** Hombres y mujeres emprendedores, de entre 30-50 años, con ambiciones de crecimiento financiero, pero que sienten culpa o preocupación por el tiempo que dedican a sus negocios en detrimento de sus familias. Valoran la autoridad, la claridad y las estrategias accionables.\n\n**Mensaje Central:** El éxito financiero no tiene por qué costar tu conexión familiar. Con la estrategia correcta, puedes optimizar tus ingresos y tu tiempo para disfrutar de ambos.\n\n**Entregables:** Hooks para redes sociales, ideas de reels/shorts, conceptos de ads, captions, prompts visuales.\n\n**Dirección Visual:** Mantener el estilo limpio, moderno y enfocado en la idea principal característico de Alex Hormozi. Utilizar gráficos simples para ilustrar conceptos financieros y mantener un primer plano del orador (Hormozi o el entrevistado) para transmitir autenticidad y emoción.",
+    "captions": [
+        {
+            "plataforma": "Instagram",
+            "caption": "La paradoja del éxito: ganas más, pero ¿te sientes más lejos de tus hijos? 😥 Alex Hormozi aborda la culpa del padre y revela una estrategia para redefinir el valor de tu tiempo. No se trata de trabajar menos, sino de trabajar más inteligentemente para tener AMBOS: éxito y familia. \n\nDescubre la 'línea de guilte' y cómo aplicarla para que tu tiempo familiar sea tu mejor inversión. \n\n#AlexHormozi #Emprendimiento #PadresEmprendedores #CrecimientoPersonal #Negocios #Productividad #Familia #EquilibrioVidaTrabajo",
+            "hashtags": [
+                "AlexHormozi",
+                "Emprendimiento",
+                "PadresEmprendedores",
+                "CrecimientoPersonal",
+                "Negocios",
+                "Productividad",
+                "Familia",
+                "EquilibrioVidaTrabajo"
+            ]
+        },
+        {
+            "plataforma": "TikTok",
+            "caption": "Mi hija de 3 años no me quiere ver 😭 ¿Culpa o estrategia? Alex Hormozi te da la respuesta. 🤯 #AlexHormozi #Padres #Negocios #Emprendedor #GuiltTrip #FamiliaPrimero #ConsejosDeNegocios",
+            "hashtags": [
+                "AlexHormozi",
+                "Padres",
+                "Negocios",
+                "Emprendedor",
+                "GuiltTrip",
+                "FamiliaPrimero",
+                "ConsejosDeNegocios"
+            ]
+        },
+        {
+            "plataforma": "YouTube",
+            "caption": "Alex Hormozi: Cómo Ganar Millones y No Perder a Tus Hijos | La 'Línea de Guilte'\n\nEn este video, Alex Hormozi se enfrenta a una de las preguntas más difíciles para los emprendedores exitosos: ¿cómo equilibrar la ambición profesional con la paternidad? Un padre exitoso comparte su dilema: ha aumentado sus ingresos de 1.2 a 3 millones, pero su hija de 3 años lo rechaza. \n\nHormozi desglosa la culpa paterna y presenta una solución táctica: la 'línea de guilte'. Aprende a redefinir el valor de tu tiempo y a comunicar tu compromiso de manera efectiva para recuperar la conexión familiar sin sacrificar tu éxito financiero.\n\nSuscríbete para más estrategias de crecimiento y vida.\n\n#AlexHormozi #PadresExitosos #EmprendimientoConsciente #NegociosYFamilia #ProductividadPersonal #CrecimientoFinanciero #PsicologiaDelEmprendedor",
+            "hashtags": [
+                "AlexHormozi",
+                "PadresExitosos",
+                "EmprendimientoConsciente",
+                "NegociosYFamilia",
+                "ProductividadPersonal",
+                "CrecimientoFinanciero",
+                "PsicologiaDelEmprendedor"
+            ]
+        },
+        {
+            "plataforma": "LinkedIn",
+            "caption": "El dilema del líder: ¿El éxito profesional debe costar la conexión familiar? Alex Hormozi aborda la tensión entre la ambición y la paternidad, ofreciendo un marco para alinear objetivos financieros y tiempo de calidad con los hijos. \n\nLa clave no está en sacrificar, sino en reestructurar el valor del tiempo y aplicar estrategias de comunicación efectivas, como la 'línea de guilte'. Una perspectiva esencial para líderes que buscan un crecimiento integral.\n\n#Liderazgo #Emprendimiento #GestiónDelTiempo #FamiliaYTrabajo #AlexHormozi #DesarrolloProfesional",
+            "hashtags": [
+                "Liderazgo",
+                "Emprendimiento",
+                "GestiónDelTiempo",
+                "FamiliaYTrabajo",
+                "AlexHormozi",
+                "DesarrolloProfesional"
+            ]
+        }
+    ],
+    "calendario_publicacion": [
+        {
+            "dia": "Día 1",
+            "pieza": "Reel: El Secreto para Ganar Más y Ver Más a tus Hijos",
+            "objetivo": "Captar la atención inicial con la promesa de una solución al conflicto éxito-familia."
+        },
+        {
+            "dia": "Día 2",
+            "pieza": "Post: La 'línea de guilte' que te libera de la culpa paterna.",
+            "objetivo": "Profundizar en el concepto clave y generar conversación sobre la culpa paterna."
+        },
+        {
+            "dia": "Día 3",
+            "pieza": "Ad: El Dilema del Padre Exitoso",
+            "objetivo": "Atraer a una audiencia más amplia interesada en soluciones prácticas para el equilibrio vida-trabajo."
+        },
+        {
+            "dia": "Día 4",
+            "pieza": "Short: Mi hija de 3 años no me quiere ver. ¿Culpa o estrategia?",
+            "objetivo": "Generar empatía y curiosidad, dirigiendo tráfico al contenido más extenso (si existe)."
+        },
+        {
+            "dia": "Día 5",
+            "pieza": "Publicación en YouTube/LinkedIn: Video completo o resumen extendido.",
+            "objetivo": "Ofrecer valor profundo y posicionar a Hormozi como autoridad en el tema."
+        }
+    ],
+    "prompts_visuales": [
+        {
+            "uso": "thumbnail",
+            "prompt": "Close-up de Alex Hormozi con expresión seria pero empática, mirando directamente a la cámara. En el fondo, un gráfico minimalista que muestra una línea ascendente (ingresos) cruzando una línea descendente (tiempo familiar). Colores limpios y modernos.",
+            "negative_prompt": "Imágenes recargadas, caras de niños tristes, gráficos complejos, colores estridentes."
+        },
+        {
+            "uso": "ad",
+            "prompt": "Secuencia rápida: 1) Un padre trabajando intensamente en su laptop, con expresión de estrés. 2) Breve clip de una niña de 3 años mirando hacia otro lado, evitando al padre. 3) Alex Hormozi aparece en pantalla dividida, explicando con gestos claros. 4) Gráfico simple mostrando 'Ingresos + Tiempo Familiar'. Estilo visual limpio y directo.",
+            "negative_prompt": "Escenas familiares genéricas, música dramática excesiva, efectos visuales complejos."
+        },
+        {
+            "uso": "post",
+            "prompt": "Imagen de un reloj de arena donde la arena superior representa 'dinero' y la inferior 'tiempo familiar'. Alex Hormozi aparece en una esquina, señalando el reloj. Fondo blanco o gris claro.",
+            "negative_prompt": "Relojes tradicionales, fondos oscuros, elementos distractores."
+        },
+        {
+            "uso": "story",
+            "prompt": "Animación corta: un icono de 'maletín' se transforma en un icono de 'familia' con una flecha indicando un cambio de enfoque. Texto superpuesto: '¿Tu éxito te aleja de tu familia?'.",
+            "negative_prompt": "Fotos estáticas, texto difícil de leer, animaciones complejas."
+        }
+    ],
+    "prompt_base_marca": {
+        "brand_name": "AlexHormozi",
+        "tone": "Claro, experto, directo, accionable, con toques de empatía estratégica.",
+        "visual_direction": "Estilo limpio, moderno, minimalista. Foco en el orador y la idea principal. Uso de gráficos simples y claros para ilustrar conceptos. Paleta de colores neutra con acentos vibrantes si es necesario para destacar información.",
+        "do": [
+            "Ser directo y al grano.",
+            "Ofrecer soluciones prácticas y medibles.",
+            "Utilizar analogías y ejemplos claros.",
+            "Mantener un tono de autoridad pero accesible.",
+            "Fomentar la acción inmediata del espectador."
+        ],
+        "dont": [
+            "Usar jerga excesiva o ambigua.",
+            "Ser vago o teórico sin aplicación práctica.",
+            "Generar contenido emocionalmente manipulador sin una solución clara.",
+            "Distraer con elementos visuales innecesarios."
+        ]
+    },
+    "retrospectiva": {
+        "que_funciono": [
+            "La identificación clara de la tensión central (éxito vs. familia).",
+            "La aplicación de la lógica de negocio de Hormozi a un problema personal.",
+            "La introducción de un concepto clave y memorable ('línea de guilte').",
+            "El tono directo y accionable que caracteriza a la marca."
+        ],
+        "que_falto": [
+            "Mayor detalle en la demostración del cálculo financiero para la 'línea de guilte'.",
+            "Exploración más profunda de la psicología detrás del rechazo infantil (aunque esto podría salirse del scope de Hormozi).",
+            "Un CTA más explícito y variado en el guion original."
+        ],
+        "siguiente_mejora": "Desarrollar un contenido complementario (ej. un post de blog o un video más largo) que profundice en el cálculo financiero de la 'línea de guilte' y ofrezca ejemplos adicionales de su aplicación en diferentes escenarios familiares y de negocio. También, explorar cómo la 'línea de guilte' puede adaptarse a diferentes edades de los hijos.",
+        "generation_mode": "ai"
+    },
+    "_quality_repair": {
+        "applied": false
+    },
+    "_prompt_version": "scriptdna-business-v3",
+    "_context_inputs": {
+        "prompt_version": "scriptdna-business-v3",
+        "script_chars": 1921,
+        "script_truncated": false,
+        "brand_profile_fields": [
+            "audience",
+            "brand_name",
+            "cta",
+            "preferred_formats",
+            "tone",
+            "visual_style"
+        ],
+        "historical_pattern_counts": {},
+        "visual_context_available": false,
+        "visual_context_status": "missing"
+    }
+}

@@ -1,0 +1,22 @@
+[
+    {
+        "uso": "reel cover",
+        "prompt": "Portada vertical 9:16 para AD_Diagnostic, orador masculino con gafas en entorno exterior verde desenfocado, texto grande: '¿30K al mes?', composición con rostro a un tercio, contraste alto, estética limpio, moderno, con foco en la idea principal, espacio seguro para subtítulo y CTA.",
+        "negative_prompt": "texto ilegible, cifras pequeñas, promesas exageradas, fondo saturado, rostro distorsionado"
+    },
+    {
+        "uso": "meta ad",
+        "prompt": "Creativo 4:5 de performance para explicar inversión vs retorno, visual central con orador gesticulando, overlays '3K inversión' y '30K objetivo', fondo natural profesional, jerarquía clara, CTA: Guardar, compartir o solicitar más información.",
+        "negative_prompt": "gráficos financieros falsos, lujo genérico, billetes irreales, exceso de texto"
+    },
+    {
+        "uso": "thumbnail",
+        "prompt": "Thumbnail 16:9 con primer plano del orador, fondo verde con bokeh, expresión de pregunta, copy grande '¿Qué negocio escala más rápido?', flecha sutil hacia cifra 30K, estilo nítido y creíble.",
+        "negative_prompt": "clickbait confuso, texto cortado, demasiados iconos"
+    },
+    {
+        "uso": "carousel",
+        "prompt": "Carrusel 4:5 educativo, slide 1 pregunta 30K, slide 2 inversión 3K, slide 3 sistema CRM, slide 4 masterclass, usar paleta sobria, tipografía pesada, composición editorial limpia.",
+        "negative_prompt": "plantilla genérica, saturación excesiva, layouts desordenados"
+    }
+]

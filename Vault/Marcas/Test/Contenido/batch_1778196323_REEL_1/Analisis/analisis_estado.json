@@ -1,0 +1,213 @@
+{
+    "status": "completed",
+    "generation_mode": "local_fallback",
+    "provider": "local_fallback",
+    "model": "deterministic",
+    "fallback_provider": "ollama",
+    "prompt_version": "scriptdna-business-v3",
+    "context_inputs": {
+        "prompt_version": "scriptdna-business-v3",
+        "script_chars": 1074,
+        "script_truncated": false,
+        "brand_profile_fields": [
+            "audience",
+            "brand_name",
+            "cta",
+            "preferred_formats",
+            "tone",
+            "visual_style"
+        ],
+        "historical_pattern_counts": {},
+        "visual_context_available": false,
+        "visual_context_status": "missing"
+    },
+    "modules": [
+        "summary",
+        "hooks",
+        "viral_moments",
+        "narrative_structure",
+        "reel_ideas",
+        "ads",
+        "creative_brief",
+        "captions",
+        "publishing_calendar",
+        "visual_prompts",
+        "retrospective"
+    ],
+    "generated_files": [
+        "Vault/Marcas/Test/Contenido/batch_1778196323_REEL_1/Analisis/resumen_ejecutivo.md",
+        "Vault/Marcas/Test/Contenido/batch_1778196323_REEL_1/Analisis/hooks.json",
+        "Vault/Marcas/Test/Contenido/batch_1778196323_REEL_1/Analisis/momentos_virales.json",
+        "Vault/Marcas/Test/Contenido/batch_1778196323_REEL_1/Analisis/estructura_narrativa.json",
+        "Vault/Marcas/Test/Contenido/batch_1778196323_REEL_1/Analisis/ideas_reels.json",
+        "Vault/Marcas/Test/Contenido/batch_1778196323_REEL_1/Analisis/ads.json",
+        "Vault/Marcas/Test/Contenido/batch_1778196323_REEL_1/Analisis/brief_creativo.md",
+        "Vault/Marcas/Test/Contenido/batch_1778196323_REEL_1/Analisis/captions.json",
+        "Vault/Marcas/Test/Contenido/batch_1778196323_REEL_1/Analisis/calendario_publicacion.json",
+        "Vault/Marcas/Test/Contenido/batch_1778196323_REEL_1/Analisis/prompts_visuales.json",
+        "Vault/Marcas/Test/Contenido/batch_1778196323_REEL_1/Analisis/prompt_base_marca.json",
+        "Vault/Marcas/Test/Contenido/batch_1778196323_REEL_1/Analisis/analisis_visual.json",
+        "Vault/Marcas/Test/Contenido/batch_1778196323_REEL_1/Analisis/retrospectiva.json"
+    ],
+    "patterns_updated": false,
+    "pattern_candidates_recorded": true,
+    "audit": {
+        "audit_version": "scriptdna-context-audit-v1",
+        "status": "passed",
+        "brand_name": "Test",
+        "video_id": "batch_1778196323_REEL_1",
+        "generated_at": "2026-05-07T23:25:47.631694Z",
+        "overall_score": 7.33,
+        "scores": {
+            "fidelidad": 10,
+            "alineacion_marca": 10,
+            "especificidad": 5.84,
+            "pensamiento_lateral": 6.7,
+            "uso_contexto_visual": 5.0,
+            "completitud_json": 10.0,
+            "utilidad_marketing": 10,
+            "alucinacion": 0,
+            "densidad_info": 8.0,
+            "cumplimiento_marca": 10.0,
+            "estructura_persuasiva": 8.0,
+            "quiet_luxury_score": 8.6,
+            "engagement_emocional": 9.2,
+            "veracidad": 1.0,
+            "estetica_visual": 7.0,
+            "coherencia_visual_narrativa": 8.0
+        },
+        "warnings": [
+            "especificidad bajo (5.84/10).",
+            "uso_contexto_visual bajo (5.0/10).",
+            "alucinacion bajo (0/10).",
+            "veracidad bajo (1.0/10).",
+            "Contexto visual pendiente: evitar asumir estética o escenas verificadas."
+        ],
+        "promoted_patterns": false,
+        "refinement_instructions": "AUDITORIA DETECTÓ DEFICIENCIAS. REFINA EL OUTPUT SIGUIENDO ESTO:\n- Evitar frases genéricas. Usar datos concretos y ejemplos precisos.\n- Profundizar en el 'insight lateral'. Ir más allá de lo obvio.\n- ELIMINAR nombres, marcas o hechos que no estén en el input proporcionado.\n- CORREGIR: especificidad bajo (5.84/10).\n- CORREGIR: uso_contexto_visual bajo (5.0/10).\n- CORREGIR: alucinacion bajo (0/10).\n- CORREGIR: veracidad bajo (1.0/10).\n- CORREGIR: Contexto visual pendiente: evitar asumir estética o escenas verificadas.",
+        "context": {
+            "script_chars": 1074,
+            "visual_context_status": "pending_visual_extraction",
+            "prompt_version": "scriptdna-business-v3",
+            "provider": "local_fallback",
+            "model": "deterministic"
+        }
+    },
+    "patterns": {
+        "hooks_frecuentes": [],
+        "estructuras_ganadoras": [],
+        "angulos_de_venta": [],
+        "reglas_de_estilo": [],
+        "pattern_candidates": [
+            {
+                "category": "hooks_frecuentes",
+                "value": "Tienes corte de inmigración, pero aún no cuentas con un abogado",
+                "source_video_id": "batch_1778196323_REEL_1",
+                "prompt_version": "scriptdna-business-v3",
+                "audit_score": null,
+                "promoted": false,
+                "observed_at": "2026-05-07T23:25:47.018105Z"
+            },
+            {
+                "category": "hooks_frecuentes",
+                "value": "¿Invertirías 3.000 para construir una vía a 30.000 al mes?",
+                "source_video_id": "batch_1778196323_REEL_1",
+                "prompt_version": "scriptdna-business-v3",
+                "audit_score": null,
+                "promoted": false,
+                "observed_at": "2026-05-07T23:25:47.018105Z"
+            },
+            {
+                "category": "hooks_frecuentes",
+                "value": "El negocio no es el trámite: es el sistema que convierte demanda en ventas.",
+                "source_video_id": "batch_1778196323_REEL_1",
+                "prompt_version": "scriptdna-business-v3",
+                "audit_score": null,
+                "promoted": false,
+                "observed_at": "2026-05-07T23:25:47.018105Z"
+            },
+            {
+                "category": "hooks_frecuentes",
+                "value": "Si el margen existe, el cuello de botella no es la idea: es capturar y cerrar la demanda.",
+                "source_video_id": "batch_1778196323_REEL_1",
+                "prompt_version": "scriptdna-business-v3",
+                "audit_score": null,
+                "promoted": false,
+                "observed_at": "2026-05-07T23:25:47.018105Z"
+            },
+            {
+                "category": "estructuras_ganadoras",
+                "value": "hook",
+                "source_video_id": "batch_1778196323_REEL_1",
+                "prompt_version": "scriptdna-business-v3",
+                "audit_score": null,
+                "promoted": false,
+                "observed_at": "2026-05-07T23:25:47.018105Z"
+            },
+            {
+                "category": "estructuras_ganadoras",
+                "value": "contexto",
+                "source_video_id": "batch_1778196323_REEL_1",
+                "prompt_version": "scriptdna-business-v3",
+                "audit_score": null,
+                "promoted": false,
+                "observed_at": "2026-05-07T23:25:47.018105Z"
+            },
+            {
+                "category": "estructuras_ganadoras",
+                "value": "idea central",
+                "source_video_id": "batch_1778196323_REEL_1",
+                "prompt_version": "scriptdna-business-v3",
+                "audit_score": null,
+                "promoted": false,
+                "observed_at": "2026-05-07T23:25:47.018105Z"
+            },
+            {
+                "category": "estructuras_ganadoras",
+                "value": "cta",
+                "source_video_id": "batch_1778196323_REEL_1",
+                "prompt_version": "scriptdna-business-v3",
+                "audit_score": null,
+                "promoted": false,
+                "observed_at": "2026-05-07T23:25:47.018105Z"
+            },
+            {
+                "category": "angulos_de_venta",
+                "value": "aspiración cuantificada",
+                "source_video_id": "batch_1778196323_REEL_1",
+                "prompt_version": "scriptdna-business-v3",
+                "audit_score": null,
+                "promoted": false,
+                "observed_at": "2026-05-07T23:25:47.018105Z"
+            },
+            {
+                "category": "angulos_de_venta",
+                "value": "riesgo calculado",
+                "source_video_id": "batch_1778196323_REEL_1",
+                "prompt_version": "scriptdna-business-v3",
+                "audit_score": null,
+                "promoted": false,
+                "observed_at": "2026-05-07T23:25:47.018105Z"
+            },
+            {
+                "category": "angulos_de_venta",
+                "value": "autoridad práctica",
+                "source_video_id": "batch_1778196323_REEL_1",
+                "prompt_version": "scriptdna-business-v3",
+                "audit_score": null,
+                "promoted": false,
+                "observed_at": "2026-05-07T23:25:47.018105Z"
+            },
+            {
+                "category": "reglas_de_estilo",
+                "value": "Mantener claridad",
+                "source_video_id": "batch_1778196323_REEL_1",
+                "prompt_version": "scriptdna-business-v3",
+                "audit_score": null,
+                "promoted": false,
+                "observed_at": "2026-05-07T23:25:47.018105Z"
+            }
+        ],
+        "pattern_metadata": []
+    }
+}

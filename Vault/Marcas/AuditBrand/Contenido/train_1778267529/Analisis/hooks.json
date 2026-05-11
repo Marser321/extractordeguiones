@@ -1,0 +1,22 @@
+[
+    {
+        "hook": "¿Sabes por qué el primer dólar es el más difícil (y el más importante)?",
+        "uso": "reel",
+        "rationale": "Genera curiosidad inmediata al plantear una pregunta que toca un punto de dolor común para emprendedores y novatos en negocios."
+    },
+    {
+        "hook": "El 30% lo logra. ¿Tú serás el siguiente en ganar tu primer dólar?",
+        "uso": "short",
+        "rationale": "Utiliza una estadística impactante para crear urgencia y un desafío personal, apelando al deseo de pertenecer y tener éxito."
+    },
+    {
+        "hook": "El secreto del segundo dólar: ¡Conquista el primero!",
+        "uso": "ad",
+        "rationale": "Crea intriga al sugerir que la clave para el éxito futuro (segundo dólar) reside en superar un obstáculo inicial (primero), prometiendo una revelación."
+    },
+    {
+        "hook": "Tu primer dólar: El hito que lo cambia todo.",
+        "uso": "post",
+        "rationale": "Enfatiza la magnitud del logro del primer dólar, presentándolo no solo como una cifra, sino como un punto de inflexión transformador."
+    }
+]

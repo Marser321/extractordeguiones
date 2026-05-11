@@ -1,0 +1,13 @@
+{
+    "language_detected": "es",
+    "language_probability": 1,
+    "full_text": "Subtítulos realizados por la comunidad de Amara.org",
+    "segments": [
+        {
+            "start": 0.0,
+            "end": 2.0,
+            "text": " Subtítulos realizados por la comunidad de Amara.org"
+        }
+    ],
+    "provider": "whisper_local"
+}

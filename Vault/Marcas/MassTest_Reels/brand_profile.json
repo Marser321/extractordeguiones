@@ -1,5 +1,6 @@
 {
-    "brand_name": "MassTest_Reels",
+    "id": "9fb76fbf-939c-43c5-bc36-2121de707561",
+    "name": "MassTest_Reels",
     "tone": "Directo, experto, Quiet Luxury",
     "audience": "Dueños de agencias y creadores de contenido",
     "offer": "Sistemas de automatización de contenido",
@@ -16,5 +17,8 @@
         "short",
         "ad",
         "post"
-    ]
+    ],
+    "metadata": {},
+    "created_at": "2026-05-07T17:58:30.195517+00:00",
+    "updated_at": "2026-05-07T17:58:30.195517+00:00"
 }

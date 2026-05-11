@@ -1,0 +1,280 @@
+{
+    "hooks_frecuentes": [
+        "¿Sabes por qué el primer dólar es el más difícil (y el más importante)?",
+        "El 30% lo logra. ¿Tú serás el siguiente en ganar tu primer dólar?",
+        "El secreto del segundo dólar: ¡Conquista el primero!",
+        "Tu primer dólar: El hito que lo cambia todo."
+    ],
+    "estructuras_ganadoras": [
+        "apertura",
+        "tension",
+        "valor",
+        "cta"
+    ],
+    "angulos_de_venta": [
+        "Enfocarse en la transformación que ocurre después de conseguir el primer dólar, no solo en la dificultad de obtenerlo.",
+        "Usar la estadística del guion como gancho para atraer a quienes buscan resultados tangibles."
+    ],
+    "reglas_de_estilo": [
+        "Utilizar lenguaje preciso y profesional.",
+        "Ofrecer soluciones concretas y pasos a seguir.",
+        "Mantener una estética visual coherente y moderna.",
+        "Enfocarse en el valor y los resultados para la audiencia."
+    ],
+    "pattern_candidates": [
+        {
+            "category": "hooks_frecuentes",
+            "value": "¿Sabes por qué el primer dólar es el más difícil (y el más importante)?",
+            "source_video_id": "train_1778267529",
+            "prompt_version": "scriptdna-business-v3",
+            "audit_score": null,
+            "promoted": false,
+            "observed_at": "2026-05-08T19:12:51.728748Z"
+        },
+        {
+            "category": "hooks_frecuentes",
+            "value": "El 30% lo logra. ¿Tú serás el siguiente en ganar tu primer dólar?",
+            "source_video_id": "train_1778267529",
+            "prompt_version": "scriptdna-business-v3",
+            "audit_score": null,
+            "promoted": false,
+            "observed_at": "2026-05-08T19:12:51.728748Z"
+        },
+        {
+            "category": "hooks_frecuentes",
+            "value": "El secreto del segundo dólar: ¡Conquista el primero!",
+            "source_video_id": "train_1778267529",
+            "prompt_version": "scriptdna-business-v3",
+            "audit_score": null,
+            "promoted": false,
+            "observed_at": "2026-05-08T19:12:51.728748Z"
+        },
+        {
+            "category": "hooks_frecuentes",
+            "value": "Tu primer dólar: El hito que lo cambia todo.",
+            "source_video_id": "train_1778267529",
+            "prompt_version": "scriptdna-business-v3",
+            "audit_score": null,
+            "promoted": false,
+            "observed_at": "2026-05-08T19:12:51.728748Z"
+        },
+        {
+            "category": "estructuras_ganadoras",
+            "value": "apertura",
+            "source_video_id": "train_1778267529",
+            "prompt_version": "scriptdna-business-v3",
+            "audit_score": null,
+            "promoted": false,
+            "observed_at": "2026-05-08T19:12:51.728748Z"
+        },
+        {
+            "category": "estructuras_ganadoras",
+            "value": "tension",
+            "source_video_id": "train_1778267529",
+            "prompt_version": "scriptdna-business-v3",
+            "audit_score": null,
+            "promoted": false,
+            "observed_at": "2026-05-08T19:12:51.728748Z"
+        },
+        {
+            "category": "estructuras_ganadoras",
+            "value": "valor",
+            "source_video_id": "train_1778267529",
+            "prompt_version": "scriptdna-business-v3",
+            "audit_score": null,
+            "promoted": false,
+            "observed_at": "2026-05-08T19:12:51.728748Z"
+        },
+        {
+            "category": "estructuras_ganadoras",
+            "value": "cta",
+            "source_video_id": "train_1778267529",
+            "prompt_version": "scriptdna-business-v3",
+            "audit_score": null,
+            "promoted": false,
+            "observed_at": "2026-05-08T19:12:51.728748Z"
+        },
+        {
+            "category": "angulos_de_venta",
+            "value": "Enfocarse en la transformación que ocurre después de conseguir el primer dólar, no solo en la dificultad de obtenerlo.",
+            "source_video_id": "train_1778267529",
+            "prompt_version": "scriptdna-business-v3",
+            "audit_score": null,
+            "promoted": false,
+            "observed_at": "2026-05-08T19:12:51.728748Z"
+        },
+        {
+            "category": "angulos_de_venta",
+            "value": "Usar la estadística del guion como gancho para atraer a quienes buscan resultados tangibles.",
+            "source_video_id": "train_1778267529",
+            "prompt_version": "scriptdna-business-v3",
+            "audit_score": null,
+            "promoted": false,
+            "observed_at": "2026-05-08T19:12:51.728748Z"
+        },
+        {
+            "category": "reglas_de_estilo",
+            "value": "Utilizar lenguaje preciso y profesional.",
+            "source_video_id": "train_1778267529",
+            "prompt_version": "scriptdna-business-v3",
+            "audit_score": null,
+            "promoted": false,
+            "observed_at": "2026-05-08T19:12:51.728748Z"
+        },
+        {
+            "category": "reglas_de_estilo",
+            "value": "Ofrecer soluciones concretas y pasos a seguir.",
+            "source_video_id": "train_1778267529",
+            "prompt_version": "scriptdna-business-v3",
+            "audit_score": null,
+            "promoted": false,
+            "observed_at": "2026-05-08T19:12:51.728748Z"
+        },
+        {
+            "category": "reglas_de_estilo",
+            "value": "Mantener una estética visual coherente y moderna.",
+            "source_video_id": "train_1778267529",
+            "prompt_version": "scriptdna-business-v3",
+            "audit_score": null,
+            "promoted": false,
+            "observed_at": "2026-05-08T19:12:51.728748Z"
+        },
+        {
+            "category": "reglas_de_estilo",
+            "value": "Enfocarse en el valor y los resultados para la audiencia.",
+            "source_video_id": "train_1778267529",
+            "prompt_version": "scriptdna-business-v3",
+            "audit_score": null,
+            "promoted": false,
+            "observed_at": "2026-05-08T19:12:51.728748Z"
+        }
+    ],
+    "pattern_metadata": [
+        {
+            "category": "hooks_frecuentes",
+            "value": "¿Sabes por qué el primer dólar es el más difícil (y el más importante)?",
+            "source_video_id": "train_1778267529",
+            "prompt_version": "scriptdna-business-v3",
+            "audit_score": 8.14,
+            "promoted": true,
+            "observed_at": "2026-05-08T19:12:52.355846Z"
+        },
+        {
+            "category": "hooks_frecuentes",
+            "value": "El 30% lo logra. ¿Tú serás el siguiente en ganar tu primer dólar?",
+            "source_video_id": "train_1778267529",
+            "prompt_version": "scriptdna-business-v3",
+            "audit_score": 8.14,
+            "promoted": true,
+            "observed_at": "2026-05-08T19:12:52.355846Z"
+        },
+        {
+            "category": "hooks_frecuentes",
+            "value": "El secreto del segundo dólar: ¡Conquista el primero!",
+            "source_video_id": "train_1778267529",
+            "prompt_version": "scriptdna-business-v3",
+            "audit_score": 8.14,
+            "promoted": true,
+            "observed_at": "2026-05-08T19:12:52.355846Z"
+        },
+        {
+            "category": "hooks_frecuentes",
+            "value": "Tu primer dólar: El hito que lo cambia todo.",
+            "source_video_id": "train_1778267529",
+            "prompt_version": "scriptdna-business-v3",
+            "audit_score": 8.14,
+            "promoted": true,
+            "observed_at": "2026-05-08T19:12:52.355846Z"
+        },
+        {
+            "category": "estructuras_ganadoras",
+            "value": "apertura",
+            "source_video_id": "train_1778267529",
+            "prompt_version": "scriptdna-business-v3",
+            "audit_score": 8.14,
+            "promoted": true,
+            "observed_at": "2026-05-08T19:12:52.355846Z"
+        },
+        {
+            "category": "estructuras_ganadoras",
+            "value": "tension",
+            "source_video_id": "train_1778267529",
+            "prompt_version": "scriptdna-business-v3",
+            "audit_score": 8.14,
+            "promoted": true,
+            "observed_at": "2026-05-08T19:12:52.355846Z"
+        },
+        {
+            "category": "estructuras_ganadoras",
+            "value": "valor",
+            "source_video_id": "train_1778267529",
+            "prompt_version": "scriptdna-business-v3",
+            "audit_score": 8.14,
+            "promoted": true,
+            "observed_at": "2026-05-08T19:12:52.355846Z"
+        },
+        {
+            "category": "estructuras_ganadoras",
+            "value": "cta",
+            "source_video_id": "train_1778267529",
+            "prompt_version": "scriptdna-business-v3",
+            "audit_score": 8.14,
+            "promoted": true,
+            "observed_at": "2026-05-08T19:12:52.355846Z"
+        },
+        {
+            "category": "angulos_de_venta",
+            "value": "Enfocarse en la transformación que ocurre después de conseguir el primer dólar, no solo en la dificultad de obtenerlo.",
+            "source_video_id": "train_1778267529",
+            "prompt_version": "scriptdna-business-v3",
+            "audit_score": 8.14,
+            "promoted": true,
+            "observed_at": "2026-05-08T19:12:52.355846Z"
+        },
+        {
+            "category": "angulos_de_venta",
+            "value": "Usar la estadística del guion como gancho para atraer a quienes buscan resultados tangibles.",
+            "source_video_id": "train_1778267529",
+            "prompt_version": "scriptdna-business-v3",
+            "audit_score": 8.14,
+            "promoted": true,
+            "observed_at": "2026-05-08T19:12:52.355846Z"
+        },
+        {
+            "category": "reglas_de_estilo",
+            "value": "Utilizar lenguaje preciso y profesional.",
+            "source_video_id": "train_1778267529",
+            "prompt_version": "scriptdna-business-v3",
+            "audit_score": 8.14,
+            "promoted": true,
+            "observed_at": "2026-05-08T19:12:52.355846Z"
+        },
+        {
+            "category": "reglas_de_estilo",
+            "value": "Ofrecer soluciones concretas y pasos a seguir.",
+            "source_video_id": "train_1778267529",
+            "prompt_version": "scriptdna-business-v3",
+            "audit_score": 8.14,
+            "promoted": true,
+            "observed_at": "2026-05-08T19:12:52.355846Z"
+        },
+        {
+            "category": "reglas_de_estilo",
+            "value": "Mantener una estética visual coherente y moderna.",
+            "source_video_id": "train_1778267529",
+            "prompt_version": "scriptdna-business-v3",
+            "audit_score": 8.14,
+            "promoted": true,
+            "observed_at": "2026-05-08T19:12:52.355846Z"
+        },
+        {
+            "category": "reglas_de_estilo",
+            "value": "Enfocarse en el valor y los resultados para la audiencia.",
+            "source_video_id": "train_1778267529",
+            "prompt_version": "scriptdna-business-v3",
+            "audit_score": 8.14,
+            "promoted": true,
+            "observed_at": "2026-05-08T19:12:52.355846Z"
+        }
+    ]
+}

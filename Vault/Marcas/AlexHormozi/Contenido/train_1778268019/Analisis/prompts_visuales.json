@@ -1,0 +1,22 @@
+[
+    {
+        "uso": "thumbnail",
+        "prompt": "Alex Hormozi mirando directamente a la cámara con una expresión pensativa pero segura. Fondo minimalista y limpio, con un gráfico sutil que representa una balanza o un signo de interrogación. Paleta de colores neutra con un toque de acento vibrante. Texto superpuesto: '¿Sin Web y GANANDO?'",
+        "negative_prompt": "Fondo recargado, imágenes de sitios web genéricos, personas sonriendo de forma exagerada, gráficos complejos."
+    },
+    {
+        "uso": "ad",
+        "prompt": "Secuencia rápida: Comienza con un gráfico abstracto que representa 'conectividad' o 'red'. Transición a Alex Hormozi hablando con autoridad. Breves clips de negocios físicos (tienda, taller) o interacciones cara a cara. Finaliza con un gráfico simple de una balanza inclinada hacia 'Excelencia' sobre 'Web'. Texto clave: 'La Verdad sobre los Negocios Sin Web'.",
+        "negative_prompt": "Imágenes de pantallas de ordenador, código, interfaces web, gráficos de crecimiento genéricos."
+    },
+    {
+        "uso": "post",
+        "prompt": "Imagen de Alex Hormozi con un gesto de 'pensar' o señalar. El fondo es un degradado sutil. En un lado de la imagen, un icono minimalista de una casa (representando 'negocio físico/tradicional') y en el otro, un icono de una nube (representando 'digital/web'). La balanza está claramente inclinada hacia el lado del negocio físico o hacia un punto intermedio que sugiere 'equilibrio estratégico'.",
+        "negative_prompt": "Fotografías de baja calidad, texto ilegible, elementos visuales distractores."
+    },
+    {
+        "uso": "story",
+        "prompt": "Animación corta: Aparece el texto '¿Tu negocio no tiene web?' seguido de un gran signo de interrogación. Luego, el texto cambia a '¿Y aún así ganas dinero?'. Alex Hormozi aparece brevemente con una sonrisa enigmática. Finalmente, el texto 'La clave: Ser MUCHO MEJOR en OTRAS ARENAS.' con un CTA para guardar o compartir.",
+        "negative_prompt": "Demasiado texto, animaciones complejas, música estridente."
+    }
+]

@@ -1,0 +1,54 @@
+{
+    "history": [
+        {
+            "score": 8.11,
+            "improvements": [
+                "uso_contexto_visual bajo (5.0/10).",
+                "alucinacion bajo (0/10).",
+                "Contexto visual pendiente: evitar asumir estética o escenas verificadas."
+            ],
+            "timestamp": "2026-05-08T19:20:19.263863Z"
+        },
+        {
+            "score": 7.79,
+            "improvements": [
+                "uso_contexto_visual bajo (5.0/10).",
+                "alucinacion bajo (0/10).",
+                "veracidad bajo (1.0/10).",
+                "Contexto visual pendiente: evitar asumir estética o escenas verificadas."
+            ],
+            "timestamp": "2026-05-08T19:20:51.456880Z"
+        },
+        {
+            "score": 7.77,
+            "improvements": [
+                "uso_contexto_visual bajo (5.0/10).",
+                "alucinacion bajo (0/10).",
+                "veracidad bajo (4.0/10).",
+                "Contexto visual pendiente: evitar asumir estética o escenas verificadas."
+            ],
+            "timestamp": "2026-05-08T19:21:17.896361Z"
+        },
+        {
+            "score": 7.63,
+            "improvements": [
+                "uso_contexto_visual bajo (5.0/10).",
+                "alucinacion bajo (0/10).",
+                "veracidad bajo (5.5/10).",
+                "Contexto visual pendiente: evitar asumir estética o escenas verificadas."
+            ],
+            "timestamp": "2026-05-08T19:21:52.985171Z"
+        },
+        {
+            "score": 7.78,
+            "improvements": [
+                "uso_contexto_visual bajo (5.0/10).",
+                "alucinacion bajo (0/10).",
+                "veracidad bajo (4.0/10).",
+                "Contexto visual pendiente: evitar asumir estética o escenas verificadas."
+            ],
+            "timestamp": "2026-05-08T19:22:30.261265Z"
+        }
+    ],
+    "current_level": "intermediate"
+}

@@ -1,0 +1,83 @@
+{
+    "language_detected": "es",
+    "language_probability": 1,
+    "full_text": "Boredom es el camino más rápido de la trabajo.  Nunca ha sido más fácil de ser suceso,  pero también nunca ha sido más fácil de ser distraído.  Y así la idea es, ¿cómo puedes forzar Boredom?  Y así creo que esto es uno de los  más productivos de la hacke para ser más productivo,  es que tienes que ponerse en un ambiente  donde no hay estímulación.  Puedes bloquear tus teléfonos para que no hay apps  que nadie puede comunicar con vosotros,  o incluso ir a otro lugar.  Eso significa bloquear las luces,  eso significa que no hay música,  eso significa poner tus pulgadas.  Sólo tener el trabajo que está en frente de vosotros.",
+    "segments": [
+        {
+            "start": 0.0,
+            "end": 3.0,
+            "text": " Boredom es el camino más rápido de la trabajo."
+        },
+        {
+            "start": 3.0,
+            "end": 4.68,
+            "text": " Nunca ha sido más fácil de ser suceso,"
+        },
+        {
+            "start": 4.68,
+            "end": 6.88,
+            "text": " pero también nunca ha sido más fácil de ser distraído."
+        },
+        {
+            "start": 6.88,
+            "end": 9.72,
+            "text": " Y así la idea es, ¿cómo puedes forzar Boredom?"
+        },
+        {
+            "start": 9.72,
+            "end": 12.200000000000001,
+            "text": " Y así creo que esto es uno de los"
+        },
+        {
+            "start": 12.200000000000001,
+            "end": 14.64,
+            "text": " más productivos de la hacke para ser más productivo,"
+        },
+        {
+            "start": 14.64,
+            "end": 17.16,
+            "text": " es que tienes que ponerse en un ambiente"
+        },
+        {
+            "start": 17.16,
+            "end": 18.96,
+            "text": " donde no hay estímulación."
+        },
+        {
+            "start": 18.96,
+            "end": 20.72,
+            "text": " Puedes bloquear tus teléfonos para que no hay apps"
+        },
+        {
+            "start": 20.72,
+            "end": 23.6,
+            "text": " que nadie puede comunicar con vosotros,"
+        },
+        {
+            "start": 23.6,
+            "end": 25.72,
+            "text": " o incluso ir a otro lugar."
+        },
+        {
+            "start": 25.72,
+            "end": 27.04,
+            "text": " Eso significa bloquear las luces,"
+        },
+        {
+            "start": 27.04,
+            "end": 28.28,
+            "text": " eso significa que no hay música,"
+        },
+        {
+            "start": 28.28,
+            "end": 29.8,
+            "text": " eso significa poner tus pulgadas."
+        },
+        {
+            "start": 29.8,
+            "end": 31.8,
+            "text": " Sólo tener el trabajo que está en frente de vosotros."
+        }
+    ],
+    "provider": "whisper_local"
+}

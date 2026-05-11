@@ -10,6 +10,12 @@ __pycache__/
 
 backend/venv/
 backend/scratch/*.log
+deploy_temp/
+pyproject.toml
+uv.lock
+backend/pyproject.toml
+backend/uv.lock
+backend/.python-version
 
 Vault/**/*.wav
 Vault/**/*.mp3

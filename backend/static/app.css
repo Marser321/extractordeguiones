@@ -230,6 +230,20 @@ input:checked + .slider:before {
   font-weight: 800;
 }
 
+.cloud-pill {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 2px 5px;
+  background: var(--brand-blue);
+  color: #ffffff;
+  border-radius: 4px;
+  font-size: 0.6rem;
+  font-weight: 900;
+  vertical-align: middle;
+  letter-spacing: 0.05em;
+  box-shadow: 0 2px 4px rgba(72, 142, 255, 0.3);
+}
+
 .sidebar-footer {
   margin-top: auto;
   padding-top: var(--space-l);

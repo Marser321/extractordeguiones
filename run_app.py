@@ -12,7 +12,7 @@ def run():
     base_dir = Path(__file__).resolve().parent
     
     # 1. Verificar entorno virtual
-    venv_path = base_dir / "venv"
+    venv_path = base_dir / "backend" / "venv"
     if sys.platform == "win32":
         python_exe = venv_path / "Scripts" / "python.exe"
     else:

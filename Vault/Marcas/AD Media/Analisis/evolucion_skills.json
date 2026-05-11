@@ -1,0 +1,18 @@
+{
+    "history": [
+        {
+            "score": 7.16,
+            "improvements": [
+                "especificidad bajo (5.79/10).",
+                "uso_contexto_visual bajo (5.0/10).",
+                "alucinacion bajo (0/10).",
+                "veracidad bajo (1.0/10).",
+                "Guion corto: revisar supuestos antes de usar outputs en producción.",
+                "Contexto visual pendiente: evitar asumir estética o escenas verificadas.",
+                "Estructura débil: Falta un Hook claro o un CTA directo en algunos módulos."
+            ],
+            "timestamp": "2026-05-07T02:40:13.656121Z"
+        }
+    ],
+    "current_level": "intermediate"
+}

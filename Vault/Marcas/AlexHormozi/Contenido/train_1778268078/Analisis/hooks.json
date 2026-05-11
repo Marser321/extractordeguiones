@@ -1,0 +1,22 @@
+[
+    {
+        "hook": "¿Crees que el crecimiento empresarial es fácil? Piensa de nuevo.",
+        "uso": "reel",
+        "rationale": "Desafía una creencia común y genera curiosidad inmediata al presentar una perspectiva contraintuitiva sobre el crecimiento."
+    },
+    {
+        "hook": "El crecimiento duele. ¿Estás preparado para pagarlo?",
+        "uso": "ad",
+        "rationale": "Apela a la emoción y al instinto de autopreservación, planteando el crecimiento como una inversión con un costo emocional y práctico."
+    },
+    {
+        "hook": "Estancado o en crecimiento: el dolor es constante. Aquí te explico por qué.",
+        "uso": "post",
+        "rationale": "Aborda ambas realidades (crecimiento y estancamiento) y promete una explicación, apelando a la necesidad de comprensión y solución."
+    },
+    {
+        "hook": "El secreto para hacer el 'dolor' del negocio más barato.",
+        "uso": "short",
+        "rationale": "Promete una solución práctica y un beneficio tangible (reducir costos, en este caso, emocionales/estratégicos), generando intriga."
+    }
+]

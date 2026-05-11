@@ -1,0 +1,44 @@
+{
+    "audit_version": "scriptdna-context-audit-v1",
+    "status": "passed",
+    "brand_name": "AD Media",
+    "video_id": "AD Media",
+    "generated_at": "2026-05-07T02:40:13.655894Z",
+    "overall_score": 7.16,
+    "scores": {
+        "fidelidad": 10,
+        "alineacion_marca": 10,
+        "especificidad": 5.79,
+        "pensamiento_lateral": 7.6,
+        "uso_contexto_visual": 5.0,
+        "completitud_json": 10.0,
+        "utilidad_marketing": 10,
+        "alucinacion": 0,
+        "densidad_info": 8.0,
+        "cumplimiento_marca": 10.0,
+        "estructura_persuasiva": 6.0,
+        "quiet_luxury_score": 7.8,
+        "engagement_emocional": 8.4,
+        "veracidad": 1.0,
+        "estetica_visual": 7.0,
+        "coherencia_visual_narrativa": 8.0
+    },
+    "warnings": [
+        "especificidad bajo (5.79/10).",
+        "uso_contexto_visual bajo (5.0/10).",
+        "alucinacion bajo (0/10).",
+        "veracidad bajo (1.0/10).",
+        "Guion corto: revisar supuestos antes de usar outputs en producción.",
+        "Contexto visual pendiente: evitar asumir estética o escenas verificadas.",
+        "Estructura débil: Falta un Hook claro o un CTA directo en algunos módulos."
+    ],
+    "promoted_patterns": false,
+    "refinement_instructions": "AUDITORIA DETECTÓ DEFICIENCIAS. REFINA EL OUTPUT SIGUIENDO ESTO:\n- Evitar frases genéricas. Usar datos concretos y ejemplos precisos.\n- ELIMINAR nombres, marcas o hechos que no estén en el input proporcionado.\n- CORREGIR: especificidad bajo (5.79/10).\n- CORREGIR: uso_contexto_visual bajo (5.0/10).\n- CORREGIR: alucinacion bajo (0/10).\n- CORREGIR: veracidad bajo (1.0/10).\n- CORREGIR: Guion corto: revisar supuestos antes de usar outputs en producción.\n- CORREGIR: Contexto visual pendiente: evitar asumir estética o escenas verificadas.\n- CORREGIR: Estructura débil: Falta un Hook claro o un CTA directo en algunos módulos.",
+    "context": {
+        "script_chars": 51,
+        "visual_context_status": "pending_visual_extraction",
+        "prompt_version": "scriptdna-business-v3",
+        "provider": null,
+        "model": null
+    }
+}

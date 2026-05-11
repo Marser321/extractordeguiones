@@ -1,0 +1,6 @@
+{
+    "language_detected": "es",
+    "language_probability": 1,
+    "segments_count": 20,
+    "provider": "whisper_local"
+}

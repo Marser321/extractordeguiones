@@ -12,14 +12,14 @@ if ! command -v python3 &> /dev/null; then
 fi
 
 # 2. Crear Entorno Virtual si no existe
-if [ ! -d "venv" ]; then
-    echo "📦 Creando entorno virtual (venv)..."
-    python3 -m venv venv
+if [ ! -d "backend/venv" ]; then
+    echo "📦 Creando entorno virtual (backend/venv)..."
+    python3 -m venv backend/venv
 fi
 
 # 3. Activar entorno e instalar dependencias
 echo "📥 Instalando dependencias de Python..."
-source venv/bin/activate
+source backend/venv/bin/activate
 pip install --upgrade pip
 pip install -r backend/requirements.txt
 

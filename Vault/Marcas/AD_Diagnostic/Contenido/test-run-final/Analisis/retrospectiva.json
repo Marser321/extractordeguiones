@@ -1,0 +1,10 @@
+{
+    "que_funciono": [
+        "Se generó una base operativa"
+    ],
+    "que_falto": [
+        "Proveedor IA funcional"
+    ],
+    "siguiente_mejora": "Configurar Gemini o verificar modelo Ollama.",
+    "generation_mode": "local_fallback"
+}

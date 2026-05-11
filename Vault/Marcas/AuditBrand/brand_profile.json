@@ -1,0 +1,20 @@
+{
+    "id": "e8f0a010-8cbc-4d66-9dc2-529a65dce1b0",
+    "name": "AuditBrand",
+    "tone": "claro, experto, directo y accionable",
+    "audience": "audiencia interesada en contenido, marketing y crecimiento",
+    "offer": "",
+    "visual_style": "limpio, moderno, con foco en la idea principal",
+    "colors": [],
+    "forbidden_words": [],
+    "cta": "Guardar, compartir o solicitar más información",
+    "preferred_formats": [
+        "reel",
+        "short",
+        "ad",
+        "post"
+    ],
+    "metadata": {},
+    "created_at": "2026-05-08T19:12:35.826842+00:00",
+    "updated_at": "2026-05-08T19:12:35.826842+00:00"
+}
