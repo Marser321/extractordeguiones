@@ -3,64 +3,44 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>AD MediaSolution Studio</title>
+    <title>ScriptDNA Studio — AD MediaSolution</title>
+    <meta name="description" content="Extrae la inteligencia creativa de cualquier video. Transcribe, analiza y genera activos creativos listos para usar." />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" href="/static/brand/ad-mark-light.jpg" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/static/app.css?v=2.7" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/app.css?v=3.4" />
   </head>
   <body>
     <div class="texture-grid"></div>
     <div class="app-layout">
-      <!-- SIDEBAR -->
+
+      <!-- ═══════════════════════════ SIDEBAR ═══════════════════════════ -->
       <aside class="sidebar">
         <header class="sidebar-header">
           <div class="brand-lockup" aria-label="AD MediaSolution">
             <img class="brand-logo-light" src="/static/brand/ad-mediasolution-wordmark.jpg" alt="AD MediaSolution" />
             <img class="brand-logo-dark" src="/static/brand/ad-mediasolution-wordmark-dark.jpg" alt="" aria-hidden="true" />
           </div>
-          <p class="product-caption">ScriptDNA Studio <span>v2.1</span></p>
+          <p class="product-caption">ScriptDNA Studio <span>v3.0</span></p>
         </header>
 
-        <nav class="main-tabs" aria-label="Secciones">
+        <nav class="main-tabs" aria-label="Secciones principales">
           <button class="main-tab active" type="button" data-view="process-view">
-            <span class="tab-icon">PX</span>
-            <span class="tab-label">Procesar</span>
+            <span class="tab-emoji">🎬</span>
+            <span class="tab-label">Studio</span>
           </button>
           <button class="main-tab" type="button" data-view="vault-view">
-            <span class="tab-icon">VA</span>
-            <span class="tab-label">Vault</span>
+            <span class="tab-emoji">📊</span>
+            <span class="tab-label">Biblioteca</span>
           </button>
-          <button class="main-tab" type="button" data-view="analysis-view">
-            <span class="tab-icon">AN</span>
-            <span class="tab-label">Análisis</span>
+          <button class="main-tab" type="button" data-view="editor-view">
+            <span class="tab-emoji">✍️</span>
+            <span class="tab-label">Editor</span>
           </button>
           <button class="main-tab" type="button" data-view="creative-view">
-            <span class="tab-icon">CR</span>
-            <span class="tab-label">Outputs creativos</span>
-          </button>
-          <button class="main-tab" type="button" data-view="polish-view">
-            <span class="tab-icon">QA</span>
-            <span class="tab-label">Pulido</span>
-          </button>
-          <button class="main-tab" type="button" data-view="brand-view">
-            <span class="tab-icon">BR</span>
-            <span class="tab-label">Marca</span>
-            <span class="tab-badge hidden" id="badge-brand" title="Perfil incompleto"></span>
-          </button>
-          <button class="main-tab" type="button" data-view="ai-view">
-            <span class="tab-icon">AI</span>
-            <span class="tab-label">Pipeline cloud</span>
-            <span class="tab-badge hidden" id="badge-ai" title="Requiere configuración"></span>
-          </button>
-          <button class="main-tab" type="button" data-view="outputs-view">
-            <span class="tab-icon">OP</span>
-            <span class="tab-label">Outputs</span>
-          </button>
-          <button class="main-tab" type="button" data-view="guide-view">
-            <span class="tab-icon">GD</span>
-            <span class="tab-label">Guía</span>
+            <span class="tab-emoji">🎨</span>
+            <span class="tab-label">Creativos</span>
           </button>
         </nav>
 
@@ -68,177 +48,177 @@
           <div class="global-status-panel">
             <span class="status-dot idle" id="global-status-dot"></span>
             <div class="global-status-text">
-              <strong id="global-status-title">Iniciando...</strong>
+              <strong id="global-status-title">Iniciando…</strong>
               <small id="global-status-subtitle">Revisando conexión</small>
             </div>
           </div>
           <div class="sidebar-actions">
-            <button id="theme-toggle" class="secondary-button theme-toggle-btn" title="Cambiar tema">
-              <span class="icon-light">LT</span>
-              <span class="icon-dark hidden">DK</span>
+            <button id="theme-toggle" class="secondary-button theme-toggle-btn" title="Cambiar tema" aria-label="Cambiar tema claro/oscuro">
+              <span class="icon-light">☀️</span>
+              <span class="icon-dark hidden">🌙</span>
             </button>
-            <a class="docs-link" href="/docs" target="_blank" rel="noreferrer">Docs API</a>
+            <button class="secondary-button theme-toggle-btn" type="button" data-view="ai-view" id="sidebar-config-btn" title="Configuración" aria-label="Abrir configuración del sistema">
+              <span>⚙️</span>
+            </button>
+            <a class="docs-link" href="/docs" target="_blank" rel="noreferrer">API</a>
           </div>
         </div>
       </aside>
 
-      <!-- CONTENT AREA -->
+      <!-- ═══════════════════════════ CONTENT ═══════════════════════════ -->
       <main class="content-area">
         <div class="workspace-scroll">
-          <section class="workspace" aria-label="AD MediaSolution Studio">
+          <section class="workspace" aria-label="ScriptDNA Studio">
 
-        <section class="status-grid" aria-label="Estado del sistema">
-          <article class="status-card" id="card-openrouter">
-            <span class="label">OpenRouter</span>
-            <strong id="stat-openrouter">Revisando</strong>
-            <small id="stat-openrouter-note">Motor cloud (Principal)</small>
-          </article>
-          <article class="status-card hidden" id="card-gemini" style="display: none;">
-            <span class="label">Gemini</span>
-            <strong id="stat-gemini">Oculto</strong>
-            <small id="stat-gemini-note">Motor secundario</small>
-          </article>
-          <article class="status-card" id="card-ollama">
-            <span class="label">Local dev</span>
-            <strong id="stat-ollama">Revisando</strong>
-            <small id="stat-ollama-note">Motor local</small>
-          </article>
-          <article class="status-card" id="card-audit">
-            <span class="label">Auditoría</span>
-            <strong id="stat-audit">Pendiente</strong>
-            <small id="stat-audit-note">Último promedio</small>
-          </article>
-          <article class="status-card" id="card-vault">
-            <span class="label">Vault</span>
-            <strong id="stat-vault">Cargando</strong>
-            <small id="stat-vault-note">Marcas y videos</small>
-          </article>
-        </section>
-
-        <section class="context-banner" aria-label="Contexto actual">
-          <div>
-            <span class="label">Proyecto activo</span>
-            <strong id="context-video-title">Sin video seleccionado</strong>
-            <p id="context-video-subtitle">Procesa una pieza o elige una del Vault para activar análisis creativo, marca y outputs.</p>
-          </div>
-          <div class="context-badges">
-            <span id="context-analysis-badge" class="state-badge neutral">Análisis pendiente</span>
-            <span id="context-audit-badge" class="state-badge neutral">Auditoría pendiente</span>
-            <span id="context-creative-badge" class="state-badge neutral">Creativos pendientes</span>
-          </div>
-          <div class="context-next">
-            <span class="label">Próxima acción</span>
-            <strong id="context-next-action">Procesar o seleccionar pieza</strong>
-          </div>
-        </section>
-
-        <section id="process-view" class="view active-view">
-          <div class="process-layout">
-            <aside class="guide-strip" aria-label="Sistema creativo AD MediaSolution">
-              <div class="section-heading">
-                <p class="eyebrow">Sistema AD</p>
-                <h2>De pieza a activos listos para decisión</h2>
+            <!-- ── Active Project Bar (visible only when video selected) ── -->
+            <section class="context-banner hidden" id="active-project-bar">
+              <div class="context-info">
+                <span class="context-dot"></span>
+                <strong id="context-video-title">Sin video seleccionado</strong>
+                <p id="context-video-subtitle"></p>
               </div>
-              <div class="mini-card-grid">
-                <article class="mini-card"><strong>Guion</strong><span>Transcripción en español lista para revisar.</span></article>
-                <article class="mini-card"><strong>Lectura</strong><span>Contexto, segmentos y fuente procesada.</span></article>
-                <article class="mini-card"><strong>Estrategia</strong><span>Hooks, ángulos, reels, ads y captions.</span></article>
-                <article class="mini-card"><strong>Prompts</strong><span>Dirección visual y prompt base de marca.</span></article>
-                <article class="mini-card"><strong>Auditoría</strong><span>Score de fidelidad, marca y utilidad.</span></article>
-                <article class="mini-card"><strong>Vault</strong><span>Todo queda ordenado por marca y pieza.</span></article>
+              <div class="context-badges">
+                <span id="context-analysis-badge" class="state-badge neutral">Análisis pendiente</span>
+                <!-- <span id="context-audit-badge" class="state-badge neutral">Auditoría pendiente</span> -->
+                <span id="context-creative-badge" class="state-badge neutral">Creativos pendientes</span>
               </div>
-            </aside>
+              <div class="context-next">
+                <strong id="context-next-action">Procesar o seleccionar pieza</strong>
+              </div>
+            </section>
 
-            <div class="work-column">
-              <div class="stepper-header">
-                <div class="step active" data-step="1"><span>1</span> Marca</div>
-                <div class="step" data-step="2"><span>2</span> Video</div>
-                <div class="step" data-step="3"><span>3</span> Motor</div>
+            <!-- ╔═══════════════════════════════════════════════════════════╗
+                 ║  VIEW: STUDIO                                            ║
+                 ╚═══════════════════════════════════════════════════════════╝ -->
+            <section id="process-view" class="view active-view">
+
+              <!-- Hero Section -->
+              <div class="hero-section" id="hero-section">
+                <div class="hero-content">
+                  <h1 class="hero-title">Extrae la inteligencia creativa<br>de cualquier video</h1>
+                  <p class="hero-subtitle">Pega un enlace de YouTube o arrastra un reel. ScriptDNA transcribe, analiza y genera tu pack creativo en minutos.</p>
+                </div>
+                <div class="capability-cards">
+                  <article class="capability-card">
+                    <span class="capability-icon">🎯</span>
+                    <h3>Transcripción</h3>
+                    <p>Guion del video en español, segmentado y listo para revisar.</p>
+                  </article>
+                  <article class="capability-card">
+                    <span class="capability-icon">🧠</span>
+                    <h3>Análisis creativo</h3>
+                    <p>Hooks, ángulos, momentos virales y estructura narrativa.</p>
+                  </article>
+                  <article class="capability-card">
+                    <span class="capability-icon">✨</span>
+                    <h3>Pack creativo</h3>
+                    <p>Prompts, copies y adsets listos para Instagram, TikTok y Meta Ads.</p>
+                  </article>
+                </div>
               </div>
 
+              <!-- Simplified Form (no stepper) -->
               <form id="process-form" class="panel form-panel">
-                <div class="step-content active" data-step="1">
-                  <div class="step-title">
-                    <h2>Identidad</h2>
-                    <p>Define la marca y un ID estable para encontrar la pieza en el Vault.</p>
-                  </div>
-                  <div class="input-group">
-                    <label>
-                      <span>Marca</span>
-                      <input id="brand-name" name="brand_name" type="text" autocomplete="organization" placeholder="Ej. AD MediaSolution" required />
-                    </label>
-                    <label>
-                      <span>ID del video</span>
-                      <input id="video-id" name="video_id" type="text" placeholder="Ej. campana-otono" required />
-                    </label>
-                  </div>
-                  <div class="step-actions">
-                    <button type="button" class="primary-button next-step">Continuar</button>
-                  </div>
+                <div class="form-header">
+                  <h2>Configura tu extracción</h2>
+                  <p>Completa los datos del proyecto y elige la fuente del video.</p>
                 </div>
 
-                <div class="step-content" data-step="2">
-                  <div class="step-title">
-                    <h2>Video</h2>
-                    <p>Arrastra un video del Mac o pega un link público. Para Instagram en cloud, sube el archivo descargado.</p>
-                  </div>
-                  <div class="source-tabs" role="tablist" aria-label="Tipo de fuente">
-                    <button type="button" class="tab active" data-source="url"><strong>Pega URL</strong><small>YouTube o link público directo</small></button>
-                    <button type="button" class="tab" data-source="upload"><strong>Arrastra video</strong><small>Recomendado para Instagram</small></button>
+                <div class="form-body">
+                  <!-- Project Identity -->
+                  <div class="form-group">
+                    <div class="input-group">
+                      <label>
+                        <span>Marca</span>
+                        <input id="brand-name" name="brand_name" type="text" autocomplete="organization" placeholder="Ej. AD MediaSolution" required />
+                      </label>
+                      <label>
+                        <span>ID del video</span>
+                        <input id="video-id" name="video_id" type="text" placeholder="Ej. campana-otono" required />
+                      </label>
+                    </div>
                   </div>
 
-                  <div class="source-fields">
-                    <label id="url-field">
-                      <span>URL del video</span>
-                      <input id="url" name="url" type="url" placeholder="https://youtube.com/..." />
-                    </label>
-                    <label id="upload-field" class="hidden upload-drop-zone">
-                      <span>Arrastra tu reel/video aquí</span>
-                      <strong>Soltar archivo o elegir desde el Mac</strong>
-                      <small id="upload-file-name">Acepta .mp4, .mov, .m4v, .webm, .mp3, .wav y .m4a.</small>
-                      <input id="upload-file" name="file" type="file" accept="video/*,audio/*,.mp4,.mov,.m4v,.webm,.mp3,.wav,.m4a" />
-                    </label>
-                    <label id="local-field" class="hidden">
-                      <span>Ubicación avanzada del archivo</span>
-                      <input id="local-file-path" name="local_file_path" type="text" placeholder="Archivo local" />
-                    </label>
+                  <!-- Video Source -->
+                  <div class="form-group">
+                    <div class="source-tabs" role="tablist" aria-label="Tipo de fuente">
+                      <button type="button" class="tab active" data-source="url"><strong>Pega URL</strong><small>YouTube o link público</small></button>
+                      <button type="button" class="tab" data-source="upload"><strong>Arrastra video</strong><small>Recomendado para Instagram</small></button>
+                    </div>
+                    <div class="source-fields">
+                      <label id="url-field">
+                        <span>URL del video</span>
+                        <input id="url" name="url" type="url" placeholder="https://youtube.com/..." />
+                      </label>
+                      <label id="upload-field" class="hidden upload-drop-zone">
+                        <span>Arrastra tu reel/video aquí</span>
+                        <strong>Soltar archivo o elegir desde el Mac</strong>
+                        <small id="upload-file-name">Acepta .mp4, .mov, .m4v, .webm, .mp3, .wav y .m4a.</small>
+                        <input id="upload-file" name="file" type="file" accept="video/*,audio/*,.mp4,.mov,.m4v,.webm,.mp3,.wav,.m4a" />
+                      </label>
+                      <label id="local-field" class="hidden">
+                        <span>Ubicación del archivo</span>
+                        <input id="local-file-path" name="local_file_path" type="text" placeholder="Archivo local" />
+                      </label>
+                    </div>
                   </div>
-                  <div class="step-actions">
-                    <button type="button" class="secondary-button prev-step">Atrás</button>
-                    <button type="button" class="primary-button next-step">Configurar motor</button>
-                  </div>
-                </div>
 
-                <div class="step-content" data-step="3">
-                  <div class="step-title">
-                    <h2>Motor IA</h2>
-                    <p>Elige el motor activo para el análisis creativo.</p>
-                  </div>
-                  <div class="inline-grid">
+                  <!-- AI Engine (hidden by default, shown via advanced toggle) -->
+                  <select id="ai-provider" name="ai_provider" class="hidden" aria-hidden="true">
+                    <option value="qwen" selected>Qwen API</option>
+                    <option value="huggingface">Hugging Face</option>
+                    <option value="openrouter">OpenRouter</option>
+                    <option value="gemini">Gemini</option>
+                    <option value="ollama">Ollama</option>
+                  </select>
+                  <select id="ai-model" name="ai_model" class="hidden" aria-hidden="true"></select>
+                  <div class="form-group ai-mode-group">
                     <label>
-                      <span>Motor</span>
-                      <select id="ai-provider" name="ai_provider">
-                        <option value="openrouter" selected>OpenRouter (Pipeline cloud)</option>
-                        <option value="gemini" class="developer-only hidden">Gemini (Respaldo)</option>
-                        <option value="ollama" class="developer-only hidden">Ollama (Local Dev)</option>
+                      <span>Modo de IA</span>
+                      <select id="ai-mode" name="ai_mode">
+                        <option value="fast">Rapido</option>
+                        <option value="quality">Calidad</option>
+                        <option value="deep">Deep</option>
+                        <option value="vision">Vision/Media</option>
+                        <option value="fallback">Respaldo cloud</option>
+                        <option value="local">Fallback local</option>
                       </select>
                     </label>
-                    <select id="ai-model" name="ai_model" class="hidden" aria-hidden="true"></select>
+                    <div id="ai-mode-status" class="human-status compact">Cargando modelo activo...</div>
                   </div>
-                  <div class="message warning">Si el pipeline no está activo, configura OPENROUTER_API_KEY e InsForge en el dashboard de Vercel.</div>
-                  <div class="step-actions">
-                    <button type="button" class="secondary-button prev-step">Atrás</button>
-                    <button id="submit-button" class="primary-button" type="submit">Iniciar extracción</button>
-                  </div>
+                </div>
+
+                <div class="form-footer">
+                  <button id="submit-button" class="primary-button" type="submit">🚀 Extraer inteligencia creativa</button>
                 </div>
               </form>
 
+              <!-- Result Panel -->
               <section class="panel result-panel" aria-live="polite">
+                <div class="pipeline-tracker">
+                  <div class="pipeline-step pending" id="step-transcribe">
+                    <div class="step-icon">🎤</div>
+                    <span class="step-label">Transcripción</span>
+                  </div>
+                  <div class="pipeline-divider">
+                    <div class="progress"><div id="progress-bar-1" class="progress-bar"></div></div>
+                  </div>
+                  <div class="pipeline-step pending" id="step-analysis">
+                    <div class="step-icon">🧠</div>
+                    <span class="step-label">Análisis</span>
+                  </div>
+                  <div class="pipeline-divider">
+                    <div class="progress"><div id="progress-bar-2" class="progress-bar"></div></div>
+                  </div>
+                  <div class="pipeline-step pending" id="step-creative">
+                    <div class="step-icon">✨</div>
+                    <span class="step-label">Creativos</span>
+                  </div>
+                </div>
                 <div class="status-row">
                   <span id="status-dot" class="status-dot idle"></span>
-                  <p id="status-text">Listo para iniciar el análisis creativo.</p>
+                  <p id="status-text">Listo para iniciar la extracción.</p>
                 </div>
-                <div class="progress"><div id="progress-bar" class="progress-bar"></div></div>
                 <div id="error-box" class="message error hidden"></div>
                 <div id="job-box" class="process-state hidden"></div>
                 <div id="result-box" class="result hidden">
@@ -255,223 +235,370 @@
                   </section>
                 </div>
               </section>
-            </div>
-          </div>
-        </section>
-
-        <section id="guide-view" class="view">
-          <div class="section-heading">
-            <p class="eyebrow">Guía operativa</p>
-            <h2>Flujos recomendados AD</h2>
-          </div>
-          <div class="route-grid">
-            <article class="route-card"><span>Camino 01</span><h3>Tengo un reel y quiero extraer ideas</h3><p>Procesa el video, revisa el resumen en Análisis y usa los hooks como base de contenido.</p><strong>Sale bien si ves guion, score y oportunidades claras.</strong></article>
-            <article class="route-card"><span>Camino 02</span><h3>Quiero crear anuncios/prompts</h3><p>Selecciona una pieza del Vault, entra en Outputs creativos y genera el pack por objetivos de negocio.</p><strong>Sale bien si puedes copiar piezas para vender, educar y generar leads.</strong></article>
-            <article class="route-card"><span>Camino 03</span><h3>Quiero auditar si el análisis sirve</h3><p>Abre Análisis, mira advertencias, score y recursos agrupados antes de usar los outputs.</p><strong>Sale bien si entiendes qué usar y qué revisar antes de publicar.</strong></article>
-          </div>
-        </section>
-
-        <section id="vault-view" class="view">
-          <div class="view-header">
-            <h2 class="view-title">Vault</h2>
-            <p class="view-subtitle">Explora marcas, videos y activos generados.</p>
-          </div>
-          <div class="vault-layout">
-            <section class="panel list-panel">
-              <div class="panel-header"><h2>Marcas</h2><button id="refresh-vault" class="secondary-button" type="button">Actualizar</button></div>
-              <div id="brand-list" class="item-list"></div>
-            </section>
-            <section class="panel list-panel">
-              <div class="panel-header"><h2>Videos</h2></div>
-              <div id="video-list" class="item-list"><div class="empty-state-box"><span class="empty-icon">VA</span><p>Elige una marca para ver sus piezas.</p></div></div>
-            </section>
-            <section class="panel detail-panel">
-              <div class="panel-header"><h2>Detalle</h2></div>
-              <div id="video-detail"><div class="empty-state-box"><span class="empty-icon">ID</span><p>Selecciona una pieza para ver su detalle completo.</p></div></div>
-            </section>
-          </div>
-        </section>
-
-        <section id="analysis-view" class="view">
-          <div class="view-header">
-            <h2 class="view-title">Análisis creativo</h2>
-            <p class="view-subtitle" id="analysis-context">Selecciona una pieza en el Vault para revisar sus archivos.</p>
-          </div>
-          <section class="panel analysis-panel">
-            <div class="panel-header"><h2>Análisis del video seleccionado</h2><span id="analysis-status" class="pill">Sin selección</span></div>
-            <div id="analysis-overview" class="insight-grid"></div>
-            <div id="analysis-links" class="actions"></div>
-            <div id="analysis-preview" class="human-status">Selecciona una pieza en el Vault para revisar el análisis creativo.</div>
-            <div id="analysis-audit-card" class="panel audit-card hidden">
-              <div class="panel-header">
-                <h3>Veredicto de Auditoría</h3>
-                <span id="analysis-audit-score" class="pill">0/10</span>
-              </div>
-              <div id="analysis-audit-warnings" class="warnings-list"></div>
-              <div class="actions">
-                <button id="refine-skill-btn" class="primary-button" type="button">Refinar Skill (Auto-Pulido)</button>
-              </div>
-            </div>
-            <div id="frames-container" class="frames-grid hidden"></div>
-          </section>
-        </section>
-
-        <section id="creative-view" class="view">
-          <section class="panel creative-panel">
-            <div class="panel-header">
-              <div>
-                <p class="eyebrow">Laboratorio creativo</p>
-                <h2>Prompts y adsets del video seleccionado</h2>
-              </div>
-              <span id="creative-status-pill" class="pill">Sin selección</span>
-            </div>
-
-            <div class="creative-toolbar">
-              <div id="creative-summary" class="human-status">Selecciona una pieza en el Vault para crear un pack creativo.</div>
-              <div class="actions">
-                <button id="generate-creative-pack" class="primary-button" type="button">Generar pack</button>
-                <button id="copy-creative-pack" class="secondary-button" type="button">Copiar todo</button>
-              </div>
-            </div>
-
-            <div id="creative-strategy" class="creative-strategy"></div>
-            <div id="creative-pack-list" class="creative-grid"></div>
-            <a id="creative-json-link" class="hidden" href="#" target="_blank" rel="noreferrer">Archivo de datos</a>
-            <a id="creative-md-link" class="hidden" href="#" target="_blank" rel="noreferrer">Archivo creativo</a>
-          </section>
-        </section>
-
-        <section id="polish-view" class="view">
-          <section class="panel creative-panel">
-            <div class="panel-header">
-              <div>
-                <p class="eyebrow">Pulido incremental</p>
-                <h2>Microtareas del video seleccionado</h2>
-              </div>
-              <span id="polish-status-pill" class="pill">Sin selección</span>
-            </div>
-            <div class="creative-toolbar">
-              <div id="polish-summary" class="human-status">Selecciona una pieza en el Vault para revisar microtareas de mejora.</div>
-              <div class="actions">
-                <button id="run-polish" class="primary-button" type="button">Ejecutar pulido</button>
-              </div>
-            </div>
-            <div id="polish-list" class="polish-grid"></div>
-          </section>
-        </section>
-
-        <section id="ai-view" class="view">
-          <div class="ai-layout">
-            <section class="panel analysis-panel developer-only hidden" style="display: none;">
-              <div class="panel-header"><h2>Gemini API</h2><span id="gemini-config-pill" class="pill">Oculto</span></div>
-              <div id="config-summary" class="human-status">Panel desactivado.</div>
-              <pre id="config-status" class="hidden" aria-hidden="true"></pre>
             </section>
 
-            <section class="panel analysis-panel">
-              <div class="panel-header"><h2>OpenRouter API</h2><span id="openrouter-config-pill" class="pill">Revisando</span></div>
-              <div id="openrouter-summary" class="human-status">Revisando conexión a OpenRouter...</div>
-            </section>
-
-            <section class="panel analysis-panel developer-only hidden">
-              <div class="panel-header"><h2>Motor local dev</h2><span id="ollama-running-pill" class="pill">Revisando</span></div>
-              <div id="ollama-status" class="human-status">Revisando motor local...</div>
-              <div class="actions">
-                <button id="start-ollama" class="secondary-button" type="button">Encender</button>
-                <button id="stop-ollama" class="secondary-button danger-action" type="button">Apagar</button>
-                <button id="restart-ollama" class="secondary-button" type="button">Reiniciar</button>
+            <!-- ╔═══════════════════════════════════════════════════════════╗
+                 ║  VIEW: MIS PROYECTOS (VAULT)                             ║
+                 ╚═══════════════════════════════════════════════════════════╝ -->
+            <section id="vault-view" class="view">
+              <div class="view-header">
+                <h2 class="view-title">📊 Biblioteca</h2>
+                <p class="view-subtitle">Tu centro de control: marcas, análisis y perfil de marca en un solo lugar.</p>
               </div>
-            </section>
 
-            <section class="panel analysis-panel">
-              <div class="panel-header">
-                <h2>Configuración</h2>
-                <div class="toggle-control">
-                  <label class="switch">
-                    <input type="checkbox" id="dev-mode-toggle">
-                    <span class="slider round"></span>
-                  </label>
-                  <small>Developer Mode</small>
+              <!-- Sub-tabs for Biblioteca -->
+              <div class="biblioteca-tabs" role="tablist" aria-label="Secciones de la biblioteca">
+                <button class="bib-tab active" type="button" data-bib="bib-projects" role="tab" aria-selected="true">📂 Proyectos</button>
+                <button class="bib-tab" type="button" data-bib="bib-analysis" role="tab" aria-selected="false">🔬 Análisis</button>
+                <button class="bib-tab" type="button" data-bib="bib-brand" role="tab" aria-selected="false">🏷️ Mi Marca</button>
+              </div>
+
+              <!-- Sub-panel: Proyectos (default) -->
+              <div id="bib-projects" class="bib-panel active-bib" role="tabpanel">
+                <div class="vault-layout">
+                  <section class="panel list-panel">
+                    <div class="panel-header"><h2>Marcas</h2><button id="refresh-vault" class="secondary-button" type="button">Sincronizar</button></div>
+                    <div id="brand-list" class="item-list"></div>
+                  </section>
+                  <section class="panel list-panel">
+                    <div class="panel-header"><h2>Videos</h2></div>
+                    <div id="video-list" class="item-list"><div class="empty-state-box"><span class="empty-icon">📂</span><p>Elige una marca para ver sus piezas.</p></div></div>
+                  </section>
+                  <section class="panel detail-panel">
+                    <div class="panel-header"><h2>Detalle</h2></div>
+                    <div id="video-detail"><div class="empty-state-box"><span class="empty-icon">🔍</span><p>Selecciona una pieza para ver su detalle completo.</p></div></div>
+                  </section>
                 </div>
               </div>
-              <div class="human-status">
-                Activa el <strong>Developer Mode</strong> para desbloquear motores locales, pruebas de prompts crudos y herramientas de depuración de pipeline.
+
+              <!-- Sub-panel: Análisis (was analysis-view content) -->
+              <div id="bib-analysis" class="bib-panel" role="tabpanel" hidden></div>
+
+              <!-- Sub-panel: Mi Marca (was brand-view content) -->
+              <div id="bib-brand" class="bib-panel" role="tabpanel" hidden></div>
+
+            </section>
+
+            <!-- ╔═══════════════════════════════════════════════════════════╗
+                 ║  VIEW: ANÁLISIS (includes polish)                        ║
+                 ╚═══════════════════════════════════════════════════════════╝ -->
+            <section id="analysis-view" class="view">
+              <div class="view-header">
+                <h2 class="view-title">📊 Análisis creativo</h2>
+                <p class="view-subtitle" id="analysis-context">Selecciona una pieza en Mis proyectos para revisar sus archivos.</p>
+              </div>
+
+              <!-- Analysis Panel -->
+              <section class="panel analysis-panel">
+                <div class="panel-header"><h2>Análisis del video seleccionado</h2><span id="analysis-status" class="pill">Sin selección</span></div>
+                <div id="analysis-overview" class="insight-grid"></div>
+                <div id="analysis-links" class="actions"></div>
+                <div id="analysis-preview" class="human-status">Selecciona una pieza en Mis proyectos para revisar el análisis creativo.</div>
+                <!-- Audit Card Removed
+                <div id="analysis-audit-card" class="panel audit-card hidden">
+                  ...
+                </div>
+                -->
+                <div id="frames-container" class="frames-grid hidden"></div>
+              </section>
+
+              <!-- Polish Section (merged from polish-view) -->
+              <div class="section-divider">
+                <span>Pulido incremental</span>
+              </div>
+              <section class="panel analysis-panel">
+                <div class="panel-header">
+                  <h2>Microtareas de mejora</h2>
+                  <span id="polish-status-pill" class="pill">Sin selección</span>
+                </div>
+                <div class="creative-toolbar">
+                  <div id="polish-summary" class="human-status">Selecciona una pieza en Mis proyectos para revisar microtareas de mejora.</div>
+                  <div class="actions">
+                    <button id="run-polish" class="primary-button" type="button">Ejecutar pulido</button>
+                  </div>
+                </div>
+                <div id="polish-list" class="polish-grid"></div>
+              </section>
+            </section>
+
+            <!-- ╔═══════════════════════════════════════════════════════════╗
+                 ║  VIEW: CREATIVOS (includes outputs + image gen)          ║
+                 ╚═══════════════════════════════════════════════════════════╝ -->
+            <section id="creative-view" class="view">
+              <!-- Creative Lab -->
+              <section class="panel creative-panel">
+                <div class="panel-header">
+                  <div>
+                    <p class="eyebrow">Laboratorio creativo</p>
+                    <h2>Prompts y adsets del video seleccionado</h2>
+                  </div>
+                  <span id="creative-status-pill" class="pill">Sin selección</span>
+                </div>
+                <div class="creative-toolbar">
+                  <div id="creative-summary" class="human-status">Selecciona una pieza en Mis proyectos para crear un pack creativo.</div>
+                  <div class="actions">
+                    <button id="generate-brand-image" class="primary-button hidden" type="button" style="background: linear-gradient(135deg, #10a37f, #0d8a6b); border-color: #10a37f;">Generar Imagen</button>
+                    <button id="generate-creative-pack" class="primary-button" type="button">Generar pack</button>
+                    <button id="copy-creative-pack" class="secondary-button" type="button">Copiar todo</button>
+                  </div>
+                </div>
+                <div id="generated-image-container" class="hidden" style="margin-bottom: var(--space-m); padding: var(--space-m); border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface-glass);">
+                  <h3 style="margin-bottom: 8px;">Imagen generada</h3>
+                  <div id="generated-image-content" style="text-align: center; color: var(--text-muted);">Generando...</div>
+                </div>
+                <div id="creative-strategy" class="creative-strategy"></div>
+                <div id="creative-pack-list" class="creative-grid"></div>
+                <a id="creative-json-link" class="hidden" href="#" target="_blank" rel="noreferrer">Archivo de datos</a>
+                <a id="creative-md-link" class="hidden" href="#" target="_blank" rel="noreferrer">Archivo creativo</a>
+              </section>
+
+              <!-- Outputs Section (merged from outputs-view) -->
+              <div class="section-divider">
+                <span>Archivos generados</span>
+              </div>
+              <section class="panel analysis-panel">
+                <div class="panel-header"><h2>Todos los recursos del video</h2><button id="reanalyze-video" class="secondary-button" type="button">Reanalizar</button></div>
+                <div id="outputs-list" class="actions"></div>
+                <div id="outputs-preview" class="human-status">Selecciona una pieza en Mis proyectos.</div>
+              </section>
+            </section>
+
+            <!-- ╔═══════════════════════════════════════════════════════════╗
+                 ║  VIEW: EDITOR DE GUION                                   ║
+                 ╚═══════════════════════════════════════════════════════════╝ -->
+            <section id="editor-view" class="view">
+              <div class="view-header">
+                <h2 class="view-title">✍️ Laboratorio de Guiones</h2>
+                <p class="view-subtitle">Adapta el guion a otra marca usando transferencia de estilo (Brand Shifting).</p>
+              </div>
+
+              <section class="panel editor-panel">
+                <div class="panel-header">
+                  <h2>Adaptador Modular</h2>
+                  <div class="actions" style="display: flex; gap: 8px; align-items: center;">
+                    <select id="editor-target-brand" class="secondary-button" style="min-height: 38px; background: var(--surface-2); color: var(--text-primary); border: 1px solid var(--border);">
+                      <option value="">Selecciona marca destino...</option>
+                    </select>
+                    <button id="editor-adapt-all" class="primary-button" type="button" disabled>Adaptar guion a esta marca</button>
+                  </div>
+                </div>
+                
+                <!-- Double column layout -->
+                <div class="editor-layout">
+                  <!-- Left Column: Original -->
+                  <div class="editor-col original-col">
+                    <div class="col-header">
+                      <h3 class="col-title">Guion Original</h3>
+                      <span id="editor-original-brand" class="pill">Sin selección</span>
+                    </div>
+                    <div id="editor-original-blocks" class="editor-blocks-container">
+                      <div class="human-status">Selecciona una pieza en Mis proyectos.</div>
+                    </div>
+                  </div>
+                  
+                  <!-- Right Column: Adapted -->
+                  <div class="editor-col adapted-col">
+                    <div class="col-header">
+                      <h3 class="col-title">Guion Adaptado</h3>
+                      <span id="editor-target-brand-pill" class="pill badge-requiere_revision">Destino</span>
+                    </div>
+                    <div id="editor-adapted-blocks" class="editor-blocks-container">
+                      <div class="human-status">Elige una marca destino para empezar a adaptar.</div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </section>
+
+            <!-- ╔═══════════════════════════════════════════════════════════╗
+                 ║  VIEW: MI MARCA                                          ║
+                 ╚═══════════════════════════════════════════════════════════╝ -->
+            <section id="brand-view" class="view">
+              <form id="brand-profile-form" class="panel form-panel wide-form">
+                <div class="panel-header">
+                  <h2>🏷️ Perfil de marca</h2>
+                  <div class="actions">
+                    <span id="brand-maturity-pill" class="pill badge-requiere_revision">Nivel: Novice</span>
+                    <span id="brand-profile-name" class="pill">Sin marca</span>
+                  </div>
+                </div>
+                <div class="inline-grid">
+                  <label><span>Marca</span><input id="profile-brand-name" name="brand_name" type="text" placeholder="Mi Marca" /></label>
+                  <label><span>CTA</span><input id="profile-cta" name="cta" type="text" /></label>
+                </div>
+                <div id="brand-wisdom-card" class="message warning hidden" style="margin-bottom: var(--space-m);">
+                  <strong>Sabiduría de marca consolidada:</strong>
+                  <div id="brand-wisdom-summary" style="font-size: 0.85rem; margin: 8px 0;"></div>
+                  <div class="actions">
+                    <button id="consolidate-wisdom-btn" class="secondary-button" style="min-height: 28px; font-size: 0.75rem;" type="button">Actualizar Sabiduría</button>
+                  </div>
+                </div>
+                <label><span>Tono</span><input id="profile-tone" name="tone" type="text" /></label>
+                <label><span>Audiencia</span><textarea id="profile-audience" name="audience" rows="3"></textarea></label>
+                <label><span>Oferta</span><textarea id="profile-offer" name="offer" rows="3"></textarea></label>
+                <label><span>Estilo visual</span><textarea id="profile-visual-style" name="visual_style" rows="3"></textarea></label>
+                <div class="inline-grid">
+                  <label><span>Colores separados por coma</span><input id="profile-colors" name="colors" type="text" placeholder="#1F7A61, #FFFFFF" /></label>
+                  <label><span>Palabras prohibidas</span><input id="profile-forbidden" name="forbidden_words" type="text" placeholder="barato, garantizado" /></label>
+                </div>
+                <button class="primary-button" type="submit">Guardar perfil</button>
+                <div id="brand-profile-result" class="human-status"></div>
+              </form>
+            </section>
+
+            <!-- ╔═══════════════════════════════════════════════════════════╗
+                 ║  VIEW: CONFIGURACIÓN (was AI Pipeline)                   ║
+                 ╚═══════════════════════════════════════════════════════════╝ -->
+            <section id="ai-view" class="view">
+              <div class="view-header">
+                <h2 class="view-title">⚙️ Configuración</h2>
+                <p class="view-subtitle">Estado de los motores de IA y diagnósticos del sistema.</p>
+              </div>
+
+              <!-- Status Cards (moved from main dashboard) -->
+              <section class="status-grid" aria-label="Estado del sistema">
+                <article class="status-card" id="card-qwen">
+                  <span class="label">Qwen API</span>
+                  <strong id="stat-qwen">Revisando</strong>
+                  <small id="stat-qwen-note">Motor core</small>
+                </article>
+                <article class="status-card" id="card-media">
+                  <span class="label">Media OSS</span>
+                  <strong id="stat-media">Revisando</strong>
+                  <small id="stat-media-note">fal / Hugging Face</small>
+                </article>
+                <article class="status-card" id="card-openrouter">
+                  <span class="label">OpenRouter</span>
+                  <strong id="stat-openrouter">Revisando</strong>
+                  <small id="stat-openrouter-note">Respaldo cloud</small>
+                </article>
+                <article class="status-card" id="card-ollama">
+                  <span class="label">Motor local</span>
+                  <strong id="stat-ollama">Revisando</strong>
+                  <small id="stat-ollama-note">Ultima opcion</small>
+                </article>
+                <!-- Audit Card Removed
+                <article class="status-card" id="card-audit">
+                  <span class="label">Auditoría</span>
+                  <strong id="stat-audit">Pendiente</strong>
+                  <small id="stat-audit-note">Último promedio</small>
+                </article>
+                -->
+                <article class="status-card" id="card-vault">
+                  <span class="label">Vault</span>
+                  <strong id="stat-vault">Cargando</strong>
+                  <small id="stat-vault-note">Marcas y videos</small>
+                </article>
+              </section>
+              <!-- Hidden Gemini card for JS compatibility -->
+              <article class="status-card hidden" id="card-gemini" style="display:none;">
+                <span class="label">Gemini</span>
+                <strong id="stat-gemini">Oculto</strong>
+                <small id="stat-gemini-note">Motor secundario</small>
+              </article>
+
+              <div class="ai-layout">
+                <!-- Qwen -->
+                <section class="panel analysis-panel">
+                  <div class="panel-header"><h2>Qwen API</h2><span id="qwen-config-pill" class="pill">Revisando</span></div>
+                  <div id="qwen-summary" class="human-status">Revisando conexion a Qwen/DashScope...</div>
+                </section>
+
+                <!-- Media -->
+                <section class="panel analysis-panel">
+                  <div class="panel-header"><h2>fal / Hugging Face</h2><span id="media-config-pill" class="pill">Opcional</span></div>
+                  <div id="media-summary" class="human-status">Configura FAL_KEY o HF_TOKEN para imagen, video y modelos de media.</div>
+                </section>
+
+                <!-- OpenRouter -->
+                <section class="panel analysis-panel">
+                  <div class="panel-header"><h2>OpenRouter API</h2><span id="openrouter-config-pill" class="pill">Respaldo</span></div>
+                  <div id="openrouter-summary" class="human-status">Revisando conexion a OpenRouter...</div>
+                </section>
+
+                <!-- OpenAI fallback -->
+                <section class="panel analysis-panel">
+                  <div class="panel-header"><h2>OpenAI opcional</h2><span id="openai-config-pill" class="pill">Opcional</span></div>
+                  <div id="openai-summary" class="human-status">OpenAI queda como fallback manual para imagen si se configura OPENAI_API_KEY.</div>
+                </section>
+
+                <!-- Gemini (hidden by default) -->
+                <section class="panel analysis-panel hidden" style="display: none;">
+                  <div class="panel-header"><h2>Gemini API</h2><span id="gemini-config-pill" class="pill">Oculto</span></div>
+                  <div id="config-summary" class="human-status">Panel desactivado.</div>
+                  <pre id="config-status" class="hidden" aria-hidden="true"></pre>
+                </section>
+
+                <!-- Ollama -->
+                <section class="panel analysis-panel">
+                  <div class="panel-header"><h2>Motor local (Ollama)</h2><span id="ollama-running-pill" class="pill">Revisando</span></div>
+                  <div id="ollama-status" class="human-status">Revisando motor local...</div>
+                  <div class="actions">
+                    <button id="start-ollama" class="secondary-button" type="button">Encender</button>
+                    <button id="stop-ollama" class="secondary-button danger-action" type="button">Apagar</button>
+                    <button id="restart-ollama" class="secondary-button" type="button">Reiniciar</button>
+                  </div>
+                </section>
+
+                <!-- Recommended Engine -->
+                <section class="panel analysis-panel">
+                  <div class="panel-header"><h2>Motor recomendado</h2><button id="refresh-ai" class="secondary-button" type="button">Actualizar</button></div>
+                  <div id="ai-summary" class="human-status">Cargando motores...</div>
+                  <pre id="ai-status" class="hidden" aria-hidden="true"></pre>
+                </section>
+
+                <!-- Audit -->
+                <section class="panel analysis-panel hidden">
+                  <div class="panel-header"><h2>Auditoría</h2><button id="refresh-audit" class="secondary-button" type="button">Cargar reporte</button></div>
+                  <div id="audit-summary" class="audit-grid hidden"></div>
+                  <div id="audit-details" class="human-status">Cargando auditoría...</div>
+                </section>
+
+                <!-- Quick Test -->
+                <form id="ai-test-form" class="panel form-panel">
+                  <div class="panel-header"><h2>Prueba rápida</h2></div>
+                  <select id="test-ai-provider" name="provider" class="hidden" aria-hidden="true"><option value="qwen">Qwen API</option><option value="huggingface">Hugging Face</option><option value="openrouter">OpenRouter</option><option value="gemini">Gemini</option><option value="ollama">Ollama</option></select>
+                  <input id="test-ai-model" name="model" class="hidden" type="text" />
+                  <textarea id="test-ai-prompt" name="prompt" class="hidden">Responde brevemente si AD MediaSolution Studio está conectado.</textarea>
+                  <button class="primary-button" type="submit">Probar conexión</button>
+                  <div id="ai-test-result" class="human-status">Sin prueba ejecutada.</div>
+                </form>
               </div>
             </section>
 
-            <section class="panel analysis-panel">
-              <div class="panel-header"><h2>Motor recomendado</h2><button id="refresh-ai" class="secondary-button" type="button">Actualizar</button></div>
-              <div id="ai-summary" class="human-status">Cargando motores...</div>
-              <pre id="ai-status" class="hidden" aria-hidden="true"></pre>
-            </section>
-
-            <section class="panel analysis-panel">
-              <div class="panel-header"><h2>Auditoría</h2><button id="refresh-audit" class="secondary-button" type="button">Cargar reporte</button></div>
-              <div id="audit-summary" class="audit-grid hidden"></div>
-              <div id="audit-details" class="human-status">Cargando auditoría...</div>
-            </section>
-
-            <form id="ai-test-form" class="panel form-panel">
-              <div class="panel-header"><h2>Prueba rápida</h2></div>
-              <select id="test-ai-provider" name="provider" class="hidden" aria-hidden="true"><option value="openrouter">OpenRouter</option><option value="gemini">Gemini</option><option value="ollama">Ollama</option></select>
-              <input id="test-ai-model" name="model" class="hidden" type="text" />
-              <textarea id="test-ai-prompt" name="prompt" class="hidden">Responde brevemente si AD MediaSolution Studio está conectado.</textarea>
-              <button class="primary-button" type="submit">Probar conexión</button>
-              <div id="ai-test-result" class="human-status">Sin prueba ejecutada.</div>
-            </form>
-          </div>
-        </section>
-
-        <section id="brand-view" class="view">
-          <form id="brand-profile-form" class="panel form-panel wide-form">
-            <div class="panel-header">
-              <h2>Perfil de marca</h2>
-              <div class="actions">
-                <span id="brand-maturity-pill" class="pill badge-requiere_revision">Nivel: Novice</span>
-                <span id="brand-profile-name" class="pill">Sin marca</span>
-              </div>
-            </div>
-            <div class="inline-grid">
-              <label><span>Marca</span><input id="profile-brand-name" name="brand_name" type="text" placeholder="Mi Marca" /></label>
-              <label><span>CTA</span><input id="profile-cta" name="cta" type="text" /></label>
-            </div>
-            
-            <div id="brand-wisdom-card" class="message warning hidden" style="margin-bottom: var(--space-m);">
-              <strong>Sabiduría de marca consolidada:</strong>
-              <div id="brand-wisdom-summary" style="font-size: 0.85rem; margin: 8px 0;"></div>
-              <div class="actions">
-                <button id="consolidate-wisdom-btn" class="secondary-button" style="min-height: 28px; font-size: 0.75rem;" type="button">Actualizar Sabiduría</button>
-              </div>
-            </div>
-            <label><span>Tono</span><input id="profile-tone" name="tone" type="text" /></label>
-            <label><span>Audiencia</span><textarea id="profile-audience" name="audience" rows="3"></textarea></label>
-            <label><span>Oferta</span><textarea id="profile-offer" name="offer" rows="3"></textarea></label>
-            <label><span>Estilo visual</span><textarea id="profile-visual-style" name="visual_style" rows="3"></textarea></label>
-            <div class="inline-grid">
-              <label><span>Colores separados por coma</span><input id="profile-colors" name="colors" type="text" placeholder="#1F7A61, #FFFFFF" /></label>
-              <label><span>Palabras prohibidas</span><input id="profile-forbidden" name="forbidden_words" type="text" placeholder="barato, garantizado" /></label>
-            </div>
-            <button class="primary-button" type="submit">Guardar perfil</button>
-            <div id="brand-profile-result" class="human-status"></div>
-          </form>
-        </section>
-
-        <section id="outputs-view" class="view">
-          <div class="view-header">
-            <h2 class="view-title">Outputs</h2>
-            <p class="view-subtitle">Activos generados del video seleccionado.</p>
-          </div>
-          <section class="panel analysis-panel">
-            <div class="panel-header"><h2>Archivos generados</h2><button id="reanalyze-video" class="secondary-button" type="button">Reanalizar</button></div>
-            <div id="outputs-list" class="actions"></div>
-            <div id="outputs-preview" class="human-status">Selecciona una pieza en el Vault.</div>
-          </section>
-        </section>
           </section>
         </div>
       </main>
     </div>
 
-    <script src="/static/app.js?v=2.7"></script>
+    <!-- ═══════════════════════════ GUIDE BOT ═══════════════════════════ -->
+    <div id="guide-bot" class="guide-bot">
+      <button id="guide-bot-trigger" class="guide-bot-trigger" type="button" aria-label="Abrir guía">
+        <span class="guide-bot-avatar">💡</span>
+        <span class="guide-bot-pulse"></span>
+      </button>
+      <div id="guide-bot-panel" class="guide-bot-panel hidden">
+        <div class="guide-bot-header">
+          <div class="guide-bot-identity">
+            <span class="guide-bot-face">💡</span>
+            <div>
+              <strong>Guía ScriptDNA</strong>
+              <small>Te ayudo a sacarle el máximo provecho</small>
+            </div>
+          </div>
+          <button id="guide-bot-close" class="guide-bot-close" type="button" aria-label="Cerrar">✕</button>
+        </div>
+        <div id="guide-bot-content" class="guide-bot-content">
+          <!-- Content injected by JS based on active view -->
+        </div>
+        <div class="guide-bot-footer">
+          <button id="guide-bot-prev" class="guide-bot-nav" type="button">← Anterior</button>
+          <span id="guide-bot-counter" class="guide-bot-counter">1/3</span>
+          <button id="guide-bot-next" class="guide-bot-nav" type="button">Siguiente →</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="/static/app.js?v=3.5"></script>
   </body>
 </html>

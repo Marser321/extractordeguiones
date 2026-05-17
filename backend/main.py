@@ -1,4 +1,5 @@
 from concurrent.futures import ThreadPoolExecutor
+import base64
 from datetime import datetime
 import json
 from pathlib import Path
@@ -26,6 +27,7 @@ try:
     from services.vault_service import vault_service
     from services.visual_service import visual_service
     from services.insforge_service import insforge_service
+    from services.brand_shifting_service import brand_shifting_service
 except ModuleNotFoundError:
     from backend.core.config import settings
     from backend.services.analysis_service import analysis_service
@@ -40,6 +42,7 @@ except ModuleNotFoundError:
     from backend.services.vault_service import vault_service
     from backend.services.visual_service import visual_service
     from backend.services.insforge_service import insforge_service
+    from backend.services.brand_shifting_service import brand_shifting_service
 
 
 BASE_DIR = Path(__file__).resolve().parent
@@ -98,12 +101,16 @@ class TranscribeRequest(BaseModel):
 class PipelineProcessRequest(MediaExtractRequest):
     pass
 
+class AdaptScriptRequest(BaseModel):
+    original_script: str
+    target_brand: str
+
 
 class JobUrlRequest(BaseModel):
     brand_name: str
     video_id: str
     url: str
-    ai_provider: str = "gemini"
+    ai_provider: str = settings.AI_DEFAULT_PROVIDER
     ai_model: Optional[str] = None
     analysis_modules: Optional[list] = None
 
@@ -112,7 +119,7 @@ class JobLocalPathRequest(BaseModel):
     brand_name: str
     video_id: str
     local_file_path: str
-    ai_provider: str = "gemini"
+    ai_provider: str = settings.AI_DEFAULT_PROVIDER
     ai_model: Optional[str] = None
     analysis_modules: Optional[list] = None
 
@@ -122,7 +129,7 @@ class JobProcessRequest(BaseModel):
     video_id: str
     url: Optional[str] = None
     local_file_path: Optional[str] = None
-    ai_provider: str = "gemini"
+    ai_provider: str = settings.AI_DEFAULT_PROVIDER
     ai_model: Optional[str] = None
     analysis_modules: Optional[list] = None
 
@@ -136,7 +143,7 @@ class JobProcessRequest(BaseModel):
 
 
 class AITestRequest(BaseModel):
-    provider: str = "gemini"
+    provider: str = settings.AI_DEFAULT_PROVIDER
     model: Optional[str] = None
     prompt: str = "Responde en JSON: {\"ok\": true, \"message\": \"ScriptDNA conectado\"}"
 
@@ -153,13 +160,13 @@ class BrandProfileRequest(BaseModel):
 
 
 class AnalyzeJobRequest(BaseModel):
-    ai_provider: str = "gemini"
+    ai_provider: str = settings.AI_DEFAULT_PROVIDER
     ai_model: Optional[str] = None
     analysis_modules: Optional[list] = None
 
 
 class CreativePackRequest(BaseModel):
-    ai_provider: str = "gemini"
+    ai_provider: str = settings.AI_DEFAULT_PROVIDER
     ai_model: Optional[str] = None
     fallback_provider: Optional[str] = None
 
@@ -169,8 +176,17 @@ class MicrotaskRunRequest(BaseModel):
 
 
 class RefineJobRequest(BaseModel):
-    ai_provider: str = "gemini"
+    ai_provider: str = settings.AI_DEFAULT_PROVIDER
     ai_model: Optional[str] = None
+
+
+class GenerateImageRequest(BaseModel):
+    prompt: str
+    brand_name: str
+    video_id: str
+    provider: str = settings.IMAGE_DEFAULT_PROVIDER
+    model: Optional[str] = None
+    size: str = "1024x1024"
 
 
 def _now() -> str:
@@ -304,20 +320,39 @@ def _ensure_ai_provider_available(ai_provider: str):
         if settings.IS_CLOUD:
             raise HTTPException(
                 status_code=400,
-                detail="Ollama solo está disponible en modo local/desarrollo. Usa Gemini para el despliegue cloud.",
+                detail="Ollama solo está disponible en modo local/desarrollo. Usa Qwen API para el despliegue cloud.",
             )
         status = ollama_control_service.status()
         if not status["running"]:
             raise HTTPException(
                 status_code=400,
-                detail="Ollama está apagado. Enciéndelo desde la pestaña IA o selecciona Gemini para este job.",
+                detail="Ollama está apagado. Enciéndelo desde la pestaña IA o selecciona Qwen API para este job.",
             )
+    elif ai_provider == "qwen":
+        status = ai_provider_service.status()
+        if not status["qwen"]["available"]:
+            raise HTTPException(
+                status_code=400,
+                detail="Qwen/DashScope no está configurado. Configura DASHSCOPE_API_KEY o QWEN_API_KEY en .env.",
+            )
+    elif ai_provider == "huggingface":
+        status = ai_provider_service.status()
+        if not status["huggingface"]["available"]:
+            raise HTTPException(
+                status_code=400,
+                detail="Hugging Face no está configurado. Configura HF_TOKEN en .env.",
+            )
+    elif ai_provider == "fal":
+        raise HTTPException(
+            status_code=400,
+            detail="fal se usa para imagen/video, no para análisis de texto. Usa Qwen API como motor principal.",
+        )
     elif ai_provider == "gemini":
         status = ai_provider_service.status()
         if not status["gemini"]["available"]:
             raise HTTPException(
                 status_code=400,
-                detail="Gemini no está configurado o no tiene SDK disponible. Configura GEMINI_API_KEY en .env o usa Ollama.",
+                detail="Gemini no está configurado o no tiene SDK disponible. Configura GEMINI_API_KEY en .env o usa Qwen.",
             )
     elif ai_provider == "openrouter":
         status = ai_provider_service.status()
@@ -342,7 +377,7 @@ def _create_job(
     video_id: str,
     source_type: str,
     source_value: str,
-    ai_provider: str = "gemini",
+    ai_provider: str = settings.AI_DEFAULT_PROVIDER,
     ai_model: Optional[str] = None,
     analysis_modules: Optional[list] = None,
 ) -> str:
@@ -530,9 +565,10 @@ def _process_job(
                 visual_service.extract_frames(video_source, brand_name, video_id)
 
                 # MT-03: Análisis Visual
-                if ai_provider == "gemini":
-                    _update_job(job_id, "analyzing_visuals", "Analizando contexto visual con Gemini Vision.")
-                    visual_analysis = visual_service.analyze_frames(brand_name, video_id, transcription["full_text"])
+                if ai_provider in {"qwen", "gemini"}:
+                    label = "Qwen Vision" if ai_provider == "qwen" else "Gemini Vision"
+                    _update_job(job_id, "analyzing_visuals", f"Analizando contexto visual con {label}.")
+                    visual_analysis = visual_service.analyze_frames(brand_name, video_id, transcription["full_text"], provider=ai_provider)
                     # Guardar el análisis visual en el vault
                     analysis_dir = vault_service.create_analysis_dir(brand_name, video_id)
                     vault_service.save_json(analysis_dir, "analisis_visual.json", visual_analysis)
@@ -675,7 +711,7 @@ def _process_refine_job(
         
         refined_analysis = analysis_service.refine_analysis(
             original_analysis, instructions, original_prompt,
-            ai_provider, ai_model, "ollama"
+            ai_provider, ai_model, settings.AI_FALLBACK_PROVIDER
         )
         
         # Guardar resultados
@@ -707,7 +743,7 @@ def _start_job(
     source_value: str,
     media_runner: Callable[[Path], Path],
     background_tasks: BackgroundTasks,
-    ai_provider: str = "gemini",
+    ai_provider: str = settings.AI_DEFAULT_PROVIDER,
     ai_model: Optional[str] = None,
     analysis_modules: Optional[list] = None,
 ) -> dict:
@@ -770,6 +806,20 @@ def _raise_http_error(error: Exception):
     raise HTTPException(status_code=500, detail=str(error)) from error
 
 
+@app.post("/ai/adapt-script")
+def adapt_script_endpoint(req: AdaptScriptRequest):
+    try:
+        adapted_data = brand_shifting_service.adapt_script(
+            original_script=req.original_script,
+            target_brand=req.target_brand,
+            ai_provider=settings.AI_DEFAULT_PROVIDER,
+            ai_model=None
+        )
+        return {"status": "success", "data": adapted_data}
+    except Exception as e:
+        return JSONResponse(status_code=500, content={"detail": str(e)})
+
+
 @app.get("/")
 def read_root():
     return RedirectResponse(url="/app")
@@ -790,16 +840,44 @@ def read_app():
     return HTMLResponse(html_path.read_text(encoding="utf-8"))
 
 
-@app.post("/test-llm")
-def test_llm(request: PromptRequest):
-    if request.engine == "ollama":
-        result = llm_service.generate_with_ollama(request.prompt, request.model)
-    elif request.engine == "gemini-flash":
-        result = llm_service.generate_with_gemini(request.prompt, use_pro=False)
-    else:
-        result = llm_service.generate_with_gemini(request.prompt, use_pro=True)
 
-    return {"engine": request.engine, "response": result}
+@app.post("/api/generate-brand-image")
+def generate_brand_image(request: GenerateImageRequest):
+    try:
+        image_result = ai_provider_service.generate_image(
+            prompt=request.prompt,
+            size=request.size,
+            model=request.model,
+            provider=request.provider,
+        )
+        url = image_result.get("url")
+        
+        # Opcional: descargar y guardar en el vault
+        video_path = vault_service.get_video_path(request.brand_name, request.video_id)
+        if url and video_path.exists():
+            creative_dir = video_path / "Analisis" / "CreativeLab"
+            creative_dir.mkdir(parents=True, exist_ok=True)
+            
+            try:
+                if image_result.get("b64_json"):
+                    img_data = base64.b64decode(image_result["b64_json"])
+                    img_filename = f"image_{uuid4().hex[:8]}.png"
+                else:
+                    import requests
+                    img_data = requests.get(url, timeout=30).content
+                    img_filename = f"image_{uuid4().hex[:8]}.jpg"
+                with open(creative_dir / img_filename, "wb") as f:
+                    f.write(img_data)
+                
+                # Actualizar payload con archivo local
+                image_result["local_path"] = str(creative_dir / img_filename)
+                return image_result
+            except Exception as e:
+                print(f"No se pudo guardar la imagen localmente: {e}")
+                
+        return image_result
+    except Exception as e:
+        _raise_http_error(e)
 
 
 @app.get("/ai/status")
@@ -815,20 +893,26 @@ def ai_models():
 @app.post("/ai/test")
 def ai_test(request: AITestRequest):
     try:
-        _ensure_ai_provider_available(request.provider)
+        provider = request.provider or settings.AI_DEFAULT_PROVIDER
+        if provider not in {"qwen", "huggingface", "openrouter", "gemini", "groq", "ollama"}:
+            raise HTTPException(status_code=400, detail=f"Proveedor IA no soportado para texto: {provider}")
+        _ensure_ai_provider_available(provider)
+        model = request.model or ai_provider_service.default_model_for(provider)
         response = ai_provider_service.generate_text(
             prompt=request.prompt,
-            provider=request.provider,
-            model=request.model,
-            json_mode=True,
+            provider=provider,
+            model=model,
+            json_mode=False,
         )
         return {
-            "provider": request.provider,
-            "model": request.model or ai_provider_service.default_model_for(request.provider),
+            "ok": True,
+            "provider": provider,
+            "model": model,
             "response": response,
         }
     except Exception as error:
         _raise_http_error(error)
+
 
 
 @app.get("/diagnostic")
@@ -846,6 +930,20 @@ def diagnostic():
         writable = True
     except Exception:
         pass
+
+    qwen_live = False
+    qwen_error = None
+    if ai_stat["qwen"]["available"]:
+        try:
+            ai_provider_service.generate_text(
+                prompt="Ping",
+                provider="qwen",
+                model=ai_provider_service.default_model_for("qwen"),
+                json_mode=False
+            )
+            qwen_live = True
+        except Exception as e:
+            qwen_error = str(e)
 
     gemini_live = False
     gemini_error = None
@@ -899,6 +997,19 @@ def diagnostic():
         "insforge": {
             "configured": ins_conf,
             "base_url": settings.INSFORGE_BASE_URL
+        },
+        "qwen": {
+            "available": ai_stat["qwen"]["available"],
+            "live": qwen_live,
+            "error": qwen_error
+        },
+        "huggingface": {
+            "available": ai_stat["huggingface"]["available"],
+            "configured": ai_stat["huggingface"]["configured"]
+        },
+        "fal": {
+            "available": ai_stat["fal"]["available"],
+            "configured": ai_stat["fal"]["configured"]
         },
         "gemini": {
             "available": ai_stat["gemini"]["available"],
@@ -963,41 +1074,92 @@ def config_status():
     project_root = Path(__file__).resolve().parent.parent
     env_paths = [project_root / ".env", Path.cwd() / ".env"]
     existing_env = next((path for path in env_paths if path.exists()), None)
+    qwen_key = settings.DASHSCOPE_API_KEY or settings.DASHSCOPE_API_KEYS or settings.QWEN_API_KEY or settings.QWEN_API_KEYS
+    hf_key = settings.HF_TOKEN or settings.HF_TOKENS
+    fal_key = settings.FAL_KEY or settings.FAL_KEYS
     gemini_key = settings.GEMINI_API_KEY or settings.GEMINI_API_KEYS
     openrouter_key = settings.OPENROUTER_API_KEY or settings.OPENROUTER_API_KEYS
-    
-    env_has_gemini = False
-    env_has_openrouter = False
+    openai_key = settings.OPENAI_API_KEY or settings.OPENAI_API_KEYS
+
+    env_flags = {
+        "qwen": False,
+        "huggingface": False,
+        "fal": False,
+        "gemini": False,
+        "openrouter": False,
+        "openai": False,
+    }
     
     if existing_env:
         try:
             content = existing_env.read_text(encoding="utf-8")
             for line in content.splitlines():
                 stripped = line.strip()
-                if (stripped.startswith("GEMINI_API_KEY=") or stripped.startswith("GEMINI_API_KEYS=")) and stripped.split("=", 1)[1].strip():
-                    env_has_gemini = True
-                if (stripped.startswith("OPENROUTER_API_KEY=") or stripped.startswith("OPENROUTER_API_KEYS=")) and stripped.split("=", 1)[1].strip():
-                    env_has_openrouter = True
+                if not stripped or stripped.startswith("#") or "=" not in stripped:
+                    continue
+                name, value = stripped.split("=", 1)
+                if not value.strip():
+                    continue
+                if name in {"DASHSCOPE_API_KEY", "DASHSCOPE_API_KEYS", "QWEN_API_KEY", "QWEN_API_KEYS"}:
+                    env_flags["qwen"] = True
+                if name in {"HF_TOKEN", "HF_TOKENS", "HUGGINGFACE_API_KEY", "HUGGINGFACE_API_KEYS"}:
+                    env_flags["huggingface"] = True
+                if name in {"FAL_KEY", "FAL_KEYS", "FAL_API_KEY", "FAL_API_KEYS"}:
+                    env_flags["fal"] = True
+                if name in {"GEMINI_API_KEY", "GEMINI_API_KEYS"}:
+                    env_flags["gemini"] = True
+                if name in {"OPENROUTER_API_KEY", "OPENROUTER_API_KEYS"}:
+                    env_flags["openrouter"] = True
+                if name in {"OPENAI_API_KEY", "OPENAI_API_KEYS"}:
+                    env_flags["openai"] = True
         except OSError:
             pass
 
-    configured_source = None
-    if bool(gemini_key):
-        configured_source = "process_env_or_loaded_env"
-    elif env_has_gemini:
-        configured_source = "env_file_pending_restart"
+    def source_for(active: bool, env_flag: bool) -> Optional[str]:
+        if active:
+            return "process_env_or_loaded_env"
+        if env_flag:
+            return "env_file_pending_restart"
+        return None
+
+    restart_required = (
+        (env_flags["qwen"] and not bool(qwen_key))
+        or (env_flags["huggingface"] and not bool(hf_key))
+        or (env_flags["fal"] and not bool(fal_key))
+        or (env_flags["gemini"] and not bool(gemini_key))
+        or (env_flags["openrouter"] and not bool(openrouter_key))
+        or (env_flags["openai"] and not bool(openai_key))
+    )
 
     return {
         "env_file_present": existing_env is not None,
         "env_file_path": str(existing_env) if existing_env else str(project_root / ".env"),
         "env_example_path": str(project_root / ".env.example"),
+        "qwen_api_key_configured": bool(qwen_key),
+        "qwen_api_key_masked": "********" if qwen_key else None,
+        "qwen_api_key_source": source_for(bool(qwen_key), env_flags["qwen"]),
+        "qwen_env_file_has_key": env_flags["qwen"],
+        "qwen_base_url": settings.QWEN_BASE_URL,
+        "qwen_default_model": ai_status_data["qwen"]["default_model"],
+        "huggingface_api_key_configured": bool(hf_key),
+        "huggingface_env_file_has_key": env_flags["huggingface"],
+        "fal_api_key_configured": bool(fal_key),
+        "fal_env_file_has_key": env_flags["fal"],
         "gemini_api_key_configured": bool(gemini_key),
         "gemini_api_key_masked": "********" if gemini_key else None,
-        "gemini_api_key_source": configured_source,
-        "gemini_env_file_has_key": env_has_gemini,
+        "gemini_api_key_source": source_for(bool(gemini_key), env_flags["gemini"]),
+        "gemini_env_file_has_key": env_flags["gemini"],
         "openrouter_api_key_configured": bool(openrouter_key),
-        "openrouter_env_file_has_key": env_has_openrouter,
-        "restart_required": (env_has_gemini and not bool(gemini_key)) or (env_has_openrouter and not bool(openrouter_key)),
+        "openrouter_env_file_has_key": env_flags["openrouter"],
+        "openai_api_key_configured": bool(openai_key),
+        "openai_env_file_has_key": env_flags["openai"],
+        "default_provider": settings.AI_DEFAULT_PROVIDER,
+        "fallback_provider": settings.AI_FALLBACK_PROVIDER,
+        "openrouter_default_model": ai_status_data["openrouter"]["default_model"],
+        "image_default_provider": settings.IMAGE_DEFAULT_PROVIDER,
+        "image_default_model": ai_provider_service.default_model_for(settings.IMAGE_DEFAULT_PROVIDER),
+        "model_registry": ai_status_data.get("model_registry", {}),
+        "restart_required": restart_required,
         "gemini_sdk_installed": ai_status_data["gemini"]["sdk_installed"],
         "gemini_legacy_sdk_installed": ai_status_data["gemini"]["legacy_sdk_installed"],
         "is_cloud": settings.IS_CLOUD,
@@ -1008,12 +1170,16 @@ def config_status():
             "upload_source": True,
             "local_path_source": not settings.IS_CLOUD,
             "ollama": not settings.IS_CLOUD,
+            "qwen": bool(qwen_key),
+            "huggingface": bool(hf_key),
+            "fal": bool(fal_key),
             "gemini": bool(gemini_key),
             "openrouter": bool(openrouter_key),
+            "openai": bool(openai_key),
             "persistent_jobs": insforge_service.configured(),
             "vault_root": str(vault_service.root),
         },
-        "setup_note": "OpenRouter es ahora el motor principal. Gemini se mantiene como respaldo si la llave es válida. Configura OPENROUTER_API_KEY en Vercel.",
+        "setup_note": "Qwen directo es el motor principal. Configura DASHSCOPE_API_KEY o QWEN_API_KEY; FAL_KEY/HF_TOKEN activan media; OPENROUTER_API_KEY queda como respaldo.",
     }
 
 
@@ -1147,7 +1313,7 @@ def create_upload_job(
     background_tasks: BackgroundTasks,
     brand_name: str = Form(...),
     video_id: str = Form(...),
-    ai_provider: str = Form("gemini"),
+    ai_provider: str = Form(settings.AI_DEFAULT_PROVIDER),
     ai_model: Optional[str] = Form(None),
     analysis_modules: Optional[str] = Form(None),
     file: UploadFile = File(...),
@@ -1204,7 +1370,7 @@ def get_brand_evolution(brand_name: str):
         _raise_http_error(error)
 
 @app.post("/training/consolidate/{brand_name}")
-def consolidate_brand_wisdom(brand_name: str, ai_provider: str = "gemini"):
+def consolidate_brand_wisdom(brand_name: str, ai_provider: str = settings.AI_DEFAULT_PROVIDER):
     """Sintetiza lo aprendido de las auditorías en reglas de marca definitivas."""
     try:
         try:

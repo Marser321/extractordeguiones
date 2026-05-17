@@ -2,8 +2,6 @@ const form = document.querySelector("#process-form");
 const submitButton = document.querySelector("#submit-button");
 const badgeBrand = document.querySelector("#badge-brand");
 const badgeAi = document.querySelector("#badge-ai");
-const devModeToggle = document.querySelector("#dev-mode-toggle");
-const devOnlyElements = document.querySelectorAll(".developer-only");
 const globalStatusDot = document.querySelector("#global-status-dot");
 const globalStatusTitle = document.querySelector("#global-status-title");
 const globalStatusSubtitle = document.querySelector("#global-status-subtitle");
@@ -19,7 +17,7 @@ const uploadFileName = document.querySelector("#upload-file-name");
 const localInput = document.querySelector("#local-file-path");
 const statusDot = document.querySelector("#status-dot");
 const statusText = document.querySelector("#status-text");
-const progressBar = document.querySelector("#progress-bar");
+// Removed single progress bar, replaced by pipeline tracker
 const errorBox = document.querySelector("#error-box");
 const resultBox = document.querySelector("#result-box");
 const jobBox = document.querySelector("#job-box");
@@ -34,18 +32,31 @@ const analysisPreview = document.querySelector("#analysis-preview");
 const analysisOverview = document.querySelector("#analysis-overview");
 const creativeStatusPill = document.querySelector("#creative-status-pill");
 const creativeSummary = document.querySelector("#creative-summary");
+const generateBrandImage = document.querySelector("#generate-brand-image");
+const generatedImageContainer = document.querySelector("#generated-image-container");
+const generatedImageContent = document.querySelector("#generated-image-content");
 const creativeStrategy = document.querySelector("#creative-strategy");
+const openaiConfigPill = document.querySelector("#openai-config-pill");
+const openaiSummary = document.querySelector("#openai-summary");
 const creativePackList = document.querySelector("#creative-pack-list");
 const generateCreativePack = document.querySelector("#generate-creative-pack");
 const copyCreativePack = document.querySelector("#copy-creative-pack");
 const creativeJsonLink = document.querySelector("#creative-json-link");
 const creativeMdLink = document.querySelector("#creative-md-link");
+const editorTargetBrand = document.querySelector("#editor-target-brand");
+const editorAdaptAll = document.querySelector("#editor-adapt-all");
+const editorOriginalBrand = document.querySelector("#editor-original-brand");
+const editorTargetBrandPill = document.querySelector("#editor-target-brand-pill");
+const editorOriginalBlocks = document.querySelector("#editor-original-blocks");
+const editorAdaptedBlocks = document.querySelector("#editor-adapted-blocks");
 const polishStatusPill = document.querySelector("#polish-status-pill");
 const polishSummary = document.querySelector("#polish-summary");
 const polishList = document.querySelector("#polish-list");
 const runPolish = document.querySelector("#run-polish");
 const aiProvider = document.querySelector("#ai-provider");
 const aiModel = document.querySelector("#ai-model");
+const aiMode = document.querySelector("#ai-mode");
+const aiModeStatus = document.querySelector("#ai-mode-status");
 const refreshAi = document.querySelector("#refresh-ai");
 const aiStatus = document.querySelector("#ai-status");
 const ollamaStatus = document.querySelector("#ollama-status");
@@ -54,6 +65,14 @@ const configSummary = document.querySelector("#config-summary");
 const aiSummary = document.querySelector("#ai-summary");
 const ollamaRunningPill = document.querySelector("#ollama-running-pill");
 const geminiConfigPill = document.querySelector("#gemini-config-pill");
+const statQwen = document.querySelector("#stat-qwen");
+const statQwenNote = document.querySelector("#stat-qwen-note");
+const qwenConfigPill = document.querySelector("#qwen-config-pill");
+const qwenSummary = document.querySelector("#qwen-summary");
+const statMedia = document.querySelector("#stat-media");
+const statMediaNote = document.querySelector("#stat-media-note");
+const mediaConfigPill = document.querySelector("#media-config-pill");
+const mediaSummary = document.querySelector("#media-summary");
 const statOpenRouter = document.querySelector("#stat-openrouter");
 const statOpenRouterNote = document.querySelector("#stat-openrouter-note");
 const openrouterConfigPill = document.querySelector("#openrouter-config-pill");
@@ -152,25 +171,7 @@ function updateThemeIcons(theme) {
   }
 }
 
-// Developer Mode Initialization
-if (devModeToggle) {
-  const savedMode = localStorage.getItem("devMode") === "true";
-  devModeToggle.checked = savedMode;
-  updateDevMode(savedMode);
-
-  devModeToggle.addEventListener("change", (e) => {
-    const isChecked = e.target.checked;
-    localStorage.setItem("devMode", isChecked);
-    updateDevMode(isChecked);
-  });
-}
-
-function updateDevMode(enabled) {
-  devOnlyElements.forEach(el => {
-    if (enabled) el.classList.remove("hidden");
-    else el.classList.add("hidden");
-  });
-}
+// Dev mode removed — all options in Configuración now
 
 themeToggle?.addEventListener("click", () => {
   const currentTheme = document.documentElement.getAttribute("data-theme");
@@ -225,10 +226,10 @@ function stateBadge(label, ready = false, warning = false) {
 }
 
 function updateContextBanner(video = selectedVideo, viewId = document.querySelector(".view.active-view")?.id) {
+  const projectBar = document.querySelector("#active-project-bar");
   if (!contextVideoTitle) return;
   if (!video) {
-    contextVideoTitle.textContent = "Sin video seleccionado";
-    contextVideoSubtitle.textContent = "Procesa una pieza o elige una del Vault para activar análisis creativo, marca y outputs.";
+    if (projectBar) projectBar.classList.add("hidden");
     contextAnalysisBadge.textContent = "Análisis pendiente";
     contextAnalysisBadge.className = "state-badge neutral";
     contextAuditBadge.textContent = "Auditoría pendiente";
@@ -239,11 +240,12 @@ function updateContextBanner(video = selectedVideo, viewId = document.querySelec
     return;
   }
 
+  if (projectBar) projectBar.classList.remove("hidden");
   const analysisReady = video.analysis_status === "completed";
   const auditReady = Boolean(video.audit?.overall_score);
   const creativeReady = Boolean(video.creative_pack?.available);
   contextVideoTitle.textContent = `${video.brand_name} / ${video.video_id}`;
-  contextVideoSubtitle.textContent = `${humanStatus(video.status)} · ${video.segments_count || 0} segmentos`;
+  if (contextVideoSubtitle) contextVideoSubtitle.textContent = `${humanStatus(video.status)} · ${video.segments_count || 0} segmentos`;
   contextAnalysisBadge.textContent = analysisReady ? "Análisis listo" : "Falta análisis";
   contextAnalysisBadge.className = `state-badge ${analysisReady ? "ready" : "warning"}`;
   contextAuditBadge.textContent = auditReady ? `Auditoría ${video.audit.overall_score}/10` : "Auditoría pendiente";
@@ -300,6 +302,7 @@ function validateCurrentStep() {
 }
 
 async function loadAuditReport() {
+  if (!auditDetails || !auditSummary) return;
   auditDetails.textContent = "Solicitando veredicto...";
   try {
     const response = await fetch("/ai/audit-report");
@@ -313,8 +316,8 @@ async function loadAuditReport() {
     renderAuditStat(data);
   } catch (error) {
     auditDetails.textContent = "Error de conexión con el auditor.";
-    statAudit.textContent = "Error";
-    statAuditNote.textContent = "No se pudo cargar";
+    if (statAudit) statAudit.textContent = "Error";
+    if (statAuditNote) statAuditNote.textContent = "No se pudo cargar";
   }
 }
 
@@ -373,11 +376,11 @@ function renderAuditReport(report) {
 function renderAuditStat(report) {
   const total = report.total_videos || 0;
   const score = report.average_score;
-  statAudit.textContent = score ? `${score}/10` : "Sin datos";
-  statAuditNote.textContent = `${total} videos auditables`;
+  if (statAudit) statAudit.textContent = score ? `${score}/10` : "Sin datos";
+  if (statAuditNote) statAuditNote.textContent = `${total} videos auditables`;
 }
 
-refreshAudit.addEventListener("click", loadAuditReport);
+refreshAudit?.addEventListener("click", loadAuditReport);
 if (refreshAudit) loadAuditReport();
 let latestResult = null;
 let latestCreativePack = null;
@@ -406,16 +409,26 @@ function handleInstagramUrlHint() {
 }
 
 function setMainView(viewId) {
+  // Redirect merged views into Biblioteca sub-tabs
+  if (viewId === "polish-view") viewId = "analysis-view";
+  if (viewId === "outputs-view") viewId = "creative-view";
+  if (viewId === "guide-view") viewId = "process-view";
+
+  // Analysis and Brand now live inside vault-view as sub-tabs
+  let bibTarget = null;
+  if (viewId === "analysis-view") { bibTarget = "bib-analysis"; viewId = "vault-view"; }
+  if (viewId === "brand-view") { bibTarget = "bib-brand"; viewId = "vault-view"; }
+
   mainTabs.forEach((tab) => tab.classList.toggle("active", tab.dataset.view === viewId));
   views.forEach((view) => view.classList.toggle("active-view", view.id === viewId));
   updateContextBanner(selectedVideo, viewId);
-  if (viewId === "vault-view") loadBrands();
-  if (viewId === "analysis-view") renderAnalysis(selectedVideo);
-  if (viewId === "creative-view") renderCreativeLab(selectedVideo);
-  if (viewId === "polish-view") renderPolish(selectedVideo);
+
+  if (viewId === "vault-view") {
+    loadBrands();
+    if (bibTarget) switchBibTab(bibTarget);
+  }
+  if (viewId === "creative-view") { renderCreativeLab(selectedVideo); renderOutputs(selectedVideo); }
   if (viewId === "ai-view") loadAiStatus();
-  if (viewId === "brand-view") loadBrandProfile(selectedVideo?.brand_name || document.querySelector("#brand-name").value.trim());
-  if (viewId === "outputs-view") renderOutputs(selectedVideo);
 }
 
 function setSource(source) {
@@ -443,7 +456,60 @@ function setDroppedFiles(fileList) {
 function setStatus(kind, text, progress = null) {
   statusDot.className = `status-dot ${kind}`;
   statusText.textContent = text;
-  if (progress !== null) progressBar.style.width = `${progress}%`;
+  
+  if (progress !== null) {
+    const stepTranscribe = document.querySelector("#step-transcribe");
+    const stepAnalysis = document.querySelector("#step-analysis");
+    const stepCreative = document.querySelector("#step-creative");
+    const pb1 = document.querySelector("#progress-bar-1");
+    const pb2 = document.querySelector("#progress-bar-2");
+    
+    if (stepTranscribe && stepAnalysis && stepCreative && pb1 && pb2) {
+      // Reset all classes
+      [stepTranscribe, stepAnalysis, stepCreative].forEach(el => {
+        el.classList.remove("pending", "processing", "completed");
+      });
+      
+      if (progress === 0) {
+        stepTranscribe.classList.add("pending");
+        stepAnalysis.classList.add("pending");
+        stepCreative.classList.add("pending");
+        pb1.style.width = "0%";
+        pb2.style.width = "0%";
+      } else if (progress > 0 && progress < 33) {
+        stepTranscribe.classList.add("processing");
+        stepAnalysis.classList.add("pending");
+        stepCreative.classList.add("pending");
+        pb1.style.width = `${(progress / 33) * 100}%`;
+        pb2.style.width = "0%";
+      } else if (progress >= 33 && progress < 66) {
+        stepTranscribe.classList.add("completed");
+        stepAnalysis.classList.add("processing");
+        stepCreative.classList.add("pending");
+        pb1.style.width = "100%";
+        pb2.style.width = `${((progress - 33) / 33) * 100}%`;
+      } else if (progress >= 66 && progress < 100) {
+        stepTranscribe.classList.add("completed");
+        stepAnalysis.classList.add("completed");
+        stepCreative.classList.add("processing");
+        pb1.style.width = "100%";
+        pb2.style.width = `${((progress - 66) / 34) * 100}%`;
+      } else if (progress >= 100) {
+        stepTranscribe.classList.add("completed");
+        stepAnalysis.classList.add("completed");
+        stepCreative.classList.add("completed");
+        pb1.style.width = "100%";
+        pb2.style.width = "100%";
+      }
+
+      if (kind === "error") {
+        document.querySelectorAll(".pipeline-step.processing").forEach(el => {
+          el.classList.remove("processing");
+          el.classList.add("pending");
+        });
+      }
+    }
+  }
 }
 
 function showError(message) {
@@ -488,7 +554,7 @@ async function submitJob(payload) {
 function buildPayload(formData) {
   const brandName = formData.get("brand_name")?.trim();
   const videoId = formData.get("video_id")?.trim();
-  const provider = formData.get("ai_provider") || "gemini";
+  const provider = formData.get("ai_provider") || "qwen";
   const model = formData.get("ai_model") || null;
 
   if (activeSource === "upload") {
@@ -591,22 +657,31 @@ async function loadBrands() {
     return;
   }
 
-  if (!data.brands.length) {
-    brandList.innerHTML = `<div class="empty-state-box"><span class="empty-icon">AD</span><p>Todavía no hay marcas. Procesa tu primera pieza.</p></div>`;
+  // Filter out ghost/test brands with 0 videos for a clean, professional listing
+  const activeBrands = data.brands.filter(b => (b.video_count || 0) > 0);
+  const allBrands = data.brands; // Keep all for editor dropdown
+
+  if (!activeBrands.length) {
+    brandList.innerHTML = `<div class="empty-state-box"><span class="empty-icon">📂</span><p>Todavía no hay marcas con contenido. Procesa tu primera pieza en "Nueva extracción".</p></div>`;
     statVault.textContent = "0 videos";
     statVaultNote.textContent = "Sin marcas";
     return;
   }
 
-  const totalVideos = data.brands.reduce((sum, brand) => sum + (brand.video_count || 0), 0);
+  const totalVideos = activeBrands.reduce((sum, brand) => sum + (brand.video_count || 0), 0);
   statVault.textContent = `${totalVideos} videos`;
-  statVaultNote.textContent = `${data.brands.length} marcas`;
-  brandList.innerHTML = data.brands.map((brand) => `
+  statVaultNote.textContent = `${activeBrands.length} marcas`;
+  brandList.innerHTML = activeBrands.map((brand) => `
     <button class="list-item" type="button" data-brand="${escapeAttr(brand.brand_name)}">
       <strong>${escapeHtml(brand.brand_name)}</strong>
       <span>${brand.video_count} videos</span>
     </button>
   `).join("");
+
+  if (editorTargetBrand) {
+    editorTargetBrand.innerHTML = `<option value="">Selecciona marca destino…</option>` +
+      allBrands.map(brand => `<option value="${escapeAttr(brand.brand_name)}">${escapeHtml(brand.brand_name)}</option>`).join("");
+  }
 }
 
 async function loadVideos(brandName) {
@@ -652,6 +727,7 @@ async function loadVideoDetail(brandName, videoId) {
   renderCreativeLab(data);
   renderPolish(data);
   renderOutputs(data);
+  renderScriptEditor(data);
   loadBrandProfile(data.brand_name);
 }
 
@@ -668,7 +744,7 @@ function renderVideoDetail(video) {
       <article class="insight-card">
         <span class="label">Estado</span>
         <strong>${video.analysis_status === "completed" ? "Análisis listo" : "Falta análisis"}</strong>
-        <p>${video.audit?.overall_score ? `Auditoría ${video.audit.overall_score}/10.` : "Auditoría pendiente."} ${video.creative_pack?.available ? "Pack creativo listo." : "Creativos pendientes."}</p>
+        <p>${video.creative_pack?.available ? "Pack creativo listo." : "Creativos pendientes."}</p>
       </article>
     </div>
     <div class="actions">
@@ -691,14 +767,13 @@ async function renderCreativeLab(video) {
 
   if (!video) {
     creativeStatusPill.textContent = "Sin selección";
-    creativeSummary.innerHTML = "Selecciona una pieza en el Vault para crear prompts, adsets y formatos listos para herramientas externas.";
+    creativeSummary.innerHTML = "Selecciona una pieza en Mis proyectos para crear prompts, adsets y formatos listos para herramientas externas.";
     return;
   }
 
   creativeStatusPill.textContent = video.creative_pack?.available ? "Pack disponible" : "Pendiente";
   creativeSummary.innerHTML = `
     <strong>${escapeHtml(video.brand_name)} / ${escapeHtml(video.video_id)}</strong>
-    <span>Auditoría: ${video.audit?.overall_score ? `${video.audit.overall_score}/10 (${escapeHtml(video.audit.status)})` : "pendiente"}</span>
     <span>${video.creative_pack?.available ? "Pack listo para revisar y copiar." : "Genera un pack para extraer prompts, adsets y mensajes listos para copiar."}</span>
   `;
 
@@ -725,7 +800,7 @@ async function renderPolish(video) {
 
   if (!video) {
     polishStatusPill.textContent = "Sin selección";
-    polishSummary.innerHTML = "Selecciona una pieza en el Vault para ejecutar microtareas de pulido.";
+    polishSummary.innerHTML = "Selecciona una pieza en Mis proyectos para ejecutar microtareas de pulido.";
     return;
   }
 
@@ -950,19 +1025,28 @@ function renderAdsetCard(item, index) {
         <span class="pill badge-fuerte">pauta</span>
       </div>
       <div class="creative-card-body">
-        <div class="creative-copy-block"><span class="label">Copy principal</span><strong>${escapeHtml(item.primary_text || item.headline || "-")}</strong></div>
-        <p class="prompt-summary line-clamp">${escapeHtml(visibleSummary)}</p>
-        <button class="primary-button" type="button" data-creative-adset="${index}">Copiar</button>
-        <details class="raw-details compact-details">
-          <summary>Ver detalles</summary>
-          <dl class="detail-list">
-            <div><dt>Objetivo</dt><dd>${escapeHtml(humanObjective(item.objective) || "-")}</dd></div>
-            <div><dt>Audiencia</dt><dd>${escapeHtml(item.audience || "-")}</dd></div>
-            <div><dt>Headline</dt><dd>${escapeHtml(item.headline || "-")}</dd></div>
-            <div><dt>Descripción</dt><dd>${escapeHtml(item.description || "-")}</dd></div>
-          </dl>
-          <p class="prompt-box">${escapeHtml(item.visual_prompt || "")}</p>
-        </details>
+        <div class="creative-copy-block">
+          <span class="label">Copy principal / Headline</span>
+          <strong>${escapeHtml(item.primary_text || item.headline || "-")}</strong>
+          <div style="margin-top: 8px; font-size: 0.85rem; color: var(--text-muted);">
+            ${item.description ? `<span><strong>Descripción:</strong> ${escapeHtml(item.description)}</span><br>` : ""}
+            ${item.audience ? `<span><strong>Audiencia:</strong> ${escapeHtml(item.audience)}</span><br>` : ""}
+            ${item.objective ? `<span><strong>Objetivo:</strong> ${escapeHtml(humanObjective(item.objective))}</span>` : ""}
+          </div>
+        </div>
+        
+        ${item.visual_prompt ? `
+        <div class="strategy-box">
+          <h4>Prompt Visual</h4>
+          <p class="prompt-box" style="margin-top: 8px;">${escapeHtml(item.visual_prompt)}</p>
+        </div>` : ""}
+
+        <div class="creative-action-bar">
+          <button class="action-btn" type="button" data-creative-type="adset" data-creative-index="${index}" data-action="copy-text">📝 Copiar Texto</button>
+          ${item.visual_prompt ? `<button class="action-btn" type="button" data-creative-type="adset" data-creative-index="${index}" data-action="copy-prompt">🪄 Copiar Prompt</button>
+          <button class="action-btn generate-img-btn" type="button" data-creative-type="adset" data-creative-index="${index}" data-action="gen-img">🖼️ Generar Imagen</button>` : ""}
+          <button class="action-btn" type="button" data-creative-type="adset" data-creative-index="${index}" data-action="copy-full">📋 Copiar Todo</button>
+        </div>
       </div>
     </article>
   `;
@@ -977,16 +1061,19 @@ function renderMessageCard(item, index) {
         <span class="pill badge-requiere_revision">lead</span>
       </div>
       <div class="creative-card-body">
-        <div class="creative-copy-block"><span class="label">Mensaje</span><strong>${escapeHtml(item.message || "-")}</strong></div>
-        <p class="prompt-summary line-clamp">${escapeHtml(visibleSummary)}</p>
-        <button class="primary-button" type="button" data-creative-message="${index}">Copiar</button>
-        <details class="raw-details compact-details">
-          <summary>Ver detalles</summary>
-          <dl class="detail-list">
-            <div><dt>Tono</dt><dd>${escapeHtml(item.tone || "-")}</dd></div>
-            <div><dt>Uso</dt><dd>${escapeHtml(humanChannel(item.use) || "-")}</dd></div>
-          </dl>
-        </details>
+        <div class="creative-copy-block">
+          <span class="label">Mensaje</span>
+          <strong>${escapeHtml(item.message || "-")}</strong>
+          <div style="margin-top: 8px; font-size: 0.85rem; color: var(--text-muted);">
+            ${item.tone ? `<span><strong>Tono:</strong> ${escapeHtml(item.tone)}</span><br>` : ""}
+            ${item.use ? `<span><strong>Uso:</strong> ${escapeHtml(humanChannel(item.use))}</span>` : ""}
+          </div>
+        </div>
+
+        <div class="creative-action-bar">
+          <button class="action-btn" type="button" data-creative-type="message" data-creative-index="${index}" data-action="copy-text">📝 Copiar Texto</button>
+          <button class="action-btn" type="button" data-creative-type="message" data-creative-index="${index}" data-action="copy-full">📋 Copiar Todo</button>
+        </div>
       </div>
     </article>
   `;
@@ -995,8 +1082,10 @@ function renderMessageCard(item, index) {
 function renderCreativeObjectiveCard(item, index, metadata) {
   const channelLabel = humanChannel(item.channel);
   const assetLabel = humanAssetType(item.asset_type);
-  const objectivePreview = humanObjective(item.objective) || channelLabel || "Pieza creativa lista para usar.";
   const rawOptions = [item.channel, item.asset_type, item.objective].filter(hasOptionList).map((value) => firstOption(value) !== String(value).trim() ? String(value).trim() : "").filter(Boolean);
+  
+  const hasVisualPrompt = Boolean(item.prompt && (item.asset_type?.toLowerCase().includes("image") || item.asset_type?.toLowerCase().includes("thumbnail") || item.asset_type?.toLowerCase().includes("video")));
+
   return `
     <article class="creative-card">
       <div class="creative-card-head">
@@ -1008,26 +1097,31 @@ function renderCreativeObjectiveCard(item, index, metadata) {
       </div>
       <div class="creative-card-body">
         <div class="creative-copy-block">
-          <span class="label">Copy visible</span>
+          <span class="label">Copy / Texto principal</span>
           <strong>${escapeHtml(item.copy_overlay || item.hook || "-")}</strong>
-        </div>
-        <p class="prompt-summary line-clamp">${escapeHtml(objectivePreview)}</p>
-        <button class="primary-button" type="button" data-creative-copy="${index}">Copiar</button>
-        <details class="raw-details compact-details">
-          <summary>Ver detalles</summary>
-          <dl class="detail-list">
-            <div><dt>Para qué sirve</dt><dd>${escapeHtml(humanObjective(item.objective) || "-")}</dd></div>
-            <div><dt>Dónde usarlo</dt><dd>${escapeHtml(channelLabel)} · ${escapeHtml(firstOption(item.aspect_ratio) || "-")}</dd></div>
-            <div><dt>CTA</dt><dd>${escapeHtml(item.cta || "-")}</dd></div>
-            ${rawOptions.length ? `<div><dt>Opciones detectadas</dt><dd>${escapeHtml(rawOptions.join(" · "))}</dd></div>` : ""}
-          </dl>
-          <div class="strategy-box">
-            <h4>Estrategia</h4>
-            <p>${escapeHtml(item.why_it_works || "Pieza diseñada para convertir el análisis en una acción creativa concreta.")}</p>
+          <div style="margin-top: 8px; font-size: 0.85rem; color: var(--text-muted);">
+            ${item.cta ? `<span><strong>CTA:</strong> ${escapeHtml(item.cta)}</span><br>` : ""}
+            ${item.objective ? `<span><strong>Objetivo:</strong> ${escapeHtml(humanObjective(item.objective))}</span>` : ""}
           </div>
-          <p class="prompt-box">${escapeHtml(item.prompt || "")}</p>
-          <button class="secondary-button" type="button" data-creative-copy-full="${index}">Copiar ficha completa</button>
-        </details>
+        </div>
+        
+        <div class="strategy-box">
+          <h4>Estrategia</h4>
+          <p style="margin-bottom: 0;">${escapeHtml(item.why_it_works || "Pieza diseñada para convertir el análisis en una acción creativa concreta.")}</p>
+        </div>
+
+        ${item.prompt ? `
+        <div class="strategy-box" style="background: var(--surface-2); border-left-color: var(--text-dim);">
+          <h4 style="color: var(--text-dim);">Prompt / Instrucción IA</h4>
+          <p class="prompt-box" style="margin-top: 8px; max-height: 120px;">${escapeHtml(item.prompt)}</p>
+        </div>` : ""}
+
+        <div class="creative-action-bar">
+          <button class="action-btn" type="button" data-creative-type="prompt" data-creative-index="${index}" data-action="copy-text">📝 Copiar Texto</button>
+          ${item.prompt ? `<button class="action-btn" type="button" data-creative-type="prompt" data-creative-index="${index}" data-action="copy-prompt">🪄 Copiar Prompt</button>` : ""}
+          ${hasVisualPrompt ? `<button class="action-btn generate-img-btn" type="button" data-creative-type="prompt" data-creative-index="${index}" data-action="gen-img">🖼️ Generar Imagen</button>` : ""}
+          <button class="action-btn" type="button" data-creative-type="prompt" data-creative-index="${index}" data-action="copy-full">📋 Copiar Todo</button>
+        </div>
       </div>
     </article>
   `;
@@ -1079,8 +1173,8 @@ function renderAnalysis(video) {
     analysisStatus.textContent = "Sin selección";
     analysisLinks.innerHTML = "";
     analysisOverview.innerHTML = "";
-    analysisPreview.textContent = "Selecciona una pieza en el Vault para revisar el análisis creativo.";
-    if (analysisContext) analysisContext.textContent = "Selecciona una pieza en el Vault para revisar el análisis creativo.";
+    analysisPreview.textContent = "Selecciona una pieza en Mis proyectos para revisar el análisis creativo.";
+    if (analysisContext) analysisContext.textContent = "Selecciona una pieza en Mis proyectos para revisar el análisis creativo.";
     return;
   }
 
@@ -1177,7 +1271,7 @@ async function refineSkill() {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        ai_provider: aiProvider.value || "openrouter",
+        ai_provider: aiProvider.value || "qwen",
         ai_model: aiModel.value || null
       })
     });
@@ -1232,7 +1326,7 @@ function renderFrames(video) {
 function renderOutputs(video) {
   if (!video) {
     outputsList.innerHTML = "";
-    outputsPreview.textContent = "Selecciona una pieza en el Vault.";
+    outputsPreview.textContent = "Selecciona una pieza en Mis proyectos.";
     return;
   }
   const brand = encodeURIComponent(video.brand_name);
@@ -1280,8 +1374,11 @@ async function loadAiStatus() {
     applyHybridMode(configData);
     updateGlobalStatus(aiData, ollamaData, configData);
   } catch (error) {
+    console.error("[AI status]", error);
     aiSummary.textContent = "No se pudo cargar el estado de IA.";
     configSummary.textContent = "No se pudo cargar configuración.";
+    if (statQwen) statQwen.textContent = "Error";
+    if (statMedia) statMedia.textContent = "Error";
     statOpenRouter.textContent = "Error";
     statGemini.textContent = "Oculto";
     statOllama.textContent = "Error";
@@ -1290,7 +1387,6 @@ async function loadAiStatus() {
 
 function applyHybridMode(config) {
   if (config.is_cloud) {
-    // Ocultar fuente local si estamos en Vercel
     const localTab = document.querySelector('.tab[data-source="local"]');
     if (localTab) localTab.style.display = 'none';
     if (activeSource === "local") {
@@ -1301,20 +1397,13 @@ function applyHybridMode(config) {
       localField.classList.add("hidden");
     }
 
-    // Ocultar sección de Ollama
-    const ollamaSection = document.querySelector('#ollama-status')?.closest('.analysis-panel');
-    if (ollamaSection) ollamaSection.classList.add('hidden');
-
-    // Deshabilitar la opción de Ollama en el selector de motores
     const ollamaOption = document.querySelector('option[value="ollama"]');
     if (ollamaOption) ollamaOption.disabled = true;
-    if (aiProvider?.value === "ollama") aiProvider.value = "openrouter";
-    
-    // Asegurar que Gemini esté oculto si no es el principal
+    if (aiProvider?.value === "ollama") aiProvider.value = "qwen";
+
     const geminiOption = document.querySelector('option[value="gemini"]');
     if (geminiOption && aiProvider?.value !== "gemini") geminiOption.classList.add('hidden');
 
-    // Badge en el sidebar product-caption
     const caption = document.querySelector('.product-caption');
     if (caption && !caption.querySelector('.cloud-pill')) {
       const pill = document.createElement('span');
@@ -1329,23 +1418,63 @@ function renderOllamaControl(status) {
   ollamaRunningPill.textContent = status.running ? "Encendido" : "Apagado";
   statOllama.textContent = status.running ? "Encendido" : "Apagado";
   statOllamaNote.textContent = status.installed ? "Disponible en este Mac" : "No disponible";
-  ollamaStatus.innerHTML = `<strong>${status.running ? "Motor local encendido." : status.installed ? "Motor local apagado." : "Motor local no disponible."}</strong><span>${status.running ? "Puedes usarlo para análisis locales de desarrollo." : status.installed ? "Puedes encenderlo cuando quieras trabajar localmente." : "Usa Gemini cuando el pipeline cloud esté configurado."}</span>`;
+  ollamaStatus.innerHTML = `<strong>${status.running ? "Motor local encendido." : status.installed ? "Motor local apagado." : "Motor local no disponible."}</strong><span>${status.running ? "Solo úsalo como fallback local o comparación." : status.installed ? "Puedes encenderlo si Qwen/API cloud no está disponible." : "Usa Qwen API como motor principal."}</span>`;
   startOllama.disabled = !status.can_start;
   stopOllama.disabled = !status.can_stop;
   restartOllama.disabled = !status.installed;
 }
 
 function renderConfigStatus(status) {
+  const qwenReady = Boolean(status.qwen_api_key_configured);
+  if (qwenConfigPill) qwenConfigPill.textContent = qwenReady ? "Activo" : "Requerido";
+  if (statQwen) statQwen.textContent = qwenReady ? "Listo" : "Pendiente";
+  if (statQwenNote) statQwenNote.textContent = qwenReady ? "Core activo" : "Falta key";
+  if (qwenSummary) {
+    qwenSummary.innerHTML = `
+      <strong>${qwenReady ? "Qwen directo está activo." : "Falta la key de Qwen."}</strong>
+      <span>${qwenReady ? `Base: ${escapeHtml(status.qwen_base_url || "")}. Modelo rápido: ${escapeHtml(status.qwen_default_model || "")}.` : "Configura DASHSCOPE_API_KEY o QWEN_API_KEY en .env/Vercel."}</span>
+    `;
+  }
+
+  const falReady = Boolean(status.fal_api_key_configured);
+  const hfReady = Boolean(status.huggingface_api_key_configured);
+  const mediaReady = falReady || hfReady;
+  if (mediaConfigPill) mediaConfigPill.textContent = mediaReady ? "Activo" : "Opcional";
+  if (statMedia) statMedia.textContent = mediaReady ? "Listo" : "Opcional";
+  if (statMediaNote) statMediaNote.textContent = mediaReady ? `${falReady ? "fal" : ""}${falReady && hfReady ? " + " : ""}${hfReady ? "HF" : ""}` : "Falta FAL_KEY/HF_TOKEN";
+  if (mediaSummary) {
+    mediaSummary.innerHTML = `
+      <strong>${mediaReady ? "Media open-source-first disponible." : "Media visual todavía opcional."}</strong>
+      <span>${mediaReady ? "fal/Hugging Face quedan listos para imagen, video o modelos de apoyo." : "Configura FAL_KEY para imagen/video y HF_TOKEN para providers de Hugging Face."}</span>
+    `;
+  }
+
   // OpenRouter Status
   const orReady = Boolean(status.openrouter_api_key_configured);
-  if (openrouterConfigPill) openrouterConfigPill.textContent = orReady ? "Activo" : "No configurado";
+  if (openrouterConfigPill) openrouterConfigPill.textContent = orReady ? "Respaldo activo" : "Sin respaldo";
   if (statOpenRouter) statOpenRouter.textContent = orReady ? "Listo" : "Pendiente";
-  if (statOpenRouterNote) statOpenRouterNote.textContent = orReady ? "Disponible cloud" : "No configurado";
+  if (statOpenRouterNote) statOpenRouterNote.textContent = orReady ? "Fallback cloud" : "No configurado";
   if (openrouterSummary) {
     openrouterSummary.innerHTML = `
       <strong>${orReady ? "OpenRouter está activo." : "OpenRouter no está configurado."}</strong>
-      <span>${orReady ? "Usando OpenRouter como motor principal para análisis creativo." : "Configura OPENROUTER_API_KEY en Vercel."}</span>
+      <span>${orReady ? "Queda como respaldo si Qwen directo falla o para comparar modelos." : "Configura OPENROUTER_API_KEY si quieres un seguro cloud."}</span>
     `;
+  }
+
+  // OpenAI Status
+  const openaiReady = Boolean(status.openai_api_key_configured);
+  if (openaiConfigPill) openaiConfigPill.textContent = openaiReady ? "Fallback activo" : "Opcional";
+  if (openaiSummary) {
+    openaiSummary.innerHTML = `
+      <strong>${openaiReady ? "OpenAI está disponible como fallback." : "OpenAI no es requerido para el MVP core."}</strong>
+      <span>${openaiReady ? "Puede usarse para GPT Image si se elige manualmente." : "La ruta open-source-first usa fal/Hugging Face para media."}</span>
+    `;
+  }
+  
+  if (generateBrandImage) {
+    generateBrandImage.classList.remove("hidden");
+    generateBrandImage.disabled = !mediaReady && !openaiReady;
+    generateBrandImage.textContent = mediaReady ? "Generar Imagen" : openaiReady ? "Generar Imagen" : "Falta FAL_KEY";
   }
 
   // Gemini Status (Hidden/Secondary)
@@ -1354,35 +1483,41 @@ function renderConfigStatus(status) {
   if (statGemini) statGemini.textContent = "Oculto";
   if (statGeminiNote) statGeminiNote.textContent = "Secundario";
   if (configSummary) {
-    configSummary.innerHTML = `<strong>Panel de Gemini desactivado por preferencia del usuario.</strong>`;
+    configSummary.innerHTML = `<strong>Gemini queda como secundario para multimodal/transcripción cuando exista key.</strong>`;
   }
 }
 
 function updateGlobalStatus(aiData, ollamaData, configData) {
+  const isQwenReady = Boolean(configData.qwen_api_key_configured);
   const isOpenRouterReady = Boolean(configData.openrouter_api_key_configured);
   const isGeminiReady = Boolean(configData.gemini_api_key_configured && (configData.gemini_sdk_installed || configData.gemini_legacy_sdk_installed));
   const isOllamaReady = Boolean(ollamaData.running);
 
-  if (isOpenRouterReady) {
-    badgeAi.classList.add("hidden");
+  if (isQwenReady) {
+    badgeAi?.classList.add("hidden");
     globalStatusDot.className = "status-dot done";
-    globalStatusTitle.textContent = "Pipeline cloud activo";
-    globalStatusSubtitle.textContent = "Listo con OpenRouter";
+    globalStatusTitle.textContent = "Pipeline Qwen activo";
+    globalStatusSubtitle.textContent = "Core listo con Qwen directo";
+  } else if (isOpenRouterReady) {
+    badgeAi?.classList.add("hidden");
+    globalStatusDot.className = "status-dot done";
+    globalStatusTitle.textContent = "Respaldo cloud activo";
+    globalStatusSubtitle.textContent = "Qwen directo pendiente";
   } else if (isGeminiReady) {
-    badgeAi.classList.add("hidden");
+    badgeAi?.classList.add("hidden");
     globalStatusDot.className = "status-dot done";
     globalStatusTitle.textContent = "Gemini activo (Respaldo)";
     globalStatusSubtitle.textContent = "Listo para analizar";
   } else if (isOllamaReady) {
-    badgeAi.classList.add("hidden");
+    badgeAi?.classList.add("hidden");
     globalStatusDot.className = "status-dot done";
     globalStatusTitle.textContent = "Motor local activo";
     globalStatusSubtitle.textContent = "Modo desarrollo listo";
   } else {
-    badgeAi.classList.remove("hidden");
+    badgeAi?.classList.remove("hidden");
     globalStatusDot.className = "status-dot error";
     globalStatusTitle.textContent = "Pipeline pendiente";
-    globalStatusSubtitle.textContent = "Falta OPENROUTER_API_KEY";
+    globalStatusSubtitle.textContent = "Falta DASHSCOPE_API_KEY o QWEN_API_KEY";
   }
 }
 
@@ -1390,13 +1525,20 @@ function updateGlobalStatus(aiData, ollamaData, configData) {
 function renderAiSummary(status) {
   const ollama = status.ollama || {};
   const gemini = status.gemini || {};
+  const qwen = status.qwen || {};
+  const huggingface = status.huggingface || {};
+  const fal = status.fal || {};
   const openrouter = status.openrouter || {};
-  const recommended = openrouter.available ? "OpenRouter" : gemini.available ? "Gemini" : ollama.available ? "Ollama" : "Ninguno";
+  const registry = status.model_registry || {};
+  const fastMode = registry.modes?.fast;
+  const fallbackMode = registry.modes?.fallback;
+  const recommended = qwen.available ? "Qwen directo" : openrouter.available ? "OpenRouter (respaldo)" : gemini.available ? "Gemini" : ollama.available ? "Ollama local" : "Ninguno";
   const testProvider = document.querySelector("#test-ai-provider");
-  if (testProvider) testProvider.value = recommended === "OpenRouter" ? "openrouter" : recommended === "Gemini" ? "gemini" : "ollama";
+  if (testProvider) testProvider.value = fastMode?.provider || (recommended === "Gemini" ? "gemini" : recommended.includes("OpenRouter") ? "openrouter" : "ollama");
+  const activeModel = qwen.available ? fastMode?.model : openrouter.available ? fallbackMode?.model : gemini.available ? gemini.default_model : ollama.default_model;
   aiSummary.innerHTML = `
     <strong>${recommended === "Ninguno" ? "No hay motor activo." : `${recommended} es la mejor opción ahora.`}</strong>
-    <span>${recommended === "Ninguno" ? "Configura OpenRouter en Vercel o activa el motor local." : "Puedes procesar piezas con esta configuración."}</span>
+    <span>${recommended === "Ninguno" ? "Configura DASHSCOPE_API_KEY/QWEN_API_KEY para activar el core." : `Modelo base: ${escapeHtml(activeModel || "")}. Media: ${fal.available ? "fal" : huggingface.available ? "HF" : "pendiente"}.`}</span>
   `;
 }
 
@@ -1417,17 +1559,86 @@ async function runOllamaAction(action) {
   }
 }
 
+function modeIsBlocked(mode, status) {
+  if (!mode) return true;
+  if (mode.provider === "ollama") {
+    if (status.is_cloud) return true;
+    const installed = Boolean(mode.installed || (status.ollama?.models || []).includes(mode.model));
+    return !installed || !status.ollama?.running;
+  }
+  if (mode.provider === "qwen") return !status.qwen?.available;
+  if (mode.provider === "huggingface") return !status.huggingface?.available;
+  if (mode.provider === "fal") return !status.fal?.available;
+  if (mode.provider === "openrouter") return !status.openrouter?.available;
+  if (mode.provider === "gemini") return !status.gemini?.available;
+  if (mode.provider === "groq") return !status.groq?.available;
+  return !mode.available;
+}
+
+function activeModeFromStatus(status) {
+  const registry = status.model_registry || {};
+  const modes = registry.modes || {};
+  const currentMode = aiMode?.value || registry.default_mode || "fast";
+  if (modes[currentMode] && !modeIsBlocked(modes[currentMode], status)) return currentMode;
+  const fallbackMode = registry.default_mode || "fast";
+  if (modes[fallbackMode] && !modeIsBlocked(modes[fallbackMode], status)) return fallbackMode;
+  return Object.keys(modes).find((key) => !modeIsBlocked(modes[key], status)) || currentMode;
+}
+
 function updateAiModels(status) {
+  const qwen = status.qwen || {};
+  const huggingface = status.huggingface || {};
+  const fal = status.fal || {};
   const openrouter = status.openrouter || {};
   const gemini = status.gemini || {};
   const ollama = status.ollama || {};
+  const registry = status.model_registry || {};
+  const modes = registry.modes || {};
+  const modeOrder = ["fast", "quality", "deep", "vision", "fallback", "local"].filter((mode) => modes[mode]);
+  const selectedMode = activeModeFromStatus(status);
+  const selected = modes[selectedMode];
+
+  if (aiMode && modeOrder.length) {
+    aiMode.innerHTML = modeOrder.map((modeKey) => {
+      const mode = modes[modeKey];
+      const blocked = modeIsBlocked(mode, status);
+      const suffix = blocked && modeKey === "local" ? " (pendiente)" : "";
+      return `<option value="${escapeAttr(modeKey)}" ${modeKey === selectedMode ? "selected" : ""} ${blocked ? "disabled" : ""}>${escapeHtml(mode.label || modeKey)}${suffix}</option>`;
+    }).join("");
+    aiMode.value = selectedMode;
+  }
+
   let models = [];
-  if (provider === "openrouter") models = openrouter.models;
-  else if (provider === "gemini") models = gemini.models;
+  if (selected) {
+    aiProvider.value = selected.provider;
+    models = [selected.model];
+  } else if (aiProvider.value === "qwen") models = qwen.models;
+  else if (aiProvider.value === "huggingface") models = huggingface.models;
+  else if (aiProvider.value === "fal") models = fal.models;
+  else if (aiProvider.value === "openrouter") models = openrouter.models;
+  else if (aiProvider.value === "gemini") models = gemini.models;
   else models = ollama.models;
+
   aiModel.innerHTML = (models || []).map((model) => `<option value="${escapeAttr(model)}">${escapeHtml(model)}</option>`).join("");
   if (!aiModel.innerHTML) {
     aiModel.innerHTML = `<option value=""></option>`;
+  }
+  if (selected?.model) aiModel.value = selected.model;
+
+  const testProvider = document.querySelector("#test-ai-provider");
+  const testModel = document.querySelector("#test-ai-model");
+  if (testProvider && selected?.provider) testProvider.value = selected.provider;
+  if (testModel && selected?.model) testModel.value = selected.model;
+
+  if (aiModeStatus) {
+    if (selected) {
+      aiModeStatus.innerHTML = `
+        <strong>${escapeHtml(selected.label)}: ${escapeHtml(selected.provider)} / ${escapeHtml(selected.model)}</strong>
+        <span>Fallback: ${escapeHtml(selected.fallback_provider || "manual")}. Riesgo/costo: ${escapeHtml(selected.cost_risk || "n/d")}.</span>
+      `;
+    } else {
+      aiModeStatus.innerHTML = `<strong>Sin modo IA activo.</strong><span>Configura Qwen API o usa un respaldo disponible.</span>`;
+    }
   }
 }
 
@@ -1512,6 +1723,57 @@ function escapeAttr(value) {
 
 mainTabs.forEach((tab) => tab.addEventListener("click", () => setMainView(tab.dataset.view)));
 sourceTabs.forEach((tab) => tab.addEventListener("click", () => setSource(tab.dataset.source)));
+
+// ═══ Biblioteca sub-tab switching ═══
+function switchBibTab(targetId) {
+  document.querySelectorAll(".bib-tab").forEach(t => {
+    const isActive = t.dataset.bib === targetId;
+    t.classList.toggle("active", isActive);
+    t.setAttribute("aria-selected", isActive ? "true" : "false");
+  });
+  document.querySelectorAll(".bib-panel").forEach(p => {
+    const isActive = p.id === targetId;
+    p.classList.toggle("active-bib", isActive);
+    p.hidden = !isActive;
+  });
+  // Trigger renders when switching to sub-tabs
+  if (targetId === "bib-analysis") { renderAnalysis(selectedVideo); renderPolish(selectedVideo); }
+  if (targetId === "bib-brand") loadBrandProfile(selectedVideo?.brand_name || document.querySelector("#brand-name")?.value?.trim() || "");
+}
+
+document.querySelectorAll(".bib-tab").forEach(tab =>
+  tab.addEventListener("click", () => switchBibTab(tab.dataset.bib))
+);
+
+// ═══ Config button in sidebar footer ═══
+const sidebarConfigBtn = document.querySelector("#sidebar-config-btn");
+if (sidebarConfigBtn) {
+  sidebarConfigBtn.addEventListener("click", () => setMainView("ai-view"));
+}
+
+// ═══ Move analysis-view and brand-view content into Biblioteca sub-panels ═══
+document.addEventListener("DOMContentLoaded", () => {
+  const analysisView = document.querySelector("#analysis-view");
+  const brandView = document.querySelector("#brand-view");
+  const bibAnalysis = document.querySelector("#bib-analysis");
+  const bibBrand = document.querySelector("#bib-brand");
+
+  if (analysisView && bibAnalysis) {
+    // Move all children from analysis-view into bib-analysis
+    while (analysisView.firstChild) {
+      bibAnalysis.appendChild(analysisView.firstChild);
+    }
+    analysisView.style.display = "none";
+  }
+
+  if (brandView && bibBrand) {
+    // Move all children from brand-view into bib-brand
+    while (brandView.firstChild) {
+      bibBrand.appendChild(brandView.firstChild);
+    }
+    brandView.style.display = "none";
+  }
+});
 urlInput.addEventListener("input", () => {
   if (!isInstagramUrl(urlInput.value.trim())) return;
   showError(INSTAGRAM_UPLOAD_MESSAGE);
@@ -1532,7 +1794,7 @@ consolidateWisdomBtn.addEventListener("click", async () => {
   brandProfileResult.innerHTML = `<strong>Actualizando sabiduría...</strong><span>Estoy revisando el historial de auditorías de la marca.</span>`;
   
   try {
-    const response = await fetch(`/training/consolidate/${encodeURIComponent(brandName)}?ai_provider=${encodeURIComponent(aiProvider.value || "openrouter")}`, { method: "POST" });
+    const response = await fetch(`/training/consolidate/${encodeURIComponent(brandName)}?ai_provider=${encodeURIComponent(aiProvider.value || "qwen")}`, { method: "POST" });
     const data = await response.json();
     if (response.ok) {
       brandWisdomCard.classList.remove("hidden");
@@ -1591,6 +1853,7 @@ document.body.addEventListener("drop", (event) => {
 refreshVault.addEventListener("click", loadBrands);
 refreshAi.addEventListener("click", loadAiStatus);
 aiProvider.addEventListener("change", loadAiStatus);
+if (aiMode) aiMode.addEventListener("change", loadAiStatus);
 startOllama.addEventListener("click", () => runOllamaAction("start"));
 stopOllama.addEventListener("click", () => runOllamaAction("stop"));
 restartOllama.addEventListener("click", () => runOllamaAction("restart"));
@@ -1642,6 +1905,53 @@ aiTestForm.addEventListener("submit", async (event) => {
   }
 });
 
+generateBrandImage.addEventListener("click", async () => {
+  if (!latestCreativePack) return;
+  const brandName = selectedVideo?.brand_name;
+  const videoId = selectedVideo?.video_id;
+  
+  // Buscar un prompt visual en el pack
+  const visualPrompts = (latestCreativePack.channel_packs || []).filter(p => p.asset_type && String(p.asset_type).toLowerCase().includes("hero"));
+  let promptText = "Una imagen premium y cinematográfica para una campaña publicitaria.";
+  if (visualPrompts.length > 0 && visualPrompts[0].prompt) {
+    promptText = visualPrompts[0].prompt;
+  } else if (latestCreativePack.strategy?.visual_direction) {
+    promptText = latestCreativePack.strategy.visual_direction;
+  }
+  
+  generateBrandImage.disabled = true;
+  generateBrandImage.textContent = "Generando...";
+  generatedImageContainer.classList.remove("hidden");
+  generatedImageContent.innerHTML = "Llamando al proveedor de imagen... Esto puede tomar unos segundos.";
+  
+  try {
+    const response = await fetch("/api/generate-brand-image", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        brand_name: brandName,
+        video_id: videoId,
+        prompt: promptText
+      })
+    });
+    const data = await response.json();
+    if (!response.ok) throw new Error(data.detail || "No se pudo generar la imagen.");
+    
+    generatedImageContent.innerHTML = `
+      <img src="${data.url}" alt="Brand Image" style="max-width: 100%; height: auto; border-radius: var(--radius); margin-top: var(--space-s); box-shadow: var(--shadow-panel);">
+      <div style="margin-top: 8px;">
+        <a href="${data.url}" target="_blank" class="secondary-button">Abrir Original</a>
+        ${data.local_path ? '<span style="font-size: 0.8rem; color: var(--text-muted); margin-left: 10px;">Guardado en el Vault</span>' : ''}
+      </div>
+    `;
+  } catch (error) {
+    generatedImageContent.innerHTML = `<span style="color: var(--danger);">Error: ${escapeHtml(error.message)}</span>`;
+  } finally {
+    generateBrandImage.disabled = false;
+    generateBrandImage.textContent = "Generar Imagen";
+  }
+});
+
 brandProfileForm.addEventListener("submit", async (event) => {
   event.preventDefault();
   const brandName = document.querySelector("#profile-brand-name").value.trim();
@@ -1668,11 +1978,11 @@ brandProfileForm.addEventListener("submit", async (event) => {
 
 reanalyzeVideo.addEventListener("click", async () => {
   if (!selectedVideo) {
-    outputsPreview.textContent = "Selecciona una pieza en el Vault antes de reanalizar.";
+    outputsPreview.textContent = "Selecciona una pieza en Mis proyectos antes de reanalizar.";
     return;
   }
   const payload = {
-    ai_provider: aiProvider.value || "openrouter",
+    ai_provider: aiProvider.value || "qwen",
     ai_model: aiModel.value || null,
   };
   const response = await fetch(`/jobs/analyze/${encodeURIComponent(selectedVideo.brand_name)}/${encodeURIComponent(selectedVideo.video_id)}`, {
@@ -1690,11 +2000,11 @@ reanalyzeVideo.addEventListener("click", async () => {
   startPolling(job.job_id);
 });
 
-refineSkillBtn.addEventListener("click", refineSkill);
+refineSkillBtn?.addEventListener("click", refineSkill);
 
 runPolish.addEventListener("click", async () => {
   if (!selectedVideo) {
-    polishSummary.innerHTML = "Selecciona una pieza en el Vault antes de ejecutar pulido.";
+    polishSummary.innerHTML = "Selecciona una pieza en Mis proyectos antes de ejecutar pulido.";
     return;
   }
 
@@ -1731,7 +2041,7 @@ polishList.addEventListener("click", (event) => {
 
 generateCreativePack.addEventListener("click", async () => {
   if (!selectedVideo) {
-    creativeSummary.innerHTML = "Selecciona una pieza en el Vault antes de generar creativos.";
+    creativeSummary.innerHTML = "Selecciona una pieza en Mis proyectos antes de generar creativos.";
     return;
   }
 
@@ -1747,7 +2057,7 @@ generateCreativePack.addEventListener("click", async () => {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        ai_provider: aiProvider.value || "openrouter",
+        ai_provider: aiProvider.value || "qwen",
         ai_model: aiModel.value || null,
         fallback_provider: "openrouter",
       }),
@@ -1768,38 +2078,65 @@ generateCreativePack.addEventListener("click", async () => {
 });
 
 creativePackList.addEventListener("click", async (event) => {
-  const promptButton = event.target.closest("[data-creative-copy]");
-  const fullButton = event.target.closest("[data-creative-copy-full]");
-  const adsetButton = event.target.closest("[data-creative-adset]");
-  const messageButton = event.target.closest("[data-creative-message]");
-  if (!latestCreativePack || (!promptButton && !fullButton && !adsetButton && !messageButton)) return;
+  const btn = event.target.closest(".action-btn");
+  if (!latestCreativePack || !btn) return;
 
-  if (adsetButton) {
-    const adset = (latestCreativePack.adsets || [])[parseInt(adsetButton.dataset.creativeAdset, 10)];
-    if (!adset) return;
-    await copyToClipboard([
-      `Adset: ${adset.name || "-"}`,
-      `Objetivo: ${adset.objective || "-"}`,
-      `Audiencia: ${adset.audience || "-"}`,
-      `Texto: ${adset.primary_text || "-"}`,
-      `Headline: ${adset.headline || "-"}`,
-      `Prompt visual: ${adset.visual_prompt || "-"}`,
-    ].join("\n"), "Adset copiado.");
-    return;
-  }
+  const type = btn.dataset.creativeType;
+  const index = parseInt(btn.dataset.creativeIndex, 10);
+  const action = btn.dataset.action;
 
-  if (messageButton) {
-    const message = (latestCreativePack.message_variants || [])[parseInt(messageButton.dataset.creativeMessage, 10)];
-    if (!message) return;
-    await copyToClipboard(message.message || "", "Mensaje copiado.");
-    return;
-  }
-
-  const index = parseInt((promptButton || fullButton).dataset.creativeCopy || fullButton?.dataset.creativeCopyFull, 10);
-  const item = (latestCreativePack.channel_packs || [])[index];
+  let item;
+  if (type === "adset") item = (latestCreativePack.adsets || [])[index];
+  else if (type === "message") item = (latestCreativePack.message_variants || [])[index];
+  else if (type === "prompt") item = (latestCreativePack.channel_packs || [])[index];
+  
   if (!item) return;
-  const text = promptButton ? (item.prompt || "") : creativePromptText(item);
-  await copyToClipboard(text, promptButton ? "Prompt copiado." : "Ficha creativa copiada.");
+
+  // Handle Generate Image Action
+  if (action === "gen-img") {
+    const promptText = item.visual_prompt || item.prompt;
+    if (promptText) {
+      if (!selectedVideo) return;
+      generateBrandImage(selectedVideo, promptText);
+    }
+    return;
+  }
+
+  // Handle Copy Actions
+  let textToCopy = "";
+  let successMsg = "";
+
+  if (action === "copy-text") {
+    textToCopy = item.primary_text || item.headline || item.message || item.copy_overlay || item.hook || "";
+    successMsg = "Texto principal copiado.";
+  } else if (action === "copy-prompt") {
+    textToCopy = item.visual_prompt || item.prompt || "";
+    successMsg = "Prompt copiado.";
+  } else if (action === "copy-full") {
+    if (type === "adset") {
+      textToCopy = [
+        `Adset: ${item.name || "-"}`,
+        `Objetivo: ${item.objective || "-"}`,
+        `Audiencia: ${item.audience || "-"}`,
+        `Texto: ${item.primary_text || "-"}`,
+        `Headline: ${item.headline || "-"}`,
+        `Prompt visual: ${item.visual_prompt || "-"}`,
+      ].join("\\n");
+    } else if (type === "message") {
+      textToCopy = [
+        `Uso: ${humanChannel(item.use) || "-"}`,
+        `Tono: ${item.tone || "-"}`,
+        `Mensaje: ${item.message || "-"}`,
+      ].join("\\n");
+    } else {
+      textToCopy = creativePromptText(item);
+    }
+    successMsg = "Ficha creativa completa copiada.";
+  }
+
+  if (textToCopy) {
+    await copyToClipboard(textToCopy, successMsg);
+  }
 });
 
 copyCreativePack.addEventListener("click", async () => {
@@ -1854,3 +2191,277 @@ copySummary.addEventListener("click", async () => {
 setSource(activeSource);
 loadBrands();
 loadAiStatus();
+
+// ═══════════════════════════════════════════════════
+// GUIDE BOT — Contextual floating assistant
+// ═══════════════════════════════════════════════════
+
+const guideTips = {
+  "process-view": [
+    { emoji: "👋", title: "¡Bienvenido a ScriptDNA Studio!", text: "El Studio es tu motor de extracción principal. Aquí la IA procesa videos de YouTube o Reels usando un pipeline visual de 3 fases: Transcripción, Análisis y Creativos.", action: null },
+    { emoji: "📝", title: "Paso 1: Identifica tu proyecto", text: "Asigna una Marca y un ID (ej. 'campana-verano'). Estos metadatos organizarán automáticamente los resultados en la nueva Biblioteca centralizada.", action: null },
+    { emoji: "🎬", title: "Paso 2: Elige la fuente", text: "Puedes usar un link público de YouTube o arrastrar directamente un archivo MP4/MOV. El sistema manejará la transcripción automáticamente.", action: null },
+    { emoji: "🚀", title: "Paso 3: Observa el Pipeline", text: "Haz clic en 'Extraer inteligencia creativa'. Nuestro nuevo tracker visual te mostrará el estado de la IA en tiempo real mientras desgrana el ADN del video.", action: null },
+  ],
+  "vault-view": [
+    { emoji: "📚", title: "Tu Nueva Biblioteca", text: "Hemos consolidado Proyectos, Análisis y Mi Marca en un solo lugar. Usa los sub-tabs superiores para navegar sin fricción mental.", action: null },
+    { emoji: "📂", title: "Sub-tab: Proyectos", text: "Aquí se agrupan tus extracciones por marca. Selecciona un video para activar inmediatamente sus datos en las pestañas de Análisis y Editor.", action: null },
+    { emoji: "🔬", title: "Sub-tab: Análisis", text: "Aquí verás el breakdown estructural: Hooks, cuerpo, CTAs, arcos narrativos y momentos virales detectados por el motor de IA.", action: null },
+    { emoji: "🏷️", title: "Sub-tab: Mi Marca", text: "Define las 'leyes' de tu marca (Tono, Audiencia, Palabras prohibidas). El motor usará esto para el Brand Shifting en el Editor.", action: null },
+  ],
+  "analysis-view": [
+    { emoji: "📊", title: "Tu análisis creativo", text: "Aquí encuentras el resumen ejecutivo, hooks, momentos virales, y estructura narrativa. Usa el botón superior para Sincronizar los cambios con la nube.", action: null },
+  ],
+  "brand-view": [
+    { emoji: "🏷️", title: "Define tu marca", text: "Completa el perfil con tono, audiencia, oferta y estilo visual. Cuanto más detallado, más precisos serán los resultados del AI.", action: null },
+  ],
+  "editor-view": [
+    { emoji: "✍️", title: "Editor de Brand Shifting", text: "Selecciona una pieza extraída y una Marca de destino. La IA reescribirá el guion adaptando la oferta y el tono, pero manteniendo la estructura viral original.", action: null },
+    { emoji: "🧩", title: "Bloques Modulares", text: "El guion se presenta en bloques (Hook, Setup, Payoff, CTA). Puedes editar el texto y bloquear segmentos para protegerlos de la reescritura.", action: null },
+  ],
+  "creative-view": [
+    { emoji: "✨", title: "Packs Creativos Automatizados", text: "Genera automáticamente prompts y copys listos para TikTok, Instagram y Meta Ads basándote en la estructura de tu video procesado.", action: null },
+    { emoji: "📋", title: "Copy & Paste", text: "Todo está optimizado para flujos de trabajo rápidos. Copia los adsets y lánzalos directamente en tu Ads Manager.", action: null },
+  ],
+  "ai-view": [
+    { emoji: "⚙️", title: "Estado de la IA", text: "En esta configuración controlas el cerebro del sistema: Qwen como core, fal/HF para media, OpenRouter como respaldo y Ollama como última opción local.", action: null },
+    { emoji: "🧪", title: "Diagnóstico", text: "Si algo falla, usa el panel de auditoría para probar las conexiones en tiempo real antes de perder tiempo en procesos largos.", action: null },
+  ],
+};
+
+let guideBotOpen = false;
+let guideTipIndex = 0;
+let guideCurrentView = "process-view";
+
+const guideBotTrigger = document.querySelector("#guide-bot-trigger");
+const guideBotPanel = document.querySelector("#guide-bot-panel");
+const guideBotClose = document.querySelector("#guide-bot-close");
+const guideBotContent = document.querySelector("#guide-bot-content");
+const guideBotPrev = document.querySelector("#guide-bot-prev");
+const guideBotNext = document.querySelector("#guide-bot-next");
+const guideBotCounter = document.querySelector("#guide-bot-counter");
+
+function guideGetCurrentView() {
+  const activeView = document.querySelector(".view.active-view");
+  let viewId = activeView ? activeView.id : "process-view";
+  
+  // Si estamos en la Biblioteca, detectar el sub-tab activo
+  if (viewId === "vault-view") {
+    const activeBib = document.querySelector(".bib-panel.active-bib");
+    if (activeBib) {
+      if (activeBib.id === "bib-analysis") return "analysis-view";
+      if (activeBib.id === "bib-brand") return "brand-view";
+    }
+  }
+  return viewId;
+}
+
+function guideRenderTip() {
+  const viewId = guideGetCurrentView();
+  if (viewId !== guideCurrentView) {
+    guideCurrentView = viewId;
+    guideTipIndex = 0;
+  }
+  const tips = guideTips[viewId] || guideTips["process-view"];
+  const tip = tips[guideTipIndex] || tips[0];
+
+  guideBotContent.innerHTML = `
+    <div class="guide-tip">
+      <span class="guide-tip-emoji">${tip.emoji}</span>
+      <h3>${tip.title}</h3>
+      <p>${tip.text}</p>
+      ${tip.action ? `<button class="guide-action" onclick="${tip.action}">${tip.actionLabel || "Ir"}</button>` : ""}
+    </div>
+  `;
+
+  guideBotCounter.textContent = `${guideTipIndex + 1}/${tips.length}`;
+  guideBotPrev.disabled = guideTipIndex === 0;
+  guideBotNext.disabled = guideTipIndex >= tips.length - 1;
+}
+
+function guideToggle() {
+  guideBotOpen = !guideBotOpen;
+  if (guideBotOpen) {
+    guideCurrentView = guideGetCurrentView();
+    guideTipIndex = 0;
+    guideRenderTip();
+    guideBotPanel.classList.remove("hidden");
+    localStorage.setItem("guideBotSeen", "true");
+  } else {
+    guideBotPanel.classList.add("hidden");
+  }
+}
+
+guideBotTrigger?.addEventListener("click", guideToggle);
+guideBotClose?.addEventListener("click", () => {
+  guideBotOpen = false;
+  guideBotPanel.classList.add("hidden");
+});
+
+guideBotPrev?.addEventListener("click", () => {
+  if (guideTipIndex > 0) { guideTipIndex--; guideRenderTip(); }
+});
+
+guideBotNext?.addEventListener("click", () => {
+  const tips = guideTips[guideGetCurrentView()] || guideTips["process-view"];
+  if (guideTipIndex < tips.length - 1) { guideTipIndex++; guideRenderTip(); }
+});
+
+// Auto-open on first visit
+if (!localStorage.getItem("guideBotSeen")) {
+  setTimeout(() => {
+    guideToggle();
+  }, 2000);
+}
+
+// Update tips when view changes
+const originalSetMainView = setMainView;
+setMainView = function(viewId) {
+  originalSetMainView(viewId);
+  if (guideBotOpen) {
+    guideCurrentView = "";
+    guideRenderTip();
+  }
+};
+
+// ═══════════════════════════════════════════════════
+// EDITOR DE GUIONES (Brand Shifting)
+// ═══════════════════════════════════════════════════
+
+async function renderScriptEditor(video) {
+  if (!editorOriginalBrand || !editorOriginalBlocks || !editorAdaptedBlocks) return;
+  
+  editorOriginalBrand.textContent = "Sin selección";
+  editorOriginalBlocks.innerHTML = `<div class="human-status">Selecciona una pieza en Mis proyectos.</div>`;
+  editorAdaptedBlocks.innerHTML = `<div class="human-status">Elige una marca destino para empezar a adaptar.</div>`;
+  if (editorTargetBrand) editorTargetBrand.value = "";
+  if (editorAdaptAll) editorAdaptAll.disabled = true;
+
+  if (!video) return;
+
+  editorOriginalBrand.textContent = video.brand_name;
+  
+  if (!video.files?.script) {
+    editorOriginalBlocks.innerHTML = `<div class="human-status">Este video no tiene guion disponible.</div>`;
+    return;
+  }
+
+  try {
+    const response = await fetch(`/vault/script/${encodeURIComponent(video.brand_name)}/${encodeURIComponent(video.video_id)}`);
+    if (!response.ok) throw new Error("No se pudo cargar el guion.");
+    const scriptText = await response.text();
+    
+    const blocks = scriptText.split(/\\n\\s*\\n/).filter(b => b.trim());
+    
+    editorOriginalBlocks.innerHTML = blocks.map((block, i) => `
+      <div class="editor-block">
+        <div class="editor-block-header">
+          <span class="editor-block-title">Bloque ${i + 1}</span>
+          <div class="editor-block-actions">
+            <button class="secondary-button" type="button" style="padding: 2px 8px; font-size: 0.7rem;" onclick="copyToClipboard(this.parentElement.parentElement.nextElementSibling.value, 'Bloque copiado')">Copiar</button>
+          </div>
+        </div>
+        <textarea class="editor-block-content" readonly>${escapeHtml(block.trim())}</textarea>
+      </div>
+    `).join("");
+
+  } catch (err) {
+    editorOriginalBlocks.innerHTML = `<div class="human-status">Error cargando el guion: ${escapeHtml(err.message)}</div>`;
+  }
+}
+
+if (editorTargetBrand) {
+  editorTargetBrand.addEventListener("change", (e) => {
+    const val = e.target.value;
+    if (editorTargetBrandPill) {
+      editorTargetBrandPill.textContent = val || "Destino";
+      editorTargetBrandPill.className = val ? "pill badge-listo" : "pill badge-requiere_revision";
+    }
+    if (editorAdaptAll) {
+      editorAdaptAll.disabled = !val || !selectedVideo;
+    }
+    
+    if (val && selectedVideo) {
+      editorAdaptedBlocks.innerHTML = `
+        <div class="human-status" style="border: 1px dashed var(--brand-blue); padding: var(--space-l); text-align: center;">
+          <span style="font-size: 2rem; display: block; margin-bottom: 8px;">✨</span>
+          <strong>Listo para adaptar a ${escapeHtml(val)}</strong>
+          <p style="font-size: 0.85rem; margin-top: 8px;">La IA usará el tono, oferta y sabiduría de la nueva marca para reescribir este guion conservando su estructura ganadora.</p>
+        </div>
+      `;
+    } else {
+      editorAdaptedBlocks.innerHTML = `<div class="human-status">Elige una marca destino para empezar a adaptar.</div>`;
+    }
+  });
+}
+
+if (editorAdaptAll) {
+  editorAdaptAll.addEventListener("click", async () => {
+    if (!selectedVideo || !editorTargetBrand.value) return;
+
+    // Recolectar el texto original de los bloques
+    const textareas = editorOriginalBlocks.querySelectorAll("textarea");
+    const originalScript = Array.from(textareas).map(ta => ta.value).join("\n\n");
+    const targetBrand = editorTargetBrand.value;
+
+    editorAdaptAll.disabled = true;
+    editorAdaptAll.textContent = "Adaptando...";
+    editorAdaptedBlocks.innerHTML = `
+      <div class="human-status" style="border: 1px dashed var(--accent); padding: var(--space-l); text-align: center;">
+        <div class="spinner" style="margin: 0 auto 16px;"></div>
+        <strong>Generando guion adaptado...</strong>
+        <p style="font-size: 0.85rem; margin-top: 8px;">Esto puede tomar unos segundos.</p>
+      </div>
+    `;
+
+    try {
+      const response = await fetch("/ai/adapt-script", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          original_script: originalScript,
+          target_brand: targetBrand
+        })
+      });
+      
+      const data = await response.json();
+      if (!response.ok) throw new Error(data.detail || "Error al adaptar el guion");
+
+      const blocks = data.data?.blocks || [];
+      
+      if (blocks.length === 0) {
+        editorAdaptedBlocks.innerHTML = `<div class="human-status">La IA no devolvió bloques válidos. Intenta nuevamente.</div>`;
+      } else {
+        const typeLabels = {
+          hook: "🎣 Hook",
+          pain: "😣 Dolor",
+          agitate: "🔥 Tensión",
+          solution: "💡 Solución",
+          proof: "📊 Prueba",
+          cta: "🚀 CTA",
+          context: "📝 Contexto",
+          development: "📖 Desarrollo",
+        };
+        editorAdaptedBlocks.innerHTML = blocks.map((block, i) => `
+          <div class="editor-block" style="border-left: 3px solid var(--accent);">
+            <div class="editor-block-header">
+              <span class="editor-block-title">${escapeHtml(typeLabels[block.type] || block.type || `Bloque ${i+1}`)}</span>
+              <div class="editor-block-actions" style="display: flex; gap: 4px; align-items: center;">
+                ${block.psychology ? `<span class="pill" style="font-size: 0.65rem; padding: 2px 6px; background: rgba(var(--accent-rgb, 99,102,241), 0.15); color: var(--accent);">🧠 ${escapeHtml(block.psychology)}</span>` : ""}
+                <button class="secondary-button" type="button" style="padding: 2px 8px; font-size: 0.7rem;" onclick="copyToClipboard(this.closest('.editor-block').querySelector('textarea').value, 'Bloque adaptado copiado')">Copiar</button>
+              </div>
+            </div>
+            <textarea class="editor-block-content" style="border-color: var(--accent);">${escapeHtml(block.content || "")}</textarea>
+            ${block.rationale ? `<p style="font-size: 0.75rem; color: var(--text-muted); margin: 8px 0 0;">💡 ${escapeHtml(block.rationale)}</p>` : ""}
+          </div>
+        `).join("");
+      }
+      
+    } catch (err) {
+      editorAdaptedBlocks.innerHTML = `<div class="human-status" style="color: var(--error);">Error: ${escapeHtml(err.message)}</div>`;
+    } finally {
+      editorAdaptAll.disabled = false;
+      editorAdaptAll.textContent = "Adaptar todo";
+    }
+  });
+}
